@@ -13,7 +13,7 @@ final class UpdateIntegration {
         try{
             $translate=require __DIR__.'/updater-translations.php';
             $base=plugins_url('assets/brand/',TBM_FILE);$de=str_starts_with(determine_locale(),'de_');
-            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-github-de.png':'banner-github.png')]],['translate'=>$translate]);
+            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-772x250-de.png':'banner-772x250.png'),'high'=>$base.($de?'banner-1544x500-de.png':'banner-1544x500.png')]],['translate'=>$translate]);
             $updater->register();add_filter('upgrader_source_selection',[self::class,'validate'],30,4);
         }catch(\Throwable $error){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);}
     }
