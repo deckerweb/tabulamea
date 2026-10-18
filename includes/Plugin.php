@@ -34,8 +34,8 @@ final class Plugin {
      * @return void
      */
     public static function boot(): void {
-        add_action('init', [self::class, 'init']);
-        add_action('init', [OutputBlocks::class,'register'],40);
+        add_action('init', [self::class, 'init'],9);
+        add_action('init', [OutputBlocks::class,'register'],9);
         add_filter('user_has_cap', [self::class, 'caps'], 20, 4);
         add_action('wp_dashboard_setup', [self::class, 'widget'], 100);
         add_action('admin_menu', [Admin::class, 'menu'], 100);

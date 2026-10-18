@@ -205,7 +205,7 @@ A random delivery token exists only in document memory and is reused for up to t
 
 ### What does TabulaMea count?
 
-It counts visible page loads, including reloads. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
+TabulaMea counts visible page loads. Reloading a page counts as a new pageview. Only repeated technical delivery of the same page load, for example after a network error, is not counted twice. Collection exclusions and privacy signals still apply. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
 
 ### Does it use cookies or external statistics services?
 
@@ -235,14 +235,15 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 
 ## Changelog
 
-0.9.0 — 2026-10-18
-New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
-Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
-Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls.
+### 0.9.0 — 2026-10-18
 
-0.1.0-dev.1–0.1.0-dev.7
-Misc: Early test versions of the independent website statistics plugin.
+- New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
+- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
+- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs.
 
+### 0.1.0 – 0.8.0
+
+- Misc: Early test versions of the independent website statistics plugin.
 ## Project and security
 
 Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Version 0.9.0 is a prepared test build; no GitHub release has been published. Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).

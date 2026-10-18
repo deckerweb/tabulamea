@@ -68,7 +68,7 @@ final class Admin {
         if($hook==='edit.php'&&Plugin::allowed('view')&&in_array(get_current_screen()->post_type,ContentColumns::types(),true)){wp_enqueue_style('tbm-content-columns',plugins_url('assets/content-columns.css',TBM_FILE),[],TBM_VERSION);}
         if($hook==='index.php'&&!self::dashboard_assets()){return;}if(str_contains($hook,'tabulamea-reports')){wp_enqueue_style('tbm-ranking',plugins_url('assets/rankings.css',TBM_FILE),[],TBM_VERSION);}
         if($hook==='index.php' || str_contains($hook,'tabulamea')) {
-            foreach(['navigation','admin','footer','statistics'] as $name){wp_enqueue_style('tbm-'.$name,plugins_url('assets/'.$name.'.css',TBM_FILE),[],TBM_VERSION);}
+            foreach(['navigation','admin','footer','statistics'] as $name){wp_enqueue_style('tbm-'.$name,plugins_url('assets/'.$name.'.css',TBM_FILE),[],TBM_VERSION.'.'.filemtime(dirname(TBM_FILE).'/assets/'.$name.'.css'));}
             foreach(['extras','admin','footer','statistics'] as $name){wp_enqueue_script('tbm-'.$name,plugins_url('assets/'.$name.'.js',TBM_FILE),[],TBM_VERSION,true);}
         }
     }
@@ -98,7 +98,8 @@ final class Admin {
     public static function footer(): void {
         require_once dirname(TBM_FILE).'/includes/deckerweb-changelog-v1.php';
         require_once dirname(TBM_FILE).'/includes/deckerweb-admin-footer-v1.php';
-        $de=str_starts_with(determine_locale(),'de_'); $docs=[];
+        // Match the effective UI language too, including preferred-language fallbacks.
+        $de=(bool)preg_match('/^de(?:[_-]|$)/i',get_user_locale())||__('Documentation','tabulamea')==='Dokumentation'; $docs=[];
         foreach(['readme'=>['DOCUMENTATION',__('Documentation','tabulamea')],'faq'=>['FAQ',__('FAQ','tabulamea')],'changelog'=>['CHANGELOG',__('Changelog','tabulamea')]] as $key=>[$file,$label]){
             $name=$file.($de?'-de':'').'.txt';$docs[$key]=['label'=>$label,'url'=>plugins_url($name,TBM_FILE),'text'=>(string)file_get_contents(dirname(TBM_FILE).'/'.$name)];
         }

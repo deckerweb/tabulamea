@@ -20,3 +20,5 @@
 /* Foreign dialog display rules must never expose closed local documents. */
 dialog.ddw-document-dialog:not([open]),dialog.ddw-document-dialog[hidden]{display:none!important}
 .ddw-document-dialog .ddw-document-close-form{margin:0;padding:0;border:0;background:none}
+
+.ddw-document-content h3{font-size:17px;line-height:1.4;margin:26px 0 10px}.ddw-document-content h3:first-child{margin-top:0}.ddw-document-content ul{list-style:disc;padding-inline-start:24px}.ddw-document-content ol{list-style:decimal;padding-inline-start:24px}.ddw-document-content li{margin:7px 0}

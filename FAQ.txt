@@ -10,7 +10,7 @@ What does TabulaMea mean?
 The Latin “tabula mea” means “my board”. For this plugin, it also expresses “my overview”: understanding statistics, maintaining content and presenting selected results.
 
 What does TabulaMea count?
-It counts visible page loads, including reloads. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
+TabulaMea counts visible page loads. Reloading a page counts as a new pageview. Only repeated technical delivery of the same page load, for example after a network error, is not counted twice. Collection exclusions and privacy signals still apply. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
 
 Does it require Koko Analytics or Statify?
 No. It runs independently. Their local tables are needed only for an optional historical import. Choose one source per website; Koko and Statify imports cannot be combined.

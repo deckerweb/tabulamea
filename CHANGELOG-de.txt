@@ -1,7 +1,7 @@
 0.9.0 — 2026-10-18
 Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.
 Verbessert: Diagramme, modulare Dashboard-Widgets, öffentliche Ausgabeblöcke, Zugriffssteuerung und Dokumentation. Library 1.0.0 und Updater 2.1.0 für den GitHub-Vertrieb integriert.
-Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen.
+Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen. Schriftgrößen in der Blockvorschau und lokalisierte Dokumentationsdialoge.
 
-0.1.0-dev.1–0.1.0-dev.7
+0.1.0 – 0.8.0
 Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.

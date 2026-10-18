@@ -16,14 +16,14 @@ if ( ! class_exists( 'Deckerweb_Changelog_Renderer_V1', false ) ) {
 			$releases = []; $current = null;
 			foreach ( preg_split( '/\R/', $text ) as $line ) {
 				$line = trim( $line );
-				if ( preg_match( '/^= (.+) =$/', $line, $heading ) ) {
-					$releases[] = [ 'heading' => $heading[1], 'items' => [] ]; $current = count( $releases ) - 1;
-				} elseif ( null !== $current && preg_match( '/^[*\-] (.+)$/', $line, $item ) ) { $releases[$current]['items'][] = $item[1]; }
+				if ( preg_match( '/^(?:= (.+) =|(\d+\.\d+\.\d+.*))$/', $line, $heading ) ) {
+					$releases[] = [ 'heading' => trim($heading[1] ?: ($heading[2] ?? '')), 'items' => [] ]; $current = count( $releases ) - 1;
+				} elseif ( null !== $current && preg_match( '/^(?:[*\-] )?((?:New|Neu|Improved|Verbessert|Fixed|Behoben|Misc|Sonstiges): .+)$/', $line, $item ) ) { $releases[$current]['items'][] = $item[1]; }
 			}
 			$html = '';
 			$categories = [ 'New' => 'new', 'Neu' => 'new', 'Improved' => 'improved', 'Verbessert' => 'improved', 'Fixed' => 'fixed', 'Behoben' => 'fixed', 'Misc' => 'misc', 'Sonstiges' => 'misc' ];
 			foreach ( $releases as $release ) {
-				$parts = array_map( 'trim', explode( '·', $release['heading'], 2 ) );
+				$parts = array_map( 'trim', preg_split('/\s[·—]\s/', $release['heading'], 2) );
 				$html .= '<section class="ddw-changelog-release"><header class="ddw-changelog-version"><h3>' . esc_html( $parts[0] ) . '</h3>' . ( isset( $parts[1] ) ? '<span>' . esc_html( $parts[1] ) . '</span>' : '' ) . '</header><ul class="ddw-changelog-entries">';
 				foreach ( $release['items'] as $item ) {
 					$prefix = ''; $category = 'misc'; $body = $item;

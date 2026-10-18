@@ -10,7 +10,7 @@ Was bedeutet TabulaMea?
 „Tabula mea“ heißt auf Latein „meine Tafel“. Für das Plugin steht der Name auch für „meine Übersicht“: Statistiken verstehen, Inhalte pflegen und ausgewählte Ergebnisse präsentieren.
 
 Was zählt TabulaMea – und was nicht?
-Gezählt werden sichtbare Seitenaufrufe. Neuladen zählt erneut. Eindeutige Besucher, Sitzungen, Klickereignisse und Besucherprofile werden nicht ermittelt. Suchergebnisse werden nur bei eingeschalteter Suchauswertung separat gezählt; 404-Seiten werden nicht erfasst.
+TabulaMea zählt sichtbare Seitenaufrufe. Das Neuladen einer Seite zählt als neuer Aufruf. Nur die wiederholte technische Übertragung desselben Aufrufs, etwa nach einem Netzwerkfehler, wird nicht doppelt gezählt. Erfassungsausschlüsse und Datenschutzsignale gelten weiterhin. Eindeutige Besucher, Sitzungen, Klickereignisse und Besucherprofile werden nicht ermittelt. Suchergebnisse werden nur bei eingeschalteter Suchauswertung separat gezählt; 404-Seiten werden nicht erfasst.
 
 Benötigt TabulaMea Koko Analytics oder Statify?
 Nein. Es ist ein eigenständiges Plugin. Die lokalen Daten dieser Plugins werden nur für einen optionalen historischen Import benötigt. Pro Website kann eine dieser Quellen verwendet werden; Koko und Statify lassen sich nicht als Importquellen kombinieren.

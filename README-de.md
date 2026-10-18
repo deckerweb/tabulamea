@@ -205,7 +205,7 @@ Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten 
 
 ### Was zählt TabulaMea – und was nicht?
 
-Gezählt werden sichtbare Seitenaufrufe. Neuladen zählt erneut. Eindeutige Besucher, Sitzungen, Klickereignisse und Besucherprofile werden nicht ermittelt. Suchergebnisse werden nur bei eingeschalteter Suchauswertung separat gezählt; 404-Seiten werden nicht erfasst.
+TabulaMea zählt sichtbare Seitenaufrufe. Das Neuladen einer Seite zählt als neuer Aufruf. Nur die wiederholte technische Übertragung desselben Aufrufs, etwa nach einem Netzwerkfehler, wird nicht doppelt gezählt. Erfassungsausschlüsse und Datenschutzsignale gelten weiterhin. Eindeutige Besucher, Sitzungen, Klickereignisse und Besucherprofile werden nicht ermittelt. Suchergebnisse werden nur bei eingeschalteter Suchauswertung separat gezählt; 404-Seiten werden nicht erfasst.
 
 ### Verwendet das Plugin Cookies oder externe Statistikdienste?
 
@@ -235,14 +235,15 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 
 ## Changelog
 
-0.9.0 — 2026-10-18
-Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.
-Verbessert: Diagramme, modulare Dashboard-Widgets, öffentliche Ausgabeblöcke, Zugriffssteuerung und Dokumentation. Library 1.0.0 und Updater 2.1.0 für den GitHub-Vertrieb integriert.
-Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen.
+### 0.9.0 — 2026-10-18
 
-0.1.0-dev.1–0.1.0-dev.7
-Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.
+- Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.
+- Verbessert: Diagramme, modulare Dashboard-Widgets, öffentliche Ausgabeblöcke, Zugriffssteuerung und Dokumentation. Library 1.0.0 und Updater 2.1.0 für den GitHub-Vertrieb integriert.
+- Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen. Schriftgrößen in der Blockvorschau und lokalisierte Dokumentationsdialoge.
 
+### 0.1.0 – 0.8.0
+
+- Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.
 ## Projekt und Sicherheit
 
 Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Version 0.9.0 ist als Teststand vorbereitet; ein GitHub-Release ist noch nicht veröffentlicht. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).

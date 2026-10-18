@@ -182,7 +182,7 @@ For the guided test, sign in as an administrator and open the supplied frontend 
 
 = What does TabulaMea count? =
 
-It counts visible page loads, including reloads. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
+TabulaMea counts visible page loads. Reloading a page counts as a new pageview. Only repeated technical delivery of the same page load, for example after a network error, is not counted twice. Collection exclusions and privacy signals still apply. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
 
 = Does it use cookies or external statistics services? =
 
@@ -215,8 +215,8 @@ Full FAQ by topic: FAQ.txt. Full guide: DOCUMENTATION.txt.
 = 0.9.0 =
 * New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
 * Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
-* Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls.
+* Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs.
 
-= 0.1.0-dev.1–0.1.0-dev.7 =
+= 0.1.0 – 0.8.0 =
 * Misc: Early test versions of the independent website statistics plugin.
 

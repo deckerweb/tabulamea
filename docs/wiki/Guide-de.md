@@ -1,5 +1,7 @@
 # Anleitung
 
+[English](Guide) · [Deutsch](Guide-de)
+
 ## Schnellstart
 
 1. Installiere und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.

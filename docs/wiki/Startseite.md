@@ -1,5 +1,7 @@
 # TabulaMea
 
+![TabulaMea](https://raw.githubusercontent.com/deckerweb/tabulamea/main/assets/brand/banner-github-de.png)
+
 Datenschutzfreundliche Website-Statistik direkt in WordPress: Seitenaufrufe überblicken, beliebte Inhalte entdecken und Zahlen für deine redaktionelle Arbeit nutzen. Ohne Cookies und Besucherprofile.
 
 TabulaMea bringt die Übersicht zurück in deine Website-Statistik. Wie oft werden deine Seiten aufgerufen? Welche Beiträge finden Aufmerksamkeit? Und welche Websites verweisen auf deine Inhalte? Du bekommst die Zahlen, die im Alltag helfen – direkt in WordPress, ohne Cookies, Besucherprofile oder die Wiedererkennung einzelner Menschen.
@@ -7,6 +9,8 @@ TabulaMea bringt die Übersicht zurück in deine Website-Statistik. Wie oft werd
 Der Name kommt vom lateinischen „tabula mea“: „meine Tafel“. Für dieses Plugin steckt darin auch „meine Übersicht“ – ein eigener Platz, an dem aus wenigen Messwerten ein verständliches Bild deiner Website entsteht. Nach innen hilft diese Übersicht beim Pflegen und Planen. Nach außen kannst du ausgewählte Inhalte als Rankings oder Aufrufzähler präsentieren.
 
 TabulaMea erfasst bewusst wenige Daten und bereitet die vorhandenen Zahlen verständlich auf: Jahresrückblicke, Inhaltsrankings und Aufrufzahlen direkt in deinen Beitrags- und Seitenlisten. Du bestimmst, wer die Statistik sehen darf und welche Ergebnisse öffentlich werden. Die Daten bleiben in deiner WordPress-Installation.
+
+Deine Inhalte. Ihre Wirkung. Alles im Blick.
 
 Deine Inhalte. Ihre Wirkung. Alles im Blick.
 
@@ -28,4 +32,4 @@ Seiten und Beiträge in ihren WordPress-Listen nach Aufrufen sortieren und filte
 
 ## Anleitung
 
-[Deutsch](Guide-de) · [English](Guide) · [Fragen nach Themen](FAQ-de)
+[English](Guide) · [Deutsch](Guide-de) · [FAQ by topic](FAQ) · [Fragen nach Themen](FAQ-de) · [Changelog](Changelog-de)

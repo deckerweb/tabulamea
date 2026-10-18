@@ -1,4 +1,6 @@
-# Guide
+# User guide
+
+[English](Guide) · [Deutsch](Guide-de)
 
 ## Quick start
 
