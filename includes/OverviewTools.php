@@ -1,0 +1,27 @@
+<?php
+namespace Deckerweb\TabulaMea;
+defined('ABSPATH') || exit;
+/** Actionable status and copyable diagnostics without secrets, visitor data or server paths. */
+final class OverviewTools {
+    /** Render the current configuration and practical next actions. @return void */
+    public static function render(): void {
+        Insights::test_panel();$s=Plugin::settings();$last=(int)get_option('tbm_last_received',0);echo '<p class="tbm-state">'.esc_html($s['measurement']?__('Measurement enabled','tabulamea'):__('Measurement paused','tabulamea')).'</p>';
+        echo '<section class="tbm-card"><h2>'.esc_html__('Measurement status','tabulamea').'</h2><p>'.esc_html(!$s['measurement']?__('Measurement is paused.','tabulamea'):($last?sprintf(__('Last accepted pageview: %s ago. Status is updated at most every five minutes.','tabulamea'),human_time_diff($last)):__('No pageviews accepted yet.','tabulamea'))).'</p><p>'.esc_html__('For a practical check, open a public page in a private browser window. Your logged-in role may be excluded.','tabulamea').'</p><a href="'.esc_url(InterfaceTools::settings_url('measurement')).'">'.esc_html__('Review settings','tabulamea').'</a></section><div class="tbm-grid">';
+        $cards=[['access',__('Access policy','tabulamea'),sprintf(__('Report roles: %1$s. Personal rules: %2$d. Plugin settings remain restricted to website administrators.','tabulamea'),implode(', ',array_map(static fn($role)=>translate_user_role(wp_roles()->roles[$role]['name'] ?? $role),$s['view_roles'])),count($s['users']))],['dashboard',__('Dashboard widgets','tabulamea'),sprintf(__('Overview widget: %1$s. Compact widget: %2$s.','tabulamea'),$s['original_widget']?__('Enabled','tabulamea'):__('Disabled','tabulamea'),$s['widget']?__('Enabled','tabulamea'):__('Disabled','tabulamea'))],['collection',__('Optional collection','tabulamea'),sprintf(__('Technology: %1$s. Countries: %2$s.','tabulamea'),DimensionReports::state('device'),DimensionReports::state('country'))],['shortcodes',__('Publishing','tabulamea'),$s['public_rankings']?__('Explicitly published rankings may appear on the website.','tabulamea'):__('Public output is disabled in Plugin settings.','tabulamea')]];
+        foreach($cards as [$tab,$title,$text]){echo '<section class="tbm-card"><h3>'.esc_html($title).'</h3><p>'.esc_html($text).'</p><a href="'.esc_url(InterfaceTools::settings_url($tab)).'">'.esc_html__('Review settings','tabulamea').'</a></section>';}echo '</div>';
+        $error=(array)get_option('tbm_core_error',[]);if((int)($error['time']??0)>time()-DAY_IN_SECONDS){echo '<p class="tbm-attention">'.esc_html(($error['code']??'')==='capacity'?__('The measurement request limit was reached within the last 24 hours. Some pageviews may be missing. Review the site-wide request limit.','tabulamea'):__('A measurement write failed within the last 24 hours. Some pageviews may be missing. Review database availability before relying on totals.','tabulamea')).'</p>';}
+        $messages=[];foreach((array)get_option('tbm_rankings',[]) as $rank){if(!empty($rank['public'])&&!$s['public_rankings']){$messages['access']=__('A ranking is published, but public output is globally disabled.','tabulamea');}}
+        if($s['country']&&!is_readable(Tracking::geo_path())){$messages['collection']=__('Country collection is selected, but its local database is missing. Review the download setting and install the database.','tabulamea');}
+        if(($s['technology']||$s['country'])&&!Tracking::supported()){$messages['collection']=__('Additional collection is paused by the collector configuration. Review the collection status.','tabulamea');}
+        if($s['widget_ranking']&&!isset(get_option('tbm_rankings',[])[$s['widget_ranking']])){$messages['dashboard']=__('The ranking selected for the widget no longer exists. The widget currently uses its normal filters.','tabulamea');}
+        foreach($messages as $tab=>$text){echo '<p class="tbm-attention">'.esc_html($text).' <a href="'.esc_url(InterfaceTools::settings_url($tab)).'">'.esc_html__('Review settings','tabulamea').'</a></p>';}
+    }
+    /** Return only operational facts safe to paste into a support request. @return array Diagnostic values. */
+    public static function diagnostic(): array {
+        $s=Plugin::settings();return ['plugin_version'=>TBM_VERSION,'wordpress_version'=>get_bloginfo('version'),'php_version'=>PHP_VERSION,'multisite'=>is_multisite(),'storage_ready'=>Plugin::ready(),'measurement_enabled'=>$s['measurement'],'last_received'=>(int)get_option('tbm_last_received',0),'technology_enabled'=>$s['technology'],'country_enabled'=>$s['country'],'country_database_readable'=>is_readable(Tracking::geo_path()),'maintenance_scheduled'=>(bool)wp_next_scheduled('tbm_maintenance'),'retention_months'=>$s['retention'],'core_schema'=>(string)get_option('tbm_schema'),'request_limit'=>$s['request_limit'],'recent_error'=>(array)get_option('tbm_core_error',[])];
+    }
+    /** Render a collapsed copyable diagnostic panel. @return void */
+    public static function diagnostic_panel(): void {
+        echo '<details class="tbm-card"><summary>'.esc_html__('Diagnostics for support','tabulamea').'</summary><p>'.esc_html__('Contains versions and operational states only. No credentials, user names, visitor details, URLs or server paths are included.','tabulamea').'</p>';InterfaceTools::copy(wp_json_encode(self::diagnostic(),JSON_PRETTY_PRINT|JSON_UNESCAPED_SLASHES),__('Diagnostic information','tabulamea'),14);echo '</details>';
+    }
+}

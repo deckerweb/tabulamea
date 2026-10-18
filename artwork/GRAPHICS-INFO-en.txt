@@ -1,0 +1,7 @@
+TabulaMea — approved artwork v2
+
+Approved preview v4: geometric mint/lavender icon on the left, shifted text block, right-hand statistics motif at 88 percent.
+
+EN/DE vector masters 2560×1280; GitHub banners 1280×640; WordPress banners 772×250 and 1544×500. SVG and PNG for each. Shared text-free icon: 128, 256, 512 and 1024 pixels, plus vector master. WordPress banners are proportional crops of the same master.
+
+Native vector paths/shapes, linear gradients and outlined text. No embedded bitmap, external resource or SVG filter. Inter typeface, SIL OFL1.1, license included. Own artwork © 2026 David Decker – DECKERWEB, GPL-2.0-or-later. Icon adapts the existing own FluentCart-addon design to the TabulaMea palette. Previous artwork remains archived separately.

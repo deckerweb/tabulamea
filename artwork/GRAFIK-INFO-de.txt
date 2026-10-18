@@ -1,0 +1,13 @@
+TabulaMea — freigegebener Grafiksatz v2
+
+Gestaltung: Freigabe der Variante v4. Geometrisches Icon links in Mint und Lavendel; Textblock nach rechts versetzt; Statistikmotiv rechts auf 88 Prozent verkleinert. Alle Texte, Größen, Abstände und Motive entsprechen der freigegebenen Vorschau.
+
+DE: TabulaMea / Datenschutzfreundliche Website-Statistik / Deine Inhalte. Ihre Wirkung. / Alles im Blick.
+EN: TabulaMea / Privacy-friendly website statistics / Your content. Its impact. / All in view.
+
+Enthalten: EN/DE-Vektormaster 2560×1280, GitHub-Banner 1280×640, WordPress-Banner 772×250 und 1544×500; jeweils SVG und PNG. Gemeinsames textfreies Icon als SVG und PNG in 128, 256, 512 und 1024 Pixeln, zusätzlich Icon-Master. WordPress-Banner sind ausschließlich proportionale Zuschnitte desselben Masters.
+
+SVG-Deklaration: originäre Vektorpfade und -formen, lineare Verläufe und Schriftpfade. Keine eingebetteten Rasterbilder, externen Ressourcen oder SVG-Filter. Keine Nachzeichnung einer Rastergrafik. Master und alle Ableitungen sind verlustfrei skalierbar.
+
+Schrift: Inter, SIL Open Font License 1.1; Lizenz beiliegend. Keine Schriftdateien eingebettet. Eigene Grafiken © 2026 David Decker – DECKERWEB, GPL-2.0-or-later. Das Icon greift die eigene FluentCart-Addon-Gestaltung auf und verwendet die TabulaMea-Farbpalette.
+Frühere Grafiksätze und Entwürfe bleiben separat erhalten.

@@ -1,0 +1,14 @@
+(wp=>{'use strict';const e=wp.element.createElement;
+for(const kind of ['counter','popular'])wp.blocks.registerBlockType('tabulamea/'+kind,{
+apiVersion:3,title:wp.i18n.__(kind==='counter'?'TabulaMea pageview counter':'TabulaMea popular content','tabulamea'),icon:kind==='counter'?'chart-area':'list-view',category:'widgets',
+supports:{color:{text:true,background:true},typography:{fontSize:true,lineHeight:true},spacing:{margin:true,padding:true},align:true,html:false},
+attributes:kind==='counter'?{days:{type:'number',default:30},global:{type:'boolean',default:false},before:{type:'string',default:''},after:{type:'string',default:''}}:{days:{type:'number',default:30},number:{type:'number',default:5},postType:{type:'string',default:'post'}},
+edit(p){const l=window.tbmOutputLabels||{},a=p.attributes,SSR=wp.serverSideRender?.default||wp.serverSideRender;
+const controls=[e(wp.components.RangeControl,{key:'days',label:l.days,min:1,max:365,value:a.days,onChange:days=>p.setAttributes({days})})];
+if(kind==='counter')controls.push(e(wp.components.ToggleControl,{key:'global',label:l.global,checked:a.global,onChange:global=>p.setAttributes({global})}),...['before','after'].map(key=>e(wp.components.TextControl,{key,label:l[key],value:a[key],onChange:value=>p.setAttributes({[key]:value})})));
+else controls.push(e(wp.components.RangeControl,{key:'number',label:l.number,min:1,max:50,value:a.number,onChange:number=>p.setAttributes({number})}),e(wp.components.SelectControl,{key:'type',label:l.type,options:l.types||[],value:a.postType,onChange:postType=>p.setAttributes({postType})}));
+const sidebar=e(wp.blockEditor.InspectorControls,{},e(wp.components.PanelBody,{title:l.settings,initialOpen:true},e('p',{},l.help+(kind==='counter'?' '+l.countHelp:'')),...controls));
+const props=wp.blockEditor.useBlockProps();const preview=SSR&&l.enabled&&(kind!=='counter'||l.counts)?e(SSR,{block:'tabulamea/'+kind,attributes:a,urlQueryArgs:{post_id:wp.data.select('core/editor')?.getCurrentPostId?.()||undefined},EmptyResponsePlaceholder:()=>e(wp.components.Placeholder,{label:l[kind]},l.unavailable)}):e(wp.components.Placeholder,{label:l[kind]},l.help+(kind==='counter'?' '+l.countHelp:''));
+return e(wp.element.Fragment,{},sidebar,e('div',props,preview));},save(){return null;}});
+wp.domReady(()=>{const l=window.tbmOutputLabels||{};wp.blocks.registerBlockVariation('core/query',{name:'tabulamea/popular-query',title:l.query||'TabulaMea popular content loop',description:l.help,icon:'chart-bar',scope:['inserter'],attributes:{namespace:'tabulamea/popular-query',query:{perPage:5,pages:0,offset:0,postType:'post',order:'desc',orderBy:'tbm_popular',inherit:false}},allowedControls:['postType'],isActive:['namespace'],innerBlocks:[['core/post-template',{},[['core/post-featured-image',{isLink:true}],['core/post-title',{isLink:true}],['core/post-excerpt',{}]]]]});});
+})(window.wp);

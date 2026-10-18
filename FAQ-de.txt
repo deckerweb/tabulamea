@@ -1,0 +1,107 @@
+Fragen nach Themen — TabulaMea
+
+English: FAQ.txt
+Ausführliche Anleitung: DOCUMENTATION-de.txt
+
+Einstieg
+────────
+
+Was bedeutet TabulaMea?
+„Tabula mea“ heißt auf Latein „meine Tafel“. Für das Plugin steht der Name auch für „meine Übersicht“: Statistiken verstehen, Inhalte pflegen und ausgewählte Ergebnisse präsentieren.
+
+Was zählt TabulaMea – und was nicht?
+Gezählt werden sichtbare Seitenaufrufe. Neuladen zählt erneut. Eindeutige Besucher, Sitzungen, Klickereignisse und Besucherprofile werden nicht ermittelt. Suchergebnisse werden nur bei eingeschalteter Suchauswertung separat gezählt; 404-Seiten werden nicht erfasst.
+
+Benötigt TabulaMea Koko Analytics oder Statify?
+Nein. Es ist ein eigenständiges Plugin. Die lokalen Daten dieser Plugins werden nur für einen optionalen historischen Import benötigt. Pro Website kann eine dieser Quellen verwendet werden; Koko und Statify lassen sich nicht als Importquellen kombinieren.
+
+Datenschutz
+───────────
+
+Verwendet das Plugin Cookies oder externe Statistikdienste?
+TabulaMea setzt keine Statistik-Cookies und verwendet keine dauerhafte Browserspeicherung für die Messung. Die Statistikdaten werden lokal gespeichert. Der freiwillige Download der Länderdatenbank ist eine gesonderte Serververbindung mit eigener Zustimmung; Besucherdaten werden dabei nicht an den Datenanbieter übertragen.
+
+Wer darf die Zahlen sehen?
+Standardmäßig Administratoren. Unter Zugriff lassen sich Rollen und persönliche Regeln festlegen. Das kompakte Dashboard-Widget hat eigene Zugriffsregeln. Öffentliche Ausgaben und genaue öffentliche Zahlen benötigen getrennte Freigaben; gespeicherte Rankings außerdem eine einzelne Veröffentlichungsfreigabe.
+
+Ist damit jede Website automatisch rechtlich abgesichert?
+Nein. Datensparsame Technik ersetzt keine Prüfung der Website, des Hostings und ihrer konkreten Konfiguration. Der Datenschutz-Textvorschlag beschreibt TabulaMea, muss geprüft werden und ist keine vollständige Datenschutzerklärung oder Rechtsberatung.
+
+Messung und Anzeige
+───────────────────
+
+Warum wird mein eigener Testaufruf nicht gezählt?
+Angemeldete Administratoren und Redakteure sind standardmäßig ausgeschlossen. Auch Do Not Track, Global Privacy Control, Browserblockaden oder deaktiviertes JavaScript können eine Messung verhindern. Private Fenster können solche Schutzsignale ebenfalls senden. Der geführte Messtest unter Übersicht zählt absichtlich keinen regulären Aufruf.
+
+Warum weichen Zahlen von anderen Werkzeugen ab?
+Messverfahren, Erfassungsumfang, Botfilter, Datenschutzsignale und Browserblockaden unterscheiden sich. Referrer sind nicht bei jedem Aufruf verfügbar. TabulaMea zählt Aufrufe, keine eindeutigen Personen; diese Werte sollten nicht unmittelbar mit Besucher- oder Sitzungszahlen verglichen werden.
+
+Was bedeuten Lücken, gestrichelte Verbindungen und Striche?
+Ein fehlender Datensatz kann sowohl wenig beziehungsweise keinen Traffic als auch unterbrochene Erfassung bedeuten. Gepunktete Verbindungen schätzen keine Zwischenwerte. Ein Strich in der Aufrufspalte bezeichnet einen fehlenden Summenwert im gewählten Zeitraum. Die Diagrammhilfe und Wertetabelle erläutern den jeweiligen Datenstand.
+
+Warum ist der aktuelle Tag unvollständig?
+Sein Zähler kann bis zum Tagesende weiter steigen. Zeiten und Datumsdarstellung folgen der Website-Konfiguration. Der Messstatus aktualisiert den Zeitstempel des letzten angenommenen Aufrufs höchstens alle fünf Minuten.
+
+Kann ich nur ausgewählte Inhalte messen?
+Ja. Unter Messung kannst du öffentliche Inhaltstypen und Gruppen von Übersichts- beziehungsweise Archivseiten auswählen. Die Website-Summe umfasst dann nur diesen Messumfang. Die Änderung betrifft künftige Messungen; vorhandene historische Summen bleiben erhalten.
+
+Redaktion und Rankings
+──────────────────────
+
+Wie finde ich die beliebtesten Seiten direkt in WordPress?
+Aktiviere unter Inhaltslisten die Aufrufspalte für Seiten. Wähle danach in der Seitenliste einen Zeitraum und sortiere nach Seitenaufrufen. Dasselbe ist für Beiträge und weitere öffentliche Inhaltstypen möglich. Das Einblenden einer Spalte aktiviert keine zusätzliche Messung.
+
+Warum ist mein Ranking leer oder kürzer als erwartet?
+Prüfe Zeitraum, Inhaltstyp, Ausschlüsse und Mindestwerte. Vergleichsmethoden brauchen Vorperiodendaten; Monatsrankings ausreichende Werte in jedem vollständigen Monat. Nur aktuell öffentliche, nicht passwortgeschützte Inhalte kommen für die Ausgabe infrage.
+
+Wie erstelle ich einen Jahresrückblick?
+Erstelle ein Ranking für Beiträge, wähle Kalenderjahr und gewünschte Anzahl, etwa zehn. Prüfe die Datenabdeckung. Nutze bei Bedarf eine Momentaufnahme sowie Kopier- oder Druckausgabe. Ein zusätzlich gewähltes Veröffentlichungsjahr schränkt die Artikel nach Erscheinungsjahr ein.
+
+Was bleibt in einer Momentaufnahme fest?
+Ergebnis, Zeitraum und ursprüngliche Ranking-Definition werden gespeichert. Nicht mehr öffentliche Inhalte werden bei der Ausgabe weiterhin ausgeblendet. Eine Momentaufnahme ist deshalb kein unveränderliches Abbild beliebiger späterer Inhaltszustände.
+
+Dashboard
+─────────
+
+Kann ich das große Widget reduzieren?
+Ja. Aufrufsumme und Zeitraum bleiben fest, die übrigen Module sind optional. Administratoren legen Website-Vorgaben und persönlich wählbare Module fest. Bei erlaubter Anpassung kann jeder seine Ansicht im Widget ändern und zurücksetzen. Alternativ steht das kompakte Widget zur Verfügung.
+
+Öffentliche Ausgabe
+───────────────────
+
+Warum bleibt mein Aufrufzähler im Frontend leer?
+Unter Zugriff müssen öffentliche Ausgabe und genaue öffentliche Zahlen erlaubt sein. Ein inhaltsbezogener Zähler benötigt außerdem einen passenden WordPress-Inhaltskontext; andernfalls verwende den Zähler für die ganze Website. Prüfe anschließend, ob der Zeitraum Daten enthält.
+
+Kann ich öffentliche Rankings nur als Rangfolge anzeigen?
+Ja. Die erfassten Aufrufzahlen bleiben für berechtigte Benutzer im Admin verfügbar. Für die öffentliche Darstellung entscheidest du getrennt, ob neben der Rangfolge auch die Zahlen sichtbar sind. Gespeicherte Rankings benötigen ihre eigene Veröffentlichungsfreigabe; öffentliche Zähler benötigen die Zahlenfreigabe.
+
+Wo gestalte ich die Blöcke?
+Die Ausgabeeinstellungen stehen rechts in der Block-Sidebar, die Vorschau im Inhaltsbereich. Der Seitenaufrufzähler erlaubt Text vor und nach der Zahl und native Gestaltungsoptionen, soweit vom Theme unterstützt. Die Beitragslisten-Variante nutzt die normalen Gestaltungsblöcke des Abfrage-Loops.
+
+Zusatzstatistiken
+─────────────────
+
+Warum fehlen frühere Länder- oder Gerätedaten?
+Diese freiwilligen Kategorien beginnen erst mit ihrer Aktivierung. Reine historische Aufrufzahlen enthalten diese Angaben nicht. Kategorien unter fünf Aufrufen werden im gewählten Zeitraum ausgeblendet. Mindestens 30 Tage sind ein sinnvoller Einstieg; kleine Websites können mehr Zeit benötigen.
+
+Was sind ausgewählte Suchbegriffe?
+Du legst nicht personenbezogene Phrasen vorher fest, etwa Spenden oder Mitglied werden. Nur genaue Treffer nach Vereinheitlichung von Großschreibung und Leerzeichen erhalten Begriffszähler. Beliebige andere Suchtexte werden nicht gespeichert. Die allgemeine Suchnutzung bleibt als getrennte Summe sichtbar.
+
+Was passiert bei „Spenden“ und „Spenden gesucht“?
+Ist nur Spenden hinterlegt, zählt spenden zu diesem Begriff. Spenden gesucht passt nicht; die ganze Phrase müsste separat hinterlegt werden. Es gibt keine automatische Synonym- oder Themenzuordnung. Begriffe erscheinen erst ab fünf Aufrufen im Zeitraum.
+
+Import und Datenhaltung
+───────────────────────
+
+Kann ein Import Daten überschreiben oder doppelt zählen?
+Die Quelltabellen bleiben unverändert. TabulaMea verwendet dauerhafte Importbelege und schließt Tage ab seiner ersten eigenen Erfassung aus. Die unterstützte Wiederholung derselben Quelle ergänzt nur zulässige neue Werte. Zurückgesetzte oder ersetzte Quelldaten können diese Zuordnung verletzen. Vorher sichern, beide Erfassungen pausieren und die Vorschau prüfen; es gibt kein automatisches Rückgängigmachen.
+
+Was unterscheidet CSV, Konfigurationsübertragung und Statistikimport?
+CSV exportiert begrenzte Berichtsausgaben. Konfigurationsübertragung übernimmt geeignete Einstellungen und Ranking-Definitionen nach Vorschau. Statistikimport liest unterstützte historische Koko- oder Statify-Daten. Keines davon ersetzt eine vollständige WordPress-Datenbanksicherung.
+
+Funktioniert TabulaMea in Multisite?
+Ja, einschließlich Netzwerkaktivierung. Hauptwebsite und Unterwebsites führen eigene Messdaten und Einstellungen. Netzwerkvorgaben betreffen Widget-Anzeige und Anpassungsgrenzen; lokale Einstellungen haben Vorrang. Es gibt keine zusammengeführte Netzwerkgesamtstatistik.
+
+Was passiert bei Deaktivierung oder Deinstallation?
+Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und Aufgaben; dauerhafte Statistiken und Einstellungen bleiben standardmäßig erhalten. Nur die ausdrücklich aktivierte Löschoption entfernt die dauerhaften TabulaMea-Daten der betreffenden Website. Fremde Plugin-Daten werden nicht gelöscht.
+

@@ -1,0 +1,2132 @@
+msgid ""
+msgstr "Project-Id-Version: TabulaMea 0.9.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Export this period"
+msgstr "Diesen Zeitraum exportieren"
+
+msgid "Internal search"
+msgstr "Interne Suche"
+
+msgid "Daily pageviews"
+msgstr "Tägliche Seitenaufrufe"
+
+msgid "Public content totals"
+msgstr "Summen öffentlicher Inhalte"
+
+msgid "Referrer domains"
+msgstr "Referrer-Domains"
+
+msgid "Export data"
+msgstr "Daten exportieren"
+
+msgid "Download CSV"
+msgstr "CSV herunterladen"
+
+msgid "Exports use the displayed dates and privacy rules. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains."
+msgstr "Exporte verwenden die angezeigten Daten und Datenschutzregeln. Inhaltsexporte enthalten bis zu 50 passende öffentliche Inhalte; Referrer-Exporte bis zu 1.000 Domains."
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Pageviews"
+msgstr "Seitenaufrufe"
+
+msgid "No retained record"
+msgstr "Kein gespeicherter Datensatz"
+
+msgid "Title"
+msgstr "Titel"
+
+msgid "Start date"
+msgstr "Anfangsdatum"
+
+msgid "End date"
+msgstr "Enddatum"
+
+msgid "Referrer domain"
+msgstr "Referrer-Domain"
+
+msgid "Approved topic"
+msgstr "Freigegebenes Thema"
+
+msgid "Search-result views"
+msgstr "Suchergebnis-Aufrufe"
+
+msgid "Privacy-friendly website statistics"
+msgstr "Datenschutzfreundliche Website-Statistik"
+
+msgid "TabulaMea updates require a compatible deckerweb Updater. Update the other plugins that bundle this component, then check again."
+msgstr "TabulaMea-Updates benötigen einen kompatiblen deckerweb Updater. Aktualisiere die anderen Plugins, die diese Komponente mitbringen, und prüfe danach erneut."
+
+msgid "The update package does not match TabulaMea, its offered version or this website’s requirements. The installed version has not been replaced."
+msgstr "Das Update-Paket passt nicht zu TabulaMea, zur angebotenen Version oder zu den Anforderungen dieser Website. Die installierte Version wurde nicht ersetzt."
+
+msgid "TabulaMea pageview counter"
+msgstr "TabulaMea-Seitenaufrufzähler"
+
+msgid "TabulaMea popular content"
+msgstr "TabulaMea: Beliebte Inhalte"
+
+msgid "Days"
+msgstr "Tage"
+
+msgid "Number of items"
+msgstr "Anzahl der Einträge"
+
+msgid "Count the whole website"
+msgstr "Ganze Website zählen"
+
+msgid "Content type"
+msgstr "Inhaltstyp"
+
+msgid "Counters also require permission to publish exact numbers."
+msgstr "Zähler benötigen zusätzlich die Freigabe zur Veröffentlichung genauer Zahlen."
+
+msgid "Uses recorded pageviews. Public output must be enabled in TabulaMea settings."
+msgstr "Verwendet erfasste Seitenaufrufe. Die öffentliche Ausgabe muss in den TabulaMea-Einstellungen freigegeben sein."
+
+msgid "Text before the number"
+msgstr "Text vor der Zahl"
+
+msgid "Text after the number"
+msgstr "Text nach der Zahl"
+
+msgid "Display settings"
+msgstr "Ausgabeeinstellungen"
+
+msgid "No public output is available. Check publication permissions, the content selection and recorded data."
+msgstr "Keine öffentliche Ausgabe verfügbar. Bitte Freigaben, Inhaltsauswahl und vorhandene Daten prüfen."
+
+msgid "TabulaMea popular content loop"
+msgstr "TabulaMea: Beliebte Inhalte als Beitragsliste"
+
+msgid "Access denied."
+msgstr "Zugriff verweigert."
+
+msgid "Choose a valid date range."
+msgstr "Bitte einen gültigen Zeitraum wählen."
+
+msgid "View content"
+msgstr "Inhalt ansehen"
+
+msgid "Edit content"
+msgstr "Inhalt bearbeiten"
+
+msgid "Compared with previous period"
+msgstr "Vergleich zum vorherigen Zeitraum"
+
+msgid "%s%% change"
+msgstr "%s%% Veränderung"
+
+msgid "The previous baseline is too small for a useful percentage."
+msgstr "Die vorherige Datenbasis ist für eine sinnvolle Prozentangabe zu klein."
+
+msgid "Today is still incomplete."
+msgstr "Der heutige Tag ist noch unvollständig."
+
+msgid "Lists filtered to %s"
+msgstr "Listen auf %s gefiltert"
+
+msgid "Clear day filter"
+msgstr "Tagesfilter entfernen"
+
+msgid "Most viewed content"
+msgstr "Meistgelesene Inhalte"
+
+msgid "Referring websites"
+msgstr "Verweisende Websites"
+
+msgid "How these numbers are measured"
+msgstr "So entstehen diese Zahlen"
+
+msgid "Pageviews count visible page loads. Reloads count again. Recognizable bots, previews, search pages and excluded roles are omitted. No unique people, sessions or visitor profiles are calculated. Browser blocking and missing JavaScript can reduce counts."
+msgstr "Seitenaufrufe zählen sichtbare Seitenladungen. Erneutes Laden zählt erneut. Erkennbare Bots, Vorschauen, Suchseiten und ausgeschlossene Rollen bleiben unberücksichtigt. Eindeutige Personen, Sitzungen oder Besucherprofile werden nicht berechnet. Browserblockaden und fehlendes JavaScript können die Zähler verringern."
+
+msgid "No matching public content with recorded pageviews was found for these filters."
+msgstr "Für diese Filter wurden keine passenden öffentlichen Inhalte mit gespeicherten Seitenaufrufen gefunden."
+
+msgid "Content"
+msgstr "Inhalte"
+
+msgid "Statistics"
+msgstr "Statistiken"
+
+msgid "No external referrers recorded for this period."
+msgstr "Für diesen Zeitraum wurden keine externen Referrer erfasst."
+
+msgid "opens in a new tab"
+msgstr "öffnet einen neuen Tab"
+
+msgid "Only domains are retained. Missing referrers cannot be reconstructed; these counts do not represent all traffic sources."
+msgstr "Gespeichert werden nur Domains. Fehlende Referrer können nicht rekonstruiert werden; diese Zähler bilden nicht alle Zugriffsquellen ab."
+
+msgid "Pageviews over time"
+msgstr "Seitenaufrufe im Zeitverlauf"
+
+msgid "Monthly totals"
+msgstr "Monatssummen"
+
+msgid "Daily totals"
+msgstr "Tagessummen"
+
+msgid "Chart help"
+msgstr "Hilfe zum Diagramm"
+
+msgid "Hover or tap for exact values. Use Tab and arrow keys; activate a daily point to filter the lists. Gaps mean no retained record, not proven zero traffic."
+msgstr "Genaue Werte erscheinen per Maus oder Touch. Mit Tab und Pfeiltasten navigieren; ein aktivierter Tagespunkt filtert die Listen. Lücken bedeuten fehlende Datensätze, nicht nachweislich null Aufrufe."
+
+msgid "Dotted connection: no retained values between these points. It does not estimate daily counts."
+msgstr "Gepunktete Verbindung: Zwischen diesen Punkten liegen keine gespeicherten Werte vor. Tageswerte werden nicht geschätzt."
+
+msgid "No bar: zero views or no retained record. Hover, tap or use the values table to check each date."
+msgstr "Kein Balken: null Aufrufe oder kein gespeicherter Datensatz. Der Wert je Datum lässt sich per Maus, Touch oder Wertetabelle prüfen."
+
+msgid "Solid: selected period · Long dashes: preceding period"
+msgstr "Durchgezogen: ausgewählter Zeitraum · Lang gestrichelt: Vorzeitraum"
+
+msgid "Interactive pageview chart"
+msgstr "Interaktiver Verlauf der Seitenaufrufe"
+
+msgid "Known collection pause within this interval"
+msgstr "Bekannte Messpause innerhalb dieses Intervalls"
+
+msgid "Show monthly values"
+msgstr "Monatswerte anzeigen"
+
+msgid "Show daily values"
+msgstr "Tageswerte anzeigen"
+
+msgid "Import Koko Analytics statistics"
+msgstr "Koko-Analytics-Statistiken importieren"
+
+msgid "No supported Koko Analytics tables were found on this website. The source plugin does not need to be active."
+msgstr "Auf dieser Website wurden keine unterstützten Koko-Analytics-Tabellen gefunden. Das Quellplugin muss nicht aktiv sein."
+
+msgid "Pause TabulaMea measurement under Measurement before importing. Enable it again after the import is complete."
+msgstr "Pausiere vor dem Import die TabulaMea-Messung unter Messung. Aktiviere sie nach Abschluss des Imports wieder."
+
+msgid "Statify data has already been imported. Combining sources cannot reliably remove overlaps."
+msgstr "Statify-Daten wurden bereits importiert. Beim Kombinieren verschiedener Quellen lassen sich Überschneidungen nicht zuverlässig entfernen."
+
+msgid "Source: %1$s to %2$s · %3$s pageviews. Import through %4$s."
+msgstr "Quelle: %1$s bis %2$s · %3$s Seitenaufrufe. Import bis %4$s."
+
+msgid "Imports daily pageviews, content counts and referrer domains. Visitor counts are not imported because their measurement differs. Dates already measured by TabulaMea are excluded to prevent overlapping totals. Koko tables remain unchanged."
+msgstr "Übernommen werden tägliche Seitenaufrufe, Inhaltszähler und Referrer-Domains. Besucherzahlen entfallen wegen des abweichenden Messverfahrens. Bereits von TabulaMea gemessene Tage werden gegen überlappende Zähler ausgeschlossen. Koko-Tabellen bleiben unverändert."
+
+msgid "Eligible source pageviews: %1$s · Excluded overlapping pageviews: %2$s"
+msgstr "Übernehmbare Quell-Seitenaufrufe: %1$s · Ausgeschlossene überlappende Aufrufe: %2$s"
+
+msgid "Import status: %1$s · processed rows: %2$d."
+msgstr "Importstatus: %1$s · verarbeitete Zeilen: %2$d."
+
+msgid "Site totals"
+msgstr "Website-Zähler"
+
+msgid "Content totals"
+msgstr "Inhaltszähler"
+
+msgid "Referrer totals"
+msgstr "Referrer-Zähler"
+
+msgid "Completed"
+msgstr "Abgeschlossen"
+
+msgid "Continue import (next batch)"
+msgstr "Import fortsetzen (nächstes Paket)"
+
+msgid "Pause automatic import"
+msgstr "Automatischen Import pausieren"
+
+msgid "Import completed."
+msgstr "Import abgeschlossen."
+
+msgid "Import paused. Reload this page and try again."
+msgstr "Import pausiert. Lade diese Seite neu und versuche es erneut."
+
+msgid "Continue automatically"
+msgstr "Automatisch fortsetzen"
+
+msgid "I have a current database backup and have reviewed the source period above."
+msgstr "Ich habe eine aktuelle Datenbanksicherung und den oben angezeigten Quellzeitraum geprüft."
+
+msgid "Import these statistics"
+msgstr "Diese Statistiken importieren"
+
+msgid "Import runs in small batches. Continue until it reports done. Repeating it adds only source increases already identified by the import ledger. Keep Koko collection paused during the import for a consistent source."
+msgstr "Der Import läuft in kleinen Paketen. Setze ihn bis zum Status abgeschlossen fort. Wiederholte Importe ergänzen nur Zuwächse bereits erkennbarer Quelldaten. Die Koko-Erfassung sollte während des Imports für eine unveränderte Quelle pausieren."
+
+msgid "Pause measurement before importing."
+msgstr "Vor dem Import die Messung pausieren."
+
+msgid "Invalid import state."
+msgstr "Ungültiger Importstatus."
+
+msgid "Your overview, inside WordPress or on your website. Choose a saved ranking, a simple popular-content list or a pageview counter. All public output is opt-in."
+msgstr "Deine Übersicht – in WordPress oder auf deiner Website. Wähle ein gespeichertes Ranking, eine einfache Liste beliebter Inhalte oder einen Seitenaufrufzähler. Öffentliche Ausgaben benötigen eine ausdrückliche Freigabe."
+
+msgid "Equivalent blocks: saved ranking → TabulaMea content ranking; popular list → TabulaMea popular content; counter → TabulaMea pageview counter. Exact counts need their own publication permission."
+msgstr "Entsprechende Blöcke: gespeichertes Ranking → TabulaMea-Inhaltsranking; Beliebtheitsliste → TabulaMea – beliebte Inhalte; Zähler → TabulaMea-Seitenaufrufzähler. Genaue Zahlen benötigen eine eigene Veröffentlichungsfreigabe."
+
+msgid "Shortcode generator"
+msgstr "Shortcode-Generator"
+
+msgid "Choose an output and copy its shortcode into a Shortcode block or a compatible builder field. Public output requires explicit permission in Settings."
+msgstr "Wähle eine Ausgabe und kopiere ihren Shortcode in einen Shortcode-Block oder ein passendes Builder-Feld. Öffentliche Ausgabe benötigt die ausdrückliche Freigabe in den Einstellungen."
+
+msgid "Output"
+msgstr "Ausgabe"
+
+msgid "Saved content ranking"
+msgstr "Gespeichertes Inhaltsranking"
+
+msgid "Pageview counter"
+msgstr "Seitenaufrufzähler"
+
+msgid "Saved ranking"
+msgstr "Gespeichertes Ranking"
+
+msgid "Choose a ranking"
+msgstr "Ranking auswählen"
+
+msgid "Public output requires both the global public-ranking setting and publication of the selected ranking. A private ranking returns no public output."
+msgstr "Die öffentliche Ausgabe erfordert die globale Ranking-Freigabe und die Veröffentlichung des ausgewählten Rankings. Ein privates Ranking liefert keine öffentliche Ausgabe."
+
+msgid "Number of posts"
+msgstr "Anzahl der Beiträge"
+
+msgid "Metric"
+msgstr "Kennzahl"
+
+msgid "Count the whole website instead of the current content"
+msgstr "Gesamte Website statt des aktuellen Inhalts zählen"
+
+msgid "Defaults to 30 days. Minimum: 1 day."
+msgstr "Standard: 30 Tage. Mindestens 1 Tag."
+
+msgid "Generated shortcode"
+msgstr "Erzeugter Shortcode"
+
+msgid "Copied."
+msgstr "Kopiert."
+
+msgid "Select the shortcode and copy it with the keyboard."
+msgstr "Den Shortcode markieren und per Tastatur kopieren."
+
+msgid "Copy shortcode"
+msgstr "Shortcode kopieren"
+
+msgid "JavaScript is needed for the generator. Copy and adapt one of the examples below."
+msgstr "Der Generator benötigt JavaScript. Ohne JavaScript eines der folgenden Beispiele kopieren und anpassen."
+
+msgid "Available shortcodes"
+msgstr "Verfügbare Shortcodes"
+
+msgid "Uses a saved ranking, including its period, content filters, count/image settings and optional snapshot. The only parameter is id."
+msgstr "Verwendet ein gespeichertes Ranking mit dessen Zeitraum, Inhaltsfiltern, Zähler-/Bildeinstellungen und optionaler Momentaufnahme. Der einzige Parameter ist id."
+
+msgid "Linked list of popular content. Parameters: number (default 5), days (30), post_type (post)."
+msgstr "Verlinkte Liste beliebter Inhalte. Parameter: number (Standard 5), days (30), post_type (post)."
+
+msgid "Pageview counter. Parameters: days (default 30), global (false = current content; true = whole website). No visitor identification."
+msgstr "Seitenaufrufzähler. Parameter: days (Standard 30), global (false = aktueller Inhalt; true = ganze Website). Keine Besuchererkennung."
+
+msgid "Available blocks"
+msgstr "Verfügbare Blöcke"
+
+msgid "In the block editor, open the block inserter and search for the block name. Shortcodes can also be inserted using the WordPress Shortcode block."
+msgstr "Im Block-Editor die Block-Auswahl öffnen und nach dem Blocknamen suchen. Shortcodes lassen sich auch im WordPress-Block „Shortcode“ einsetzen."
+
+msgid "TabulaMea content ranking"
+msgstr "TabulaMea-Inhaltsranking"
+
+msgid "Displays a saved ranking. Select a published ranking in the block settings; public output must also be enabled globally."
+msgstr "Zeigt ein gespeichertes Ranking. In den Block-Einstellungen ein veröffentlichtes Ranking auswählen; die öffentliche Ausgabe muss auch global freigegeben sein."
+
+msgid "Displays current-content or whole-site pageviews. Choose the period and scope in the block sidebar; the block itself previews the output."
+msgstr "Zeigt Seitenaufrufe des aktuellen Inhalts oder der gesamten Website. Zeitraum und Umfang in der Block-Sidebar wählen; der Block zeigt die Ausgabe als Vorschau."
+
+msgid "Linked popular-content list with controls for period, item count and public content type."
+msgstr "Verlinkte Liste beliebter Inhalte mit Einstellungen für Zeitraum, Anzahl und öffentlichen Inhaltstyp."
+
+msgid "Based on the WordPress Query Loop block, ordered by recorded pageviews over the last 30 days. Design titles, images and excerpts using normal blocks. Up to 50 ranked contents; public output must be enabled."
+msgstr "Basiert auf dem WordPress-Block Abfrage-Loop, sortiert nach erfassten Seitenaufrufen der letzten 30 Tage. Titel, Bilder und Auszüge lassen sich mit normalen Blöcken gestalten. Bis zu 50 platzierte Inhalte; die öffentliche Ausgabe muss freigegeben sein."
+
+msgid "Technical details"
+msgstr "Technische Details"
+
+msgid "Devices"
+msgstr "Geräte"
+
+msgid "Browsers"
+msgstr "Browser"
+
+msgid "Operating systems"
+msgstr "Betriebssysteme"
+
+msgid "Countries"
+msgstr "Länder"
+
+msgid "Disabled"
+msgstr "Deaktiviert"
+
+msgid "Collection is technically paused"
+msgstr "Erfassung technisch pausiert"
+
+msgid "Country database missing; countries remain unknown"
+msgstr "Länderdatenbank fehlt; Länder bleiben unbekannt"
+
+msgid "Collecting"
+msgstr "Erfassung aktiv"
+
+msgid "Waiting for the first accepted pageview"
+msgstr "Wartet auf den ersten akzeptierten Seitenaufruf"
+
+msgid "Additional statistics"
+msgstr "Zusatzstatistiken"
+
+msgid "These reports count pageviews, not unique people. Percentages use displayed categories only; categories below 5 pageviews and their totals are never exported."
+msgstr "Diese Berichte zählen Seitenaufrufe, keine eindeutigen Personen. Prozentwerte beziehen sich nur auf angezeigte Kategorien; Kategorien unter 5 Aufrufen und ihre Summen werden nicht exportiert."
+
+msgid "Choose a valid date range; the end must not precede the start."
+msgstr "Einen gültigen Zeitraum wählen; das Enddatum darf nicht vor dem Anfangsdatum liegen."
+
+msgid "Collection started:"
+msgstr "Zusätzliche Statistik erfasst seit:"
+
+msgid "Not collected yet"
+msgstr "Noch keine Daten erfasst"
+
+msgid "No categories reach the display threshold in this period. Check the collection status and try a longer period."
+msgstr "In diesem Zeitraum erreicht keine Kategorie die Anzeigeschwelle. Erfassungsstatus prüfen und einen längeren Zeitraum versuchen."
+
+msgid "Category"
+msgstr "Kategorie"
+
+msgid "Share of displayed categories"
+msgstr "Anteil an den angezeigten Kategorien"
+
+msgid "How to read this report"
+msgstr "Diesen Bericht richtig lesen"
+
+msgid "Detection is approximate. Unknown includes requests that could not be classified. Its percentage is shown only when that category meets the same display threshold. Hidden categories are excluded from percentage denominators."
+msgstr "Die Erkennung liefert Näherungswerte. „Unbekannt“ umfasst nicht zuordenbare Aufrufe. Der Prozentwert erscheint nur, wenn auch diese Kategorie die Anzeigeschwelle erreicht. Verborgene Kategorien fließen nicht in die Prozentberechnung ein."
+
+msgid "Data coverage"
+msgstr "Datenabdeckung"
+
+msgid "Available statistics history since:"
+msgstr "Verfügbare Statistikhistorie seit:"
+
+msgid "No data available"
+msgstr "Keine Daten vorhanden"
+
+msgid "This is the earliest retained record, not necessarily the original installation date."
+msgstr "Dies ist der früheste erhaltene Datensatz, nicht unbedingt das ursprüngliche Installationsdatum."
+
+msgid "Retained records: %1$s to %2$s, with pageviews on %3$d days."
+msgstr "Erhaltene Daten: %1$s bis %2$s, mit Seitenaufrufen an %3$d Tagen."
+
+msgid "An initial observation basis is available. This is not a guarantee of statistical significance."
+msgstr "Eine erste Beobachtungsbasis ist vorhanden. Dies garantiert keine statistische Aussagekraft."
+
+msgid "Early or sparse data: allow at least 30 calendar days, sufficient traffic and regular recorded days before comparing categories."
+msgstr "Frühe oder geringe Datenbasis: Vor Vergleichen mindestens 30 Kalendertage, genügend Aufrufe und regelmäßig erfasste Tage abwarten."
+
+msgid "The initial-basis indicator requires at least 30 calendar days, records on 14 days and 100 pageviews. It is an orientation aid, not a significance test."
+msgstr "Die Kennzeichnung einer ersten Datenbasis setzt mindestens 30 Kalendertage, Datensätze an 14 Tagen und 100 Seitenaufrufe voraus. Sie dient der Orientierung, nicht als Signifikanztest."
+
+msgid "Days without records may mean no traffic or a collection gap. Thirty days alone do not guarantee a useful comparison. Missing history is never estimated."
+msgstr "Tage ohne Datensätze können keinen Traffic oder eine Erfassungslücke bedeuten. 30 Tage allein garantieren keinen sinnvollen Vergleich. Fehlende Bestandsdaten werden niemals geschätzt."
+
+msgid "Your content. Its impact. All in view."
+msgstr "Deine Inhalte. Ihre Wirkung. Alles im Blick."
+
+msgid "Action completed."
+msgstr "Aktion abgeschlossen."
+
+msgid "The action could not be completed. Check the input or create a new preview if it expired or the target settings changed."
+msgstr "Die Aktion konnte nicht abgeschlossen werden. Eingaben prüfen oder eine neue Vorschau erstellen, falls sie abgelaufen ist oder die Zieleinstellungen geändert wurden."
+
+msgid "Overview"
+msgstr "Übersicht"
+
+msgid "Measurement"
+msgstr "Messung"
+
+msgid "Access"
+msgstr "Zugriff"
+
+msgid "Dashboard"
+msgstr "Dashboard"
+
+msgid "Additional collection"
+msgstr "Zusätzliche Erfassung"
+
+msgid "Content lists"
+msgstr "Inhaltslisten"
+
+msgid "Shortcodes & blocks"
+msgstr "Shortcodes & Blöcke"
+
+msgid "Data & transfer"
+msgstr "Daten & Übertragung"
+
+msgid "The statistics store is unavailable. Check database permissions and reactivate the plugin."
+msgstr "Der Statistikspeicher ist nicht verfügbar. Prüfe die Datenbankrechte und aktiviere das Plugin erneut."
+
+msgid "Settings sections"
+msgstr "Einstellungsbereiche"
+
+msgid "Content rankings use retained pageviews for posts and pages. Additional statistics show independently collected country and technology totals."
+msgstr "Inhaltsrankings nutzen gespeicherte Seitenaufrufe von Beiträgen und Seiten. Zusatzstatistiken zeigen unabhängig erfasste Länder- und Technikkategorien."
+
+msgid "Access and dashboard"
+msgstr "Zugriff und Dashboard"
+
+msgid "Administrators retain access for recovery. Personal rules override role rules. Settings and access policy can only be changed by website administrators."
+msgstr "Administratoren behalten einen sicheren Zugang. Persönliche Regeln haben Vorrang vor Rollenregeln. Einstellungen und Zugriffsregeln dürfen nur Website-Administratoren ändern."
+
+msgid "View statistics"
+msgstr "Statistiken ansehen"
+
+msgid "View compact dashboard widget"
+msgstr "Kompaktes Dashboard-Widget ansehen"
+
+msgid "Personal rules"
+msgstr "Persönliche Regeln"
+
+msgid "User"
+msgstr "Benutzer"
+
+msgid "Widget"
+msgstr "Widget"
+
+msgid "Remove personal rule"
+msgstr "Persönliche Regel entfernen"
+
+msgid "Use role rules"
+msgstr "Rollenregeln übernehmen"
+
+msgid "Allow"
+msgstr "Erlauben"
+
+msgid "Deny"
+msgstr "Sperren"
+
+msgid "Use role rules again"
+msgstr "Wieder Rollenregeln verwenden"
+
+msgid "Allow explicitly published rankings on the public website"
+msgstr "Ausdrücklich freigegebene Rankings auf der öffentlichen Website erlauben"
+
+msgid "Also allow exact pageview counts in public output"
+msgstr "Genaue Seitenaufrufzahlen ebenfalls öffentlich ausgeben dürfen"
+
+msgid "Ranking order can be published without exact counts. Counters remain empty until exact counts are allowed."
+msgstr "Die Rangfolge kann ohne genaue Zahlen veröffentlicht werden. Zähler bleiben leer, bis genaue Zahlen freigegeben sind."
+
+msgid "Dashboard widgets"
+msgstr "Dashboard-Widgets"
+
+msgid "The overview widget follows statistics access. The compact widget uses its own access rules. Both retain WordPress screen options."
+msgstr "Das Übersichts-Widget folgt dem Statistikzugriff. Das kompakte Widget verwendet eigene Zugriffsregeln. Beide bleiben über die WordPress-Ansichtsoptionen steuerbar."
+
+msgid "Compact widget"
+msgstr "Kompaktes Widget"
+
+msgid "Enable compact dashboard widget"
+msgstr "Kompaktes Dashboard-Widget aktivieren"
+
+msgid "Optional country and technology reports"
+msgstr "Optionale Länder- und Technikberichte"
+
+msgid "These reports count accepted pageviews from activation onward. No additional browser request is sent. They do not identify visitors and cannot reconstruct past country or technology data."
+msgstr "Diese Berichte zählen akzeptierte Seitenaufrufe ab Aktivierung. Es wird keine zusätzliche Browseranfrage gesendet. Sie erkennen keine einzelnen Besucher und können frühere Länder- oder Technikdaten nicht rekonstruieren."
+
+msgid "Collect device, browser and operating system categories"
+msgstr "Geräte-, Browser- und Betriebssystemkategorien erfassen"
+
+msgid "Collect country categories using a local GeoIP database"
+msgstr "Länderkategorien mit einer lokalen GeoIP-Datenbank erfassen"
+
+msgid "Allow downloading and monthly updating DB-IP Country Lite from download.db-ip.com"
+msgstr "Download und monatliche Aktualisierung von DB-IP Country Lite über download.db-ip.com erlauben"
+
+msgid "Only country and technology totals are stored, without IP addresses or full browser headers. Country lookup uses the direct connection address; reverse proxies require correct server configuration. Browser and device detection is approximate."
+msgstr "Gespeichert werden nur Länder- und Technikzähler, ohne IP-Adressen oder vollständige Browserkennungen. Die Länderzuordnung nutzt die direkte Verbindungsadresse; Reverse-Proxys benötigen eine korrekte Serverkonfiguration. Browser- und Geräteerkennung liefern Näherungswerte."
+
+msgid "Keep dimension reports for months"
+msgstr "Zusatzberichte für diese Anzahl Monate aufbewahren"
+
+msgid "Delete all TabulaMea settings, statistics, rankings and snapshots when uninstalling on this website. Source data belonging to other plugins is preserved."
+msgstr "Bei Deinstallation auf dieser Website alle TabulaMea-Einstellungen, Statistiken, Rankings und Momentaufnahmen löschen. Quelldaten anderer Plugins bleiben erhalten."
+
+msgid "Country database"
+msgstr "Länderdatenbank"
+
+msgid "Database month:"
+msgstr "Datenbankstand:"
+
+msgid "Not installed"
+msgstr "Nicht installiert"
+
+msgid "Download or refresh country database"
+msgstr "Länderdatenbank herunterladen oder aktualisieren"
+
+msgid "WordPress website-administration capability"
+msgstr "WordPress-Berechtigung zur Website-Verwaltung"
+
+msgid "User not found on this website."
+msgstr "Benutzer auf dieser Website nicht gefunden."
+
+msgid "Administrator recovery access"
+msgstr "Sicherer Zugang für Administratoren"
+
+msgid "Personal permission"
+msgstr "Persönliche Erlaubnis"
+
+msgid "Personal restriction"
+msgstr "Persönliche Einschränkung"
+
+msgid "Role rules"
+msgstr "Rollenregeln"
+
+msgid "Find a user"
+msgstr "Benutzer suchen"
+
+msgid "Search by name, login or email"
+msgstr "Nach Name, Anmeldename oder E-Mail suchen"
+
+msgid "Search users"
+msgstr "Benutzer suchen"
+
+msgid "Up to 20 matches. Select a user to inspect permissions or add a personal rule."
+msgstr "Bis zu 20 Treffer. Einen Benutzer auswählen, um Rechte zu prüfen oder eine persönliche Regel hinzuzufügen."
+
+msgid "Effective access"
+msgstr "Tatsächliche Zugriffsrechte"
+
+msgid "This checks permissions without signing in as the selected user. WordPress screen options may still hide a widget."
+msgstr "Die Rechte werden ohne Anmeldung als ausgewählter Benutzer geprüft. WordPress-Ansichtsoptionen können ein Widget zusätzlich ausblenden."
+
+msgid "Area"
+msgstr "Bereich"
+
+msgid "Reason"
+msgstr "Begründung"
+
+msgid "Full statistics"
+msgstr "Vollständige Statistik"
+
+msgid "Rankings, search and additional reports"
+msgstr "Rankings, Suche und Zusatzberichte"
+
+msgid "Statistics overview widget"
+msgstr "Statistikübersichts-Widget"
+
+msgid "Plugin settings and access policy"
+msgstr "Plugin-Einstellungen und Zugriffsregeln"
+
+msgid "Allowed"
+msgstr "Erlaubt"
+
+msgid "Unavailable"
+msgstr "Nicht verfügbar"
+
+msgid "Statistics storage is unavailable"
+msgstr "Statistikspeicher nicht verfügbar"
+
+msgid "A website display switch or an access rule may restrict this area."
+msgstr "Ein Anzeige-Schalter der Website oder eine Zugriffsregel kann diesen Bereich einschränken."
+
+msgid "Add personal access rule"
+msgstr "Persönliche Zugriffsregel hinzufügen"
+
+msgid "Administrators only"
+msgstr "Nur Administratoren"
+
+msgid "Editors may view statistics"
+msgstr "Redakteure dürfen Statistiken ansehen"
+
+msgid "Editors see the compact widget only"
+msgstr "Redakteure sehen nur das kompakte Widget"
+
+msgid "Permission templates"
+msgstr "Berechtigungsvorlagen"
+
+msgid "Templates change role rules. Existing personal rules keep their priority; administrator recovery access remains available. Review the changes before applying."
+msgstr "Vorlagen ändern Rollenregeln. Bestehende persönliche Regeln behalten Vorrang; der sichere Administrator-Zugang bleibt erhalten. Änderungen vor dem Anwenden prüfen."
+
+msgid "Template"
+msgstr "Vorlage"
+
+msgid "Preview changes"
+msgstr "Änderungen vorab prüfen"
+
+msgid "Which ranking method fits?"
+msgstr "Welche Ranking-Methode passt?"
+
+msgid "Most viewed"
+msgstr "Meistaufgerufen"
+
+msgid "Example: the ten posts with the most recorded pageviews in the selected year."
+msgstr "Beispiel: die zehn Beiträge mit den meisten erfassten Seitenaufrufen im gewählten Jahr."
+
+msgid "Gaining attention"
+msgstr "Gewinnt an Aufmerksamkeit"
+
+msgid "Example: content with the largest absolute increase compared with the preceding equally long period. Small changes are not proof of a trend."
+msgstr "Beispiel: Inhalte mit dem größten absoluten Zuwachs gegenüber dem vorherigen gleich langen Zeitraum. Kleine Veränderungen belegen noch keinen Trend."
+
+msgid "Losing attention"
+msgstr "Verliert an Aufmerksamkeit"
+
+msgid "Example: previously popular content whose recorded views fell most. This does not assess content quality."
+msgstr "Beispiel: zuvor beliebte Inhalte, deren erfasste Aufrufe am stärksten zurückgingen. Dies bewertet nicht die Qualität der Inhalte."
+
+msgid "Popular every month"
+msgstr "Jeden Monat beliebt"
+
+msgid "Example: content reaching at least ten views in each of three complete calendar months. Requires retained history for every selected month."
+msgstr "Beispiel: Inhalte mit mindestens zehn Aufrufen in jedem von drei vollständigen Kalendermonaten. Erfordert gespeicherte Daten für alle gewählten Monate."
+
+msgid "Older content gaining attention"
+msgstr "Ältere Inhalte mit neuer Aufmerksamkeit"
+
+msgid "Example: a post published over a year ago that is now receiving more views. Uses publication age and an absolute period comparison."
+msgstr "Beispiel: ein über ein Jahr alter Beitrag, der jetzt mehr Aufrufe erhält. Berücksichtigt das Veröffentlichungsalter und einen absoluten Zeitraumvergleich."
+
+msgid "The retained history does not cover all requested complete months. Save this definition for later, or choose fewer months before interpreting its results."
+msgstr "Die gespeicherten Daten decken nicht alle angeforderten vollständigen Monate ab. Die Definition kann für später gespeichert werden; für eine jetzige Auswertung sind weniger Monate sinnvoll."
+
+msgid "This period starts before the retained measurement history. Results describe the available records only."
+msgstr "Dieser Zeitraum beginnt vor den gespeicherten Messdaten. Ergebnisse beschreiben ausschließlich die vorhandenen Datensätze."
+
+msgid "Changes are absolute counts. The minimum baseline avoids treating tiny numbers as meaningful trends. These numbers do not measure quality or conversions."
+msgstr "Veränderungen sind absolute Zahlen. Die Mindestdatenbasis verhindert, dass winzige Zahlen als aussagekräftige Trends erscheinen. Die Werte messen weder Qualität noch Conversions."
+
+msgid "Rules captured with this snapshot"
+msgstr "Mit dieser Momentaufnahme gespeicherte Regeln"
+
+msgid "Maximum items: %d"
+msgstr "Höchstzahl der Einträge: %d"
+
+msgid "Minimum views: %1$d · Complete months: %2$d"
+msgstr "Mindestaufrufe: %1$d · Vollständige Monate: %2$d"
+
+msgid "Excluded contents: %1$d · Publication year: %2$s"
+msgstr "Ausgeschlossene Inhalte: %1$d · Veröffentlichungsjahr: %2$s"
+
+msgid "All years"
+msgstr "Alle Jahre"
+
+msgid "Remove from my favorites"
+msgstr "Aus meinen Favoriten entfernen"
+
+msgid "Add to my favorites"
+msgstr "Zu meinen Favoriten hinzufügen"
+
+msgid "Statistics overview"
+msgstr "Statistikübersicht"
+
+msgid "Content rankings"
+msgstr "Inhaltsrankings"
+
+msgid "TabulaMea: Statistics for this content"
+msgstr "TabulaMea: Statistik zu diesem Inhalt"
+
+msgid "Measurement status and diagnostics"
+msgstr "Messstatus und Diagnose"
+
+msgid "Shortcode generator and blocks"
+msgstr "Shortcode-Generator und Blöcke"
+
+msgid "Import, export and data care"
+msgstr "Import, Export und Datenpflege"
+
+msgid "Create a ranking"
+msgstr "Ranking erstellen"
+
+msgid "TabulaMea statistics storage"
+msgstr "TabulaMea-Statistikspeicher"
+
+msgid "TabulaMea maintenance"
+msgstr "TabulaMea-Wartung"
+
+msgid "Review TabulaMea status"
+msgstr "TabulaMea-Status prüfen"
+
+msgid "TabulaMea storage is available"
+msgstr "Der TabulaMea-Speicher ist verfügbar"
+
+msgid "TabulaMea storage needs attention"
+msgstr "Der TabulaMea-Speicher muss geprüft werden"
+
+msgid "Checks the plugin schema and transactional tables. This does not prove that every browser can deliver pageviews. Use the guided frontend test for that."
+msgstr "Prüft Plugin-Schema und transaktionale Tabellen. Dies belegt nicht die Zustellung aus jedem Browser. Dafür dient der geführte Frontend-Test."
+
+msgid "TabulaMea maintenance is configured"
+msgstr "Die TabulaMea-Wartung ist eingerichtet"
+
+msgid "Review TabulaMea measurement capacity"
+msgstr "TabulaMea-Messkapazität prüfen"
+
+msgid "Review TabulaMea maintenance or country data"
+msgstr "TabulaMea-Wartung oder Länderdaten prüfen"
+
+msgid "The anonymous request budget was reached repeatedly in the last ten minutes. Some deliveries were rejected. Review the configured limit and server capacity."
+msgstr "Das anonyme Anfragebudget wurde in den letzten zehn Minuten wiederholt erreicht. Einige Zustellungen wurden abgewiesen. Das eingestellte Limit und die Serverkapazität prüfen."
+
+msgid "Checks overdue scheduled work and required local country data. Low traffic, paused collection and disabled optional reports are not errors."
+msgstr "Prüft überfällige Aufgaben und erforderliche lokale Länderdaten. Wenig Traffic, pausierte Messung und deaktivierte Zusatzberichte sind keine Fehler."
+
+msgid "Plugin version"
+msgstr "Plugin-Version"
+
+msgid "WordPress version"
+msgstr "WordPress-Version"
+
+msgid "PHP version"
+msgstr "PHP-Version"
+
+msgid "Multisite"
+msgstr "Multisite"
+
+msgid "Statistics storage"
+msgstr "Statistikspeicher"
+
+msgid "Last accepted request"
+msgstr "Letzte angenommene Anfrage"
+
+msgid "Technology collection"
+msgstr "Technikkategorien erfassen"
+
+msgid "Country collection"
+msgstr "Länderkategorien erfassen"
+
+msgid "Country database readable"
+msgstr "Länderdatenbank lesbar"
+
+msgid "Scheduled maintenance"
+msgstr "Geplante Wartung"
+
+msgid "Additional retention in months"
+msgstr "Zusatzdaten-Aufbewahrung in Monaten"
+
+msgid "Storage schema"
+msgstr "Speicherschema"
+
+msgid "Maximum valid measurement requests per minute (site-wide)"
+msgstr "Maximale gültige Messanfragen pro Minute (gesamte Website)"
+
+msgid "Recent operational status"
+msgstr "Letzter Betriebsstatus"
+
+msgid "Last successful maintenance"
+msgstr "Letzte erfolgreiche Wartung"
+
+msgid "Network activation"
+msgstr "Netzwerkaktivierung"
+
+msgid "Search collection"
+msgstr "Sucherfassung"
+
+msgid "Approximate storage in bytes"
+msgstr "Ungefährer Speicherbedarf in Bytes"
+
+msgid "Retained from"
+msgstr "Gespeichert ab"
+
+msgid "Retained through"
+msgstr "Gespeichert bis"
+
+msgid "Country database month"
+msgstr "Monat der Länderdatenbank"
+
+msgid "Network display defaults"
+msgstr "Netzwerk-Anzeigevorgaben"
+
+msgid "Enabled"
+msgstr "Aktiviert"
+
+msgid "Not yet recorded"
+msgstr "Noch nicht erfasst"
+
+msgid "No recent error"
+msgstr "Kein neuerer Fehler"
+
+msgid "Request limit reached"
+msgstr "Anfragelimit erreicht"
+
+msgid "Storage error"
+msgstr "Speicherfehler"
+
+msgid "Operational settings only; no visitor or content details."
+msgstr "Nur Betriebseinstellungen; keine Besucher- oder Inhaltsdetails."
+
+msgid "Statistics are shown only for public content."
+msgstr "Statistiken werden nur für öffentliche Inhalte angezeigt."
+
+msgid "Last 30 days"
+msgstr "Letzte 30 Tage"
+
+msgid "Pageviews: %1$s · Previous period: %2$s"
+msgstr "Seitenaufrufe: %1$s · Vorheriger Zeitraum: %2$s"
+
+msgid "Open content statistics"
+msgstr "Inhaltsstatistik öffnen"
+
+msgid "Content statistics"
+msgstr "Inhaltsstatistik"
+
+msgid "Private mode must be boolean."
+msgstr "Der Private-Modus muss ein boolescher Wert sein."
+
+msgid "Invalid authentication provider."
+msgstr "Ungültiger Authentifizierungsanbieter."
+
+msgid "The plugin must be installed in a stable slug directory."
+msgstr "Das Plugin muss in einem Verzeichnis mit einem festen Slug installiert sein."
+
+msgid "Invalid GitHub repository URL."
+msgstr "Ungültige GitHub-Repository-URL."
+
+msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
+msgstr "Das private Update konnte nicht autorisiert werden. Prüfe die Repository-Zugangsdaten und suche erneut nach Updates."
+
+msgid "Could not create the update download file."
+msgstr "Die Datei für den Update-Download konnte nicht erstellt werden."
+
+msgid "The private update download failed. Check credentials and try again."
+msgstr "Der Download des privaten Updates ist fehlgeschlagen. Prüfe die Zugangsdaten und versuche es erneut."
+
+msgid "Could not access the update filesystem."
+msgstr "Auf das Dateisystem für das Update konnte nicht zugegriffen werden."
+
+msgid "GitHub release does not contain the plugin main file."
+msgstr "Der GitHub-Release enthält nicht die Hauptdatei des Plugins."
+
+msgid "Could not prepare the GitHub release package."
+msgstr "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
+
+msgid "See the release on GitHub."
+msgstr "Sieh dir den Release auf GitHub an."
+
+msgid "Use the widget filters below"
+msgstr "Die folgenden Widget-Filter verwenden"
+
+msgid "Saved ranking in the compact widget"
+msgstr "Gespeichertes Ranking im kompakten Widget"
+
+msgid "A selected saved ranking keeps its own filters, period and snapshot. Public publication is not required for this private widget."
+msgstr "Ein ausgewähltes Ranking behält seine eigenen Filter, seinen Zeitraum und seine Momentaufnahme. Für dieses private Widget muss es nicht öffentlich freigegeben sein."
+
+msgid "Default widget period"
+msgstr "Standardzeitraum des Widgets"
+
+msgid "Number of widget items (1–20)"
+msgstr "Anzahl der Widget-Einträge (1–20)"
+
+msgid "All public content types"
+msgstr "Alle öffentlichen Inhaltstypen"
+
+msgid "Widget content type"
+msgstr "Inhaltstyp im Widget"
+
+msgid "Show pageview total"
+msgstr "Summe der Seitenaufrufe anzeigen"
+
+msgid "TabulaMea counts pageviews without identifying individual visitors. Personal periods affect only the current user on this website."
+msgstr "TabulaMea zählt Seitenaufrufe ohne Erkennung einzelner Besucher. Persönliche Zeiträume gelten nur für den aktuellen Benutzer auf dieser Website."
+
+msgid "Saved snapshot"
+msgstr "Gespeicherte Momentaufnahme"
+
+msgid "No site total was saved with this older snapshot."
+msgstr "Mit dieser älteren Momentaufnahme wurde keine Website-Gesamtsumme gespeichert."
+
+msgid "Saved site pageviews:"
+msgstr "Gespeicherte Website-Seitenaufrufe:"
+
+msgid "Pageviews:"
+msgstr "Seitenaufrufe:"
+
+msgid "My widget period"
+msgstr "Mein Widget-Zeitraum"
+
+msgid "Period"
+msgstr "Zeitraum"
+
+msgid "Save my display"
+msgstr "Meine Anzeige speichern"
+
+msgid "General widget settings"
+msgstr "Allgemeine Widget-Einstellungen"
+
+msgid "Allow personal widget adjustments"
+msgstr "Persönliche Widget-Anpassungen erlauben"
+
+msgid "Maximum personal widget items (1–20)"
+msgstr "Maximale Anzahl persönlicher Widget-Einträge (1–20)"
+
+msgid "Personal choices apply only to that user on this website. Turning them off restores website defaults without deleting saved preferences. Saved compact rankings keep their own definition."
+msgstr "Persönliche Einstellungen gelten nur für diesen Benutzer auf dieser Website. Beim Ausschalten gelten wieder die Website-Vorgaben; gespeicherte Vorlieben bleiben erhalten. Gespeicherte kompakte Rankings behalten ihre eigene Definition."
+
+msgid "Period comparison"
+msgstr "Zeitraumvergleich"
+
+msgid "Pageview chart"
+msgstr "Aufrufdiagramm"
+
+msgid "Pageviews and period are always shown."
+msgstr "Seitenaufrufe und Zeitraum werden immer angezeigt."
+
+msgid "Optional modules"
+msgstr "Optionale Module"
+
+msgid "Large widget"
+msgstr "Großes Widget"
+
+msgid "Enable statistics overview widget"
+msgstr "Statistikübersichts-Widget aktivieren"
+
+msgid "Overview widget period"
+msgstr "Zeitraum des Übersichts-Widgets"
+
+msgid "Default overview items (1–10)"
+msgstr "Einträge im Übersichts-Widget (1–10)"
+
+msgid "Default chart style"
+msgstr "Standard-Diagrammdarstellung"
+
+msgid "Line"
+msgstr "Linie"
+
+msgid "Bars"
+msgstr "Balken"
+
+msgid "Default modules"
+msgstr "Standardmodule"
+
+msgid "Modules users may choose"
+msgstr "Persönlich wählbare Module"
+
+msgid "Only these modules can be added in personal widget settings. Website defaults remain available."
+msgstr "Nur diese Module können persönlich hinzugefügt werden. Die Standardmodule der Website bleiben verfügbar."
+
+msgid "Customize my overview"
+msgstr "Meine Übersicht anpassen"
+
+msgid "Reset to website defaults"
+msgstr "Auf Website-Vorgaben zurücksetzen"
+
+msgid "Display settings are managed by the website administrator."
+msgstr "Die Anzeigeeinstellungen werden vom Website-Administrator vorgegeben."
+
+msgid "Import Statify statistics"
+msgstr "Statify-Statistiken importieren"
+
+msgid "No supported Statify table was found on this website."
+msgstr "Auf dieser Website wurde keine unterstützte Statify-Tabelle gefunden."
+
+msgid "Source: %1$s to %2$s · %3$s records. Import through %4$s."
+msgstr "Quelle: %1$s bis %2$s · %3$s Datensätze. Import bis einschließlich %4$s."
+
+msgid "Each source row becomes one historical pageview. Public content is mapped by its current local URL where possible. Unmapped content contributes to overview totals only. Referrers are reduced to external domains; search strings and other query parameters are not retained."
+msgstr "Jede Quellzeile wird als historischer Seitenaufruf übernommen. Öffentliche Inhalte werden nach Möglichkeit über ihre aktuelle lokale URL zugeordnet. Nicht zugeordnete Inhalte tragen nur zu Übersichtssummen bei. Referrer werden auf externe Domains reduziert; Suchstrings und andere Abfrageparameter bleiben ungespeichert."
+
+msgid "Another statistics source has already been imported. Combining sources cannot reliably identify overlapping pageviews, so this import is unavailable on this website."
+msgstr "Eine andere Statistikquelle wurde bereits importiert. Beim Kombinieren verschiedener Quellen lassen sich überlappende Aufrufe nicht zuverlässig erkennen. Dieser Import ist deshalb auf dieser Website nicht verfügbar."
+
+msgid "Pause measurement before importing. Also pause Statify collection and make a database backup."
+msgstr "Vor dem Import die Messung und die Statify-Erfassung pausieren und eine Datenbanksicherung erstellen."
+
+msgid "Processed source rows: %1$d · Mapped public contents: %2$d · Status: %3$s"
+msgstr "Verarbeitete Quellzeilen: %1$d · Zugeordnete öffentliche Inhalte: %2$d · Status: %3$s"
+
+msgid "In progress"
+msgstr "In Bearbeitung"
+
+msgid "I have a backup, reviewed the source and paused both collectors."
+msgstr "Ich habe eine Sicherung, die Quelle geprüft und beide Erfassungen pausiert."
+
+msgid "Continue next batch"
+msgstr "Nächstes Paket verarbeiten"
+
+msgid "Start reviewed import"
+msgstr "Geprüften Import starten"
+
+msgid "The source is read only. Repeated imports skip known source IDs. Do not reset or replace the source table between imports. Source records at or after the first TabulaMea collection day are excluded."
+msgstr "Die Quelle wird ausschließlich gelesen. Wiederholte Importe überspringen bekannte Quell-IDs. Die Quelltabelle zwischen Importen nicht zurücksetzen oder ersetzen. Quelldatensätze ab dem ersten TabulaMea-Messtag werden ausgeschlossen."
+
+msgid "Pause measurement and review source compatibility first."
+msgstr "Zuerst die Messung pausieren und die Vereinbarkeit der Quellen prüfen."
+
+msgid "Website statistics"
+msgstr "Website-Statistiken"
+
+msgid "Unknown"
+msgstr "Unbekannt"
+
+msgid "Desktop"
+msgstr "Desktop"
+
+msgid "Tablet"
+msgstr "Tablet"
+
+msgid "Smartphone"
+msgstr "Smartphone"
+
+msgid "Public output enabled"
+msgstr "Öffentliche Ausgabe freigegeben"
+
+msgid "Public output is disabled in Plugin settings."
+msgstr "Die öffentliche Ausgabe ist in den Plugin-Einstellungen ausgeschaltet."
+
+msgid "Live ranking"
+msgstr "Dynamisches Ranking"
+
+msgid "Choose a published ranking. Its filters and appearance are managed on the Content rankings page."
+msgstr "Ein veröffentlichtes Ranking auswählen. Filter und Darstellung werden auf der Seite Inhaltsrankings verwaltet."
+
+msgid "No published ranking selected. Create and publish a ranking in Plugin settings first."
+msgstr "Kein veröffentlichtes Ranking ausgewählt. Zuerst ein Ranking in Tools anlegen und veröffentlichen."
+
+msgid "pageviews"
+msgstr "Seitenaufrufe"
+
+msgid "Previous period: %1$s · Change: %2$s"
+msgstr "Vorperiode: %1$s · Veränderung: %2$s"
+
+msgid "Percentages refer to all recorded site pageviews in this period, including content outside this list."
+msgstr "Prozentwerte beziehen sich auf alle erfassten Seitenaufrufe der Website in diesem Zeitraum, einschließlich der Inhalte außerhalb dieser Liste."
+
+msgid "A saved site total is unavailable; percentage shares are not shown."
+msgstr "Eine gespeicherte Website-Gesamtsumme ist nicht vorhanden; Prozentanteile werden nicht angezeigt."
+
+msgid "Recorded pageviews · %1$s to %2$s"
+msgstr "Erfasste Seitenaufrufe · %1$s bis %2$s"
+
+msgid "%s recorded pageviews (configured collection scope)"
+msgstr "%s erfasste Seitenaufrufe (eingestellter Messumfang)"
+
+msgid "Ranking defaults"
+msgstr "Ranking-Vorgaben"
+
+msgid "Uninstall preference"
+msgstr "Deinstallationseinstellung"
+
+msgid "A configuration preview is waiting for review."
+msgstr "Eine Konfigurationsvorschau wartet auf Prüfung."
+
+msgid "Last application result"
+msgstr "Ergebnis der letzten Übernahme"
+
+msgid "Skipped: plugin inactive"
+msgstr "Übersprungen: Plugin inaktiv"
+
+msgid "Applied or already unchanged"
+msgstr "Übernommen oder bereits unverändert"
+
+msgid "Could not save; review this website and create a new preview"
+msgstr "Speichern fehlgeschlagen; diese Website prüfen und eine neue Vorschau erstellen"
+
+msgid "Review configuration changes"
+msgstr "Konfigurationsänderungen prüfen"
+
+msgid "Nothing has been applied yet. This preview expires after 15 minutes. If a target configuration changes, create a new preview."
+msgstr "Noch wurde nichts übernommen. Diese Vorschau läuft nach 15 Minuten ab. Bei geänderten Zieleinstellungen eine neue Vorschau erstellen."
+
+msgid "No permitted target websites were selected."
+msgstr "Keine zulässigen Zielwebsites ausgewählt."
+
+msgid "The plugin is inactive on this target website. Its configuration will not be changed."
+msgstr "Das Plugin ist auf dieser Zielwebsite nicht aktiv. Ihre Konfiguration wird nicht geändert."
+
+msgid "Setting"
+msgstr "Einstellung"
+
+msgid "Current value"
+msgstr "Aktueller Wert"
+
+msgid "New value"
+msgstr "Neuer Wert"
+
+msgid "New ranking definitions:"
+msgstr "Neue Ranking-Definitionen:"
+
+msgid "Skipped ranking IDs (existing, unsupported on target or capacity reached):"
+msgstr "Übersprungene Ranking-IDs (vorhanden, am Ziel nicht unterstützt oder Höchstzahl erreicht):"
+
+msgid "Individual settings preserved:"
+msgstr "Erhaltene individuelle Einstellungen:"
+
+msgid "Apply the reviewed changes"
+msgstr "Geprüfte Änderungen übernehmen"
+
+msgid "Discard preview"
+msgstr "Vorschau verwerfen"
+
+msgid "Personal rules: %d"
+msgstr "Persönliche Regeln: %d"
+
+msgid "Roles allowed to view reports"
+msgstr "Rollen mit Zugriff auf Berichte"
+
+msgid "Management roles"
+msgstr "Verwaltungsrollen"
+
+msgid "Roles allowed to view the compact widget"
+msgstr "Rollen mit Zugriff auf das kompakte Widget"
+
+msgid "Personal access rules"
+msgstr "Persönliche Zugriffsregeln"
+
+msgid "Public ranking output"
+msgstr "Öffentliche Ranking-Ausgabe"
+
+msgid "Hide upgrade advertising"
+msgstr "Upgrade-Werbung ausblenden"
+
+msgid "Country database download consent"
+msgstr "Zustimmung zum Download der Länderdatenbank"
+
+msgid "Dimension retention in months"
+msgstr "Aufbewahrung der Zusatzberichte in Monaten"
+
+msgid "Excluded content"
+msgstr "Ausgeschlossene Inhalte"
+
+msgid "Exclude the static front page"
+msgstr "Statische Startseite ausschließen"
+
+msgid "Delete plugin data on uninstall"
+msgstr "Plugin-Daten bei Deinstallation löschen"
+
+msgid "Widget item limit"
+msgstr "Höchstzahl der Widget-Einträge"
+
+msgid "Visitor totals are unavailable"
+msgstr "Besucherzahlen sind nicht verfügbar"
+
+msgid "Settings sections to include"
+msgstr "Einzubeziehende Einstellungsbereiche"
+
+msgid "Ranking definitions to include"
+msgstr "Einzubeziehende Ranking-Definitionen"
+
+msgid "Personal rules, snapshots, content exclusions by ID, category IDs, collected statistics and download consent are excluded. Imported collection and public output stay disabled for review."
+msgstr "Persönliche Regeln, Momentaufnahmen, Inhaltsausschlüsse nach ID, Kategorie-IDs, erfasste Statistiken und Download-Zustimmung bleiben ausgeschlossen. Importierte Erfassung und öffentliche Ausgabe bleiben bis zur Prüfung ausgeschaltet."
+
+msgid "Selective configuration export"
+msgstr "Gezielter Konfigurationsexport"
+
+msgid "Download configuration"
+msgstr "Konfiguration herunterladen"
+
+msgid "Import with preview"
+msgstr "Import mit Vorschau"
+
+msgid "Import ranking definitions from the file"
+msgstr "Ranking-Definitionen aus der Datei importieren"
+
+msgid "Configuration JSON file"
+msgstr "Konfiguration als JSON-Datei"
+
+msgid "Preview import"
+msgstr "Import vorab prüfen"
+
+msgid "Named configuration templates"
+msgstr "Benannte Konfigurationsvorlagen"
+
+msgid "Save a portable selection for reuse. For example: Customer website, Editorial project or Own website. Templates do not grant collection or download consent."
+msgstr "Eine übertragbare Auswahl zur Wiederverwendung speichern, etwa „Kundenwebsite“, „Redaktionsprojekt“ oder „Eigene Website“. Vorlagen erteilen keine Erfassungs- oder Download-Zustimmung."
+
+msgid "Template name"
+msgstr "Name der Vorlage"
+
+msgid "Save new template"
+msgstr "Neue Vorlage speichern"
+
+msgid "Include saved ranking definitions"
+msgstr "Gespeicherte Ranking-Definitionen einbeziehen"
+
+msgid "Preview template"
+msgstr "Vorlage vorab prüfen"
+
+msgid "Delete template"
+msgstr "Vorlage löschen"
+
+msgid "Apply a template to selected websites"
+msgstr "Vorlage auf ausgewählte Websites anwenden"
+
+msgid "Only checked websites are considered. Individual settings are preserved by default. The preview lists changes and skipped conflicts for every website."
+msgstr "Nur angekreuzte Websites werden berücksichtigt. Individuelle Einstellungen bleiben standardmäßig erhalten. Die Vorschau zeigt Änderungen und übersprungene Konflikte je Website."
+
+msgid "Search website domain or path"
+msgstr "Domain oder Pfad der Website suchen"
+
+msgid "Find websites"
+msgstr "Websites suchen"
+
+msgid "Up to 100 websites are listed; a single preview supports at most 50 selected websites."
+msgstr "Bis zu 100 Websites werden aufgelistet; eine Vorschau unterstützt höchstens 50 ausgewählte Websites."
+
+msgid "Preserve settings that differ from installation defaults"
+msgstr "Vom Installationsstandard abweichende Einstellungen erhalten"
+
+msgid "Preview selected websites"
+msgstr "Ausgewählte Websites vorab prüfen"
+
+msgid "Reset one settings section"
+msgstr "Einen Einstellungsbereich zurücksetzen"
+
+msgid "Only the chosen section is reset after preview. Rankings, snapshots, collected statistics and the retention period are preserved. Resetting Access also clears personal access rules."
+msgstr "Nur der gewählte Bereich wird nach Vorschau zurückgesetzt. Rankings, Momentaufnahmen, erfasste Statistiken und die Aufbewahrungsdauer bleiben erhalten. Das Zurücksetzen von Zugriff entfernt auch persönliche Zugriffsregeln."
+
+msgid "Settings section"
+msgstr "Einstellungsbereich"
+
+msgid "Preview reset"
+msgstr "Zurücksetzen vorab prüfen"
+
+msgid "Filter content"
+msgstr "Inhalte filtern"
+
+msgid "Filters active"
+msgstr "Filter aktiv"
+
+msgid "Find content by title"
+msgstr "Inhalt nach Titel suchen"
+
+msgid "Rows per list"
+msgstr "Zeilen je Liste"
+
+msgid "Apply"
+msgstr "Anwenden"
+
+msgid "Content filters active"
+msgstr "Inhaltsfilter aktiv"
+
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+msgid "Display"
+msgstr "Darstellung"
+
+msgid "Compare previous period"
+msgstr "Vorzeitraum vergleichen"
+
+msgid "Chart style is remembered for you on this website."
+msgstr "Die Diagrammdarstellung wird für dich auf dieser Website gespeichert."
+
+msgid "Browse periods"
+msgstr "Zeiträume durchblättern"
+
+msgid "Previous period"
+msgstr "Vorheriger Zeitraum"
+
+msgid "Next period"
+msgstr "Nächster Zeitraum"
+
+msgid "Coverage and interpretation"
+msgstr "Datenabdeckung und Einordnung"
+
+msgid "A missing record is not proof of zero visits. Only known setting changes can explain pauses; historical outages cannot be reconstructed. The current day is incomplete. Comparisons use the preceding interval with the same number of calendar days."
+msgstr "Ein fehlender Datensatz belegt nicht null Besuche. Nur bekannte Einstellungsänderungen können Pausen erklären; historische Ausfälle lassen sich nicht rekonstruieren. Der heutige Tag ist unvollständig. Verglichen wird mit dem vorherigen Zeitraum mit gleich vielen Kalendertagen."
+
+msgid "Current collection covers only the selected part of this website. Historical totals can include earlier collection scopes."
+msgstr "Die aktuelle Erfassung berücksichtigt nur den ausgewählten Teil dieser Website. Historische Summen können frühere Messumfänge enthalten."
+
+msgid "No collection setting changes are recorded for this period."
+msgstr "Für diesen Zeitraum sind keine Änderungen der Messkonfiguration vermerkt."
+
+msgid "Technical collection changes"
+msgstr "Technische Änderungen der Erfassung"
+
+msgid "Excluded roles"
+msgstr "Ausgeschlossene Rollen"
+
+msgid "Collection scope"
+msgstr "Messumfang"
+
+msgid "Content types"
+msgstr "Inhaltstypen"
+
+msgid "Archive types"
+msgstr "Archivtypen"
+
+msgid "Search-engine bot filter"
+msgstr "Suchmaschinen-Botfilter"
+
+msgid "AI bot filter"
+msgstr "KI-Botfilter"
+
+msgid "Retention"
+msgstr "Aufbewahrung"
+
+msgid "Measurement enabled"
+msgstr "Messung aktiviert"
+
+msgid "Measurement paused"
+msgstr "Messung pausiert"
+
+msgid "Guided measurement test"
+msgstr "Geführter Messtest"
+
+msgid "Open the public homepage using this link, then return here and reload. The signed test bypasses your role exclusion but does not add a pageview. Measurement must be enabled. A successful test proves this browser delivery only."
+msgstr "Die öffentliche Startseite über diesen Link öffnen, anschließend hierher zurückkehren und neu laden. Der signierte Test umgeht den Rollenausschluss, zählt aber keinen Seitenaufruf. Die Messung muss aktiviert sein. Ein erfolgreicher Test belegt ausschließlich die Zustellung aus diesem Browser."
+
+msgid "Open frontend test"
+msgstr "Frontend-Test öffnen"
+
+msgid "Last successful test: %s"
+msgstr "Letzter erfolgreicher Test: %s"
+
+msgid "No test received yet."
+msgstr "Noch kein Test empfangen."
+
+msgid "How pageviews are distributed"
+msgstr "Verteilung der Seitenaufrufe"
+
+msgid "Archives and overview pages"
+msgstr "Archive und Übersichtsseiten"
+
+msgid "Unavailable or no longer public content"
+msgstr "Nicht verfügbare oder nicht mehr öffentliche Inhalte"
+
+msgid "Content-list shares refer to all recorded website pageviews in the same period, including archives and content outside the list."
+msgstr "Anteile der Inhaltsliste beziehen sich auf alle erfassten Website-Seitenaufrufe im selben Zeitraum, einschließlich Archiven und Inhalten außerhalb dieser Liste."
+
+msgid "Invalid ranking."
+msgstr "Ungültiges Ranking."
+
+msgid "Unknown action."
+msgstr "Unbekannte Aktion."
+
+msgid "Select the text and copy it with the keyboard."
+msgstr "Den Text markieren und per Tastatur kopieren."
+
+msgid "Copy"
+msgstr "Kopieren"
+
+msgid "Invalid search delivery."
+msgstr "Ungültige Suchzustellung."
+
+msgid "Statistics could not be saved."
+msgstr "Statistiken konnten nicht gespeichert werden."
+
+msgid "First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews."
+msgstr "Aufrufe der ersten Suchergebnisseite einschließlich Neuladen. Dies sind keine eindeutigen Suchvorgänge oder Personen. Suchaufrufe bleiben von regulären Seitenaufrufen getrennt."
+
+msgid "Search-result views: %1$s · Without results: %2$s"
+msgstr "Suchergebnis-Aufrufe: %1$s · Ohne Ergebnisse: %2$s"
+
+msgid "Search collection is disabled. Existing history remains available."
+msgstr "Die Sucherfassung ist deaktiviert. Vorhandene Daten bleiben verfügbar."
+
+msgid "Most used approved search topics"
+msgstr "Häufigste freigegebene Suchthemen"
+
+msgid "Only approved topics with at least five recorded views are listed. Unknown search phrases are never saved. Select a calendar year for a year-in-review ranking."
+msgstr "Nur freigegebene Themen mit mindestens fünf erfassten Aufrufen werden aufgelistet. Unbekannte Suchphrasen werden niemals gespeichert. Für einen Jahresrückblick ein Kalenderjahr auswählen."
+
+msgid "No approved topic meets the display threshold in this period."
+msgstr "Kein freigegebenes Thema erreicht in diesem Zeitraum die Anzeigeschwelle."
+
+msgid "Review settings"
+msgstr "Einstellungen prüfen"
+
+msgid "Today"
+msgstr "Heute"
+
+msgid "Yesterday"
+msgstr "Gestern"
+
+msgid "Last 7 days"
+msgstr "Letzte 7 Tage"
+
+msgid "Last 14 days"
+msgstr "Letzte 14 Tage"
+
+msgid "Last 90 days"
+msgstr "Letzte 90 Tage"
+
+msgid "Last 180 days"
+msgstr "Letzte 180 Tage"
+
+msgid "Last 365 days"
+msgstr "Letzte 365 Tage"
+
+msgid "This month"
+msgstr "Dieser Monat"
+
+msgid "Last month"
+msgstr "Letzter Monat"
+
+msgid "Calendar year"
+msgstr "Kalenderjahr"
+
+msgid "Previous calendar year"
+msgstr "Vorheriges Kalenderjahr"
+
+msgid "Custom dates"
+msgstr "Eigener Zeitraum"
+
+msgid "Start date for custom period"
+msgstr "Anfangsdatum für eigenen Zeitraum"
+
+msgid "End date for custom period"
+msgstr "Enddatum für eigenen Zeitraum"
+
+msgid "Date fields apply only to Custom dates. Calendar year uses the year field."
+msgstr "Datumsfelder gelten nur bei „Eigener Zeitraum“. „Kalenderjahr“ verwendet das Jahresfeld."
+
+msgid "Use this period as my default"
+msgstr "Diesen Zeitraum als meinen Standard speichern"
+
+msgid "Retained days with pageviews: %d. Days without records may mean no traffic or interrupted collection. Missing history is not estimated."
+msgstr "Gespeicherte Tage mit Seitenaufrufen: %d. Tage ohne Datensätze können keinen Traffic oder eine unterbrochene Erfassung bedeuten. Fehlende Bestandsdaten werden nicht geschätzt."
+
+msgid "The retained history does not cover the start of this period. Interpret totals and changes with care."
+msgstr "Die erhaltenen Daten decken den Anfang dieses Zeitraums nicht ab. Summen und Veränderungen entsprechend vorsichtig einordnen."
+
+msgid "Invalid pageview."
+msgstr "Ungültiger Seitenaufruf."
+
+msgid "Privacy-friendly measurement"
+msgstr "Datenschutzfreundliche Messung"
+
+msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
+msgstr "Zählt sichtbare Seitenaufrufe ohne Cookies, Fingerprinting, Besucherkennungen oder individuelle Besuchsverläufe. Do Not Track und Global Privacy Control werden berücksichtigt."
+
+msgid "Enable pageview measurement"
+msgstr "Seitenaufrufmessung aktivieren"
+
+msgid "Do not count logged-in users with these roles"
+msgstr "Angemeldete Benutzer dieser Rollen nicht mitzählen"
+
+msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
+msgstr "Basisstatistiken für diese Anzahl Monate aufbewahren (0 = bis zur ausdrücklichen Löschung)"
+
+msgid "Hide these referrer domains from future referrer counts (one per line)"
+msgstr "Diese Referrer-Domains künftig nicht mitzählen (eine pro Zeile)"
+
+msgid "Pageviews still count. Existing referrer totals remain unchanged. No query strings or referrer paths are stored."
+msgstr "Seitenaufrufe zählen weiterhin. Vorhandene Referrer-Zähler bleiben unverändert. Abfrageparameter oder Referrer-Pfade werden nicht gespeichert."
+
+msgid "Network defaults"
+msgstr "Netzwerkvorgaben"
+
+msgid "Each website measures and stores its own statistics, including the main website. These are display defaults only. Website choices override network defaults; personal choices stay within website limits. Collection, access rights and external-download consent are configured separately on each website."
+msgstr "Jede Website misst und speichert ihre eigenen Statistiken, auch die Haupt-Website. Dies sind ausschließlich Anzeigevorgaben. Website-Einstellungen haben Vorrang vor Netzwerkvorgaben; persönliche Einstellungen bleiben innerhalb der Website-Grenzen. Erfassung, Zugriffsrechte und Zustimmung zu externen Downloads werden je Website getrennt festgelegt."
+
+msgid "Enable configurable overview widget"
+msgstr "Anpassbares Übersichts-Widget aktivieren"
+
+msgid "Enable compact widget"
+msgstr "Kompaktes Widget aktivieren"
+
+msgid "Compact widget period"
+msgstr "Zeitraum des kompakten Widgets"
+
+msgid "Website and network display defaults"
+msgstr "Anzeigevorgaben für Website und Netzwerk"
+
+msgid "Explicit website choices override network defaults. Personal widget preferences remain within the website limits."
+msgstr "Ausdrückliche Website-Einstellungen haben Vorrang vor Netzwerkvorgaben. Persönliche Widget-Einstellungen bleiben innerhalb der Website-Grenzen."
+
+msgid "Overview widget"
+msgstr "Übersichts-Widget"
+
+msgid "Personal adjustments"
+msgstr "Persönliche Anpassungen"
+
+msgid "Personal item limit"
+msgstr "Persönliche Höchstzahl der Einträge"
+
+msgid "Overview items"
+msgstr "Einträge der Übersicht"
+
+msgid "Website override"
+msgstr "Website-Anpassung"
+
+msgid "Network default"
+msgstr "Netzwerkvorgabe"
+
+msgid "Restore network display defaults on this website"
+msgstr "Netzwerk-Anzeigevorgaben auf dieser Website wiederherstellen"
+
+msgid "Invalid input."
+msgstr "Ungültige Eingabe."
+
+msgid "Automated requests"
+msgstr "Automatisierte Aufrufe"
+
+msgid "Exclude recognizable search-engine bots from statistics"
+msgstr "Erkennbare Suchmaschinen-Bots aus der Statistik ausschließen"
+
+msgid "For example Google, Bing and DuckDuckGo. People arriving through these search engines are still counted."
+msgstr "Beispielsweise Google, Bing und DuckDuckGo. Menschen, die über diese Suchmaschinen kommen, werden weiterhin erfasst."
+
+msgid "Exclude recognizable AI bots and assistants from statistics"
+msgstr "Erkennbare KI-Bots und KI-Assistenten aus der Statistik ausschließen"
+
+msgid "For example OpenAI, Anthropic and Perplexity. People following links from these services are still counted. These options do not block access or change robots.txt. Bots without a measurement request remain invisible, even when an exclusion is disabled."
+msgstr "Beispielsweise OpenAI, Anthropic und Perplexity. Menschen, die Links dieser Dienste folgen, werden weiterhin erfasst. Diese Optionen sperren keine Zugriffe und ändern keine robots.txt. Bots ohne Messanfrage bleiben auch bei ausgeschaltetem Ausschluss unsichtbar."
+
+msgid "Which pages should be measured?"
+msgstr "Welche Seiten sollen gemessen werden?"
+
+msgid "All public pages"
+msgstr "Alle öffentlichen Seiten"
+
+msgid "Selected content and archive types"
+msgstr "Ausgewählte Inhalts- und Archivtypen"
+
+msgid "Choose content and archive types"
+msgstr "Inhalts- und Archivtypen auswählen"
+
+msgid "These choices apply only to selected collection. Existing totals are retained. The website total then covers only the selected part of your website."
+msgstr "Diese Auswahl gilt nur für den eingeschränkten Messumfang. Vorhandene Summen bleiben erhalten. Die Website-Gesamtzahl bezieht sich dann nur auf den ausgewählten Teil der Website."
+
+msgid "Front page"
+msgstr "Startseite"
+
+msgid "Posts overview"
+msgstr "Beitragsübersicht"
+
+msgid "Category, tag and public taxonomy archives"
+msgstr "Kategorie-, Schlagwort- und öffentliche Taxonomie-Archive"
+
+msgid "Content-type archives"
+msgstr "Inhaltstyp-Archive"
+
+msgid "Author archives"
+msgstr "Autorenarchive"
+
+msgid "Date archives"
+msgstr "Datumsarchive"
+
+msgid "Other public overview pages"
+msgstr "Weitere öffentliche Übersichtsseiten"
+
+msgid "See which offers people search for, without retaining arbitrary search inputs. Select non-personal terms in advance; matching results-page views are counted under these terms. Names, email addresses and other unselected inputs are not saved as search text."
+msgstr "Erkenne, welche Angebote auf deiner Website gesucht werden, ohne beliebige Sucheingaben zu speichern. Lege vorher nicht personenbezogene Suchbegriffe fest; passende Suchergebnisseiten werden darunter gezählt. Namen, E-Mail-Adressen und andere nicht ausgewählte Eingaben werden nicht als Suchtext gespeichert."
+
+msgid "Count search-result views separately"
+msgstr "Suchergebnis-Aufrufe getrennt zählen"
+
+msgid "Counts the first results page and searches without results. Reloads count again. Free search strings are never retained. Search counts do not increase regular pageview totals."
+msgstr "Zählt die erste Ergebnisseite und Suchen ohne Ergebnisse. Neuladen zählt erneut. Freie Suchstrings werden niemals gespeichert. Suchaufrufe erhöhen die regulären Seitenaufrufzahlen nicht."
+
+msgid "Selected search terms"
+msgstr "Ausgewählte Suchbegriffe"
+
+msgid "Selected search terms: one exact phrase per line"
+msgstr "Ausgewählte Suchbegriffe: eine genaue Suchphrase pro Zeile"
+
+msgid "Use only non-personal topics. Matching ignores letter case and repeated spaces; unknown terms are not saved."
+msgstr "Nur nicht personenbezogene Themen verwenden. Die Zuordnung ignoriert Großschreibung und mehrfache Leerzeichen; unbekannte Begriffe werden nicht gespeichert."
+
+msgid "Examples for a club: Donations, Volunteering, Become a member, Events, Contact. These suggestions are not enabled automatically."
+msgstr "Beispiele für einen Verein: Spenden, Ehrenamt, Mitglied werden, Veranstaltungen, Kontakt. Diese Vorschläge werden nicht automatisch aktiviert."
+
+msgid "Example: if Donations is selected, a search for donations increases that counter. A search for Donations wanted does not match unless that whole phrase is selected separately. Other searches increase only the overall search total; their text is not retained. This does not change WordPress search results."
+msgstr "Beispiel: Ist Spenden ausgewählt, erhöht eine Suche nach spenden diesen Zähler. Spenden gesucht passt nur, wenn diese gesamte Phrase separat hinterlegt ist. Andere Suchen erhöhen nur die allgemeine Suchsumme; ihr Text wird nicht gespeichert. Die WordPress-Suchergebnisse bleiben unverändert."
+
+msgid "Example report: Donations · 18 search-result views · Last 30 days · Open search on website. Term totals appear from five views; missing terms do not prove zero interest. Counts describe first results-page loads, not people, and reloads count again. This feature monitors selected terms rather than discovering unknown queries."
+msgstr "Beispielauswertung: Spenden · 18 Suchaufrufe · Letzte 30 Tage · Suche auf der Website öffnen. Begriffswerte erscheinen ab fünf Aufrufen; fehlende Begriffe belegen kein fehlendes Interesse. Gezählt werden Aufrufe der ersten Suchergebnisseite, keine Personen; Neuladen zählt erneut. Die Funktion beobachtet ausgewählte Begriffe, statt unbekannte Suchanfragen zu entdecken."
+
+msgid "Most popular posts"
+msgstr "Beliebteste Beiträge"
+
+msgid "Most popular pages"
+msgstr "Beliebteste Seiten"
+
+msgid "Top 10 of the previous year"
+msgstr "Top 10 des Vorjahres"
+
+msgid "Popular posts in a category"
+msgstr "Beliebteste Beiträge einer Kategorie"
+
+msgid "Contents to exclude"
+msgstr "Auszuschließende Inhalte"
+
+msgid "Turn recorded pageviews into useful reading lists: popular content, growing interest, monthly favorites or a year in review. Start privately; publish a ranking only when you choose."
+msgstr "Aus erfassten Seitenaufrufen werden hilfreiche Leselisten: beliebte Inhalte, wachsendes Interesse, monatliche Favoriten oder ein Jahresrückblick. Beginne privat und veröffentliche ein Ranking nur bewusst."
+
+msgid "Ranking workspace"
+msgstr "Ranking-Arbeitsbereich"
+
+msgid "My rankings"
+msgstr "Meine Rankings"
+
+msgid "Year in review"
+msgstr "Jahresrückblick"
+
+msgid "Published"
+msgstr "Freigegeben"
+
+msgid "Private"
+msgstr "Privat"
+
+msgid "View results"
+msgstr "Ergebnisse ansehen"
+
+msgid "Edit ranking"
+msgstr "Ranking bearbeiten"
+
+msgid "Your first useful overview"
+msgstr "Deine erste hilfreiche Übersicht"
+
+msgid "Create a ranking from a template, choose a period and inspect the results. No content is published automatically."
+msgstr "Erstelle ein Ranking aus einer Vorlage, wähle einen Zeitraum und prüfe die Ergebnisse. Es werden keine Inhalte automatisch veröffentlicht."
+
+msgid "Ranking preview"
+msgstr "Ranking-Vorschau"
+
+msgid "Snapshot saved:"
+msgstr "Momentaufnahme gespeichert:"
+
+msgid "Counts are frozen. Contents that are no longer public remain hidden."
+msgstr "Zähler sind eingefroren. Nicht mehr öffentliche Inhalte bleiben ausgeblendet."
+
+msgid "This ranking uses complete calendar months. Every listed content must reach the minimum pageviews in every selected month."
+msgstr "Dieses Ranking nutzt vollständige Kalendermonate. Jeder aufgeführte Inhalt muss die Mindestzahl an Aufrufen in jedem ausgewählten Monat erreichen."
+
+msgid "Comparison with the preceding equally long period:"
+msgstr "Vergleich mit dem davorliegenden gleich langen Zeitraum:"
+
+msgid "The snapshot has no currently eligible public contents. Content visibility or exclusions may have changed."
+msgstr "Die Momentaufnahme enthält keine derzeit passenden öffentlichen Inhalte. Sichtbarkeit oder Ausschlüsse können sich geändert haben."
+
+msgid "No public, unprotected contents are available. Publish a suitable post or page first."
+msgstr "Es gibt keine öffentlichen, nicht passwortgeschützten Inhalte. Zuerst einen passenden Beitrag oder eine Seite veröffentlichen."
+
+msgid "No content pageviews are retained for this period. Choose a period with existing statistics history."
+msgstr "Für diesen Zeitraum sind keine Inhaltsaufrufe vorhanden. Wähle einen Zeitraum mit vorhandener Statistikhistorie."
+
+msgid "Pageviews exist, but the selected type, category, publication year or exclusions leave no matching contents. Relax the filters or change the period."
+msgstr "Aufrufe sind vorhanden, aber Inhaltstyp, Kategorie, Veröffentlichungsjahr oder Ausschlüsse lassen keine passenden Inhalte übrig. Filter lockern oder Zeitraum ändern."
+
+msgid "No content meets this method’s minimum traffic and comparison rules. Try a longer period, a lower minimum or Most viewed."
+msgstr "Kein Inhalt erfüllt die Mindestaufrufe und Vergleichsregeln dieser Methode. Einen längeren Zeitraum, eine niedrigere Mindestzahl oder „Meistaufgerufen“ versuchen."
+
+msgid "Create a ranking from a template"
+msgstr "Ranking aus einer Vorlage anlegen"
+
+msgid "Starting point"
+msgstr "Ausgangspunkt"
+
+msgid "Category for the category template"
+msgstr "Kategorie für die Kategorievorlage"
+
+msgid "All categories"
+msgstr "Alle Kategorien"
+
+msgid "Create unpublished ranking"
+msgstr "Unveröffentlichtes Ranking anlegen"
+
+msgid "Open shortcode generator"
+msgstr "Shortcode-Generator öffnen"
+
+msgid "Shortcode for this ranking"
+msgstr "Shortcode dieses Rankings"
+
+msgid "The ranking is published, but global public output is disabled."
+msgstr "Das Ranking ist veröffentlicht, aber die globale öffentliche Ausgabe ist ausgeschaltet."
+
+msgid "Private ranking: public shortcodes and blocks remain empty."
+msgstr "Privates Ranking: Öffentliche Shortcodes und Blöcke bleiben leer."
+
+msgid "Duplicate as a private live ranking"
+msgstr "Als privates dynamisches Ranking duplizieren"
+
+msgid "Return to live ranking"
+msgstr "Zum dynamischen Ranking wechseln"
+
+msgid "Save snapshot"
+msgstr "Momentaufnahme speichern"
+
+msgid "Delete ranking"
+msgstr "Ranking löschen"
+
+msgid "Unsaved preview"
+msgstr "Ungespeicherte Vorschau"
+
+msgid "Create a custom ranking"
+msgstr "Eigenes Ranking anlegen"
+
+msgid "Choose content and ranking method"
+msgstr "Inhalte und Auswertungsmethode wählen"
+
+msgid "Give the overview a recognizable title. Most viewed is the simplest starting point."
+msgstr "Gib der Übersicht einen wiedererkennbaren Titel. „Meistgelesen“ ist der einfachste Einstieg."
+
+msgid "Ranking title"
+msgstr "Ranking-Titel"
+
+msgid "Shortcode identifier (optional for a new ranking)"
+msgstr "Shortcode-Kennung (bei neuem Ranking optional)"
+
+msgid "Use a short identifier without spaces. New rankings get an identifier from the title when this field is empty. Reusing an existing identifier updates that definition."
+msgstr "Eine kurze Kennung ohne Leerzeichen verwenden. Neue Rankings erhalten bei leerem Feld eine Kennung aus dem Titel. Eine vorhandene Kennung aktualisiert die betreffende Definition."
+
+msgid "Ranking method"
+msgstr "Ranking-Methode"
+
+msgid "Movers compare absolute pageview changes with the preceding equally long period. Older content must also be gaining views. Popular every month uses complete months instead of the period below."
+msgstr "Auf- und Absteiger vergleichen die absolute Änderung der Seitenaufrufe mit dem davorliegenden gleich langen Zeitraum. Auch ältere Inhalte müssen an Aufrufen gewinnen. „Jeden Monat beliebt“ nutzt vollständige Monate statt des folgenden Zeitraums."
+
+msgid "Set the period and filters"
+msgstr "Zeitraum und Filter festlegen"
+
+msgid "Publication year (0 = any)"
+msgstr "Veröffentlichungsjahr (0 = alle)"
+
+msgid "Number of items (1–50)"
+msgstr "Anzahl der Einträge (1–50)"
+
+msgid "Minimum pageviews (at least 5; per month for monthly rankings)"
+msgstr "Mindestaufrufe (mindestens 5; bei Monatsrankings je Monat)"
+
+msgid "Complete months for monthly rankings (2–12)"
+msgstr "Vollständige Monate für Monatsrankings (2–12)"
+
+msgid "Minimum content age in days for rediscovered content"
+msgstr "Mindestalter in Tagen für wiederentdeckte Inhalte"
+
+msgid "The period refers to pageview dates. Publication year separately filters when the content was published."
+msgstr "Der Zeitraum bezieht sich auf das Abrufdatum. Das Veröffentlichungsjahr filtert unabhängig davon, wann der Inhalt veröffentlicht wurde."
+
+msgid "Use the website-wide ranking exclusions"
+msgstr "Websiteweite Ranking-Ausschlüsse verwenden"
+
+msgid "Exclude individual content"
+msgstr "Einzelne Inhalte ausschließen"
+
+msgid "Choose appearance and publication"
+msgstr "Darstellung und Freigabe wählen"
+
+msgid "A private ranking is available in the admin. Frontend output needs this ranking’s publication switch and the website-wide public-output permission."
+msgstr "Ein privates Ranking steht im Admin zur Verfügung. Die öffentliche Ausgabe benötigt sowohl die Freigabe dieses Rankings als auch die websiteweite Erlaubnis."
+
+msgid "Show period below this ranking"
+msgstr "Zeitraum unter diesem Ranking anzeigen"
+
+msgid "List appearance"
+msgstr "Listendarstellung"
+
+msgid "Numbered list"
+msgstr "Nummerierte Liste"
+
+msgid "Simple link list"
+msgstr "Einfache Linkliste"
+
+msgid "List with featured images"
+msgstr "Liste mit Beitragsbildern"
+
+msgid "Publish this ranking"
+msgstr "Dieses Ranking veröffentlichen"
+
+msgid "Show pageview counts"
+msgstr "Aufrufzahlen anzeigen"
+
+msgid "Show featured images"
+msgstr "Beitragsbilder anzeigen"
+
+msgid "Show the previous period and absolute change"
+msgstr "Vorperiode und absolute Veränderung anzeigen"
+
+msgid "Show share of all site pageviews"
+msgstr "Anteil an allen Seitenaufrufen der Website anzeigen"
+
+msgid "Editing a frozen ranking preserves its snapshot until you return it to live mode."
+msgstr "Beim Bearbeiten eines eingefrorenen Rankings bleibt die Momentaufnahme bis zur Rückkehr zum dynamischen Ranking erhalten."
+
+msgid "Preview without saving"
+msgstr "Ohne Speichern ansehen"
+
+msgid "Save ranking"
+msgstr "Ranking speichern"
+
+msgid "Search content for exclusion lists"
+msgstr "Inhalte für Ausschlusslisten suchen"
+
+msgid "Content title search"
+msgstr "Nach Inhaltstitel suchen"
+
+msgid "Find content"
+msgstr "Inhalte suchen"
+
+msgid "Search before changing selections. Results appear in both exclusion pickers; saved selections stay available. Save an edited ranking before starting another search."
+msgstr "Vor dem Ändern der Auswahl suchen. Treffer erscheinen in beiden Ausschlusslisten; gespeicherte Auswahlen bleiben verfügbar. Ein bearbeitetes Ranking vor einer weiteren Suche speichern."
+
+msgid "Website-wide ranking exclusions"
+msgstr "Websiteweite Ranking-Ausschlüsse"
+
+msgid "Save ranking defaults"
+msgstr "Ranking-Vorgaben speichern"
+
+msgid "Most read contents in %s"
+msgstr "Meistgelesene Inhalte %s"
+
+msgid "Recorded pageviews from %1$s to %2$s."
+msgstr "Erfasste Seitenaufrufe vom %1$s bis %2$s."
+
+msgid "Source: saved snapshot."
+msgstr "Quelle: gespeicherte Momentaufnahme."
+
+msgid "Source: current retained statistics."
+msgstr "Quelle: aktuell erhaltene Statistiken."
+
+msgid "This list describes recorded pageviews, not an editorial quality assessment. Missing history is not estimated."
+msgstr "Diese Liste beschreibt erfasste Seitenaufrufe, keine redaktionelle Qualitätsbewertung. Fehlende Bestandsdaten werden nicht geschätzt."
+
+msgid "Print this review"
+msgstr "Diesen Rückblick drucken"
+
+msgid "Create a top-10 post list for the selected year"
+msgstr "Top-10-Beitragsliste für das gewählte Jahr erstellen"
+
+msgid "Generate a factual draft with titles, pageview counts and links. It is never published automatically. A selected saved ranking keeps its filters, year and snapshot."
+msgstr "Einen sachlichen Entwurf mit Titeln, Aufrufzahlen und Links erzeugen. Er wird niemals automatisch veröffentlicht. Ein ausgewähltes gespeichertes Ranking behält Filter, Jahr und Momentaufnahme."
+
+msgid "Optional saved year ranking"
+msgstr "Optionales gespeichertes Jahresranking"
+
+msgid "Generate review text"
+msgstr "Rückblicktext erzeugen"
+
+msgid "Text draft to copy and edit"
+msgstr "Textentwurf zum Kopieren und Bearbeiten"
+
+msgid "No recorded pageviews in this period. This is not proof of zero visits."
+msgstr "Keine erfassten Seitenaufrufe in diesem Zeitraum. Das beweist nicht, dass es keine Besuche gab."
+
+msgid "Filter recorded pageviews"
+msgstr "Nach erfassten Seitenaufrufen filtern"
+
+msgid "All pageview states"
+msgstr "Alle Erfassungsstände"
+
+msgid "With recorded pageviews"
+msgstr "Mit erfassten Seitenaufrufen"
+
+msgid "Without recorded pageviews"
+msgstr "Ohne erfasste Seitenaufrufe"
+
+msgid "Pageview period"
+msgstr "Zeitraum der Seitenaufrufe"
+
+msgid "Reset view filters"
+msgstr "Aufruffilter zurücksetzen"
+
+msgid "Pageviews in content lists"
+msgstr "Seitenaufrufe in Inhaltslisten"
+
+msgid "Enable a sortable Pageviews column for selected public content types. Only statistics viewers see it. Missing records are shown as a dash; they do not prove zero visits."
+msgstr "Aktiviere eine sortierbare Spalte „Seitenaufrufe“ für ausgewählte öffentliche Inhaltstypen. Sie ist nur für Statistikberechtigte sichtbar. Fehlende Datensätze erscheinen als Strich und beweisen nicht, dass es keine Besuche gab."
+
+msgid "Period for list-table counts"
+msgstr "Zeitraum für die Zähler in Inhaltslisten"
+
+msgid "Settings"
+msgstr "Einstellungen"
+
+msgid "Documentation"
+msgstr "Dokumentation"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+msgid "Changelog"
+msgstr "Änderungsverlauf"
+
+msgid "About this plugin"
+msgstr "Über dieses Plugin"
+
+msgid "Version"
+msgstr "Version"
+
+msgid "More plugins"
+msgstr "Weitere Plugins"
+
+msgid "Close"
+msgstr "Schließen"
+
+msgid "Copy of %s"
+msgstr "Kopie von %s"
+
+msgid "Invalid report."
+msgstr "Ungültiger Bericht."
+
+msgid "Measurement status"
+msgstr "Messstatus"
+
+msgid "Measurement is paused."
+msgstr "Die Messung pausiert."
+
+msgid "Last accepted pageview: %s ago. Status is updated at most every five minutes."
+msgstr "Letzter angenommener Seitenaufruf vor %s. Der Status wird höchstens alle fünf Minuten aktualisiert."
+
+msgid "No pageviews accepted yet."
+msgstr "Noch keine Seitenaufrufe angenommen."
+
+msgid "For a practical check, open a public page in a private browser window. Your logged-in role may be excluded."
+msgstr "Öffne zur praktischen Prüfung eine öffentliche Seite in einem privaten Browserfenster. Deine angemeldete Rolle kann von der Messung ausgeschlossen sein."
+
+msgid "Access policy"
+msgstr "Zugriffsregeln"
+
+msgid "Report roles: %1$s. Personal rules: %2$d. Plugin settings remain restricted to website administrators."
+msgstr "Berichtsrollen: %1$s. Persönliche Regeln: %2$d. Plugin-Einstellungen bleiben Website-Administratoren vorbehalten."
+
+msgid "Overview widget: %1$s. Compact widget: %2$s."
+msgstr "Übersichts-Widget: %1$s. Kompaktes Widget: %2$s."
+
+msgid "Optional collection"
+msgstr "Zusätzliche Erfassung"
+
+msgid "Technology: %1$s. Countries: %2$s."
+msgstr "Technik: %1$s. Länder: %2$s."
+
+msgid "Publishing"
+msgstr "Veröffentlichung"
+
+msgid "Explicitly published rankings may appear on the website."
+msgstr "Ausdrücklich veröffentlichte Rankings können auf der Website erscheinen."
+
+msgid "The measurement request limit was reached within the last 24 hours. Some pageviews may be missing. Review the site-wide request limit."
+msgstr "In den letzten 24 Stunden wurde die Grenze für Messanfragen erreicht. Seitenaufrufe können fehlen. Prüfe die websiteweite Erfassungsgrenze."
+
+msgid "A measurement write failed within the last 24 hours. Some pageviews may be missing. Review database availability before relying on totals."
+msgstr "In den letzten 24 Stunden konnte eine Messung nicht gespeichert werden. Seitenaufrufe können fehlen. Prüfe die Datenbankverfügbarkeit, bevor du dich auf die Summen verlässt."
+
+msgid "A ranking is published, but public output is globally disabled."
+msgstr "Ein Ranking ist veröffentlicht, aber die öffentliche Ausgabe ist global ausgeschaltet."
+
+msgid "Country collection is selected, but its local database is missing. Review the download setting and install the database."
+msgstr "Die Ländererfassung ist ausgewählt, aber ihre lokale Datenbank fehlt. Download-Einstellung prüfen und Datenbank installieren."
+
+msgid "Additional collection is paused by the collector configuration. Review the collection status."
+msgstr "Die zusätzliche Erfassung pausiert aufgrund der Endpunkt-Konfiguration. Erfassungsstatus prüfen."
+
+msgid "The ranking selected for the widget no longer exists. The widget currently uses its normal filters."
+msgstr "Das für das Widget ausgewählte Ranking existiert nicht mehr. Das Widget verwendet derzeit seine normalen Filter."
+
+msgid "Diagnostics for support"
+msgstr "Diagnose für Supportanfragen"
+
+msgid "Contains versions and operational states only. No credentials, user names, visitor details, URLs or server paths are included."
+msgstr "Enthält nur Versionen und Betriebszustände. Keine Zugangsdaten, Benutzernamen, Besucherdetails, URLs oder Serverpfade."
+
+msgid "Diagnostic information"
+msgstr "Diagnoseinformationen"
+
+msgid "This website uses TabulaMea to count pageviews without cookies, persistent browser storage, visitor profiles or unique-person counts."
+msgstr "Diese Website verwendet TabulaMea, um Seitenaufrufe ohne Cookies, dauerhafte Browserspeicherung, Besucherprofile oder die Zählung eindeutiger Personen zu erfassen."
+
+msgid "Recorded data consists of local daily totals, content identifiers, query-free page paths and external referring domains. Do Not Track and Global Privacy Control are respected."
+msgstr "Gespeichert werden lokale Tageszähler, Inhaltskennungen, Seitenpfade ohne Abfrageparameter und externe verweisende Domains. Do Not Track und Global Privacy Control werden berücksichtigt."
+
+msgid "A random per-document delivery token is held only in memory. Its unlinked hash is retained temporarily on the server to prevent duplicate retries; it expires after ten minutes and is removed during cleanup. No address or browser identity is stored with it."
+msgstr "Eine zufällige Zustellkennung bleibt je Dokument nur im Arbeitsspeicher. Ihr nicht zugeordneter Hash wird kurzzeitig auf dem Server gehalten, um doppelte Zustellversuche zu verhindern; er läuft nach zehn Minuten ab und wird bei der Bereinigung entfernt. Damit werden keine Adresse oder Browseridentität gespeichert."
+
+msgid "Collection is currently paused."
+msgstr "Die Erfassung ist derzeit pausiert."
+
+msgid "Coarse device, browser and operating-system categories are retained as separate daily totals, without raw browser headers."
+msgstr "Grobe Geräte-, Browser- und Betriebssystemkategorien werden als getrennte Tageszähler ohne vollständige Browserkennungen gespeichert."
+
+msgid "Country categories are derived locally from the connection address without storing the address. Categories are aggregated independently."
+msgstr "Länderkategorien werden lokal aus der Verbindungsadresse abgeleitet, ohne die Adresse zu speichern. Die Kategorien werden unabhängig zusammengezählt."
+
+msgid "Search-result views and views without results are counted separately. Free search strings are not retained; only explicitly approved non-personal topics can receive aggregate counts."
+msgstr "Suchergebnis-Aufrufe und Aufrufe ohne Ergebnisse werden getrennt gezählt. Freie Suchstrings bleiben ungespeichert; nur ausdrücklich freigegebene nicht personenbezogene Themen können Summenzähler erhalten."
+
+msgid "Core statistics are retained for %d months."
+msgstr "Basisstatistiken werden für %d Monate aufbewahrt."
+
+msgid "Core statistics have no automatic age limit."
+msgstr "Basisstatistiken haben keine automatische Altersgrenze."
+
+msgid "Optional category statistics are retained for %d months."
+msgstr "Optionale Kategoriestatistiken werden für %d Monate aufbewahrt."
+
+msgid "The server is permitted to download the country database from DB-IP; visitor addresses are not sent to that service."
+msgstr "Der Server darf die Länderdatenbank von DB-IP herunterladen; Besucheradressen werden nicht an diesen Dienst übertragen."
+
+msgid "Hosting access logs and other installed software are outside this description. Review this text for your actual website and legal requirements before publishing it."
+msgstr "Hosting-Zugriffsprotokolle und andere installierte Software sind nicht Teil dieser Beschreibung. Den Text vor einer Veröffentlichung auf die tatsächliche Website und rechtliche Anforderungen prüfen."
+
+msgid "Text suggestion for your privacy policy"
+msgstr "Textvorschlag für deine Datenschutzerklärung"
+
+msgid "This text describes the current TabulaMea configuration. Review and adapt it before adding it to your WordPress privacy policy page. Nothing is changed automatically."
+msgstr "Dieser Text beschreibt die aktuelle TabulaMea-Konfiguration. Vor der Übernahme in die WordPress-Datenschutzseite prüfen und anpassen. Es wird nichts automatisch geändert."
+
+msgid "Edit privacy policy page"
+msgstr "Datenschutzseite bearbeiten"
+
+msgid "View privacy policy page"
+msgstr "Datenschutzseite ansehen"
+
+msgid "No WordPress privacy policy page is assigned."
+msgstr "Es ist keine WordPress-Datenschutzseite zugewiesen."
+
+msgid "Settings → Privacy"
+msgstr "Einstellungen → Datenschutz"
+
+msgid "Non-binding text suggestion without warranty of accuracy, completeness or currency. Errors excepted. Not legal advice. Review and adapt it to your website before publication. It describes TabulaMea only and does not replace a complete privacy policy."
+msgstr "Unverbindlicher Textvorschlag ohne Gewähr für Richtigkeit, Vollständigkeit oder Aktualität. Irrtümer vorbehalten. Keine Rechtsberatung. Vor der Veröffentlichung prüfen und an die tatsächlichen Gegebenheiten deiner Website anpassen. Der Vorschlag beschreibt ausschließlich TabulaMea und ersetzt keine vollständige Datenschutzerklärung."
+
+msgid "Configuration-dependent privacy text"
+msgstr "Konfigurationsabhängiger Datenschutztext"
+
+msgid "Copy text suggestion"
+msgstr "Textvorschlag kopieren"
+
+msgid "Data care"
+msgstr "Datenpflege"
+
+msgid "Approximate storage: %1$s · Retained core history: %2$s to %3$s"
+msgstr "Ungefährer Speicherbedarf: %1$s · Gespeicherter Basiszeitraum: %2$s bis %3$s"
+
+msgid "Storage is an approximate database estimate, refreshed hourly. Cleanup removes dated TabulaMea aggregates only. Definitions, snapshots and import receipts remain; other plugins are never changed."
+msgstr "Der Speicherbedarf ist eine stündlich aktualisierte Datenbankschätzung. Die Bereinigung entfernt nur datierte TabulaMea-Summen. Definitionen, Momentaufnahmen und Importbelege bleiben erhalten; andere Plugins werden niemals verändert."
+
+msgid "Review deletion"
+msgstr "Löschung prüfen"
+
+msgid "Delete aggregate records before %s. This cannot be undone without your backup."
+msgstr "Summendatensätze vor %s löschen. Ohne Sicherung kann dies nicht rückgängig gemacht werden."
+
+msgid "I reviewed the date and have a backup. Delete the next batch."
+msgstr "Ich habe das Datum geprüft und eine Sicherung. Das nächste Paket löschen."
+
+msgid "Delete next batch"
+msgstr "Nächstes Paket löschen"
+
+msgid "Each action removes at most 1,000 rows per aggregate table. Continue until no rows remain; reports may be incomplete while cleanup is in progress."
+msgstr "Jede Aktion entfernt höchstens 1.000 Zeilen je Summentabelle. Fortsetzen, bis keine Zeilen mehr übrig sind; währenddessen können Berichte unvollständig sein."
+
+msgid "Delete records before this date"
+msgstr "Datensätze vor diesem Datum löschen"
+
+msgid "Preview affected data"
+msgstr "Betroffene Daten vorab anzeigen"
+
+msgid "Choose a valid historical cutoff."
+msgstr "Ein gültiges historisches Stichtagsdatum auswählen."
+
+msgid "Create a fresh preview first."
+msgstr "Zuerst eine neue Vorschau erstellen."
+
+msgid "Cleanup stopped after a storage error. Review the remaining data."
+msgstr "Die Bereinigung wurde nach einem Speicherfehler gestoppt. Die verbleibenden Daten prüfen."
+
+msgid "Statistics shortcuts"
+msgstr "Statistik-Navigation"
