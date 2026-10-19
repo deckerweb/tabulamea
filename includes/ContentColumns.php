@@ -60,7 +60,8 @@ final class ContentColumns {
      * @return array Modified SQL clauses.
      */
     public static function clauses(array $clauses,\WP_Query $query): array {
-        if(!$query->get('tbm_column')||!Plugin::allowed('view')){return $clauses;}global $wpdb;$range=Rankings::dates(['period'=>self::period()]);
+        if(!$query->get('tbm_column')||!Plugin::allowed('view')){return $clauses;}
+        $filter=InterfaceTools::text($_GET,'tbm_view_filter');if($query->get('orderby')!=='tbm_views'&&!in_array($filter,['recorded','unrecorded'],true)){return $clauses;}global $wpdb;$range=Rankings::dates(['period'=>self::period()]);
         $join=$wpdb->prepare(" LEFT JOIN (SELECT post_id,SUM(pageviews) views FROM {$wpdb->prefix}tbm_post_stats WHERE date BETWEEN %s AND %s GROUP BY post_id) tbm_counts ON tbm_counts.post_id={$wpdb->posts}.ID ",$range);
         $clauses['join'].=$join;
         $filter=InterfaceTools::text($_GET,'tbm_view_filter');if($filter==='recorded'){$clauses['where'].=' AND tbm_counts.views IS NOT NULL';}elseif($filter==='unrecorded'){$clauses['where'].=' AND tbm_counts.views IS NULL';}

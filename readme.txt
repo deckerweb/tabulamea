@@ -1,6 +1,7 @@
 === TabulaMea ===
 Contributors: daveshine
 Tags: statistics, privacy, pageviews, dashboard
+Tested up to: 7.1.3
 Requires at least: 7.1.2
 Requires PHP: 8.2
 Stable tag: 0.9.0
@@ -148,6 +149,8 @@ Basic statistics may have an age limit or no automatic age deletion; 0 months me
 
 Data care previews the cutoff and affected aggregate rows before deletion. Back up the database first. Definitions, snapshots and permanent import receipts remain. Deleted historical totals are not reconstructed.
 
+Automatic deletion uses bounded scheduled batches. Larger backlogs schedule follow-up batches. Delayed WordPress scheduled tasks can postpone actual deletion.
+
 = Privacy page and operational checks =
 
 Overview provides a text suggestion based on your TabulaMea settings. Edit and frontend links point to the assigned WordPress privacy policy page; if none is assigned, follow Settings → Privacy. Copy, review and adapt the text before publication. It replaces neither a complete privacy policy nor legal review.
@@ -166,11 +169,11 @@ TabulaMea includes deckerweb Library 1.0.0 and deckerweb Updater 2.1.0 for direc
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
-This build is prepared for GitHub. It does not authorize another distribution channel.
+TabulaMea is distributed through GitHub.
 
 == Installation ==
 
-1. Install and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+1. Download the installable tabulamea-0.9.0.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -214,8 +217,8 @@ Full FAQ by topic: FAQ.txt. Full guide: DOCUMENTATION.txt.
 
 = 0.9.0 =
 * New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
-* Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
-* Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs.
+* Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution. Faster broad yearly content rankings, ordinary content lists and chart queries without additional measurement writes or indexes. Bounded cleanup continuations for larger backlogs.
+* Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs. Atomic rollback and safe delivery retries after database errors or lost connections, including search counters. Atomic import transactions and import-source conflict checks. Public query-loop counter context, late-registered content types, dense annual charts and mobile settings layout.
 
 = 0.1.0 – 0.8.0 =
 * Misc: Early test versions of the independent website statistics plugin.

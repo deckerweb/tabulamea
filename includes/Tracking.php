@@ -90,16 +90,30 @@ final class Tracking {
         } catch (\Throwable $e) { return false; }
         finally { foreach([$gz,$tmp] as $file){ if(is_file($file)){wp_delete_file($file);} } flock($handle,LOCK_UN); fclose($handle); }
     }
-    /**
-     * Prune only this plugin's aggregate history and refresh opted-in database monthly.
+    /** Prune fixed aggregate tables in bounded batches and queue remaining work.
+     * @return bool Whether all statements and any follow-up scheduling succeeded.
+     */
+    private static function prune(): bool {
+        global $wpdb;$s=Plugin::settings();$ok=true;$more=CoreStore::cleanup_pending();$cutoff=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(1,min(120,(int)$s['retention'])).' months')->format('Y-m-d');
+        $tables=['dimensions'=>$cutoff];
+        if($s['core_retention']>0){$core=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(1,min(120,(int)$s['core_retention'])).' months')->format('Y-m-d');foreach(['site_stats','post_stats','referrer_stats','search_stats'] as $name){$tables[$name]=$core;}}
+        foreach($tables as $name=>$before){$deleted=$wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}tbm_{$name} WHERE date < %s LIMIT 1000",$before));if($deleted===false){$ok=false;}elseif($deleted===1000){$more=true;}}
+        if($ok&&$more&&!wp_next_scheduled('tbm_maintenance_batch')){$ok=(bool)wp_schedule_single_event(time()+60,'tbm_maintenance_batch');}
+        return $ok;
+    }
+    /** Continue bounded local cleanup without downloading external country data.
+     * @return void
+     */
+    public static function maintenance_batch(): void {
+        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=self::prune()&&$ok;
+        if($ok){update_option('tbm_last_maintenance',time(),false);}else{CoreStore::failure('storage');}
+    }
+    /** Prune plugin-owned history and refresh opted-in country data at most monthly.
      * @return void
      */
     public static function maintenance(): void {
-        $ok=CoreStore::cleanup();
-        global $wpdb; $s=Plugin::settings(); $cutoff=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(1,min(120,(int)$s['retention'])).' months')->format('Y-m-d');
-        if($wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}tbm_dimensions WHERE date < %s LIMIT 1000",$cutoff))===false){$ok=false;}
-        if($s['core_retention']>0){$core=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.(int)$s['core_retention'].' months')->format('Y-m-d');foreach(['site_stats','post_stats','referrer_stats','search_stats'] as $name){if($wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}tbm_{$name} WHERE date < %s LIMIT 1000",$core))===false){$ok=false;}}}
-        if ($s['country'] && $s['geo_download'] && get_option('tbm_geo_month')!==gmdate('Y-m')) { if(!self::download_geo()){$ok=false;} }
+        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=self::prune()&&$ok;$s=Plugin::settings();
+        if($s['country']&&$s['geo_download']&&get_option('tbm_geo_month')!==gmdate('Y-m')){if(!self::download_geo()){$ok=false;}}
         if($ok){update_option('tbm_last_maintenance',time(),false);}else{CoreStore::failure('storage');}
     }
 }

@@ -2,11 +2,11 @@
 
 [English](Changelog) · [Deutsch](Changelog-de)
 
-## 0.9.0 — 2026-10-18
+## 0.9.0 — 2026-10-19
 
 - New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
-- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
-- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs.
+- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution. Faster broad yearly content rankings, ordinary content lists and chart queries without additional measurement writes or indexes. Bounded cleanup continuations for larger backlogs.
+- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs. Atomic rollback and safe delivery retries after database errors or lost connections, including search counters. Atomic import transactions and import-source conflict checks. Public query-loop counter context, late-registered content types, dense annual charts and mobile settings layout.
 
 ## 0.1.0 – 0.8.0
 

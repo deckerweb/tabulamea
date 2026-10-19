@@ -8,6 +8,8 @@ Privacy-friendly website statistics inside WordPress: see pageviews, discover po
 
 [English / Deutsch](README-de.md) · [Guide](DOCUMENTATION.txt) · [FAQ](FAQ.txt) · [About TabulaMea](ABOUT.txt)
 
+[Download 0.9.0](https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+
 ## Contents
 
 - [Quick start](#quick-start)
@@ -56,7 +58,7 @@ Your content. Its impact. All in view.
 
 ## Quick start
 
-1. Install and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+1. Download the installable tabulamea-0.9.0.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -177,6 +179,8 @@ Basic statistics may have an age limit or no automatic age deletion; 0 months me
 
 Data care previews the cutoff and affected aggregate rows before deletion. Back up the database first. Definitions, snapshots and permanent import receipts remain. Deleted historical totals are not reconstructed.
 
+Automatic deletion uses bounded scheduled batches. Larger backlogs schedule follow-up batches. Delayed WordPress scheduled tasks can postpone actual deletion.
+
 ## Privacy page and operational checks
 
 Overview provides a text suggestion based on your TabulaMea settings. Edit and frontend links point to the assigned WordPress privacy policy page; if none is assigned, follow Settings → Privacy. Copy, review and adapt the text before publication. It replaces neither a complete privacy policy nor legal review.
@@ -195,11 +199,11 @@ TabulaMea includes deckerweb Library 1.0.0 and deckerweb Updater 2.1.0 for direc
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
-This build is prepared for GitHub. It does not authorize another distribution channel.
+TabulaMea is distributed through GitHub.
 
 ## Technical collection limits
 
-A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. Without secure browser randomness, one attempt is made without a token. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation.
+A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. Without secure browser randomness, one attempt is made without a token. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
 
 ## FAQ
 
@@ -235,18 +239,22 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 
 ## Changelog
 
-### 0.9.0 — 2026-10-18
+### 0.9.0 — 2026-10-19
 
 - New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
-- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution.
-- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs.
+- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution. Faster broad yearly content rankings, ordinary content lists and chart queries without additional measurement writes or indexes. Bounded cleanup continuations for larger backlogs.
+- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs. Atomic rollback and safe delivery retries after database errors or lost connections, including search counters. Atomic import transactions and import-source conflict checks. Public query-loop counter context, late-registered content types, dense annual charts and mobile settings layout.
 
 ### 0.1.0 – 0.8.0
 
 - Misc: Early test versions of the independent website statistics plugin.
 ## Project and security
 
-Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Version 0.9.0 is a prepared test build; no GitHub release has been published. Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
+Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Version 0.9.0 is available on [GitHub](https://github.com/deckerweb/tabulamea/releases/tag/v0.9.0). Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
+
+## Support this project
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
 
 ## Copyright & licenses
 

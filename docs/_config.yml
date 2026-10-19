@@ -1,0 +1,7 @@
+theme: jekyll-theme-cayman
+title: TabulaMea
+description: Privacy-friendly website statistics · Datenschutzfreundliche Website-Statistik
+url: https://deckerweb.github.io
+baseurl: /tabulamea
+show_downloads: false
+exclude: [wiki]

@@ -18,3 +18,5 @@
 .tbm-bars-note{display:none}.tbm-chart-bars .tbm-bars-note{display:block}.tbm-chart-bars .tbm-unknown{opacity:.65;r:2}
 
 .tbm-reset-views{margin:0 8px 0 4px!important}.tbm-chart svg text.tbm-axis-y{display:block!important}.tbm-chart svg text.tbm-axis-middle[hidden]{display:none!important}
+
+.tbm-chart-dense .tbm-chart-point:not(:focus):not(.is-selected){opacity:0}

@@ -118,7 +118,7 @@ final class Admin {
      * @param string $id Ranking identifier.
      * @return void
      */
-    public static function button(string $task,string $label,string $id=''): void { echo '<form class="tbm-inline" action="'.esc_url(admin_url('admin-post.php')).'" method="post">';self::action_fields($task);echo '<input type="hidden" name="id" value="'.esc_attr($id).'">';submit_button($label,'secondary','submit',false,['id'=>'tbm-'.$task.'-'.$id]);echo '</form>'; }
+    public static function button(string $task,string $label,string $id=''): void { echo '<form class="tbm-inline" action="'.esc_url(admin_url('admin-post.php')).'" method="post">';self::action_fields($task);echo '<input type="hidden" name="id" value="'.esc_attr($id).'">';echo '<button type="submit" class="button" id="'.esc_attr('tbm-'.$task.'-'.$id).'">'.esc_html($label).'</button>';echo '</form>'; }
     /**
      * Dispatch administrative mutations after explicit capability and nonce checks.
      * @return void
@@ -126,7 +126,7 @@ final class Admin {
     public static function action(): void {
         if(!current_user_can('manage_options')){wp_die(esc_html__('Access denied.','tabulamea'),'',403);}
         $task=is_string($_POST['task'] ?? null) ? sanitize_key($_POST['task']) : ''; 
-        if(!in_array($task,['ranking','freeze','unfreeze','delete','geo','export','import'],true)){wp_die('Invalid action','',400);}
+        if(!in_array($task,['ranking','freeze','unfreeze','delete','geo','export','import'],true)){wp_die(esc_html__('Unknown action.','tabulamea'),'',400);}
         check_admin_referer('tbm_'.$task);$ok=false;$ranks=(array)get_option('tbm_rankings',[]);$id=is_string($_POST['id'] ?? null) ? sanitize_key($_POST['id']) : ''; 
         if($task==='ranking' && !empty($_POST['tbm_preview'])){
             $raw=wp_unslash($_POST['ranking'] ?? []);if(!is_array($raw)){wp_die(esc_html__('Invalid ranking.','tabulamea'),'',400);}
@@ -141,8 +141,8 @@ final class Admin {
         }
         if($task==='geo'){$ok=Tracking::download_geo();}
         if($task==='export'){
-            $s=Plugin::settings();unset($s['users'],$s['geo_download'],$s['delete_data']);foreach($ranks as &$rank){unset($rank['snapshot']);}unset($rank);
-            nocache_headers();header('Content-Type: application/json; charset=utf-8');header('Content-Disposition: attachment; filename="tabulamea-configuration.json"');echo wp_json_encode(['format'=>1,'settings'=>$s,'rankings'=>$ranks],JSON_PRETTY_PRINT);exit;
+            $package=ConfigurationTools::package(array_keys(ConfigurationTools::sections()),array_map('strval',array_keys($ranks)));
+            nocache_headers();header('Content-Type: application/json; charset=utf-8');header('Content-Disposition: attachment; filename="tabulamea-configuration.json"');echo wp_json_encode($package,JSON_PRETTY_PRINT);exit;
         }
         if($task==='import'){
             try{ToolsActions::import_preview(['access','dashboard','collection','rankings'],true);$ok=true;}catch(\Throwable $error){$ok=false;}

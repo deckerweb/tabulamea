@@ -19,7 +19,12 @@ if ( ! defined( 'ABSPATH' ) ) {
  * It never turns on automatic updates. Private credentials come from an optional provider.
  */
 interface AuthProvider {
-	/** Return a runtime credential for this exact repository, or null. Never log it. */
+	/**
+	 * Return a runtime credential only for the exact configured repository. Never log the result.
+	 *
+	 * @param string $repository Normalized repository URL requesting authorization.
+	 * @return string|null Runtime token, or null when unavailable or outside the provider scope.
+	 */
 	public function token( string $repository ): ?string;
 }
 
@@ -27,6 +32,13 @@ interface AuthProvider {
 final class EnvironmentAuthProvider implements AuthProvider {
 	private string $repository;
 	private string $variable;
+	/**
+	 * Configure a repository-scoped environment credential without reading or storing the secret.
+	 *
+	 * @param string $repository Exact repository URL allowed to use this provider.
+	 * @param string $variable Valid uppercase environment variable name containing the runtime secret.
+	 * @return void No return value; throws InvalidArgumentException for an invalid variable name.
+	 */
 	public function __construct( string $repository, string $variable ) {
 		if ( ! preg_match( '/^[A-Z][A-Z0-9_]*$/D', $variable ) ) {
 			throw new \InvalidArgumentException( 'Invalid secret variable name.' );
@@ -34,14 +46,26 @@ final class EnvironmentAuthProvider implements AuthProvider {
 		$this->repository = rtrim( $repository, '/' );
 		$this->variable = $variable;
 	}
+	/**
+	 * Return a runtime credential only for the exact configured repository. Never log the result.
+	 *
+	 * @param string $repository Normalized repository URL requesting authorization.
+	 * @return string|null Runtime token, or null when unavailable or outside the provider scope.
+	 */
 	public function token( string $repository ): ?string {
 		if ( $repository !== $this->repository ) { return null; }
 		$value = getenv( $this->variable );
 		return is_string( $value ) && '' !== $value ? $value : null;
 	}
+	/**
+	 * Return non-secret diagnostic metadata without exposing credentials or provider objects.
+	 *
+	 * @return array Safe diagnostic fields.
+	 */
 	public function __debugInfo(): array { return array( 'provider' => 'environment' ); }
 }
 
+/** Connect one configured GitHub repository to native update offers, metadata and package validation. */
 final class Updater {
 	public const IMPLEMENTATION_VERSION = '2.1.0';
 	public const SUPPORTS_PRIVATE_REPOSITORIES = true;
@@ -115,6 +139,7 @@ final class Updater {
 	 * @param array  $artwork Optional icons (svg, 1x, 2x, default) and banners (low, high) URL maps.
 	 * @param array  $options Optional private boolean, auth AuthProvider and translate callable(string):string. Public defaults remain compatible.
 	 * @throws \InvalidArgumentException If the slug or repository URL is invalid.
+	 * @return void No return value; validates and stores repository integration settings.
 	 */
 	public function __construct( string $main_file, string $repository_url, string $name, string $description, array $artwork = array(), array $options = array() ) {
 		if ( isset( $options['translate'] ) && ! is_callable( $options['translate'] ) ) { throw new \InvalidArgumentException( 'Invalid host translator.' ); }
@@ -190,7 +215,9 @@ final class Updater {
 	}
 
 	/**
-	 * Register the update, information, and extracted archive hooks.
+	 * Register native update, metadata and archive-validation hooks for this plugin.
+	 *
+	 * @return void No return value; adds WordPress filters and does not enable automatic updates.
 	 */
 	public function register(): void {
 		\add_filter( 'update_plugins_github.com', array( $this, 'update' ), 10, 4 );
@@ -279,7 +306,12 @@ final class Updater {
 		return $release;
 	}
 
-	/** The host owns extraction, catalogs and the sole textdomain; never cache translated strings. */
+	/**
+	 * Translate through the host in the current locale; never cache translated strings.
+	 *
+	 * @param string $message Untranslated source message.
+	 * @return string Host translation, or the source message when the translator fails.
+	 */
 	private function text( string $message ): string {
 		if ( null === $this->translate ) { return $message; }
 		try { $translated = ( $this->translate )( $message ); }
@@ -287,12 +319,25 @@ final class Updater {
 		return is_string( $translated ) && '' !== trim( $translated ) ? $translated : $message;
 	}
 
-	/** Keep provider objects out of ordinary diagnostic object dumps. */
+	/**
+	 * Return non-secret diagnostic metadata without exposing credentials or provider objects.
+	 *
+	 * @return array Safe diagnostic fields.
+	 */
 	public function __debugInfo(): array { return array( 'repository' => $this->repo, 'private' => $this->private, 'version' => self::IMPLEMENTATION_VERSION ); }
 
-	/** Remove metadata after credential rotation; never derive cache names from secrets. */
+	/**
+	 * Invalidate this repository’s release metadata after credential or configuration changes.
+	 *
+	 * @return void No return value; deletes the repository-specific site transient.
+	 */
 	public function clear_cache(): void { \delete_site_transient( $this->cache ); }
 
+	/**
+	 * Resolve authorization headers for this repository without returning provider exceptions.
+	 *
+	 * @return array|null Headers, empty for a public repository, or null when private authorization fails.
+	 */
 	private function auth_headers(): ?array {
 		if ( ! $this->private ) { return array(); }
 		try { $token = $this->auth ? $this->auth->token( $this->repo ) : null; }
@@ -301,14 +346,28 @@ final class Updater {
 		return array( 'Authorization' => 'Bearer ' . $token );
 	}
 
-	/** Core bulk plugin updates omit type/action per item; reject any explicit conflicting context. */
+	/**
+	 * Match this plugin’s native single or bulk update; reject explicit conflicting context.
+	 *
+	 * @param mixed $upgrader WordPress upgrader instance, required to recognize native bulk updates.
+	 * @param array $context Per-package upgrade context including the plugin basename.
+	 * @return bool Whether the context identifies an update of this plugin.
+	 */
 	private function is_update_context( $upgrader, array $context ): bool {
 		if ( ( $context['plugin'] ?? '' ) !== $this->file || ( isset( $context['type'] ) && 'plugin' !== $context['type'] ) || ( isset( $context['action'] ) && 'update' !== $context['action'] ) ) { return false; }
 		if ( isset( $context['type'], $context['action'] ) ) { return true; }
 		return $upgrader instanceof \Plugin_Upgrader && true === $upgrader->bulk;
 	}
 
-	/** Stream only this plugin's private offered package. Credentials never follow redirects. */
+	/**
+	 * Stream only this plugin’s offered private update package; never forward credentials through redirects.
+	 *
+	 * @param mixed $reply Earlier download result, or false to continue native processing.
+	 * @param string $package Requested update URL, which must match the offered repository package.
+	 * @param mixed $upgrader Native upgrader instance used to verify update context.
+	 * @param array $hook_extra Per-package native update context.
+	 * @return mixed Earlier result, verified temporary ZIP path, or a sanitized WP_Error; successful temporary files belong to the upgrader.
+	 */
 	public function download( $reply, $package, $upgrader, $hook_extra ) {
 		if ( ! $this->private || false !== $reply || ! $this->is_update_context( $upgrader, $hook_extra ) ) { return $reply; }
 		$release = $this->release();

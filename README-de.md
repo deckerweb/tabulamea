@@ -8,6 +8,8 @@ Datenschutzfreundliche Website-Statistik direkt in WordPress: Seitenaufrufe übe
 
 [English / Deutsch](README.md) · [Anleitung](DOCUMENTATION-de.txt) · [FAQ](FAQ-de.txt) · [Über TabulaMea](ABOUT-de.txt)
 
+[Download 0.9.0](https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+
 ## Inhaltsverzeichnis
 
 - [Schnellstart](#schnellstart)
@@ -56,7 +58,7 @@ Deine Inhalte. Ihre Wirkung. Alles im Blick.
 
 ## Schnellstart
 
-1. Installiere und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
+1. Lade das Installationspaket tabulamea-0.9.0.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
 2. Öffne Einstellungen → TabulaMea → Übersicht. Dort siehst du Messstatus und geführten Messtest.
 3. Unter Messung legst du fest, welche öffentlichen Inhalte erfasst werden. Administratoren und Redakteure sind standardmäßig von regulären Aufrufen ausgeschlossen.
 4. Öffne TabulaMea → Statistikübersicht und wähle deinen Zeitraum. Neue Messdaten entstehen ab der Aktivierung; historische Daten lassen sich separat importieren.
@@ -177,6 +179,8 @@ Grundstatistiken können zeitlich begrenzt oder ohne automatische Alterslöschun
 
 Die Datenpflege zeigt vor einer Löschung Stichtag und betroffene Summenzeilen. Erstelle vorher eine Datenbanksicherung. Definitionen, Momentaufnahmen und dauerhafte Importbelege bleiben dabei erhalten. Bereits gelöschte historische Summen werden nicht rekonstruiert.
 
+Die automatische Löschung läuft in begrenzten geplanten Schritten. Bei größeren Rückständen werden weitere Schritte eingeplant. Verzögerte WordPress-Hintergrundaufgaben können die tatsächliche Löschung aufschieben.
+
 ## Datenschutzseite und technische Diagnose
 
 Unter Übersicht findest du einen Textvorschlag zur aktuellen TabulaMea-Konfiguration. Die Bearbeitungs- und Frontendlinks führen zur zugewiesenen WordPress-Datenschutzseite; fehlt sie, führt der Hinweis zu Einstellungen → Datenschutz. Kopiere den Vorschlag, prüfe ihn und passe ihn vor der Veröffentlichung an deine Website an. Er ersetzt weder eine vollständige Datenschutzerklärung noch eine rechtliche Prüfung.
@@ -195,11 +199,11 @@ TabulaMea enthält die deckerweb Library 1.0.0 und den deckerweb Updater 2.1.0 f
 
 Die Library bietet unter Plugins → Installieren → deckerweb einen zusätzlichen Plugin-Katalog. Der optionale Online-Abruf ist standardmäßig ausgeschaltet. Bei Aktivierung lädt er den freigegebenen Katalog von GitHub; Installation und Aktivierung weiterer Plugins werden jeweils bewusst ausgelöst. Der Dienst sieht dabei die Server-IP, aber keine TabulaMea-Statistikdaten. Library-Einstellungen und Verwaltungsdaten sind gemeinsame Komponentendaten: Sie bleiben erhalten, solange ein weiterer Host installiert ist, auch wenn dieser deaktiviert ist. Beim letzten Host werden temporäre Daten bereinigt; die eigene optionale Löschung dauerhafter Library-Einstellungen ist standardmäßig aus. Installierte andere Plugins und deren Inhalte werden nicht gelöscht.
 
-Diese Fassung ist für GitHub vorbereitet. Ein anderer Vertriebsweg ist damit nicht freigegeben.
+TabulaMea wird über GitHub veröffentlicht.
 
 ## Technische Messgrenzen
 
-Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten Dokuments und wird für höchstens drei Versuche nach Netzwerk- oder Serverfehlern wiederverwendet. Der Server speichert vorübergehend ausschließlich ihren Hash und Ablaufzeitpunkt, ohne Zuordnung zu Inhalt, Adresse oder Browser. Die Kennung läuft nach zehn Minuten ab und wird in kleinen Bereinigungspaketen entfernt; verzögerte Bereinigung kann abgelaufene Hashes länger erhalten. Sie verhindert doppelte Zustellung, keine wiederholten Besuche. Ohne sichere Browserzufallsquelle gibt es genau einen Versuch ohne Kennung. Atomare InnoDB-Transaktionen halten die Zähler bei Schreibfehlern konsistent. Ein anonymes Anfragebudget je Website liegt standardmäßig bei 60.000 validierten Anfragen pro Minute einschließlich Wiederholungsversuchen, ist einstellbar und verwendet keine IP-Adressen. Oberhalb des Limits werden Anfragen abgewiesen. Das schützt Ressourcen, verhindert aber nicht jede bewusste Manipulation.
+Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten Dokuments und wird für höchstens drei Versuche nach Netzwerk- oder Serverfehlern wiederverwendet. Der Server speichert vorübergehend ausschließlich ihren Hash und Ablaufzeitpunkt, ohne Zuordnung zu Inhalt, Adresse oder Browser. Die Kennung läuft nach zehn Minuten ab und wird in kleinen Bereinigungspaketen entfernt; verzögerte Bereinigung kann abgelaufene Hashes länger erhalten. Sie verhindert doppelte Zustellung, keine wiederholten Besuche. Ohne sichere Browserzufallsquelle gibt es genau einen Versuch ohne Kennung. Atomare InnoDB-Transaktionen halten die Zähler bei Schreibfehlern konsistent. Ein anonymes Anfragebudget je Website liegt standardmäßig bei 60.000 validierten Anfragen pro Minute einschließlich Wiederholungsversuchen, ist einstellbar und verwendet keine IP-Adressen. Oberhalb des Limits werden Anfragen abgewiesen. Das schützt Ressourcen, verhindert aber nicht jede bewusste Manipulation. Nach einem Datenbankfehler stoppt die Verarbeitung sofort und die gesamte Zählertransaktion wird zurückgerollt. Bei Deadlocks und Sperrzeitüberschreitungen sind höchstens drei vollständige Versuche vorgesehen; Verbindungsabbrüche und unklare Commit-Bestätigungen werden intern nicht erneut ausgeführt. Die Zustellkennung des Dokuments schützt einen nachfolgenden Zustellversuch innerhalb der Beleglaufzeit vor Doppelzählungen.
 
 ## FAQ
 
@@ -235,18 +239,22 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 
 ## Changelog
 
-### 0.9.0 — 2026-10-18
+### 0.9.0 — 2026-10-19
 
 - Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.
-- Verbessert: Diagramme, modulare Dashboard-Widgets, öffentliche Ausgabeblöcke, Zugriffssteuerung und Dokumentation. Library 1.0.0 und Updater 2.1.0 für den GitHub-Vertrieb integriert.
-- Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen. Schriftgrößen in der Blockvorschau und lokalisierte Dokumentationsdialoge.
+- Verbessert: Diagramme, modulare Dashboard-Widgets, öffentliche Ausgabeblöcke, Zugriffssteuerung und Dokumentation. Library 1.0.0 und Updater 2.1.0 für den GitHub-Vertrieb integriert. Schnellere breite Jahresrankings, normale Inhaltslisten und Diagrammabfragen ohne zusätzliche Schreibzugriffe oder Indizes beim Messen. Begrenzte Bereinigungsschritte auch bei größeren Rückständen.
+- Behoben: Statistikzugriff, Aufrufspalten, Diagrammdarstellung und die Zuordnung von Hinweisen und Bedienelementen. Schriftgrößen in der Blockvorschau und lokalisierte Dokumentationsdialoge. Vollständiger Rollback und sichere Zustellwiederholungen bei Datenbankfehlern oder Verbindungsabbrüchen, auch für Suchzähler. Atomare Import-Transaktionen und Prüfung konkurrierender Importquellen. Zähler in Beitragslisten, später registrierte Inhaltstypen, dichte Jahresdiagramme und mobile Einstellungen.
 
 ### 0.1.0 – 0.8.0
 
 - Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.
 ## Projekt und Sicherheit
 
-Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Version 0.9.0 ist als Teststand vorbereitet; ein GitHub-Release ist noch nicht veröffentlicht. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).
+Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Version 0.9.0 ist auf [GitHub](https://github.com/deckerweb/tabulamea/releases/tag/v0.9.0) erhältlich. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).
+
+## Unterstützung
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
 
 ## Copyright & Lizenzen
 

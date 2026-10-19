@@ -29,7 +29,7 @@ final class StatifyImport {
     /** Import up to 100 source rows with a shared per-site import lock. @return bool Batch success. */
     public static function batch(): bool {
         if(Plugin::settings()['measurement']||self::conflict()){return false;}global $wpdb;$lock='tbm_import_'.md5(DB_NAME.'|'.$wpdb->prefix);if((int)$wpdb->get_var($wpdb->prepare('SELECT GET_LOCK(%s,0)',$lock))!==1){return false;}
-        try{$state=(array)get_option('tbm_statify_import',[]);if(!$state){return false;}if($state['done']){return true;}$cutoff=min($state['cutoff'],StatisticsImport::cutoff());$rows=$wpdb->get_results($wpdb->prepare("SELECT id,created,target,referrer FROM {$wpdb->prefix}statify WHERE id>%d AND id<=%d AND created<=%s ORDER BY id LIMIT 100",$state['cursor'],$state['max_id'],$cutoff),ARRAY_A);if($wpdb->last_error){return false;}
+        try{if(self::conflict()){return false;}wp_cache_delete('tbm_statify_import','options');$state=(array)get_option('tbm_statify_import',[]);if(!$state){return false;}if($state['done']){return true;}$cutoff=min($state['cutoff'],StatisticsImport::cutoff());$rows=$wpdb->get_results($wpdb->prepare("SELECT id,created,target,referrer FROM {$wpdb->prefix}statify WHERE id>%d AND id<=%d AND created<=%s ORDER BY id LIMIT 100",$state['cursor'],$state['max_id'],$cutoff),ARRAY_A);if($wpdb->last_error){return false;}
             foreach($rows as $row){$mapped=self::copy($row);if($mapped===false){return false;}$state['cursor']=(int)$row['id'];$state['processed']++;$state['mapped']+=(int)$mapped;update_option('tbm_statify_import',$state,false);}if(count($rows)<100){$state['done']=true;update_option('tbm_statify_import',$state,false);}update_option('tbm_revision',microtime(true),false);delete_transient('tbm_storage_summary');return true;
         }finally{$wpdb->get_var($wpdb->prepare('SELECT RELEASE_LOCK(%s)',$lock));}
     }
@@ -40,9 +40,14 @@ final class StatifyImport {
     private static function copy(array $row) {
         global $wpdb;$date=substr((string)$row['created'],0,10);$parsed=\DateTimeImmutable::createFromFormat('!Y-m-d',$date,wp_timezone());if(!$parsed||$parsed->format('Y-m-d')!==$date){return 0;}$target=(string)$row['target'];$url=str_starts_with($target,'/')?home_url($target):$target;$id=0;
         if(wp_parse_url($url,PHP_URL_HOST)===wp_parse_url(home_url(),PHP_URL_HOST)){$candidate=url_to_postid($url);$post=$candidate?get_post($candidate):null;if($post&&is_post_publicly_viewable($post)&&$post->post_password===''){$id=$candidate;}}
-        $path=$id?(string)wp_parse_url(get_permalink($id),PHP_URL_PATH):'/__imported_overview__';$path=substr($path?:'/',0,768);$domain=Measurement::domain((string)$row['referrer']);if($domain===Measurement::domain(home_url())){$domain='';}$key=hash('sha256',(string)$row['id']);if($wpdb->query('START TRANSACTION')===false){return false;}
-        $receipt=$wpdb->query($wpdb->prepare("INSERT IGNORE INTO {$wpdb->prefix}tbm_import_ledger (source,kind,source_key,pageviews) VALUES ('statify','row',%s,1)",$key));if($receipt===false){$wpdb->query('ROLLBACK');return false;}if($receipt===0){$wpdb->query('COMMIT');return 0;}
-        $results=[$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_site_stats (date,pageviews) VALUES (%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1",$date)),$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_post_stats (date,post_id,path_hash,path,pageviews) VALUES (%s,%d,%s,%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1",$date,$id,hash('sha256',$id.'|'.$path),$path))];
-        if($domain&&!in_array($domain,Plugin::settings()['referrer_blocklist'],true)){$results[]=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) VALUES (%s,%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1",$date,$domain));}if(in_array(false,$results,true)){$wpdb->query('ROLLBACK');return false;}if($wpdb->query('COMMIT')===false){$wpdb->query('ROLLBACK');return false;}return $id?1:0;
+        $path=$id?(string)wp_parse_url(get_permalink($id),PHP_URL_PATH):'/__imported_overview__';$path=substr($path?:'/',0,768);$domain=Measurement::domain((string)$row['referrer']);if($domain===Measurement::domain(home_url())){$domain='';}$key=hash('sha256',(string)$row['id']);$mapped=0;
+        $ok=CoreStore::import('statify','row',$key,1,static function(int $delta) use($date,$id,$path,$domain,&$mapped): bool {
+            global $wpdb;
+            if($wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_site_stats (date,pageviews) VALUES (%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$delta))===false){return false;}
+            if($wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_post_stats (date,post_id,path_hash,path,pageviews) VALUES (%s,%d,%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$id,hash('sha256',$id.'|'.$path),$path,$delta))===false){return false;}
+            if($domain&&!in_array($domain,Plugin::settings()['referrer_blocklist'],true)&&$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) VALUES (%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$domain,$delta))===false){return false;}
+            $mapped=$id?1:0;return true;
+        });
+        return $ok?$mapped:false;
     }
 }

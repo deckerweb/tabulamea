@@ -1210,6 +1210,45 @@ msgstr "Höchstzahl der Widget-Einträge"
 msgid "Visitor totals are unavailable"
 msgstr "Besucherzahlen sind nicht verfügbar"
 
+msgid "Enable pageview measurement"
+msgstr "Seitenaufrufmessung aktivieren"
+
+msgid "Excluded roles"
+msgstr "Ausgeschlossene Rollen"
+
+msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
+msgstr "Basisstatistiken für diese Anzahl Monate aufbewahren (0 = bis zur ausdrücklichen Löschung)"
+
+msgid "Hide these referrer domains from future referrer counts (one per line)"
+msgstr "Diese Referrer-Domains künftig nicht mitzählen (eine pro Zeile)"
+
+msgid "Exclude recognizable search-engine bots from statistics"
+msgstr "Erkennbare Suchmaschinen-Bots aus der Statistik ausschließen"
+
+msgid "Exclude recognizable AI bots and assistants from statistics"
+msgstr "Erkennbare KI-Bots und KI-Assistenten aus der Statistik ausschließen"
+
+msgid "Collection scope"
+msgstr "Messumfang"
+
+msgid "Content types"
+msgstr "Inhaltstypen"
+
+msgid "Archive types"
+msgstr "Archivtypen"
+
+msgid "Count search-result views separately"
+msgstr "Suchergebnis-Aufrufe getrennt zählen"
+
+msgid "Selected search terms"
+msgstr "Ausgewählte Suchbegriffe"
+
+msgid "Pageviews in content lists"
+msgstr "Seitenaufrufe in Inhaltslisten"
+
+msgid "Period for list-table counts"
+msgstr "Zeitraum für die Zähler in Inhaltslisten"
+
 msgid "Settings sections to include"
 msgstr "Einzubeziehende Einstellungsbereiche"
 
@@ -1344,18 +1383,6 @@ msgstr "Für diesen Zeitraum sind keine Änderungen der Messkonfiguration vermer
 
 msgid "Technical collection changes"
 msgstr "Technische Änderungen der Erfassung"
-
-msgid "Excluded roles"
-msgstr "Ausgeschlossene Rollen"
-
-msgid "Collection scope"
-msgstr "Messumfang"
-
-msgid "Content types"
-msgstr "Inhaltstypen"
-
-msgid "Archive types"
-msgstr "Archivtypen"
 
 msgid "Search-engine bot filter"
 msgstr "Suchmaschinen-Botfilter"
@@ -1501,17 +1528,8 @@ msgstr "Datenschutzfreundliche Messung"
 msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
 msgstr "Zählt sichtbare Seitenaufrufe ohne Cookies, Fingerprinting, Besucherkennungen oder individuelle Besuchsverläufe. Do Not Track und Global Privacy Control werden berücksichtigt."
 
-msgid "Enable pageview measurement"
-msgstr "Seitenaufrufmessung aktivieren"
-
 msgid "Do not count logged-in users with these roles"
 msgstr "Angemeldete Benutzer dieser Rollen nicht mitzählen"
-
-msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
-msgstr "Basisstatistiken für diese Anzahl Monate aufbewahren (0 = bis zur ausdrücklichen Löschung)"
-
-msgid "Hide these referrer domains from future referrer counts (one per line)"
-msgstr "Diese Referrer-Domains künftig nicht mitzählen (eine pro Zeile)"
 
 msgid "Pageviews still count. Existing referrer totals remain unchanged. No query strings or referrer paths are stored."
 msgstr "Seitenaufrufe zählen weiterhin. Vorhandene Referrer-Zähler bleiben unverändert. Abfrageparameter oder Referrer-Pfade werden nicht gespeichert."
@@ -1564,14 +1582,8 @@ msgstr "Ungültige Eingabe."
 msgid "Automated requests"
 msgstr "Automatisierte Aufrufe"
 
-msgid "Exclude recognizable search-engine bots from statistics"
-msgstr "Erkennbare Suchmaschinen-Bots aus der Statistik ausschließen"
-
 msgid "For example Google, Bing and DuckDuckGo. People arriving through these search engines are still counted."
 msgstr "Beispielsweise Google, Bing und DuckDuckGo. Menschen, die über diese Suchmaschinen kommen, werden weiterhin erfasst."
-
-msgid "Exclude recognizable AI bots and assistants from statistics"
-msgstr "Erkennbare KI-Bots und KI-Assistenten aus der Statistik ausschließen"
 
 msgid "For example OpenAI, Anthropic and Perplexity. People following links from these services are still counted. These options do not block access or change robots.txt. Bots without a measurement request remain invisible, even when an exclusion is disabled."
 msgstr "Beispielsweise OpenAI, Anthropic und Perplexity. Menschen, die Links dieser Dienste folgen, werden weiterhin erfasst. Diese Optionen sperren keine Zugriffe und ändern keine robots.txt. Bots ohne Messanfrage bleiben auch bei ausgeschaltetem Ausschluss unsichtbar."
@@ -1615,14 +1627,8 @@ msgstr "Weitere öffentliche Übersichtsseiten"
 msgid "See which offers people search for, without retaining arbitrary search inputs. Select non-personal terms in advance; matching results-page views are counted under these terms. Names, email addresses and other unselected inputs are not saved as search text."
 msgstr "Erkennen Sie, welche Angebote auf Ihrer Website gesucht werden, ohne beliebige Sucheingaben zu speichern. Lege vorher nicht personenbezogene Suchbegriffe fest; passende Suchergebnisseiten werden darunter gezählt. Namen, E-Mail-Adressen und andere nicht ausgewählte Eingaben werden nicht als Suchtext gespeichert."
 
-msgid "Count search-result views separately"
-msgstr "Suchergebnis-Aufrufe getrennt zählen"
-
 msgid "Counts the first results page and searches without results. Reloads count again. Free search strings are never retained. Search counts do not increase regular pageview totals."
 msgstr "Zählt die erste Ergebnisseite und Suchen ohne Ergebnisse. Neuladen zählt erneut. Freie Suchstrings werden niemals gespeichert. Suchaufrufe erhöhen die regulären Seitenaufrufzahlen nicht."
-
-msgid "Selected search terms"
-msgstr "Ausgewählte Suchbegriffe"
 
 msgid "Selected search terms: one exact phrase per line"
 msgstr "Ausgewählte Suchbegriffe: eine genaue Suchphrase pro Zeile"
@@ -1924,14 +1930,8 @@ msgstr "Zeitraum der Seitenaufrufe"
 msgid "Reset view filters"
 msgstr "Aufruffilter zurücksetzen"
 
-msgid "Pageviews in content lists"
-msgstr "Seitenaufrufe in Inhaltslisten"
-
 msgid "Enable a sortable Pageviews column for selected public content types. Only statistics viewers see it. Missing records are shown as a dash; they do not prove zero visits."
 msgstr "Aktivieren Sien Sie eine sortierbare Spalte „Seitenaufrufe“ für ausgewählte öffentliche Inhaltstypen. Sie ist nur für Statistikberechtigte sichtbar. Fehlende Datensätze erscheinen als Strich und beweisen nicht, dass es keine Besuche gab."
-
-msgid "Period for list-table counts"
-msgstr "Zeitraum für die Zähler in Inhaltslisten"
 
 msgid "Settings"
 msgstr "Einstellungen"
@@ -2058,6 +2058,9 @@ msgstr "Optionale Kategoriestatistiken werden für %d Monate aufbewahrt."
 
 msgid "The server is permitted to download the country database from DB-IP; visitor addresses are not sent to that service."
 msgstr "Der Server darf die Länderdatenbank von DB-IP herunterladen; Besucheradressen werden nicht an diesen Dienst übertragen."
+
+msgid "Automatic deletion runs in small scheduled batches. Delayed WordPress scheduled tasks can retain older data for longer."
+msgstr "Die automatische Löschung erfolgt in kleinen geplanten Schritten. Bei verzögerten WordPress-Hintergrundaufgaben können ältere Daten länger erhalten bleiben."
 
 msgid "Hosting access logs and other installed software are outside this description. Review this text for your actual website and legal requirements before publishing it."
 msgstr "Hosting-Zugriffsprotokolle und andere installierte Software sind nicht Teil dieser Beschreibung. Den Text vor einer Veröffentlichung auf die tatsächliche Website und rechtliche Anforderungen prüfen Sien."

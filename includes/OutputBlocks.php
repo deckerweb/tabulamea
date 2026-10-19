@@ -9,8 +9,12 @@ final class OutputBlocks {
         register_block_type('tabulamea/counter',['api_version'=>3,'editor_script'=>'tbm-output-blocks','supports'=>self::supports(),'uses_context'=>['postId'],'attributes'=>['before'=>['type'=>'string','default'=>''],'after'=>['type'=>'string','default'=>''],'days'=>['type'=>'number','default'=>30],'global'=>['type'=>'boolean','default'=>false]],'render_callback'=>[self::class,'counter']]);
         register_block_type('tabulamea/popular',['api_version'=>3,'editor_style'=>'tbm-ranking','style'=>'tbm-ranking','editor_script'=>'tbm-output-blocks','supports'=>self::supports(),'attributes'=>['days'=>['type'=>'number','default'=>30],'number'=>['type'=>'number','default'=>5],'postType'=>['type'=>'string','default'=>'post']],'render_callback'=>[self::class,'popular']]);
         add_filter('query_loop_block_query_vars',[self::class,'query_loop'],20,2);
-        foreach(get_post_types(['public'=>true]) as $type){add_filter('rest_'.$type.'_collection_params',[self::class,'collection_params']);add_filter('rest_'.$type.'_query',[self::class,'rest_query'],20,2);}
+        add_action('init',[self::class,'collections'],30);
         add_action('enqueue_block_editor_assets',[self::class,'labels']);
+    }
+    /** Register native collection filters after public custom types have been registered. @return void */
+    public static function collections(): void {
+        foreach(get_post_types(['public'=>true]) as $type){add_filter('rest_'.$type.'_collection_params',[self::class,'collection_params']);add_filter('rest_'.$type.'_query',[self::class,'rest_query'],20,2);}
     }
     /** Return native appearance controls shared by output blocks. @return array Block support flags. */
     public static function supports(): array {return ['color'=>['text'=>true,'background'=>true],'typography'=>['fontSize'=>true,'lineHeight'=>true],'spacing'=>['margin'=>true,'padding'=>true],'align'=>true,'html'=>false];}
@@ -21,9 +25,11 @@ final class OutputBlocks {
     }
     /** Render the pageview counter with the same publication guard as its shortcode.
      * @param array $attributes Block attributes.
+     * @param string $content Saved inner markup, unused by this dynamic block.
+     * @param \WP_Block|null $block Block context, including a Query Loop content ID.
      * @return string Escaped counter markup or empty output.
      */
-    public static function counter(array $attributes): string {$text=Rankings::counter(['days'=>$attributes['days']??30,'global'=>!empty($attributes['global'])?'true':'false']);return $text===''?'':'<span '.get_block_wrapper_attributes().'>'.esc_html((string)($attributes['before']??'')).$text.esc_html((string)($attributes['after']??'')).'</span>';}
+    public static function counter(array $attributes,string $content='',?\WP_Block $block=null): string {$text=Rankings::counter(['days'=>$attributes['days']??30,'global'=>!empty($attributes['global'])?'true':'false'],(int)($block->context['postId']??0));return $text===''?'':'<span '.get_block_wrapper_attributes().'>'.esc_html((string)($attributes['before']??'')).$text.esc_html((string)($attributes['after']??'')).'</span>';}
     /** Render a bounded popular-content list.
      * @param array $attributes Block attributes.
      * @return string Safe linked-list markup.

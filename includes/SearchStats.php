@@ -29,12 +29,14 @@ final class SearchStats {
         if(!hash_equals($proof,$c['proof'])||($topic!==''&&!isset($s['search_topics'][$topic]))){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
         $event=$a['event']??'';if(!is_string($event)||($event!==''&&!preg_match('/^[a-f0-9]{32}$/D',$event))){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
         $budget=CoreStore::budget();if($budget!==true){return new \WP_REST_Response(null,$budget===false?429:503);}
-        global $wpdb;$prior=$wpdb->suppress_errors(true);try{
-            if($wpdb->query('START TRANSACTION')===false){throw new \RuntimeException();}
-            if($event!==''){$receipt=$wpdb->query($wpdb->prepare("INSERT IGNORE INTO {$wpdb->prefix}tbm_receipts (token_hash,expires) VALUES (%s,%d)",hash('sha256',$event),time()+600));if($receipt===false){throw new \RuntimeException();}if($receipt===0){$wpdb->query('COMMIT');return new \WP_REST_Response(null,204);}}
-            $date=wp_date('Y-m-d');foreach($topic===''?['']:['',$topic] as $key){if($wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_search_stats (date,topic,no_results,views) VALUES (%s,%s,%d,1) ON DUPLICATE KEY UPDATE views=views+1",$date,$key,$empty))===false){throw new \RuntimeException();}}
-            if($wpdb->query('COMMIT')===false){throw new \RuntimeException();}add_option('tbm_search_since',$date,'',false);if(wp_rand(1,100)===1){CoreStore::cleanup();}return new \WP_REST_Response(null,204);
-        }catch(\Throwable $e){$wpdb->query('ROLLBACK');CoreStore::failure('storage');return new \WP_Error('storage_failed',__('Statistics could not be saved.','tabulamea'),['status'=>503]);}finally{$wpdb->suppress_errors($prior);}
+        $date=wp_date('Y-m-d');
+        if (!CoreStore::search($date,$topic,$empty,$event)) {
+            CoreStore::failure('storage');
+            return new \WP_Error('storage_failed',__('Statistics could not be saved.','tabulamea'),['status'=>503]);
+        }
+        add_option('tbm_search_since',$date,'',false);
+        if(wp_rand(1,100)===1){CoreStore::cleanup();}
+        return new \WP_REST_Response(null,204);
     }
     /** Read private search aggregates for a valid interval.
      * @param array $range Inclusive dates.

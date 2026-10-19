@@ -27,8 +27,16 @@ final class Stats {
      * @return array Date-to-count mapping.
      */
     public static function daily(array $range): array {
-        global $wpdb;if(self::monthly($range)){$rows=$wpdb->get_results($wpdb->prepare("SELECT DATE_FORMAT(date,'%%Y-%%m-01') date,SUM(pageviews) pageviews FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s GROUP BY DATE_FORMAT(date,'%%Y-%%m-01') ORDER BY date",$range),OBJECT_K);$out=[];$d=(new \DateTimeImmutable($range[0],wp_timezone()))->modify('first day of this month');$end=new \DateTimeImmutable($range[1],wp_timezone());while($d<=$end&&count($out)<2400){$key=$d->format('Y-m-d');$out[$key]=(int)($rows[$key]->pageviews??0);$d=$d->modify('+1 month');}return $out;}$rows=$wpdb->get_results($wpdb->prepare("SELECT date,pageviews FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s ORDER BY date",$range),OBJECT_K);$out=[];
-        $d=new \DateTimeImmutable($range[0],wp_timezone());$end=new \DateTimeImmutable($range[1],wp_timezone());
-        while($d<=$end && count($out)<3660){$key=$d->format('Y-m-d');$out[$key]=(int)($rows[$key]->pageviews ?? 0);$d=$d->modify('+1 day');}return $out;
+        global $wpdb;$monthly=self::monthly($range);$group=$monthly?"DATE_FORMAT(date,'%%Y-%%m-01')":'date';
+        $rows=$wpdb->get_results($wpdb->prepare("SELECT $group date,SUM(pageviews) pageviews FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s GROUP BY $group ORDER BY date",$range),OBJECT_K);
+        $out=self::calendar($range);foreach($out as $day=>$_){$out[$day]=(int)($rows[$day]->pageviews??0);}return $out;
+    }
+    /** Build bounded daily or monthly date keys without reading stored counters.
+     * @param array $range Inclusive site-local date pair.
+     * @return array Date keys initialized to zero.
+     */
+    public static function calendar(array $range): array {
+        $monthly=self::monthly($range);$out=[];$d=new \DateTimeImmutable($range[0],wp_timezone());if($monthly){$d=$d->modify('first day of this month');}$end=new \DateTimeImmutable($range[1],wp_timezone());
+        while($d<=$end&&count($out)<($monthly?2400:3660)){$out[$d->format('Y-m-d')]=0;$d=$d->modify($monthly?'+1 month':'+1 day');}return $out;
     }
 }

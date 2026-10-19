@@ -55,6 +55,7 @@ final class Plugin {
         NetworkSettings::boot();
         add_action('admin_post_tbm_statistics_import', [StatisticsImport::class,'action']);
         add_action('tbm_maintenance', [Tracking::class, 'maintenance']);
+        add_action('tbm_maintenance_batch', [Tracking::class, 'maintenance_batch']);
         add_action('wp_initialize_site', [self::class, 'new_site'], 200);
     }
     /**
@@ -155,7 +156,7 @@ final class Plugin {
     public static function deactivate(bool $network = false): void {
         if ($network && is_multisite()) {
             $offset=0;
-            do { $ids=get_sites(['fields'=>'ids','number'=>100,'offset'=>$offset]); foreach ($ids as $id) { switch_to_blog($id); wp_clear_scheduled_hook('tbm_maintenance'); restore_current_blog(); } $offset+=100; } while(count($ids)===100);
-        } else { wp_clear_scheduled_hook('tbm_maintenance'); }
+            do { $ids=get_sites(['fields'=>'ids','number'=>100,'offset'=>$offset]); foreach ($ids as $id) { switch_to_blog($id); wp_clear_scheduled_hook('tbm_maintenance'); wp_clear_scheduled_hook('tbm_maintenance_batch'); restore_current_blog(); } $offset+=100; } while(count($ids)===100);
+        } else { wp_clear_scheduled_hook('tbm_maintenance'); wp_clear_scheduled_hook('tbm_maintenance_batch'); }
     }
 }

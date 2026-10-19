@@ -8,6 +8,7 @@ delete_site_transient('ddw_ghru_'.substr(md5('https://github.com/deckerweb/tabul
 function tbm_uninstall_site(): void {
     global $wpdb;
     wp_clear_scheduled_hook('tbm_maintenance');
+    wp_clear_scheduled_hook('tbm_maintenance_batch');
     $names=$wpdb->get_col($wpdb->prepare("SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s OR option_name LIKE %s",$wpdb->esc_like('_transient_tbm_').'%',$wpdb->esc_like('_transient_timeout_tbm_').'%'));
     foreach($names as $name){delete_option($name);}
     foreach((array)get_option('tbm_workflow_keys',[]) as $key=>$expiry){if(preg_match('/^tbm_(stage|draft|apply_result|cleanup)_\\d+$/D',$key)){delete_transient($key);}}

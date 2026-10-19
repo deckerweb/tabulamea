@@ -58,7 +58,8 @@ final class StatisticsImport {
         if(Plugin::settings()['measurement']){return false;}
         global $wpdb;if($wpdb->get_var("SELECT 1 FROM {$wpdb->prefix}tbm_import_ledger WHERE source='statify' LIMIT 1")){return false;}$lock='tbm_import_'.md5(DB_NAME.'|'.$wpdb->prefix);if((int)$wpdb->get_var($wpdb->prepare('SELECT GET_LOCK(%s,0)',$lock))!==1){return false;}
         try{
-            $state=get_option('tbm_import_state',[]);$source=self::inspect();if(!$source||!$state){return false;}if($state['phase']==='done'){return true;}
+            if($wpdb->get_var("SELECT 1 FROM {$wpdb->prefix}tbm_import_ledger WHERE source='statify' LIMIT 1")){return false;}
+            wp_cache_delete('tbm_import_state','options');$state=get_option('tbm_import_state',[]);$source=self::inspect();if(!$source||!$state){return false;}if($state['phase']==='done'){return true;}
             $phase=$state['phase'];$prefix=$wpdb->prefix;$offset=(int)$state['offset'];$cutoff=min($state['cutoff'],self::cutoff());
             if($phase==='site'){$sql="SELECT date,pageviews FROM {$prefix}koko_analytics_site_stats WHERE date<=%s ORDER BY date LIMIT 250 OFFSET %d";}
             elseif($phase==='posts'){
@@ -77,20 +78,19 @@ final class StatisticsImport {
      * @return bool Whether the row committed or was already imported.
      */
     private static function copy(string $kind,array $row): bool {
-        global $wpdb;$date=$row['date'];$views=(int)$row['pageviews'];if(!preg_match('/^\d{4}-\d{2}-\d{2}$/D',$date)||$views<0){return false;}
-        $key=hash('sha256',$date.'|'.($row['source_id']??''));if($wpdb->query('START TRANSACTION')===false){return false;}
-        $previous=$wpdb->get_var($wpdb->prepare("SELECT pageviews FROM {$wpdb->prefix}tbm_import_ledger WHERE source='koko' AND kind=%s AND source_key=%s FOR UPDATE",$kind,$key));$delta=max(0,$views-(int)$previous);
-        $result=0;
-        if($delta>0){
-            if($kind==='site'){$result=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_site_stats (date,pageviews) VALUES (%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$delta));}
-            elseif($kind==='posts'){
-                $id=(int)$row['post_id'];$path=(string)($row['path']??'');if(!$path){$path=(string)wp_parse_url(get_permalink($id)?:'/',PHP_URL_PATH);}
-                $path=(string)wp_parse_url($path,PHP_URL_PATH);$path=substr($path,0,768);if(!str_starts_with($path,'/')){$path='/'.$path;}
-                $result=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_post_stats (date,post_id,path_hash,path,pageviews) VALUES (%s,%d,%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$id,hash('sha256',$id.'|'.$path),$path,$delta));
-            }else{$domain=Measurement::domain((string)($row['referrer']??''));if($domain){$result=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) VALUES (%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$domain,$delta));}}
-        }
-        if($result===false){$wpdb->query('ROLLBACK');return false;}
-        $ledger=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_import_ledger (source,kind,source_key,pageviews) VALUES ('koko',%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=GREATEST(pageviews,VALUES(pageviews))",$kind,$key,$views));
-        if($ledger===false){$wpdb->query('ROLLBACK');return false;}return $wpdb->query('COMMIT')!==false;
+        global $wpdb;$date=$row['date'];$views=(int)$row['pageviews'];$parsed=\DateTimeImmutable::createFromFormat('!Y-m-d',$date,wp_timezone());if(!$parsed||$parsed->format('Y-m-d')!==$date||$views<0){return false;}
+        $id=(int)($row['post_id']??0);$path=(string)($row['path']??'');
+        if($kind==='posts'&&!$path){$path=(string)wp_parse_url(get_permalink($id)?:'/',PHP_URL_PATH);}
+        $path=substr((string)wp_parse_url($path,PHP_URL_PATH),0,768);if(!str_starts_with($path,'/')){$path='/'.$path;}
+        $domain=Measurement::domain((string)($row['referrer']??''));
+        $key=hash('sha256',$date.'|'.($row['source_id']??''));
+        return CoreStore::import('koko',$kind,$key,$views,static function(int $delta) use($kind,$date,$id,$path,$domain): bool {
+            global $wpdb;
+            if($kind==='site'){$query=$wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_site_stats (date,pageviews) VALUES (%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$delta);}
+            elseif($kind==='posts'){$query=$wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_post_stats (date,post_id,path_hash,path,pageviews) VALUES (%s,%d,%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$id,hash('sha256',$id.'|'.$path),$path,$delta);}
+            elseif($domain){$query=$wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) VALUES (%s,%s,%d) ON DUPLICATE KEY UPDATE pageviews=pageviews+VALUES(pageviews)",$date,$domain,$delta);}
+            else{return true;}
+            return $wpdb->query($query)!==false;
+        });
     }
 }

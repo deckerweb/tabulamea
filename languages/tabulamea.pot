@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-18 23:13+0200\n"
+"POT-Creation-Date: 2026-10-19 01:16+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: work/tabulamea/includes/DataExports.php:12
 #: work/tabulamea/includes/WordPressIntegration.php:19
 #: work/tabulamea/includes/SearchStats.php:7
-#: work/tabulamea/includes/SearchStats.php:48
+#: work/tabulamea/includes/SearchStats.php:50
 #: work/tabulamea/includes/MeasurementPolicy.php:84
 #: work/tabulamea/includes/DataCare.php:38
 #: work/tabulamea/includes/Navigation.php:11
@@ -61,7 +61,7 @@ msgid "Exports use the displayed dates and privacy rules. Content exports includ
 msgstr ""
 
 #: work/tabulamea/includes/DataExports.php:21
-#: work/tabulamea/includes/StatisticsAdmin.php:87
+#: work/tabulamea/includes/StatisticsAdmin.php:88
 msgid "Date"
 msgstr ""
 
@@ -71,7 +71,7 @@ msgstr ""
 #: work/tabulamea/includes/StatisticsAdmin.php:25
 #: work/tabulamea/includes/StatisticsAdmin.php:47
 #: work/tabulamea/includes/StatisticsAdmin.php:58
-#: work/tabulamea/includes/StatisticsAdmin.php:87
+#: work/tabulamea/includes/StatisticsAdmin.php:88
 #: work/tabulamea/includes/ShortcodeTools.php:20
 #: work/tabulamea/includes/DimensionReports.php:38
 #: work/tabulamea/includes/ContentColumns.php:22
@@ -81,7 +81,7 @@ msgid "Pageviews"
 msgstr ""
 
 #: work/tabulamea/includes/DataExports.php:21
-#: work/tabulamea/includes/StatisticsAdmin.php:70
+#: work/tabulamea/includes/StatisticsAdmin.php:71
 msgid "No retained record"
 msgstr ""
 
@@ -129,62 +129,62 @@ msgstr ""
 msgid "The update package does not match TabulaMea, its offered version or this website’s requirements. The installed version has not been replaced."
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/ShortcodeTools.php:31
 msgid "TabulaMea pageview counter"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/ShortcodeTools.php:32
 msgid "TabulaMea popular content"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/ShortcodeTools.php:21
 msgid "Days"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/DashboardTools.php:70
 msgid "Number of items"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Count the whole website"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/ShortcodeTools.php:17
 #: work/tabulamea/includes/Insights.php:31
 #: work/tabulamea/includes/RankingAdmin.php:100
 msgid "Content type"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Counters also require permission to publish exact numbers."
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Uses recorded pageviews. Public output must be enabled in TabulaMea settings."
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Text before the number"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Text after the number"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "Display settings"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 msgid "No public output is available. Check publication permissions, the content selection and recorded data."
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:20
+#: work/tabulamea/includes/OutputBlocks.php:24
 #: work/tabulamea/includes/ShortcodeTools.php:33
 msgid "TabulaMea popular content loop"
 msgstr ""
@@ -196,12 +196,12 @@ msgstr ""
 #: work/tabulamea/includes/DashboardTools.php:78
 #: work/tabulamea/includes/StatifyImport.php:25
 #: work/tabulamea/includes/Insights.php:80
-#: work/tabulamea/includes/SearchStats.php:48
+#: work/tabulamea/includes/SearchStats.php:50
 #: work/tabulamea/includes/ReportTools.php:70
 #: work/tabulamea/includes/NetworkSettings.php:16
 #: work/tabulamea/includes/NetworkSettings.php:29
 #: work/tabulamea/includes/RankingAdmin.php:27
-#: work/tabulamea/includes/Admin.php:90 work/tabulamea/includes/Admin.php:126
+#: work/tabulamea/includes/Admin.php:90 work/tabulamea/includes/Admin.php:127
 #: work/tabulamea/includes/ToolsActions.php:13
 #: work/tabulamea/includes/ToolsActions.php:25
 #: work/tabulamea/includes/ToolsActions.php:72
@@ -212,7 +212,7 @@ msgstr ""
 #: work/tabulamea/includes/StatisticsAdmin.php:10
 #: work/tabulamea/includes/RankingEnhancements.php:22
 #: work/tabulamea/includes/DashboardTools.php:79
-#: work/tabulamea/includes/SearchStats.php:48
+#: work/tabulamea/includes/SearchStats.php:50
 msgid "Choose a valid date range."
 msgstr ""
 
@@ -271,7 +271,7 @@ msgid "Pageviews count visible page loads. Reloads count again. Recognizable bot
 msgstr ""
 
 #: work/tabulamea/includes/StatisticsAdmin.php:46
-#: work/tabulamea/includes/Rankings.php:141
+#: work/tabulamea/includes/Rankings.php:151
 #: work/tabulamea/includes/RankingAdmin.php:126
 msgid "No matching public content with recorded pageviews was found for these filters."
 msgstr ""
@@ -298,53 +298,53 @@ msgstr ""
 msgid "Only domains are retained. Missing referrers cannot be reconstructed; these counts do not represent all traffic sources."
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:72
+#: work/tabulamea/includes/StatisticsAdmin.php:73
 msgid "Pageviews over time"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:72
+#: work/tabulamea/includes/StatisticsAdmin.php:73
 msgid "Monthly totals"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:72
+#: work/tabulamea/includes/StatisticsAdmin.php:73
 msgid "Daily totals"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:72
+#: work/tabulamea/includes/StatisticsAdmin.php:73
 msgid "Chart help"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:72
+#: work/tabulamea/includes/StatisticsAdmin.php:73
 msgid "Hover or tap for exact values. Use Tab and arrow keys; activate a daily point to filter the lists. Gaps mean no retained record, not proven zero traffic."
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:73
+#: work/tabulamea/includes/StatisticsAdmin.php:74
 msgid "Dotted connection: no retained values between these points. It does not estimate daily counts."
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:74
+#: work/tabulamea/includes/StatisticsAdmin.php:75
 msgid "No bar: zero views or no retained record. Hover, tap or use the values table to check each date."
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:75
+#: work/tabulamea/includes/StatisticsAdmin.php:76
 msgid "Solid: selected period · Long dashes: preceding period"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:76
+#: work/tabulamea/includes/StatisticsAdmin.php:77
 msgid "Interactive pageview chart"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-#: work/tabulamea/includes/StatisticsAdmin.php:83
+#: work/tabulamea/includes/StatisticsAdmin.php:78
 #: work/tabulamea/includes/StatisticsAdmin.php:84
+#: work/tabulamea/includes/StatisticsAdmin.php:85
 msgid "Known collection pause within this interval"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:87
+#: work/tabulamea/includes/StatisticsAdmin.php:88
 msgid "Show monthly values"
 msgstr ""
 
-#: work/tabulamea/includes/StatisticsAdmin.php:87
+#: work/tabulamea/includes/StatisticsAdmin.php:88
 msgid "Show daily values"
 msgstr ""
 
@@ -693,7 +693,7 @@ msgid "Days without records may mean no traffic or a collection gap. Thirty days
 msgstr ""
 
 #: work/tabulamea/includes/Settings.php:12
-#: work/tabulamea/includes/Admin.php:105
+#: work/tabulamea/includes/Admin.php:106
 msgid "Your content. Its impact. All in view."
 msgstr ""
 
@@ -817,6 +817,7 @@ msgid "Allow explicitly published rankings on the public website"
 msgstr ""
 
 #: work/tabulamea/includes/Settings.php:54
+#: work/tabulamea/includes/ConfigurationTools.php:113
 msgid "Also allow exact pageview counts in public output"
 msgstr ""
 
@@ -1240,6 +1241,7 @@ msgid "Storage schema"
 msgstr ""
 
 #: work/tabulamea/includes/WordPressIntegration.php:56
+#: work/tabulamea/includes/ConfigurationTools.php:113
 #: work/tabulamea/includes/Measurement.php:128
 msgid "Maximum valid measurement requests per minute (site-wide)"
 msgstr ""
@@ -1330,47 +1332,47 @@ msgstr ""
 msgid "Content statistics"
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:8
+#: work/tabulamea/includes/updater-translations.php:13
 msgid "Private mode must be boolean."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:10
+#: work/tabulamea/includes/updater-translations.php:15
 msgid "Invalid authentication provider."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:12
+#: work/tabulamea/includes/updater-translations.php:17
 msgid "The plugin must be installed in a stable slug directory."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:14
+#: work/tabulamea/includes/updater-translations.php:19
 msgid "Invalid GitHub repository URL."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:16
+#: work/tabulamea/includes/updater-translations.php:21
 msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:18
+#: work/tabulamea/includes/updater-translations.php:23
 msgid "Could not create the update download file."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:20
+#: work/tabulamea/includes/updater-translations.php:25
 msgid "The private update download failed. Check credentials and try again."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:22
+#: work/tabulamea/includes/updater-translations.php:27
 msgid "Could not access the update filesystem."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:24
+#: work/tabulamea/includes/updater-translations.php:29
 msgid "GitHub release does not contain the plugin main file."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:26
+#: work/tabulamea/includes/updater-translations.php:31
 msgid "Could not prepare the GitHub release package."
 msgstr ""
 
-#: work/tabulamea/includes/updater-translations.php:28
+#: work/tabulamea/includes/updater-translations.php:33
 msgid "See the release on GitHub."
 msgstr ""
 
@@ -1457,11 +1459,13 @@ msgid "General widget settings"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:41
+#: work/tabulamea/includes/ConfigurationTools.php:113
 #: work/tabulamea/includes/NetworkSettings.php:18
 msgid "Allow personal widget adjustments"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:41
+#: work/tabulamea/includes/ConfigurationTools.php:113
 #: work/tabulamea/includes/NetworkSettings.php:19
 msgid "Maximum personal widget items (1–20)"
 msgstr ""
@@ -1495,17 +1499,20 @@ msgid "Enable statistics overview widget"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:59
+#: work/tabulamea/includes/ConfigurationTools.php:113
 #: work/tabulamea/includes/NetworkSettings.php:20
 #: work/tabulamea/includes/NetworkSettings.php:25
 msgid "Overview widget period"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:59
+#: work/tabulamea/includes/ConfigurationTools.php:113
 #: work/tabulamea/includes/NetworkSettings.php:19
 msgid "Default overview items (1–10)"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:60
+#: work/tabulamea/includes/ConfigurationTools.php:113
 msgid "Default chart style"
 msgstr ""
 
@@ -1520,10 +1527,12 @@ msgid "Bars"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:61
+#: work/tabulamea/includes/ConfigurationTools.php:113
 msgid "Default modules"
 msgstr ""
 
 #: work/tabulamea/includes/DashboardTools.php:62
+#: work/tabulamea/includes/ConfigurationTools.php:113
 msgid "Modules users may choose"
 msgstr ""
 
@@ -1598,7 +1607,7 @@ msgstr ""
 msgid "Pause measurement and review source compatibility first."
 msgstr ""
 
-#: work/tabulamea/includes/Plugin.php:118
+#: work/tabulamea/includes/Plugin.php:119
 msgid "Website statistics"
 msgstr ""
 
@@ -1643,30 +1652,30 @@ msgstr ""
 msgid "No published ranking selected. Create and publish a ranking in Plugin settings first."
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:145
+#: work/tabulamea/includes/Rankings.php:155
 #: work/tabulamea/includes/RankingAdmin.php:125
 msgid "pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:147
+#: work/tabulamea/includes/Rankings.php:157
 #, php-format
 msgid "Previous period: %1$s · Change: %2$s"
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:151
+#: work/tabulamea/includes/Rankings.php:161
 msgid "Percentages refer to all recorded site pageviews in this period, including content outside this list."
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:151
+#: work/tabulamea/includes/Rankings.php:161
 msgid "A saved site total is unavailable; percentage shares are not shown."
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:152
+#: work/tabulamea/includes/Rankings.php:162
 #, php-format
 msgid "Recorded pageviews · %1$s to %2$s"
 msgstr ""
 
-#: work/tabulamea/includes/Rankings.php:172
+#: work/tabulamea/includes/Rankings.php:184
 #, php-format
 msgid "%s recorded pageviews (configured collection scope)"
 msgstr ""
@@ -1803,6 +1812,74 @@ msgstr ""
 
 #: work/tabulamea/includes/ConfigurationTools.php:113
 msgid "Visitor totals are unavailable"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Measurement.php:124
+msgid "Enable pageview measurement"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Insights.php:62
+msgid "Excluded roles"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Measurement.php:127
+msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Measurement.php:129
+msgid "Hide these referrer domains from future referrer counts (one per line)"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/MeasurementPolicy.php:79
+msgid "Exclude recognizable search-engine bots from statistics"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/MeasurementPolicy.php:80
+msgid "Exclude recognizable AI bots and assistants from statistics"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Insights.php:62
+#: work/tabulamea/includes/MeasurementPolicy.php:81
+msgid "Collection scope"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Insights.php:62
+#: work/tabulamea/includes/MeasurementPolicy.php:82
+msgid "Content types"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/Insights.php:62
+#: work/tabulamea/includes/MeasurementPolicy.php:83
+msgid "Archive types"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/MeasurementPolicy.php:84
+msgid "Count search-result views separately"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/MeasurementPolicy.php:84
+msgid "Selected search terms"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/ContentColumns.php:84
+msgid "Pageviews in content lists"
+msgstr ""
+
+#: work/tabulamea/includes/ConfigurationTools.php:113
+#: work/tabulamea/includes/ContentColumns.php:86
+msgid "Period for list-table counts"
 msgstr ""
 
 #: work/tabulamea/includes/ConfigurationTools.php:148
@@ -1989,25 +2066,6 @@ msgid "Technical collection changes"
 msgstr ""
 
 #: work/tabulamea/includes/Insights.php:62
-msgid "Excluded roles"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "Collection scope"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:82
-msgid "Content types"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Archive types"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
 msgid "Search-engine bot filter"
 msgstr ""
 
@@ -2067,11 +2125,12 @@ msgid "Content-list shares refer to all recorded website pageviews in the same p
 msgstr ""
 
 #: work/tabulamea/includes/Insights.php:82
-#: work/tabulamea/includes/Admin.php:131
+#: work/tabulamea/includes/Admin.php:132
 msgid "Invalid ranking."
 msgstr ""
 
 #: work/tabulamea/includes/Insights.php:84
+#: work/tabulamea/includes/Admin.php:129
 #: work/tabulamea/includes/ToolsActions.php:9
 #: work/tabulamea/includes/DataCare.php:51
 msgid "Unknown action."
@@ -2091,38 +2150,38 @@ msgstr ""
 msgid "Invalid search delivery."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:37
+#: work/tabulamea/includes/SearchStats.php:35
 #: work/tabulamea/includes/Measurement.php:91
 #: work/tabulamea/includes/Measurement.php:97
 msgid "Statistics could not be saved."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:48
+#: work/tabulamea/includes/SearchStats.php:50
 msgid "First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:48
+#: work/tabulamea/includes/SearchStats.php:50
 #, php-format
 msgid "Search-result views: %1$s · Without results: %2$s"
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:49
+#: work/tabulamea/includes/SearchStats.php:51
 msgid "Search collection is disabled. Existing history remains available."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:50
+#: work/tabulamea/includes/SearchStats.php:52
 msgid "Most used approved search topics"
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:50
+#: work/tabulamea/includes/SearchStats.php:52
 msgid "Only approved topics with at least five recorded views are listed. Unknown search phrases are never saved. Select a calendar year for a year-in-review ranking."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:51
+#: work/tabulamea/includes/SearchStats.php:53
 msgid "No approved topic meets the display threshold in this period."
 msgstr ""
 
-#: work/tabulamea/includes/SearchStats.php:51
+#: work/tabulamea/includes/SearchStats.php:53
 #: work/tabulamea/includes/OverviewTools.php:9
 #: work/tabulamea/includes/OverviewTools.php:11
 #: work/tabulamea/includes/OverviewTools.php:17
@@ -2223,20 +2282,8 @@ msgstr ""
 msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
 msgstr ""
 
-#: work/tabulamea/includes/Measurement.php:124
-msgid "Enable pageview measurement"
-msgstr ""
-
 #: work/tabulamea/includes/Measurement.php:125
 msgid "Do not count logged-in users with these roles"
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:127
-msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:129
-msgid "Hide these referrer domains from future referrer counts (one per line)"
 msgstr ""
 
 #: work/tabulamea/includes/Measurement.php:129
@@ -2309,15 +2356,7 @@ msgid "Automated requests"
 msgstr ""
 
 #: work/tabulamea/includes/MeasurementPolicy.php:79
-msgid "Exclude recognizable search-engine bots from statistics"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:79
 msgid "For example Google, Bing and DuckDuckGo. People arriving through these search engines are still counted."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:80
-msgid "Exclude recognizable AI bots and assistants from statistics"
 msgstr ""
 
 #: work/tabulamea/includes/MeasurementPolicy.php:80
@@ -2377,15 +2416,7 @@ msgid "See which offers people search for, without retaining arbitrary search in
 msgstr ""
 
 #: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Count search-result views separately"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
 msgid "Counts the first results page and searches without results. Reloads count again. Free search strings are never retained. Search counts do not increase regular pageview totals."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Selected search terms"
 msgstr ""
 
 #: work/tabulamea/includes/MeasurementPolicy.php:84
@@ -2770,40 +2801,32 @@ msgstr ""
 msgid "No recorded pageviews in this period. This is not proof of zero visits."
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:78
+#: work/tabulamea/includes/ContentColumns.php:79
 msgid "Filter recorded pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
+#: work/tabulamea/includes/ContentColumns.php:80
 msgid "All pageview states"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
+#: work/tabulamea/includes/ContentColumns.php:80
 msgid "With recorded pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
+#: work/tabulamea/includes/ContentColumns.php:80
 msgid "Without recorded pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
+#: work/tabulamea/includes/ContentColumns.php:80
 msgid "Pageview period"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
+#: work/tabulamea/includes/ContentColumns.php:80
 msgid "Reset view filters"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:83
-msgid "Pageviews in content lists"
-msgstr ""
-
-#: work/tabulamea/includes/ContentColumns.php:83
+#: work/tabulamea/includes/ContentColumns.php:84
 msgid "Enable a sortable Pageviews column for selected public content types. Only statistics viewers see it. Missing records are shown as a dash; they do not prove zero visits."
-msgstr ""
-
-#: work/tabulamea/includes/ContentColumns.php:85
-msgid "Period for list-table counts"
 msgstr ""
 
 #: work/tabulamea/includes/Admin.php:61
@@ -2811,31 +2834,31 @@ msgstr ""
 msgid "Settings"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:102
+#: work/tabulamea/includes/Admin.php:102 work/tabulamea/includes/Admin.php:103
 msgid "Documentation"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:102
+#: work/tabulamea/includes/Admin.php:103
 msgid "FAQ"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:102
+#: work/tabulamea/includes/Admin.php:103
 msgid "Changelog"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:105
+#: work/tabulamea/includes/Admin.php:106
 msgid "About this plugin"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:105
+#: work/tabulamea/includes/Admin.php:106
 msgid "Version"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:105
+#: work/tabulamea/includes/Admin.php:106
 msgid "More plugins"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:105
+#: work/tabulamea/includes/Admin.php:106
 msgid "Close"
 msgstr ""
 
@@ -2983,6 +3006,10 @@ msgstr ""
 
 #: work/tabulamea/includes/DataCare.php:19
 msgid "The server is permitted to download the country database from DB-IP; visitor addresses are not sent to that service."
+msgstr ""
+
+#: work/tabulamea/includes/DataCare.php:19
+msgid "Automatic deletion runs in small scheduled batches. Delayed WordPress scheduled tasks can retain older data for longer."
 msgstr ""
 
 #: work/tabulamea/includes/DataCare.php:19

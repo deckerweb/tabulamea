@@ -87,7 +87,8 @@ final class Rankings {
         if(!Plugin::ready() || !($range=self::dates($a))){return [];}
         global $wpdb;$excluded=self::exclusions($a);$mode=$a['mode'] ?? 'popular';$compare=$mode!=='evergreen'&&(!empty($a['compare'])||in_array($mode,['rising','falling','rediscovered'],true));$previous=self::previous($range);
         $key='tbm_rank_'.md5(wp_json_encode([$a,$range,$excluded,get_option('tbm_revision',0),TBM_VERSION]));$cached=get_transient($key);if(is_array($cached)){return $cached;}
-        $where="s.date BETWEEN %s AND %s AND p.post_status='publish' AND p.post_password=''";$params=[$compare?$previous[0]:$range[0],$range[1]];
+        $dateWhere="s.date BETWEEN %s AND %s";$dateParams=[$compare?$previous[0]:$range[0],$range[1]];
+        $where="p.post_status='publish' AND p.post_password=''";$params=[];
         $types=array_values(array_diff(get_post_types(['public'=>true]),['attachment']));
         if(($a['type'] ?? 'post')!=='all'){$types=in_array($a['type'] ?? 'post',$types,true)?[$a['type'] ?? 'post']:[];}
         if(!$types){return [];}$where.=' AND p.post_type IN ('.implode(',',array_fill(0,count($types),'%s')).')';array_push($params,...$types);
@@ -98,16 +99,25 @@ final class Rankings {
         if($mode==='rediscovered'){$where.=' AND p.post_date < %s';$params[]=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(30,(int)($a['older_days'] ?? 365)).' days')->format('Y-m-d');}
         $limit=max(1,min(50,(int)($a['limit'] ?? 10)));$minimum=max(5,(int)($a['min_views'] ?? 10));
         if($mode==='evergreen'){
+            $where=$dateWhere.' AND '.$where;$params=array_merge($dateParams,$params);
             $sql="SELECT monthly.ID,SUM(monthly.views) pageviews,0 previous,0 delta FROM (SELECT p.ID,DATE_FORMAT(s.date,'%%Y-%%m') month_key,SUM(s.pageviews) views FROM {$wpdb->prefix}tbm_post_stats s JOIN {$wpdb->posts} p ON p.ID=s.post_id WHERE $where GROUP BY p.ID,month_key) monthly GROUP BY monthly.ID HAVING COUNT(*) >= %d AND MIN(monthly.views) >= %d ORDER BY pageviews DESC,monthly.ID ASC LIMIT %d";
             array_push($params,max(2,(int)($a['months'] ?? 3)),$minimum,$limit);
         }else{
             $select='SUM(CASE WHEN s.date BETWEEN %s AND %s THEN s.pageviews ELSE 0 END)';$prev=$compare?'SUM(CASE WHEN s.date BETWEEN %s AND %s THEN s.pageviews ELSE 0 END)':'0';
-            $head=[$range[0],$range[1]];if($compare){array_push($head,...$previous);}$params=array_merge($head,$params);
+            $head=[$range[0],$range[1]];if($compare){array_push($head,...$previous);}$wideRange=(new \DateTimeImmutable($range[0]))->diff(new \DateTimeImmutable($range[1]))->days>=179
+                && ($a['type'] ?? 'post')==='all' && empty($a['search']) && empty($a['category']) && empty($a['published_year']) && $mode!=='rediscovered';
+            $params=array_merge($head,$dateParams,$params);
             $having='pageviews > 0';$order='pageviews DESC,p.ID ASC';
             if(in_array($mode,['rising','rediscovered'],true)){$having='pageviews >= %d AND delta > 0';$params[]=$minimum;$order='delta DESC,pageviews DESC,p.ID ASC';}
             if($mode==='falling'){$having='previous >= %d AND delta < 0';$params[]=$minimum;$order='delta ASC,previous DESC,p.ID ASC';}
             // Delta is computed from the same aggregate expressions through a bounded derived table.
-            $sql="SELECT totals.*,totals.pageviews-totals.previous delta FROM (SELECT p.ID,$select pageviews,$prev previous FROM {$wpdb->prefix}tbm_post_stats s JOIN {$wpdb->posts} p ON p.ID=s.post_id WHERE $where GROUP BY p.ID) totals HAVING ".str_replace('p.ID','ID',$having).' ORDER BY '.str_replace('p.ID','ID',$order).' LIMIT %d';$params[]=$limit;
+            // Broad long-range reports aggregate the date slice once, avoiding a row lookup
+            // per historical counter through the post/date index. Selective filters keep
+            // their indexed join. No extra index or measurement write is required.
+            $aggregate=$wideRange
+                ? "SELECT p.ID,counts.pageviews,counts.previous FROM (SELECT s.post_id,$select pageviews,$prev previous FROM {$wpdb->prefix}tbm_post_stats s WHERE $dateWhere GROUP BY s.post_id) counts JOIN {$wpdb->posts} p ON p.ID=counts.post_id WHERE $where"
+                : "SELECT p.ID,$select pageviews,$prev previous FROM {$wpdb->prefix}tbm_post_stats s JOIN {$wpdb->posts} p ON p.ID=s.post_id WHERE $dateWhere AND $where GROUP BY p.ID";
+            $sql="SELECT totals.*,totals.pageviews-totals.previous delta FROM ($aggregate) totals HAVING ".str_replace('p.ID','ID',$having).' ORDER BY '.str_replace('p.ID','ID',$order).' LIMIT %d';$params[]=$limit;
         }
         $rows=$wpdb->get_results($wpdb->prepare($sql,$params),ARRAY_A);if(is_array($rows)){set_transient($key,$rows,300);}return is_array($rows)?$rows:[];
     }
@@ -163,12 +173,14 @@ final class Rankings {
     }
     /** Render a public anonymous pageview counter only after explicit publication opt-in.
      * @param array $atts Days and whole-site selection.
+     * @param int $id Optional block-context public content ID; zero uses the current post.
      * @return string Escaped formatted count, or empty output when disabled.
      */
-    public static function counter(array $atts=[]): string {
+    public static function counter(array $atts=[],int $id=0): string {
         if(!Plugin::ready()||!Plugin::settings()['public_rankings']||!Plugin::settings()['public_counts']){return '';}
-        $a=shortcode_atts(['days'=>30,'global'=>'false'],$atts,'tabulamea_counter');$days=max(1,min(36500,(int)$a['days']));$range=[(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.($days-1).' days')->format('Y-m-d'),wp_date('Y-m-d')];
-        global $wpdb;$total=($a['global']==='true')?(new Stats())->get_totals(...$range)->pageviews:(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_post_stats WHERE post_id=%d AND date BETWEEN %s AND %s",get_the_ID(),...$range));
+        $a=shortcode_atts(['days'=>30,'global'=>'false'],$atts,'tabulamea_counter');$days=max(1,min(36500,(int)$a['days']));$range=[max('2000-01-01',(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.($days-1).' days')->format('Y-m-d')),wp_date('Y-m-d')];
+        $id=$id?:get_the_ID();if($a['global']!=='true'){$post=$id?get_post($id):null;if(!$post||!is_post_publicly_viewable($post)||$post->post_password!==''){return '';}}
+        global $wpdb;$total=($a['global']==='true')?(new Stats())->get_totals(...$range)->pageviews:(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_post_stats WHERE post_id=%d AND date BETWEEN %s AND %s",$id,...$range));
         if($a['global']==='true'&&Plugin::settings()['measure_scope']==='selected'){return esc_html(sprintf(__('%s recorded pageviews (configured collection scope)','tabulamea'),number_format_i18n($total)));}return esc_html(number_format_i18n($total));
     }
     /** Render a convenient live list after global public output opt-in.
@@ -178,7 +190,7 @@ final class Rankings {
     public static function popular(array $atts=[]): string {
         if(!Plugin::ready()||!Plugin::settings()['public_rankings']){return '';}
         $a=shortcode_atts(['number'=>5,'days'=>30,'post_type'=>'post'],$atts,'tabulamea_popular');$days=max(1,min(36500,(int)$a['days']));
-        return self::render(self::clean(['type'=>sanitize_key($a['post_type']),'period'=>'custom','start'=>(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.($days-1).' days')->format('Y-m-d'),'end'=>wp_date('Y-m-d'),'limit'=>max(1,min(50,(int)$a['number'])),'counts'=>Plugin::settings()['public_counts']]));
+        return self::render(self::clean(['type'=>sanitize_key($a['post_type']),'period'=>'custom','start'=>max('2000-01-01',(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.($days-1).' days')->format('Y-m-d')),'end'=>wp_date('Y-m-d'),'limit'=>max(1,min(50,(int)$a['number'])),'counts'=>Plugin::settings()['public_counts']]));
     }
 
 }
