@@ -4,11 +4,11 @@
 
 Privacy-friendly website statistics inside WordPress: see pageviews, discover popular content and put your numbers to work when maintaining your site. No cookies or visitor profiles.
 
-**0.9.0 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
+**0.9.1 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
 
 [English / Deutsch](README-de.md) · [Guide](DOCUMENTATION.txt) · [FAQ](FAQ.txt) · [About TabulaMea](ABOUT.txt)
 
-[Download 0.9.0](https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+[Download 0.9.1](https://github.com/deckerweb/tabulamea/releases/download/v0.9.1/tabulamea-0.9.1.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
 
 ## Contents
 
@@ -58,7 +58,7 @@ Your content. Its impact. All in view.
 
 ## Quick start
 
-1. Download the installable tabulamea-0.9.0.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+1. Download the installable tabulamea-0.9.1.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -195,7 +195,7 @@ Deactivation preserves data. Uninstall always removes temporary caches and sched
 
 ## GitHub updates and deckerweb Library
 
-TabulaMea includes deckerweb Library 1.0.0 and deckerweb Updater 2.1.0 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+TabulaMea includes deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
@@ -239,6 +239,13 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 
 ## Changelog
 
+### 0.9.1 — 2026-10-21
+
+- Improved: Updated deckerweb Library 1.1.0 and Updater 2.2.1 with approved catalog downloads and localized notices.
+- Improved: Load the measurement script with a deferred strategy to avoid blocking rendering.
+- Fixed: GitHub update checks remain available when another plugin loads an older updater first.
+- Fixed: Explicit SVG coordinate escaping and identifier-safe storage inspection. Completed translator guidance.
+
 ### 0.9.0 — 2026-10-19
 
 - New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
@@ -250,7 +257,7 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 - Misc: Early test versions of the independent website statistics plugin.
 ## Project and security
 
-Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Version 0.9.0 is available on [GitHub](https://github.com/deckerweb/tabulamea/releases/tag/v0.9.0). Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
+Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Published versions are available on [GitHub](https://github.com/deckerweb/tabulamea/releases). Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
 
 ## Support this project
 
@@ -260,4 +267,4 @@ Developed and published by David Decker – DECKERWEB. Independent website stati
 
 © 2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 
-deckerweb Plugin Library 1.0.0 and deckerweb Updater 2.1.0: GPL-2.0-or-later, bundled locally. MaxMind DB Reader 1.13.1: Apache-2.0, isolated namespace; source and license in [vendor/maxmind](vendor/maxmind). Inter outlines in artwork: OFL-1.1; [license](assets/brand/Inter-OFL-LICENSE.txt). Country source: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Collection, reports and importers contain no copied Koko Analytics or Statify source code.
+deckerweb Plugin Library 1.1.0 and deckerweb Updater 2.2.1: GPL-2.0-or-later, bundled locally. MaxMind DB Reader 1.13.1: Apache-2.0, isolated namespace; source and license in [vendor/maxmind](vendor/maxmind). Inter outlines in artwork: OFL-1.1; [license](assets/brand/Inter-OFL-LICENSE.txt). Country source: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Collection, reports and importers contain no copied Koko Analytics or Statify source code.

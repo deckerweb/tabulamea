@@ -154,12 +154,16 @@ final class Rankings {
         foreach($rows as $row){$post=get_post((int)$row['ID']);$html.='<li><a href="'.esc_url(get_permalink($post)).'">';if(!empty($a['images'])||$style==='images'){$html.=get_the_post_thumbnail($post,'thumbnail',['loading'=>'lazy']);}$html.=esc_html(get_the_title($post)).'</a>';
             if(!empty($a['counts'])){$html.=' <span>'.esc_html(number_format_i18n((int)$row['pageviews'])).' '.esc_html__('pageviews','tabulamea').'</span>';}
             if(!empty($a['share']) && $total>0){$html.=' <span>('.esc_html(number_format_i18n(100*(int)$row['pageviews']/$total,1)).' %)</span>';}
-            if(empty($a['hide_changes'])&&(!empty($a['compare'])||in_array($a['mode'] ?? '',['rising','falling','rediscovered'],true)) && array_key_exists('previous',$row)){$html.='<span class="tbm-change">'.esc_html(sprintf(__('Previous period: %1$s · Change: %2$s','tabulamea'),number_format_i18n((int)$row['previous']),((int)$row['delta']>0?'+':'').number_format_i18n((int)$row['delta']))).'</span>';}
+            if(empty($a['hide_changes'])&&(!empty($a['compare'])||in_array($a['mode'] ?? '',['rising','falling','rediscovered'],true)) && array_key_exists('previous',$row)){$html.='<span class="tbm-change">'.esc_html(sprintf(
+/* translators: %1$s: formatted preceding-period count; %2$s: signed difference. */
+__('Previous period: %1$s · Change: %2$s','tabulamea'),number_format_i18n((int)$row['previous']),((int)$row['delta']>0?'+':'').number_format_i18n((int)$row['delta']))).'</span>';}
             $html.='</li>';
         }
         $html.='</'.$tag.'>';
         if(!empty($a['share'])){$html.='<p class="tbm-share-note">'.esc_html($total>0?__('Percentages refer to all recorded site pageviews in this period, including content outside this list.','tabulamea'):__('A saved site total is unavailable; percentage shares are not shown.','tabulamea')).'</p>';}
-        if(!empty($a['caption'])){$range=$a['snapshot']['range']??self::dates($a);$html.='<p class="tbm-ranking-caption">'.esc_html(sprintf(__('Recorded pageviews · %1$s to %2$s','tabulamea'),$range[0],$range[1])).'</p>';}
+        if(!empty($a['caption'])){$range=$a['snapshot']['range']??self::dates($a);$html.='<p class="tbm-ranking-caption">'.esc_html(sprintf(
+/* translators: %1$s: first date; %2$s: last date. */
+__('Recorded pageviews · %1$s to %2$s','tabulamea'),$range[0],$range[1])).'</p>';}
         return $html;
     }
     /**
@@ -181,7 +185,9 @@ final class Rankings {
         $a=shortcode_atts(['days'=>30,'global'=>'false'],$atts,'tabulamea_counter');$days=max(1,min(36500,(int)$a['days']));$range=[max('2000-01-01',(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.($days-1).' days')->format('Y-m-d')),wp_date('Y-m-d')];
         $id=$id?:get_the_ID();if($a['global']!=='true'){$post=$id?get_post($id):null;if(!$post||!is_post_publicly_viewable($post)||$post->post_password!==''){return '';}}
         global $wpdb;$total=($a['global']==='true')?(new Stats())->get_totals(...$range)->pageviews:(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_post_stats WHERE post_id=%d AND date BETWEEN %s AND %s",$id,...$range));
-        if($a['global']==='true'&&Plugin::settings()['measure_scope']==='selected'){return esc_html(sprintf(__('%s recorded pageviews (configured collection scope)','tabulamea'),number_format_i18n($total)));}return esc_html(number_format_i18n($total));
+        if($a['global']==='true'&&Plugin::settings()['measure_scope']==='selected'){return esc_html(sprintf(
+/* translators: %s: formatted pageview count for the configured collection scope. */
+__('%s recorded pageviews (configured collection scope)','tabulamea'),number_format_i18n($total)));}return esc_html(number_format_i18n($total));
     }
     /** Render a convenient live list after global public output opt-in.
      * @param array $atts Number, days and public content type.

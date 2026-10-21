@@ -7,13 +7,13 @@ final class UpdateIntegration {
     private static bool $unavailable=false;
     /** Initialize the pinned updater after host translations; no release is published here. @return void */
     public static function boot(): void {
-        $class='\\Deckerweb\\GitHubReleaseUpdater\\V2\\Updater';
-        if(!class_exists($class)){require_once __DIR__.'/deckerweb-github-release-updater-v2.php';}
-        if(!defined($class.'::SUPPORTS_HOST_TRANSLATIONS')||!constant($class.'::SUPPORTS_HOST_TRANSLATIONS')||!defined($class.'::IMPLEMENTATION_VERSION')||version_compare(constant($class.'::IMPLEMENTATION_VERSION'),'2.1.0','<')){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);return;}
+        // Use this host's pinned implementation even when another V2 version loaded first.
+        $class=require __DIR__.'/deckerweb-github-release-updater-v2.php';
+        if(!is_string($class)||!class_exists($class,false)||!defined($class.'::SUPPORTS_CATALOG_PROVIDER')||!constant($class.'::SUPPORTS_CATALOG_PROVIDER')||!defined($class.'::SUPPORTS_HOST_TRANSLATIONS')||!constant($class.'::SUPPORTS_HOST_TRANSLATIONS')||!defined($class.'::IMPLEMENTATION_VERSION')||version_compare(constant($class.'::IMPLEMENTATION_VERSION'),'2.2.1','<')){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);return;}
         try{
             $translate=require __DIR__.'/updater-translations.php';
             $base=plugins_url('assets/brand/',TBM_FILE);$de=str_starts_with(determine_locale(),'de_');
-            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-772x250-de.png':'banner-772x250.png'),'high'=>$base.($de?'banner-1544x500-de.png':'banner-1544x500.png')]],['translate'=>$translate]);
+            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-772x250-de.png':'banner-772x250.png'),'high'=>$base.($de?'banner-1544x500-de.png':'banner-1544x500.png')]],array_merge(deckerweb_library_updater_options_v1(TBM_FILE,'https://github.com/deckerweb/tabulamea'),['translate'=>$translate]));
             $updater->register();add_filter('upgrader_source_selection',[self::class,'validate'],30,4);
         }catch(\Throwable $error){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);}
     }

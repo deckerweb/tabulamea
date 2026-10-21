@@ -1,6 +1,6 @@
 <?php
 /** Copyright 2026 David Decker – DECKERWEB. SPDX-License-Identifier: GPL-2.0-or-later */
-namespace Deckerweb\PluginLibrary\V1_0_0;
+namespace Deckerweb\PluginLibrary\V1_1_0;
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 /** Personal catalog presentation and local, data-minimized diagnostics. */
 final class Experience {
@@ -17,14 +17,14 @@ final class Experience {
   * @return void Updates only the current user's view metadata after POST, nonce and capability checks.
   */
  public static function save(): void {
-  if ( ( $_SERVER['REQUEST_METHOD'] ?? '' ) !== 'POST' || ! current_user_can( 'install_plugins' ) || ! is_string( $_POST['dwl_view_nonce'] ?? null ) || ! wp_verify_nonce( $_POST['dwl_view_nonce'], 'dwl_view' ) ) { wp_die( esc_html( Library::t( 'Permission denied.' ) ), '', [ 'response' => 403 ] ); }
+  if ( ( isset( $_SERVER['REQUEST_METHOD'] ) && is_string( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' ) !== 'POST' || ! current_user_can( 'install_plugins' ) || ! is_string( $_POST['dwl_view_nonce'] ?? null ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['dwl_view_nonce'] ) ), 'dwl_view' ) ) { wp_die( esc_html( Library::t( 'Permission denied.' ) ), '', [ 'response' => 403 ] ); }
   $v = self::view();
   if ( isset( $_POST['dwl_reset'] ) ) { $v = [ 'sort'=>'standard', 'seed'=>md5( wp_generate_uuid4() ), 'search'=>'', 'series'=>'', 'compatible'=>false ]; }
   else {
-   $mode = is_string( $_POST['dwl_sort'] ?? null ) ? $_POST['dwl_sort'] : '';
+   $mode = is_string( $_POST['dwl_sort'] ?? null ) ? sanitize_key( wp_unslash( $_POST['dwl_sort'] ) ) : '';
    if ( ! isset( self::MODES[$mode] ) ) { wp_die( esc_html( Library::t( 'Invalid sort order.' ) ) ); }
    $v['sort']=$mode; $v['search']=is_string( $_POST['dwl_search'] ?? null ) ? substr( sanitize_text_field( wp_unslash( $_POST['dwl_search'] ) ), 0, 150 ) : '';
-   $v['series']=is_string( $_POST['dwl_series'] ?? null ) ? sanitize_key( wp_unslash( $_POST['dwl_series'] ) ) : ''; $v['compatible']=( $_POST['dwl_compatible'] ?? '' ) === '1';
+   $v['series']=is_string( $_POST['dwl_series'] ?? null ) ? sanitize_key( wp_unslash( $_POST['dwl_series'] ) ) : ''; $v['compatible']=( isset( $_POST['dwl_compatible'] ) && is_string( $_POST['dwl_compatible'] ) ? sanitize_text_field( wp_unslash( $_POST['dwl_compatible'] ) ) : '' ) === '1';
    if ( isset( $_POST['dwl_shuffle'] ) ) { $v['seed']=md5( wp_generate_uuid4() ); $v['sort']='random'; }
   }
   update_user_meta( get_current_user_id(), self::META, $v );
@@ -68,7 +68,7 @@ final class Experience {
  public static function notice(): void {
   global $pagenow;
   if ( ! current_user_can( 'install_plugins' ) || ! in_array( $pagenow, [ 'plugins.php', 'plugin-install.php', 'update-core.php', 'options-general.php', 'settings.php' ], true ) ) { return; }
-  if ( in_array( $pagenow, [ 'settings.php','options-general.php' ], true ) && ( $_GET['page'] ?? '' )!=='deckerweb-library' ) { return; }
+  if ( in_array( $pagenow, [ 'settings.php','options-general.php' ], true ) && Library::query( 'page' )!=='deckerweb-library' ) { return; }
   $conflicts=self::conflicts(); if ( ! $conflicts ) { return; }
   $fingerprint=hash( 'sha256', wp_json_encode( $conflicts ) );
   if ( get_user_meta( get_current_user_id(), 'deckerweb_git_updater_notice_v1', true )===$fingerprint || ! empty( $GLOBALS['deckerweb_git_updater_notice_v1'] ) ) { return; }
@@ -80,7 +80,7 @@ final class Experience {
   * @return void Checks authorization, writes user metadata and returns to native plugin administration.
   */
  public static function dismiss(): void {
-  if ( ($_SERVER['REQUEST_METHOD']??'')!=='POST' || ! current_user_can('install_plugins') ) { wp_die(esc_html(Library::t('Permission denied.')),'',['response'=>403]); }
+  if ( ( isset( $_SERVER['REQUEST_METHOD'] ) && is_string( $_SERVER['REQUEST_METHOD'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REQUEST_METHOD'] ) ) : '' )!=='POST' || ! current_user_can('install_plugins') ) { wp_die(esc_html(Library::t('Permission denied.')),'',['response'=>403]); }
   check_admin_referer('dwl_conflict_dismiss');update_user_meta(get_current_user_id(),'deckerweb_git_updater_notice_v1',hash('sha256',wp_json_encode(self::conflicts())));
   if (wp_doing_ajax()) {wp_send_json_success();}
   wp_safe_redirect(self_admin_url('plugins.php'));exit;

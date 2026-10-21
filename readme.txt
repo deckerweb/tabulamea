@@ -4,7 +4,7 @@ Tags: statistics, privacy, pageviews, dashboard
 Tested up to: 7.1.3
 Requires at least: 7.1.2
 Requires PHP: 8.2
-Stable tag: 0.9.0
+Stable tag: 0.9.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -165,7 +165,7 @@ Deactivation preserves data. Uninstall always removes temporary caches and sched
 
 = GitHub updates and deckerweb Library =
 
-TabulaMea includes deckerweb Library 1.0.0 and deckerweb Updater 2.1.0 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+TabulaMea includes deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
@@ -173,7 +173,7 @@ TabulaMea is distributed through GitHub.
 
 == Installation ==
 
-1. Download the installable tabulamea-0.9.0.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+1. Download the installable tabulamea-0.9.1.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -214,6 +214,12 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 Full FAQ by topic: FAQ.txt. Full guide: DOCUMENTATION.txt.
 
 == Changelog ==
+
+= 0.9.1 =
+* Improved: Updated deckerweb Library 1.1.0 and Updater 2.2.1 with approved catalog downloads and localized notices.
+* Improved: Load the measurement script with a deferred strategy to avoid blocking rendering.
+* Fixed: GitHub update checks remain available when another plugin loads an older updater first.
+* Fixed: Explicit SVG coordinate escaping and identifier-safe storage inspection. Completed translator guidance.
 
 = 0.9.0 =
 * New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.

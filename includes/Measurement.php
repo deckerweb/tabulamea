@@ -56,7 +56,7 @@ final class Measurement {
         if(is_singular() && (!is_post_publicly_viewable(get_post()) || post_password_required())){return;}
         $path=wp_parse_url(wp_unslash((string)($_SERVER['REQUEST_URI'] ?? '/')),PHP_URL_PATH);if(!is_string($path) || strlen($path)>768){return;}
         $id=is_singular()?get_queried_object_id():0;
-        wp_enqueue_script('tabulamea-measure',plugins_url('assets/measure.js',TBM_FILE),[],TBM_VERSION,true);
+        wp_enqueue_script('tabulamea-measure',plugins_url('assets/measure.js',TBM_FILE),[],TBM_VERSION,['in_footer'=>true,'strategy'=>'defer']);
         wp_add_inline_script('tabulamea-measure','window.tabulaMeaPage='.wp_json_encode(['endpoint'=>rest_url('tabulamea/v1/pageview'),'post'=>$id,'path'=>$path,'signature'=>self::signature($id,$path),'context'=>MeasurementPolicy::context($path),'test'=>MeasurementPolicy::testing()?MeasurementPolicy::test_token():'']).';','before');
     }
     /** Reject recognizable automated and speculative requests without storing request headers.

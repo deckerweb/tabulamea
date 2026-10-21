@@ -121,7 +121,11 @@ final class RankingAdmin {
      */
     public static function recap_text(array $rank): string {
         $range=$rank['snapshot']['range'] ?? Rankings::dates($rank);if(!$range){return '';}$rows=Rankings::visible($rank,$rank['snapshot']['rows'] ?? Rankings::query($rank));
-        $lines=[sprintf(__('Most read contents in %s','tabulamea'),substr($range[0],0,4)),sprintf(__('Recorded pageviews from %1$s to %2$s.','tabulamea'),$range[0],$range[1]),isset($rank['snapshot'])?__('Source: saved snapshot.','tabulamea'):__('Source: current retained statistics.','tabulamea'),''];
+        $lines=[sprintf(
+/* translators: %s: calendar year. */
+__('Most read contents in %s','tabulamea'),substr($range[0],0,4)),sprintf(
+/* translators: %1$s: first date; %2$s: last date. */
+__('Recorded pageviews from %1$s to %2$s.','tabulamea'),$range[0],$range[1]),isset($rank['snapshot'])?__('Source: saved snapshot.','tabulamea'):__('Source: current retained statistics.','tabulamea'),''];
         foreach($rows as $index=>$row){$lines[]=($index+1).'. '.wp_strip_all_tags(get_the_title($row['ID'])).' — '.number_format_i18n((int)$row['pageviews']).' '.__('pageviews','tabulamea');$lines[]=get_permalink($row['ID']);$lines[]='';}
         if(!$rows){$lines[]=__('No matching public content with recorded pageviews was found for these filters.','tabulamea');}$lines[]=__('This list describes recorded pageviews, not an editorial quality assessment. Missing history is not estimated.','tabulamea');return implode("\n",$lines);
     }

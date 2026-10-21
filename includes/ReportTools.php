@@ -56,7 +56,9 @@ final class ReportTools {
      */
     public static function explain(array $range): void {
         $e=self::evidence($range);
-        echo '<p class="description">'.esc_html(sprintf(__('Retained days with pageviews: %d. Days without records may mean no traffic or interrupted collection. Missing history is not estimated.','tabulamea'),(int)$e['days'])).'</p>';
+        echo '<p class="description">'.esc_html(sprintf(
+/* translators: %d: number of days with stored pageviews. */
+__('Retained days with pageviews: %d. Days without records may mean no traffic or interrupted collection. Missing history is not estimated.','tabulamea'),(int)$e['days'])).'</p>';
         if($e['partial']){echo '<p class="tbm-attention">'.esc_html__('The retained history does not cover the start of this period. Interpret totals and changes with care.','tabulamea').'</p>';}
     }
     /**

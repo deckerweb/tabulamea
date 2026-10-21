@@ -4,11 +4,11 @@
 
 Datenschutzfreundliche Website-Statistik direkt in WordPress: Seitenaufrufe überblicken, beliebte Inhalte entdecken und Zahlen für deine redaktionelle Arbeit nutzen. Ohne Cookies und Besucherprofile.
 
-**0.9.0 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
+**0.9.1 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
 
 [English / Deutsch](README.md) · [Anleitung](DOCUMENTATION-de.txt) · [FAQ](FAQ-de.txt) · [Über TabulaMea](ABOUT-de.txt)
 
-[Download 0.9.0](https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+[Download 0.9.1](https://github.com/deckerweb/tabulamea/releases/download/v0.9.1/tabulamea-0.9.1.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
 
 ## Inhaltsverzeichnis
 
@@ -58,7 +58,7 @@ Deine Inhalte. Ihre Wirkung. Alles im Blick.
 
 ## Schnellstart
 
-1. Lade das Installationspaket tabulamea-0.9.0.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
+1. Lade das Installationspaket tabulamea-0.9.1.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
 2. Öffne Einstellungen → TabulaMea → Übersicht. Dort siehst du Messstatus und geführten Messtest.
 3. Unter Messung legst du fest, welche öffentlichen Inhalte erfasst werden. Administratoren und Redakteure sind standardmäßig von regulären Aufrufen ausgeschlossen.
 4. Öffne TabulaMea → Statistikübersicht und wähle deinen Zeitraum. Neue Messdaten entstehen ab der Aktivierung; historische Daten lassen sich separat importieren.
@@ -195,7 +195,7 @@ Deaktivierung erhält Daten. Deinstallation entfernt immer temporäre Caches und
 
 ## GitHub-Updates und deckerweb Library
 
-TabulaMea enthält die deckerweb Library 1.0.0 und den deckerweb Updater 2.1.0 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
+TabulaMea enthält die deckerweb Library 1.1.0 und den deckerweb Updater 2.2.1 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
 
 Die Library bietet unter Plugins → Installieren → deckerweb einen zusätzlichen Plugin-Katalog. Der optionale Online-Abruf ist standardmäßig ausgeschaltet. Bei Aktivierung lädt er den freigegebenen Katalog von GitHub; Installation und Aktivierung weiterer Plugins werden jeweils bewusst ausgelöst. Der Dienst sieht dabei die Server-IP, aber keine TabulaMea-Statistikdaten. Library-Einstellungen und Verwaltungsdaten sind gemeinsame Komponentendaten: Sie bleiben erhalten, solange ein weiterer Host installiert ist, auch wenn dieser deaktiviert ist. Beim letzten Host werden temporäre Daten bereinigt; die eigene optionale Löschung dauerhafter Library-Einstellungen ist standardmäßig aus. Installierte andere Plugins und deren Inhalte werden nicht gelöscht.
 
@@ -239,6 +239,13 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 
 ## Changelog
 
+### 0.9.1 — 2026-10-21
+
+- Verbessert: deckerweb Library 1.1.0 und Updater 2.2.1 mit freigegebenen Katalogdownloads und lokalisierten Hinweisen aktualisiert.
+- Verbessert: Messskript verzögert laden, damit die Darstellung der Seite nicht blockiert wird.
+- Behoben: GitHub-Updateprüfungen bleiben verfügbar, wenn ein anderes Plugin zuerst einen älteren Updater lädt.
+- Behoben: Ausdrückliche Maskierung der SVG-Koordinaten und sichere Tabellenkennungen bei der Speicherprüfung. Übersetzerhinweise vervollständigt.
+
 ### 0.9.0 — 2026-10-19
 
 - Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.
@@ -250,7 +257,7 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 - Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.
 ## Projekt und Sicherheit
 
-Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Version 0.9.0 ist auf [GitHub](https://github.com/deckerweb/tabulamea/releases/tag/v0.9.0) erhältlich. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).
+Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Veröffentlichte Versionen sind auf [GitHub](https://github.com/deckerweb/tabulamea/releases) erhältlich. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).
 
 ## Unterstützung
 
@@ -260,4 +267,4 @@ Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Webs
 
 © 2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 
-deckerweb Plugin Library 1.0.0 und deckerweb Updater 2.1.0: GPL-2.0-or-later, lokal eingebettet. MaxMind DB Reader 1.13.1: Apache-2.0, isolierter Namensraum; Herkunft und Lizenz in [vendor/maxmind](vendor/maxmind). Inter-Konturschrift in den Grafiken: OFL-1.1; [Lizenz](assets/brand/Inter-OFL-LICENSE.txt). Länderquelle: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Messung, Auswertungen und Importer enthalten keinen übernommenen Quellcode von Koko Analytics oder Statify.
+deckerweb Plugin Library 1.1.0 und deckerweb Updater 2.2.1: GPL-2.0-or-later, lokal eingebettet. MaxMind DB Reader 1.13.1: Apache-2.0, isolierter Namensraum; Herkunft und Lizenz in [vendor/maxmind](vendor/maxmind). Inter-Konturschrift in den Grafiken: OFL-1.1; [Lizenz](assets/brand/Inter-OFL-LICENSE.txt). Länderquelle: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Messung, Auswertungen und Importer enthalten keinen übernommenen Quellcode von Koko Analytics oder Statify.

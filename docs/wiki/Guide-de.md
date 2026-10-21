@@ -4,7 +4,7 @@
 
 ## Schnellstart
 
-1. Lade das Installationspaket tabulamea-0.9.0.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
+1. Lade das Installationspaket tabulamea-0.9.1.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
 2. Öffne Einstellungen → TabulaMea → Übersicht. Dort siehst du Messstatus und geführten Messtest.
 3. Unter Messung legst du fest, welche öffentlichen Inhalte erfasst werden. Administratoren und Redakteure sind standardmäßig von regulären Aufrufen ausgeschlossen.
 4. Öffne TabulaMea → Statistikübersicht und wähle deinen Zeitraum. Neue Messdaten entstehen ab der Aktivierung; historische Daten lassen sich separat importieren.
@@ -141,7 +141,7 @@ Deaktivierung erhält Daten. Deinstallation entfernt immer temporäre Caches und
 
 ## GitHub-Updates und deckerweb Library
 
-TabulaMea enthält die deckerweb Library 1.0.0 und den deckerweb Updater 2.1.0 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
+TabulaMea enthält die deckerweb Library 1.1.0 und den deckerweb Updater 2.2.1 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
 
 Die Library bietet unter Plugins → Installieren → deckerweb einen zusätzlichen Plugin-Katalog. Der optionale Online-Abruf ist standardmäßig ausgeschaltet. Bei Aktivierung lädt er den freigegebenen Katalog von GitHub; Installation und Aktivierung weiterer Plugins werden jeweils bewusst ausgelöst. Der Dienst sieht dabei die Server-IP, aber keine TabulaMea-Statistikdaten. Library-Einstellungen und Verwaltungsdaten sind gemeinsame Komponentendaten: Sie bleiben erhalten, solange ein weiterer Host installiert ist, auch wenn dieser deaktiviert ist. Beim letzten Host werden temporäre Daten bereinigt; die eigene optionale Löschung dauerhafter Library-Einstellungen ist standardmäßig aus. Installierte andere Plugins und deren Inhalte werden nicht gelöscht.
 

@@ -101,7 +101,9 @@ final class ConfigurationTools {
      */
     public static function display($value): string {
         if(is_bool($value)){return $value?__('Enabled','tabulamea'):__('Disabled','tabulamea');}
-        if(is_array($value)){if($value && is_array(reset($value))){return sprintf(__('Personal rules: %d','tabulamea'),count($value));}$labels=[];foreach($value as $item){$labels[]=is_scalar($item)&&isset(wp_roles()->roles[(string)$item])?translate_user_role(wp_roles()->roles[(string)$item]['name']):(string)$item;}return implode(', ',$labels)?:'—';}
+        if(is_array($value)){if($value && is_array(reset($value))){return sprintf(
+/* translators: %d: number of personal permission rules. */
+__('Personal rules: %d','tabulamea'),count($value));}$labels=[];foreach($value as $item){$labels[]=is_scalar($item)&&isset(wp_roles()->roles[(string)$item])?translate_user_role(wp_roles()->roles[(string)$item]['name']):(string)$item;}return implode(', ',$labels)?:'—';}
         return (string)$value;
     }
     /**

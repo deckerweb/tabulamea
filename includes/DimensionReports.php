@@ -47,7 +47,9 @@ final class DimensionReports {
         echo '<p>'.esc_html__('Available statistics history since:','tabulamea').' '.esc_html($first?:__('No data available','tabulamea')).'</p><p>'.esc_html__('This is the earliest retained record, not necessarily the original installation date.','tabulamea').'</p>';
         foreach(self::labels() as $dim=>$label){$row=(array)$wpdb->get_row($wpdb->prepare("SELECT MIN(date) first,MAX(date) last,COUNT(DISTINCT date) days,COALESCE(SUM(pageviews),0) views FROM {$wpdb->prefix}tbm_dimensions WHERE dimension=%s",$dim),ARRAY_A);$since=get_option('tbm_since_'.$dim);$elapsed=$since?(int)(new \DateTimeImmutable($since,wp_timezone()))->diff(new \DateTimeImmutable('today',wp_timezone()))->days+1:0;
             echo '<h3>'.esc_html($label).'</h3><p>'.esc_html(self::state($dim)).' · '.esc_html($since?:__('Not collected yet','tabulamea')).'</p>';
-            if(!empty($row['first'])){echo '<p>'.esc_html(sprintf(__('Retained records: %1$s to %2$s, with pageviews on %3$d days.','tabulamea'),$row['first'],$row['last'],(int)$row['days'])).'</p>';}
+            if(!empty($row['first'])){echo '<p>'.esc_html(sprintf(
+/* translators: %1$s: first date; %2$s: last date; %3$d: days with recorded pageviews. */
+__('Retained records: %1$s to %2$s, with pageviews on %3$d days.','tabulamea'),$row['first'],$row['last'],(int)$row['days'])).'</p>';}
             echo '<p>'.esc_html($elapsed>=30&&(int)($row['days'] ?? 0)>=14&&(int)($row['views'] ?? 0)>=100?__('An initial observation basis is available. This is not a guarantee of statistical significance.','tabulamea'):__('Early or sparse data: allow at least 30 calendar days, sufficient traffic and regular recorded days before comparing categories.','tabulamea')).'</p>';
         }
         echo '<p class="description">'.esc_html__('The initial-basis indicator requires at least 30 calendar days, records on 14 days and 100 pageviews. It is an orientation aid, not a significance test.','tabulamea').'</p>';

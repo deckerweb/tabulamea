@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: deckerweb Library 1.0.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: deckerweb Library 1.1.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "%s is installed but inactive. Activate it first."
 msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."

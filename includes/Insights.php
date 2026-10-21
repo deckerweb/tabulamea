@@ -63,7 +63,9 @@ final class Insights {
     }
     /** Render the dry-run status and a fresh protected frontend test link. @return void */
     public static function test_panel(): void {
-        if(!current_user_can('manage_options')){return;}$last=(int)get_option('tbm_test_received',0);echo '<section class="tbm-card" id="tbm-function-test"><h2>'.esc_html__('Guided measurement test','tabulamea').'</h2><p>'.esc_html__('Open the public homepage using this link, then return here and reload. The signed test bypasses your role exclusion but does not add a pageview. Measurement must be enabled. A successful test proves this browser delivery only.','tabulamea').'</p><p><a class="button" target="_blank" rel="noopener" href="'.esc_url(add_query_arg('tbm_test',wp_create_nonce('tbm_measure_test'),home_url('/'))).'">'.esc_html__('Open frontend test','tabulamea').'</a></p><p>'.esc_html($last?sprintf(__('Last successful test: %s','tabulamea'),wp_date(get_option('date_format').' H:i:s',$last)):__('No test received yet.','tabulamea')).'</p></section>';
+        if(!current_user_can('manage_options')){return;}$last=(int)get_option('tbm_test_received',0);echo '<section class="tbm-card" id="tbm-function-test"><h2>'.esc_html__('Guided measurement test','tabulamea').'</h2><p>'.esc_html__('Open the public homepage using this link, then return here and reload. The signed test bypasses your role exclusion but does not add a pageview. Measurement must be enabled. A successful test proves this browser delivery only.','tabulamea').'</p><p><a class="button" target="_blank" rel="noopener" href="'.esc_url(add_query_arg('tbm_test',wp_create_nonce('tbm_measure_test'),home_url('/'))).'">'.esc_html__('Open frontend test','tabulamea').'</a></p><p>'.esc_html($last?sprintf(
+/* translators: %s: localized date and time of the last successful test. */
+__('Last successful test: %s','tabulamea'),wp_date(get_option('date_format').' H:i:s',$last)):__('No test received yet.','tabulamea')).'</p></section>';
     }
     /** Explain aggregate composition without exposing missing or private content.
      * @param array $range Inclusive dates.

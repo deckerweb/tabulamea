@@ -62,11 +62,13 @@
    $.ajax({url:dwlInline.url,method:'POST',dataType:'json',data:{action:'dwl_inline_status',operation:job.form.dataset.dwlAction,slug:job.form.dataset.dwlSlug,network:job.form.dataset.dwlNetwork,_wpnonce:job.form.querySelector('[name="_wpnonce"]').value}}).done(response=>{
     const data=response?.data || {};
     if (!response.success || data.pending) {unavailable(data.message);return;}
-    if(!data.installed && job.failure){data.message=job.failure+' '+(data.message||'');}apply(job,data);
+    if(!data.installed && job.failure){finish(job,job.failure+' '+(data.message||''),true);return;}apply(job,data);
    }).fail(()=>unavailable(dwlInline.failed));
   };
+  // Native upgrader filters may verify the Core updates nonce. The server still
+  // independently verifies the operation- and slug-bound Library _wpnonce.
   const send = (job) => {
-   $.ajax({url:dwlInline.url,method:'POST',dataType:'json',data:{...credentials(),action:'dwl_inline',operation:job.form.dataset.dwlAction,slug:job.form.dataset.dwlSlug,network:job.form.dataset.dwlNetwork,_wpnonce:job.form.querySelector('[name="_wpnonce"]').value}}).done(response => {
+   $.ajax({url:dwlInline.url,method:'POST',dataType:'json',data:{...credentials(),_ajax_nonce:window.wp?.updates?.ajaxNonce,action:'dwl_inline',operation:job.form.dataset.dwlAction,slug:job.form.dataset.dwlSlug,network:job.form.dataset.dwlNetwork,_wpnonce:job.form.querySelector('[name="_wpnonce"]').value}}).done(response => {
     const data = response?.data || {};
     if (!response.success) {
      if (data.credentials && document.getElementById('request-filesystem-credentials-dialog') && window.wp?.updates) {
@@ -80,7 +82,7 @@
      finish(job, data.message || dwlInline.failed, true); return;
     }
     apply(job,data);
-   }).fail(xhr => {job.failure = xhr.status===403 ? dwlInline.forbidden : (String(xhr.responseText).trim()==='-1' ? dwlInline.interrupted : dwlInline.failed);job.status.textContent=job.failure;checkStatus(job);});
+   }).fail(xhr => {job.failure = String(xhr.responseText).trim()==='-1' ? dwlInline.interrupted : (xhr.status===403 ? dwlInline.forbidden : dwlInline.failed);job.status.textContent=job.failure;checkStatus(job);});
   };
   $('#deckerweb-library').on('submit', '.dwl-card form[data-dwl-action]', function(event) {
    if (!['install','activate','update'].includes(this.dataset.dwlAction)) return;

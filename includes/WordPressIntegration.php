@@ -39,7 +39,7 @@ final class WordPressIntegration {
     private static function result(string $test,bool $ok,string $label,string $description): array {return ['test'=>'tabulamea_'.$test,'status'=>$ok?'good':'recommended','label'=>$label,'badge'=>['label'=>'TabulaMea','color'=>'blue'],'description'=>'<p>'.esc_html($description).'</p>','actions'=>'<a href="'.esc_url(InterfaceTools::settings_url('overview')).'">'.esc_html__('Review TabulaMea status','tabulamea').'</a>'];}
     /** Check actual storage structures, never create synthetic visitor records. @return array Native test result. */
     public static function storage_test(): array {
-        global $wpdb;$ok=Plugin::ready();foreach(['site_stats','post_stats','referrer_stats','dimensions','receipts','rate','search_stats','import_ledger'] as $suffix){$row=$wpdb->get_row($wpdb->prepare('SHOW TABLE STATUS WHERE Name=%s',$wpdb->prefix.'tbm_'.$suffix));if(!$row||strcasecmp($row->Engine,'InnoDB')!==0){$ok=false;}if($row){$indexes=$wpdb->get_col("SHOW INDEX FROM {$wpdb->prefix}tbm_{$suffix}",2);if(!in_array('PRIMARY',$indexes,true)||($suffix==='post_stats'&&!in_array('post_date',$indexes,true))){$ok=false;}}}
+        global $wpdb;$ok=Plugin::ready();foreach(['site_stats','post_stats','referrer_stats','dimensions','receipts','rate','search_stats','import_ledger'] as $suffix){$row=$wpdb->get_row($wpdb->prepare('SHOW TABLE STATUS WHERE Name=%s',$wpdb->prefix.'tbm_'.$suffix));if(!$row||strcasecmp($row->Engine,'InnoDB')!==0){$ok=false;}if($row){$indexes=$wpdb->get_col($wpdb->prepare('SHOW INDEX FROM %i',$wpdb->prefix.'tbm_'.$suffix),2);if(!in_array('PRIMARY',$indexes,true)||($suffix==='post_stats'&&!in_array('post_date',$indexes,true))){$ok=false;}}}
         return self::result('storage',$ok,$ok?__('TabulaMea storage is available','tabulamea'):__('TabulaMea storage needs attention','tabulamea'),__('Checks the plugin schema and transactional tables. This does not prove that every browser can deliver pageviews. Use the guided frontend test for that.','tabulamea'));
     }
     /** Check scheduled work and optional local data only when they are required. @return array Native test result. */
@@ -62,7 +62,9 @@ final class WordPressIntegration {
      * @return void
      */
     public static function box(\WP_Post $post): void {
-        if(!Plugin::allowed('view')||!is_post_publicly_viewable($post)||$post->post_password!==''){echo '<p>'.esc_html__('Statistics are shown only for public content.','tabulamea').'</p>';return;}$range=Rankings::dates(['period'=>'30_days']);$total=(new Stats())->content_total($post->ID,$range);$prior=(new Stats())->content_total($post->ID,Rankings::previous($range));echo '<details><summary>'.esc_html__('Last 30 days','tabulamea').'</summary><p>'.esc_html(sprintf(__('Pageviews: %1$s · Previous period: %2$s','tabulamea'),number_format_i18n($total),number_format_i18n($prior))).'</p></details><p><a href="'.esc_url(self::content_url($post->ID)).'">'.esc_html__('Open content statistics','tabulamea').'</a></p>';
+        if(!Plugin::allowed('view')||!is_post_publicly_viewable($post)||$post->post_password!==''){echo '<p>'.esc_html__('Statistics are shown only for public content.','tabulamea').'</p>';return;}$range=Rankings::dates(['period'=>'30_days']);$total=(new Stats())->content_total($post->ID,$range);$prior=(new Stats())->content_total($post->ID,Rankings::previous($range));echo '<details><summary>'.esc_html__('Last 30 days','tabulamea').'</summary><p>'.esc_html(sprintf(
+/* translators: %1$s: current pageviews; %2$s: preceding-period pageviews. */
+__('Pageviews: %1$s · Previous period: %2$s','tabulamea'),number_format_i18n($total),number_format_i18n($prior))).'</p></details><p><a href="'.esc_url(self::content_url($post->ID)).'">'.esc_html__('Open content statistics','tabulamea').'</a></p>';
     }
     /** Add a contextual shortcut without exposing statistics to visitors.
      * @param \WP_Admin_Bar $bar Toolbar instance.

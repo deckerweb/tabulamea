@@ -2,6 +2,13 @@
 
 [English](Changelog) · [Deutsch](Changelog-de)
 
+## 0.9.1 — 2026-10-21
+
+- Verbessert: deckerweb Library 1.1.0 und Updater 2.2.1 mit freigegebenen Katalogdownloads und lokalisierten Hinweisen aktualisiert.
+- Verbessert: Messskript verzögert laden, damit die Darstellung der Seite nicht blockiert wird.
+- Behoben: GitHub-Updateprüfungen bleiben verfügbar, wenn ein anderes Plugin zuerst einen älteren Updater lädt.
+- Behoben: Ausdrückliche Maskierung der SVG-Koordinaten und sichere Tabellenkennungen bei der Speicherprüfung. Übersetzerhinweise vervollständigt.
+
 ## 0.9.0 — 2026-10-19
 
 - Neu: Eigenständige, datensparsame Website-Statistik mit Inhaltsrankings, Jahresrückblicken und Aufrufspalten für die redaktionelle Arbeit.

@@ -1,10 +1,10 @@
 <?php
-/** Return runtime updater messages translated through the TabulaMea domain. */
+/** Copy into the host adapter and replace the tabulamea textdomain with its literal domain. */
 defined( 'ABSPATH' ) || exit;
 /**
- * Translate an updater message through the host domain.
- * @param string $message English component message.
- * @return string Translated message or unchanged fallback.
+ * Resolve an updater source string in the host textdomain.
+ * @param string $message English updater message.
+ * @return string Translated host message, or original source text.
  */
 return static function ( string $message ): string {
     // Literal calls let the host's normal translation extractor collect every source string.
@@ -31,6 +31,20 @@ return static function ( string $message ): string {
             return __( 'Could not prepare the GitHub release package.', 'tabulamea' );
         case 'See the release on GitHub.':
             return __( 'See the release on GitHub.', 'tabulamea' );
+        case 'Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider.':
+            return __( 'Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider.', 'tabulamea' );
+        case 'Manage installed plugins':
+            return __( 'Manage installed plugins', 'tabulamea' );
+        case 'Dismiss this notice':
+            return __( 'Dismiss this notice', 'tabulamea' );
+        case 'Permission denied.':
+            return __( 'Permission denied.', 'tabulamea' );
+        case 'Public catalog callbacks require both providers and cannot be used in private mode.':
+            return __( 'Public catalog callbacks require both providers and cannot be used in private mode.', 'tabulamea' );
+        case 'The approved release could not be verified.':
+            return __( 'The approved release could not be verified.', 'tabulamea' );
+        case 'The approved release changed. Refresh updates first.':
+            return __( 'The approved release changed. Refresh updates first.', 'tabulamea' );
         default:
             return $message;
     }

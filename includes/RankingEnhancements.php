@@ -30,7 +30,13 @@ final class RankingEnhancements {
     public static function explain(array $rank): void {
         $message=self::assessment($rank);if($message){echo '<p class="tbm-attention">'.esc_html($message).'</p>';}
         if(in_array($rank['mode']??'popular',['rising','falling','rediscovered'],true)){echo '<p class="description">'.esc_html__('Changes are absolute counts. The minimum baseline avoids treating tiny numbers as meaningful trends. These numbers do not measure quality or conversions.','tabulamea').'</p>';}
-        if(isset($rank['snapshot']['definition'])){$d=$rank['snapshot']['definition'];echo '<details><summary>'.esc_html__('Rules captured with this snapshot','tabulamea').'</summary><p>'.esc_html((RankingAdmin::modes()[$d['mode']]??'').' · '.($d['type']??'').' · '.sprintf(__('Maximum items: %d','tabulamea'),(int)($d['limit']??10))).'</p><p>'.esc_html(sprintf(__('Minimum views: %1$d · Complete months: %2$d','tabulamea'),(int)($d['min_views']??10),(int)($d['months']??3))).'</p><p>'.esc_html((ReportTools::periods()[$d['period']]??'').' · '.sprintf(__('Excluded contents: %1$d · Publication year: %2$s','tabulamea'),count((array)($d['exclude_ids']??[])),!empty($d['published_year'])?(string)$d['published_year']:__('All years','tabulamea'))).'</p></details>';}
+        if(isset($rank['snapshot']['definition'])){$d=$rank['snapshot']['definition'];echo '<details><summary>'.esc_html__('Rules captured with this snapshot','tabulamea').'</summary><p>'.esc_html((RankingAdmin::modes()[$d['mode']]??'').' · '.($d['type']??'').' · '.sprintf(
+/* translators: %d: maximum number of ranking items. */
+__('Maximum items: %d','tabulamea'),(int)($d['limit']??10))).'</p><p>'.esc_html(sprintf(
+/* translators: %1$d: minimum pageviews; %2$d: complete calendar months. */
+__('Minimum views: %1$d · Complete months: %2$d','tabulamea'),(int)($d['min_views']??10),(int)($d['months']??3))).'</p><p>'.esc_html((ReportTools::periods()[$d['period']]??'').' · '.sprintf(
+/* translators: %1$d: excluded content count; %2$s: publication year or translated all-years label. */
+__('Excluded contents: %1$d · Publication year: %2$s','tabulamea'),count((array)($d['exclude_ids']??[])),!empty($d['published_year'])?(string)$d['published_year']:__('All years','tabulamea'))).'</p></details>';}
     }
     /** Offer a protected personal favorite action without changing shared rankings.
      * @param string $id Saved ranking ID.

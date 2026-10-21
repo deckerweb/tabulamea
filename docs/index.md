@@ -3,11 +3,55 @@ layout: default
 title: TabulaMea
 ---
 
-[English](./) · [Deutsch](index-de)
+# TabulaMea
 
 ![TabulaMea](assets/brand/banner-github.png)
 
 Privacy-friendly website statistics inside WordPress: see pageviews, discover popular content and put your numbers to work when maintaining your site. No cookies or visitor profiles.
+
+**0.9.1 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
+
+[English](./) · [Deutsch](index-de) · [Guide](https://github.com/deckerweb/tabulamea/blob/main/DOCUMENTATION.txt) · [FAQ](https://github.com/deckerweb/tabulamea/blob/main/FAQ.txt) · [About TabulaMea](https://github.com/deckerweb/tabulamea/blob/main/ABOUT.txt)
+
+[Download 0.9.1](https://github.com/deckerweb/tabulamea/releases/download/v0.9.1/tabulamea-0.9.1.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+
+## Contents
+
+- [Quick start](#quick-start)
+- [Reading the statistics](#reading-the-statistics)
+- [Maintaining your content](#maintaining-your-content)
+- [Rankings and yearly roundups](#rankings-and-yearly-roundups)
+- [Access and dashboard](#access-and-dashboard)
+- [Blocks and shortcodes](#blocks-and-shortcodes)
+- [Selected search terms](#selected-search-terms)
+- [Collection scope, bots and privacy signals](#collection-scope-bots-and-privacy-signals)
+- [Country and technology](#country-and-technology)
+- [Importing historical data](#importing-historical-data)
+- [Exports, retention and data care](#exports-retention-and-data-care)
+- [Privacy page and operational checks](#privacy-page-and-operational-checks)
+- [Multisite and removal](#multisite-and-removal)
+- [GitHub updates and deckerweb Library](#github-updates-and-deckerweb-library)
+- [Technical collection limits](#technical-collection-limits)
+
+## At a glance
+
+### Less data. A clearer picture.
+
+Count pageviews without cookies, visitor profiles or identifying returning people. Your statistics stay in WordPress.
+
+### Understand what people read on your website
+
+See pageviews, trends and referring websites clearly. Compare periods and take a closer look at individual content.
+
+### Turn numbers into content rankings
+
+Create reusable rankings of popular posts, content gaining attention and yearly roundups. Snapshots preserve results for a review.
+
+### Keep your important content in view
+
+Sort and filter WordPress post and page lists by pageviews. Find frequently read content where you maintain it.
+
+## About TabulaMea
 
 TabulaMea brings clarity to your website statistics. How often are your pages viewed? Which posts attract attention? Which websites link people to your content? Get the numbers that help with everyday decisions, right inside WordPress, without cookies, visitor profiles or identifying returning people.
 
@@ -17,26 +61,215 @@ TabulaMea collects a small set of measurements and presents the recorded numbers
 
 Your content. Its impact. All in view.
 
-## Less data. A clearer picture.
+## Quick start
 
-Count pageviews without cookies, visitor profiles or identifying returning people. Your statistics stay in WordPress.
+1. Download the installable tabulamea-0.9.1.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
+3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
+4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
+5. Configure Access, Dashboard and Content lists for your site. Country, technology and search reports are optional.
 
-## Understand what people read on your website
+For the guided test, sign in as an administrator and open the supplied frontend link. Return and reload Overview. The test bypasses role exclusions but creates no regular pageview. Do Not Track and Global Privacy Control remain respected, so a private browser window is not a guaranteed counting test.
 
-See pageviews, trends and referring websites clearly. Compare periods and take a closer look at individual content.
+## Reading the statistics
 
-## Turn numbers into content rankings
+The overview shows pageviews, the preceding-period comparison, a chart, popular content and referring websites. Choose periods including 7, 14, 30, 90, 180 or 365 days, a calendar month or year, or custom dates. Comparison intervals use the same number of calendar days.
 
-Create reusable rankings of popular posts, content gaining attention and yearly roundups. Snapshots preserve results for a review.
+Switch lines and bars next to the chart. Your personal selection applies to the statistics screen; the dashboard follows its own widget setting. Explore values using a pointer, touch or keyboard. Activating a daily point limits content and referrer lists to that date. An expandable values table provides an alternative to the chart.
 
-## Keep your important content in view
+A missing record does not prove zero views. Dotted gap connections provide orientation without estimating intermediate values. Today is incomplete. Custom intervals of ten years or more explicitly use monthly totals. Comparison percentages are omitted when the preceding baseline is below ten pageviews.
 
-Sort and filter WordPress post and page lists by pageviews. Find frequently read content where you maintain it.
+Filter content by title and type. Content shares use all recorded site pageviews in the same period, including archives and content outside the list. Referrers retain domains only; missing sources cannot be reconstructed, so this is not a complete account of all traffic sources.
 
-[Download 0.9.0](https://github.com/deckerweb/tabulamea/releases/download/v0.9.0/tabulamea-0.9.0.zip)
+## Maintaining your content
 
-## Documentation
+Enable the pageview column for pages, posts or other public content types under Settings → TabulaMea → Content lists. In each WordPress list, choose a period, sort by pageviews and filter items with or without recorded counts.
 
-[GitHub](https://github.com/deckerweb/tabulamea) · [FAQ](https://github.com/deckerweb/tabulamea/blob/main/FAQ.txt) · [Guide](https://github.com/deckerweb/tabulamea/blob/main/DOCUMENTATION.txt)
+Find frequently viewed content where you edit it. Small counts are shown too. A dash means no aggregate is available for that content and period; it does not prove zero actual visits.
 
-© 2026 David Decker – DECKERWEB · GPL-2.0-or-later
+For public content, contextual statistics links in lists, the editor and admin toolbar open the detail report. Edit links follow WordPress permissions. Pageviews indicate attention, not content quality, satisfaction or completed goals.
+
+## Rankings and yearly roundups
+
+Create reusable reports under TabulaMea → Content rankings. Choose content type, period and item count, with optional category, publication year and exclusions. Favorites are personal to the current website.
+
+The five methods:
+- Most viewed: content with the highest recorded pageviews in the selected period.
+- Gaining attention: positive absolute growth over an equally long preceding period, with a sufficient current baseline.
+- Losing attention: negative growth, with a sufficient preceding baseline.
+- Popular every month: content meeting the chosen minimum in every selected complete calendar month. Choose two to twelve months.
+- Older content gaining attention: older publications with positive growth and a sufficient current baseline.
+
+Comparison methods need suitable earlier records. Limited data can produce a short or empty list; that alone is neither a technical error nor a judgment of content quality.
+
+For “Top 10 blog posts of 2026”, choose posts, calendar year 2026 and ten items. Publication year is a separate filter: it limits when a post was published, not when its pageviews occurred.
+
+Live rankings follow incoming data. A snapshot preserves results, dates and the original definition for a roundup. Content visibility is still checked, so items no longer public are omitted. Copy and print output can help prepare a yearly review.
+
+## Access and dashboard
+
+Administrators can view statistics by default. Under Access, allow other roles and set personal rules. Personal rules take priority over role rules; administrator recovery access remains available. Plugin settings are reserved for website administrators. The compact widget has its own access rule.
+
+Dashboard settings contain three separate areas:
+- Large widget: pageview total and period remain mandatory. Comparison, chart, popular content and referrers are optional. This area also controls the widget chart style.
+- Compact widget: a short content list with dates and an optional total. Use its filters or a saved ranking; a saved ranking retains its own definition and any snapshot.
+- General widget settings: personal adjustments and shared limits.
+
+When personal adjustments are allowed, users can customize their widget within administrator limits and reset it to site defaults. WordPress Screen Options can also hide widgets personally. Dates follow the website’s WordPress date format.
+
+## Blocks and shortcodes
+
+Frontend output is off by default. Access has two separate permissions: allow public output and additionally allow exact public counts. Saved rankings also require individual publication. Visitors can therefore see the ranking order alone, while authorized admin users still see the recorded counts; a counter stays empty without number permission. These choices do not affect collection or private admin access.
+
+Search for these blocks in the editor:
+- TabulaMea content ranking: choose a published saved ranking.
+- TabulaMea pageview counter: current content or whole website, days and text before or after the number. Native appearance controls depend on theme support.
+- TabulaMea popular content: a compact list with days, item count and content type.
+- TabulaMea popular content loop: a WordPress Query Loop variation ordered by the last 30 days of pageviews. Design titles, images and excerpts with normal blocks. The selection is limited to 50 ranked items.
+
+Controls live in the block sidebar; the canvas previews the output. Missing permissions or data show an editor notice. Opening a preview does not publish anything.
+
+Shortcode examples:
+`[tabulamea_ranking id="ranking-id"]`
+`[tabulamea_popular number="5" days="30" post_type="post"]`
+`[tabulamea_counter days="30" global="false"]`
+
+Replace ranking-id with your saved ranking’s identifier. For counters, global="false" uses the current WordPress content context; global="true" uses the whole website. Use the global counter where no appropriate content context exists. days includes today; number limits the popular list to at most 50 items. The simple shortcodes default to 30 days, and the list defaults to five posts. post_type is the technical content type, such as post or page.
+
+Use the generator under Shortcodes & blocks for parameters. Saved rankings can include a period caption; no backlink or visible branding is required. Exact-number permission also covers public shares and numerical changes.
+
+## Selected search terms
+
+Optional internal search reporting monitors terms you select in advance; it does not discover unknown queries. Enable it under Measurement and enter non-personal terms or exact phrases, one per line.
+
+Examples for a club: Donations, Volunteering, Become a member, Events, Contact. Suggestions are not activated automatically.
+
+How matching works:
+- Selected: Donations. Search: donations. Result: the Donations counter increases.
+- Selected: Contact. Search: CONTACT. Result: the Contact counter increases.
+- Selected: Volunteering. Search: Volunteering wanted. Result: no match unless that entire phrase is selected too.
+- Unselected input: only the overall search count increases; the input text is not retained.
+
+Matching normalizes letter case and repeated whitespace. Otherwise the phrase must match. There is no automatic topic or synonym classification, and WordPress search results are unchanged.
+
+Example report: “Donations · 18 search-result views · Last 30 days”. A link opens that search on the website. Terms appear only from five views in the selected period; an absent entry does not prove no interest.
+
+Counts represent first results-page loads; reloads count again. Searches without results also contribute to a separate overall total. Paginated results are not counted. Search views are separate from regular pageviews. Arbitrary search input and query parameters are not retained. Deliberately selecting a personal phrase would still be personal: selection does not make it anonymous.
+
+## Collection scope, bots and privacy signals
+
+The frontend sends one anonymous request per visible document. No cookies, browser storage, visitor IDs, fingerprinting or individual histories are used. Do Not Track and Global Privacy Control are respected. Known automated clients and speculative loads are excluded, but no filter can guarantee human-only counts. The plugin stores local daily totals, content IDs and query-free paths, and external referrer domains. Browser blocking and disabled JavaScript can reduce measured counts. Country, browser, operating system and device reports remain independent aggregates; categories below five pageviews in an interval are hidden. These reports begin when enabled; allow at least 30 days for an initial basis. No claim of legal compliance for every website configuration is implied. Hosting access logs are outside this plugin’s storage.
+
+All suitable public pages remain the default. Selected collection can limit public content types and separately include homepage, posts overview and archive groups. Future counts then describe that selected scope; retained historical totals can span earlier collection scopes. Global public counters identify restricted collection. Recognizable search-engine and AI bots have independent exclusions, both on by default. These are statistical filters, not access blocking or robots.txt rules. Disabling a filter does not capture bots that never execute a measurement request. Local declarations are approximate, not verified bot identities.
+
+## Country and technology
+
+Country collection is off by default. It requires a local DB-IP Country Lite database. Downloading and monthly updates require separate explicit consent and connect to download.db-ip.com; the server IP is visible to that service. Visitor addresses are not sent there. Lookup uses the direct connection address without trusting forwarded headers. A reverse proxy needs correct server configuration. MaxMind DB Reader 1.13.1 is included under Apache-2.0 solely to read the local MMDB format. DB-IP Country Lite attribution: https://db-ip.com/ · CC BY 4.0.
+
+Device type, browser and operating system are optional coarse, independent daily categories. They are not combined into visitor profiles. Categories below five pageviews in the selected period are suppressed. These facts cannot be inferred retrospectively from pageview totals alone. Allow at least 30 days for an initial picture; small websites may need longer.
+
+Browser/device classification and country attribution are approximations. Unknown values may occur where information is unavailable. Country reporting is not precise location tracking.
+
+## Importing historical data
+
+Data & transfer → Import Koko Analytics statistics. Make a database backup. Pause TabulaMea measurement and Koko collection first, then review the available period and start the import. Continue the small batches until the status is done, then enable TabulaMea measurement and leave Koko collection disabled. The source tables must be in the same WordPress site. Supported source layouts include the legacy post-ID/referrer-URL format and the path-ID/referrer-label format used by Koko 2.5.3. Source tables are read only. Daily pageviews, content totals and normalized referrer domains are copied. Visitor counts are intentionally omitted. All days from TabulaMea’s first measured day onward are excluded to prevent overlap. Repeating imports adds positive source increments only; source reductions are not subtracted. Do not reset or replace the source database between repeated imports, because source IDs identify imported rows. Existing country and technology data are not reconstructed. A changed post ID after moving to another WordPress site cannot be mapped automatically. Statify import uses the local id/created/referrer/target layout. Pause both collectors and review the source preview and backup confirmation. Each row counts once; permanent source-ID receipts make repeated imports idempotent. Current local public URLs are mapped to contents where possible. Unmapped records retain overview counts only, without their original target strings. Referrers retain domains only. Koko and Statify imports cannot be combined on the same website because overlapping pageviews cannot be reliably identified. Neither importer changes source tables. Imports have no automatic undo; restore your backup if needed.
+
+## Exports, retention and data care
+
+Private CSV exports follow the selected report dates and privacy rules. Exports cover daily views, public content totals, referrer domains, and outputs from rankings, additional statistics and search reports. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains. CSV is not a complete database backup or a universal restore format.
+
+Configuration transfer and statistics import serve different purposes. Review transferable settings and suitable ranking definitions before applying them. Personal rules, local content IDs, search-term lists, download consent, snapshots and statistics are excluded from configuration packages.
+
+Basic statistics may have an age limit or no automatic age deletion; 0 months means keep until explicitly deleted. Additional statistics have their own retention. Scheduled cleanup uses small batches and can be delayed by WP-Cron.
+
+Data care previews the cutoff and affected aggregate rows before deletion. Back up the database first. Definitions, snapshots and permanent import receipts remain. Deleted historical totals are not reconstructed.
+
+Automatic deletion uses bounded scheduled batches. Larger backlogs schedule follow-up batches. Delayed WordPress scheduled tasks can postpone actual deletion.
+
+## Privacy page and operational checks
+
+Overview provides a text suggestion based on your TabulaMea settings. Edit and frontend links point to the assigned WordPress privacy policy page; if none is assigned, follow Settings → Privacy. Copy, review and adapt the text before publication. It replaces neither a complete privacy policy nor legal review.
+
+Collection status shows the last accepted storage timestamp, refreshed at most every five minutes. A successful guided test instead confirms delivery from that browser without creating a regular pageview.
+
+Site Health checks storage structure, tables and scheduled work. Copyable diagnostics contain operational information, not visitor profiles or credentials. A lack of recent pageviews alone does not prove a technical failure. The native Command Palette opens permitted reports, periods, rankings and settings.
+
+## Multisite and removal
+
+Deactivation preserves data. Uninstall always removes temporary caches and scheduled tasks. Permanent statistics, settings, rankings and snapshots remain unless the website’s explicit delete-all option is enabled. Other plugins’ data is never removed. Settings and statistics are per website in Multisite. New network sites initialize their own tables. Configuration transfer excludes personal rules, snapshots, content IDs, external-download consent and collected statistics. Uninstall also always removes temporary delivery receipts, request budgets and coarse operational error state. Network defaults only cover widget display and personal adjustment limits; explicit website settings override them. Collection consent and access rights remain per website. Personal widget settings stay within administrator limits.
+
+## GitHub updates and deckerweb Library
+
+TabulaMea includes deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+
+The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
+
+TabulaMea is distributed through GitHub.
+
+## Technical collection limits
+
+A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. Without secure browser randomness, one attempt is made without a token. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
+
+## FAQ
+
+### What does TabulaMea count?
+
+TabulaMea counts visible page loads. Reloading a page counts as a new pageview. Only repeated technical delivery of the same page load, for example after a network error, is not counted twice. Collection exclusions and privacy signals still apply. It does not calculate unique visitors or sessions, track click events or build visitor profiles. Search pages are counted separately only when search reporting is enabled; 404 pages are excluded.
+
+### Does it use cookies or external statistics services?
+
+TabulaMea does not set statistics cookies or use persistent browser storage for measurement. Statistics are stored locally. Optional country database downloads are separate server connections requiring consent; visitor information is not sent to the database provider.
+
+### Who can see the numbers?
+
+Administrators by default. Access supports role and personal rules. The compact dashboard widget has separate permissions. Public output and exact public numbers need separate consent switches, and saved rankings also require individual publication.
+
+### Why is my own test visit missing?
+
+Logged-in administrators and editors are excluded by default. Do Not Track, Global Privacy Control, browser blocking and disabled JavaScript can also prevent collection. Private windows may send privacy signals too. The guided test under Overview intentionally creates no regular pageview.
+
+### Why is a ranking empty or shorter than expected?
+
+Check dates, content type, exclusions and minimum counts. Comparison methods need preceding records; monthly methods need sufficient views in every complete month. Output includes only currently public content without passwords.
+
+### Can public rankings show their order without displaying counts?
+
+Yes. Recorded counts remain available to authorized admin users. Public presentation has a separate choice: show the ranking order alone, or also display its counts. Saved rankings need individual publication; public counters need number permission.
+
+### What happens on deactivation or uninstall?
+
+Deactivation preserves data. Uninstall removes plugin-owned temporary data and tasks; permanent statistics and settings remain by default. Only the explicit deletion option removes the relevant website’s permanent TabulaMea data. Other plugins’ data is never deleted.
+
+[All FAQs by topic](https://github.com/deckerweb/tabulamea/blob/main/FAQ.txt)
+
+## Changelog
+
+### 0.9.1 — 2026-10-21
+
+- Improved: Updated deckerweb Library 1.1.0 and Updater 2.2.1 with approved catalog downloads and localized notices.
+- Improved: Load the measurement script with a deferred strategy to avoid blocking rendering.
+- Fixed: GitHub update checks remain available when another plugin loads an older updater first.
+- Fixed: Explicit SVG coordinate escaping and identifier-safe storage inspection. Completed translator guidance.
+
+### 0.9.0 — 2026-10-19
+
+- New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.
+- Improved: Charts, modular dashboard widgets, public output blocks, access controls and documentation. Library 1.0.0 and Updater 2.1.0 integrated for GitHub distribution. Faster broad yearly content rankings, ordinary content lists and chart queries without additional measurement writes or indexes. Bounded cleanup continuations for larger backlogs.
+- Fixed: Statistics access, pageview columns, chart presentation and the placement of explanations and controls. Editor font-size previews and localized documentation dialogs. Atomic rollback and safe delivery retries after database errors or lost connections, including search counters. Atomic import transactions and import-source conflict checks. Public query-loop counter context, late-registered content types, dense annual charts and mobile settings layout.
+
+### 0.1.0 – 0.8.0
+
+- Misc: Early test versions of the independent website statistics plugin.
+## Project and security
+
+Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Published versions are available on [GitHub](https://github.com/deckerweb/tabulamea/releases). Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](https://github.com/deckerweb/tabulamea/blob/main/SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
+
+## Support this project
+
+[Ko-fi](https://ko-fi.com/deckerweb) · [Buy Me a Coffee](https://buymeacoffee.com/daveshine) · [PayPal](https://paypal.me/deckerweb)
+
+## Copyright & licenses
+
+© 2026 David Decker – DECKERWEB. GPL-2.0-or-later.
+
+deckerweb Plugin Library 1.1.0 and deckerweb Updater 2.2.1: GPL-2.0-or-later, bundled locally. MaxMind DB Reader 1.13.1: Apache-2.0, isolated namespace; source and license in [vendor/maxmind](https://github.com/deckerweb/tabulamea/blob/main/vendor/maxmind). Inter outlines in artwork: OFL-1.1; [license](assets/brand/Inter-OFL-LICENSE.txt). Country source: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Collection, reports and importers contain no copied Koko Analytics or Statify source code.

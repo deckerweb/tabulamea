@@ -2,6 +2,13 @@
 
 [English](Changelog) · [Deutsch](Changelog-de)
 
+## 0.9.1 — 2026-10-21
+
+- Improved: Updated deckerweb Library 1.1.0 and Updater 2.2.1 with approved catalog downloads and localized notices.
+- Improved: Load the measurement script with a deferred strategy to avoid blocking rendering.
+- Fixed: GitHub update checks remain available when another plugin loads an older updater first.
+- Fixed: Explicit SVG coordinate escaping and identifier-safe storage inspection. Completed translator guidance.
+
 ## 0.9.0 — 2026-10-19
 
 - New: Independent, data-minimizing website statistics with content rankings, yearly roundups and pageview columns for editorial work.

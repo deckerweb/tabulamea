@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: TabulaMea 0.9.0\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: TabulaMea 0.9.1\nLanguage: de_DE\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Export this period"
 msgstr "Diesen Zeitraum exportieren"
@@ -912,6 +912,27 @@ msgstr "Das GitHub-Release-Paket konnte nicht vorbereitet werden."
 
 msgid "See the release on GitHub."
 msgstr "Sieh dir den Release auf GitHub an."
+
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr "Git Updater ist aktiv. Wenn eine deckerweb-Installation oder ein Update fehlschlägt, deaktiviere Git Updater vorübergehend und versuche es erneut. Aktiviere ihn danach wieder, wenn andere Plugins oder Themes ihn benötigen. Lass ihn nur dauerhaft deaktiviert, wenn diese Erweiterungen einen anderen zuverlässigen Updateweg besitzen."
+
+msgid "Manage installed plugins"
+msgstr "Installierte Plugins verwalten"
+
+msgid "Dismiss this notice"
+msgstr "Diesen Hinweis ausblenden"
+
+msgid "Permission denied."
+msgstr "Zugriff verweigert."
+
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr "Öffentliche Katalog-Callbacks benötigen beide Anbieter und können nicht im Private-Modus verwendet werden."
+
+msgid "The approved release could not be verified."
+msgstr "Die freigegebene Version konnte nicht geprüft werden."
+
+msgid "The approved release changed. Refresh updates first."
+msgstr "Die freigegebene Version hat sich geändert. Suche zuerst erneut nach Updates."
 
 msgid "Use the widget filters below"
 msgstr "Die folgenden Widget-Filter verwenden"

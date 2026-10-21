@@ -3,7 +3,7 @@
  * Plugin Name: TabulaMea
  * Plugin URI: https://github.com/deckerweb/tabulamea
  * Description: Privacy-friendly pageview statistics, popular content and referrers, with access controls and optional country and technology reports.
- * Version: 0.9.0
+ * Version: 0.9.1
  * Requires at least: 7.1.2
  * Requires PHP: 8.2
  * Author: David Decker – DECKERWEB
@@ -20,7 +20,7 @@
  */
 defined('ABSPATH') || exit;
 define('TBM_FILE', __FILE__);
-define('TBM_VERSION', '0.9.0');
+define('TBM_VERSION', '0.9.1');
 require_once __DIR__ . '/includes/deckerweb-plugin-library/bootstrap.php';
 deckerweb_library_register_v2(__FILE__, [], __DIR__.'/includes/deckerweb-plugin-library');
 require_once __DIR__ . '/includes/UpdateIntegration.php';

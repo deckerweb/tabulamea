@@ -3,7 +3,12 @@
 defined('WP_UNINSTALL_PLUGIN') || exit;
 require_once __DIR__.'/includes/deckerweb-plugin-library/lifecycle.php';
 deckerweb_library_uninstall_v3(__DIR__.'/tabulamea.php');
-delete_site_transient('ddw_ghru_'.substr(md5('https://github.com/deckerweb/tabulamea'),0,24));
+// Clear only TabulaMea's current and legacy updater metadata.
+$tabulamea_updater_class=require __DIR__.'/includes/deckerweb-github-release-updater-v2.php';
+if(is_string($tabulamea_updater_class)&&method_exists($tabulamea_updater_class,'clear_repository_cache')){
+    $tabulamea_updater_class::clear_repository_cache('https://github.com/deckerweb/tabulamea');
+}
+unset($tabulamea_updater_class);
 /** Clean one site's tasks, caches and optionally user-owned TabulaMea data. @return void */
 function tbm_uninstall_site(): void {
     global $wpdb;
