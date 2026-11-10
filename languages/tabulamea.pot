@@ -1,3139 +1,3119 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-#
-#, fuzzy
 msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-21 22:12+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
 
-#: work/tabulamea/includes/DataExports.php:12
 msgid "Export this period"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
-#: work/tabulamea/includes/WordPressIntegration.php:19
-#: work/tabulamea/includes/SearchStats.php:7
-#: work/tabulamea/includes/SearchStats.php:50
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-#: work/tabulamea/includes/DataCare.php:46
-#: work/tabulamea/includes/Navigation.php:11
 msgid "Internal search"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
-#: work/tabulamea/includes/DataCare.php:46
 msgid "Daily pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
-#: work/tabulamea/includes/DataCare.php:46
 msgid "Public content totals"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
-#: work/tabulamea/includes/DataCare.php:46
 msgid "Referrer domains"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
 msgid "Export data"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
-#: work/tabulamea/includes/DimensionReports.php:40
-#: work/tabulamea/includes/RankingAdmin.php:59
 msgid "Download CSV"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:12
 msgid "Exports use the displayed dates and privacy rules. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains."
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:21
-#: work/tabulamea/includes/StatisticsAdmin.php:92
+msgid "Report"
+msgstr ""
+
+msgid "Period start"
+msgstr ""
+
+msgid "Period end"
+msgstr ""
+
+msgid "Content type filter"
+msgstr ""
+
+msgid "Title filter (content report only)"
+msgstr ""
+
+msgid "Selected day (content/referrer reports)"
+msgstr ""
+
+msgid "Current measurement scope (historical scope may differ)"
+msgstr ""
+
+msgid "Generated at"
+msgstr ""
+
 msgid "Date"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:21
-#: work/tabulamea/includes/DataExports.php:22
-#: work/tabulamea/includes/DataExports.php:23
-#: work/tabulamea/includes/StatisticsAdmin.php:25
-#: work/tabulamea/includes/StatisticsAdmin.php:51
-#: work/tabulamea/includes/StatisticsAdmin.php:62
-#: work/tabulamea/includes/StatisticsAdmin.php:92
-#: work/tabulamea/includes/ShortcodeTools.php:20
-#: work/tabulamea/includes/DimensionReports.php:38
-#: work/tabulamea/includes/ContentColumns.php:22
-#: work/tabulamea/includes/ToolsActions.php:77
-#: work/tabulamea/includes/ToolsActions.php:78
 msgid "Pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:21
-#: work/tabulamea/includes/StatisticsAdmin.php:75
 msgid "No retained record"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:22
-#: work/tabulamea/includes/ToolsActions.php:78
 msgid "Title"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:22
-#: work/tabulamea/includes/DataExports.php:23
-#: work/tabulamea/includes/DataExports.php:24
-#: work/tabulamea/includes/ToolsActions.php:78
 msgid "Start date"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:22
-#: work/tabulamea/includes/DataExports.php:23
-#: work/tabulamea/includes/DataExports.php:24
-#: work/tabulamea/includes/ToolsActions.php:78
 msgid "End date"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:23
-#: work/tabulamea/includes/StatisticsAdmin.php:62
 msgid "Referrer domain"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:24
 msgid "Approved topic"
 msgstr ""
 
-#: work/tabulamea/includes/DataExports.php:24
 msgid "Search-result views"
 msgstr ""
 
-#: work/tabulamea/includes/UpdateIntegration.php:16
 msgid "Privacy-friendly website statistics"
 msgstr ""
 
-#: work/tabulamea/includes/UpdateIntegration.php:22
-msgid "TabulaMea updates require a compatible deckerweb Updater. Update the other plugins that bundle this component, then check again."
+msgid "TabulaMea updates could not be initialized. Reinstall the current TabulaMea ZIP, then check again. Existing statistics are preserved."
 msgstr ""
 
-#: work/tabulamea/includes/UpdateIntegration.php:36
 msgid "The update package does not match TabulaMea, its offered version or this website’s requirements. The installed version has not been replaced."
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/ShortcodeTools.php:31
-msgid "TabulaMea pageview counter"
+msgid "Popular articles"
 msgstr ""
 
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/ShortcodeTools.php:32
-msgid "TabulaMea popular content"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/ShortcodeTools.php:21
-msgid "Days"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/DashboardTools.php:70
-msgid "Number of items"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Count the whole website"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/ShortcodeTools.php:17
-#: work/tabulamea/includes/Insights.php:31
-#: work/tabulamea/includes/RankingAdmin.php:100
-msgid "Content type"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Counters also require permission to publish exact numbers."
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Uses recorded pageviews. Public output must be enabled in TabulaMea settings."
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Text before the number"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Text after the number"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "Display settings"
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-msgid "No public output is available. Check publication permissions, the content selection and recorded data."
-msgstr ""
-
-#: work/tabulamea/includes/OutputBlocks.php:24
-#: work/tabulamea/includes/ShortcodeTools.php:33
-msgid "TabulaMea popular content loop"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:8
-#: work/tabulamea/includes/StatisticsImport.php:53
-#: work/tabulamea/includes/DimensionReports.php:32
-#: work/tabulamea/includes/Settings.php:26
-#: work/tabulamea/includes/DashboardTools.php:78
-#: work/tabulamea/includes/StatifyImport.php:29
-#: work/tabulamea/includes/Insights.php:82
-#: work/tabulamea/includes/SearchStats.php:50
-#: work/tabulamea/includes/ReportTools.php:72
-#: work/tabulamea/includes/NetworkSettings.php:16
-#: work/tabulamea/includes/NetworkSettings.php:29
-#: work/tabulamea/includes/RankingAdmin.php:27
-#: work/tabulamea/includes/Admin.php:90 work/tabulamea/includes/Admin.php:127
-#: work/tabulamea/includes/ToolsActions.php:13
-#: work/tabulamea/includes/ToolsActions.php:25
-#: work/tabulamea/includes/ToolsActions.php:74
-#: work/tabulamea/includes/DataCare.php:56
-msgid "Access denied."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:10
-#: work/tabulamea/includes/RankingEnhancements.php:22
-#: work/tabulamea/includes/DashboardTools.php:79
-#: work/tabulamea/includes/SearchStats.php:50
-msgid "Choose a valid date range."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:24
-msgid "View content"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:24
-#: work/tabulamea/includes/StatisticsAdmin.php:52
-msgid "Edit content"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:25
-msgid "Compared with previous period"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:27
-#, php-format
-msgid "%s%% change"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:27
-msgid "The previous baseline is too small for a useful percentage."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:28
-msgid "Today is still incomplete."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:32
-#, php-format
-msgid "Lists filtered to %s"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:32
-msgid "Clear day filter"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:33
-#: work/tabulamea/includes/ShortcodeTools.php:13
-#: work/tabulamea/includes/DashboardTools.php:45
-msgid "Most viewed content"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:33
-#: work/tabulamea/includes/DashboardTools.php:45
-msgid "Referring websites"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:36
-msgid "How these numbers are measured"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:36
-msgid "Pageviews count visible page loads. Reloads count again. Recognizable bots, previews, search pages and excluded roles are omitted. No unique people, sessions or visitor profiles are calculated. Browser blocking and missing JavaScript can reduce counts."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:50
-#: work/tabulamea/includes/Rankings.php:151
-#: work/tabulamea/includes/RankingAdmin.php:130
-msgid "No matching public content with recorded pageviews was found for these filters."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:51
-msgid "Content"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:52
-#: work/tabulamea/includes/Settings.php:49
-msgid "Statistics"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:62
-msgid "No external referrers recorded for this period."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:62
-#: work/tabulamea/includes/DataCare.php:30
-msgid "opens in a new tab"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:63
-msgid "Only domains are retained. Missing referrers cannot be reconstructed; these counts do not represent all traffic sources."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-msgid "Pageviews over time"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-msgid "Monthly totals"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-msgid "Daily totals"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-msgid "Chart help"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:77
-msgid "Hover or tap for exact values. Use Tab and arrow keys; activate a daily point to filter the lists. Gaps mean no retained record, not proven zero traffic."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:78
-msgid "Dotted connection: no retained values between these points. It does not estimate daily counts."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:79
-msgid "No bar: zero views or no retained record. Hover, tap or use the values table to check each date."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:80
-msgid "Solid: selected period · Long dashes: preceding period"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:81
-msgid "Interactive pageview chart"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:82
-#: work/tabulamea/includes/StatisticsAdmin.php:88
-#: work/tabulamea/includes/StatisticsAdmin.php:89
-msgid "Known collection pause within this interval"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:92
-msgid "Show monthly values"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsAdmin.php:92
-msgid "Show daily values"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:35
-msgid "Import Koko Analytics statistics"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:36
-msgid "No supported Koko Analytics tables were found on this website. The source plugin does not need to be active."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:37
-msgid "Pause TabulaMea measurement under Measurement before importing. Enable it again after the import is complete."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:38
-msgid "Statify data has already been imported. Combining sources cannot reliably remove overlaps."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:40
-#, php-format
-msgid "Source: %1$s to %2$s · %3$s pageviews. Import through %4$s."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:40
-msgid "Imports daily pageviews, content counts and referrer domains. Visitor counts are not imported because their measurement differs. Dates already measured by TabulaMea are excluded to prevent overlapping totals. Koko tables remain unchanged."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:43
-#, php-format
-msgid "Eligible source pageviews: %1$s · Excluded overlapping pageviews: %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:45
-#, php-format
-msgid "Import status: %1$s · processed rows: %2$d."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:45
-msgid "Site totals"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:45
-msgid "Content totals"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:45
-msgid "Referrer totals"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:45
-#: work/tabulamea/includes/StatifyImport.php:24
-msgid "Completed"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:47
-msgid "Continue import (next batch)"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:47
-msgid "Pause automatic import"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:47
-msgid "Import completed."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:47
-msgid "Import paused. Reload this page and try again."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:47
-msgid "Continue automatically"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:48
-msgid "I have a current database backup and have reviewed the source period above."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:48
-msgid "Import these statistics"
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:49
-msgid "Import runs in small batches. Continue until it reports done. Repeating it adds only source increases already identified by the import ledger. Keep Koko collection paused during the import for a consistent source."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:54
-msgid "Pause measurement before importing."
-msgstr ""
-
-#: work/tabulamea/includes/StatisticsImport.php:57
-#: work/tabulamea/includes/StatifyImport.php:31
-msgid "Invalid import state."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:11
-msgid "Your overview, inside WordPress or on your website. Choose a saved ranking, a simple popular-content list or a pageview counter. All public output is opt-in."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:12
-msgid "Equivalent blocks: saved ranking → TabulaMea content ranking; popular list → TabulaMea popular content; counter → TabulaMea pageview counter. Exact counts need their own publication permission."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:12
-msgid "Shortcode generator"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:12
-msgid "Choose an output and copy its shortcode into a Shortcode block or a compatible builder field. Public output requires explicit permission in Settings."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:13
-msgid "Output"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:13
-msgid "Saved content ranking"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:13
-msgid "Pageview counter"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:14
-#: work/tabulamea/includes/Rankings.php:26
-msgid "Saved ranking"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:14
-#: work/tabulamea/includes/Rankings.php:26
-msgid "Choose a ranking"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:16
-msgid "Public output requires both the global public-ranking setting and publication of the selected ranking. A private ranking returns no public output."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:17
-msgid "Number of posts"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:20
-msgid "Metric"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:20
-msgid "Count the whole website instead of the current content"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:21
-msgid "Defaults to 30 days. Minimum: 1 day."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:22
-msgid "Generated shortcode"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:22
-#: work/tabulamea/includes/InterfaceTools.php:63
-msgid "Copied."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:22
-msgid "Select the shortcode and copy it with the keyboard."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:22
-msgid "Copy shortcode"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:23
-msgid "JavaScript is needed for the generator. Copy and adapt one of the examples below."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:24
-msgid "Available shortcodes"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:25
-msgid "Uses a saved ranking, including its period, content filters, count/image settings and optional snapshot. The only parameter is id."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:26
-msgid "Linked list of popular content. Parameters: number (default 5), days (30), post_type (post)."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:27
-msgid "Pageview counter. Parameters: days (default 30), global (false = current content; true = whole website). No visitor identification."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:28
-msgid "Available blocks"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:28
-msgid "In the block editor, open the block inserter and search for the block name. Shortcodes can also be inserted using the WordPress Shortcode block."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:30
-msgid "TabulaMea content ranking"
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:30
-msgid "Displays a saved ranking. Select a published ranking in the block settings; public output must also be enabled globally."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:31
-msgid "Displays current-content or whole-site pageviews. Choose the period and scope in the block sidebar; the block itself previews the output."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:32
-msgid "Linked popular-content list with controls for period, item count and public content type."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:33
-msgid "Based on the WordPress Query Loop block, ordered by recorded pageviews over the last 30 days. Design titles, images and excerpts using normal blocks. Up to 50 ranked contents; public output must be enabled."
-msgstr ""
-
-#: work/tabulamea/includes/ShortcodeTools.php:47
-msgid "Technical details"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:7
-msgid "Devices"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:7
-msgid "Browsers"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:7
-msgid "Operating systems"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:7
-msgid "Countries"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:25
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:103
-#: work/tabulamea/includes/OverviewTools.php:16
-msgid "Disabled"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:26
-msgid "Collection is technically paused"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:27
-msgid "Country database missing; countries remain unknown"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:28
-msgid "Collecting"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:28
-msgid "Waiting for the first accepted pageview"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:33
-#: work/tabulamea/includes/WordPressIntegration.php:19
-#: work/tabulamea/includes/Admin.php:17 work/tabulamea/includes/DataCare.php:46
-#: work/tabulamea/includes/Navigation.php:11
-msgid "Additional statistics"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:34
-msgid "These reports count pageviews, not unique people. Percentages use displayed categories only; categories below 5 pageviews and their totals are never exported."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:35
-#: work/tabulamea/includes/RankingAdmin.php:51
-msgid "Choose a valid date range; the end must not precede the start."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:36
-msgid "Collection started:"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:36
-#: work/tabulamea/includes/DimensionReports.php:49
-msgid "Not collected yet"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:37
-msgid "No categories reach the display threshold in this period. Check the collection status and try a longer period."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:38
-#: work/tabulamea/includes/RankingAdmin.php:106
-#: work/tabulamea/includes/ToolsActions.php:77
-msgid "Category"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:38
-#: work/tabulamea/includes/ToolsActions.php:77
-msgid "Share of displayed categories"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:39
-msgid "How to read this report"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:39
-msgid "Detection is approximate. Unknown includes requests that could not be classified. Its percentage is shown only when that category meets the same display threshold. Hidden categories are excluded from percentage denominators."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:46
-msgid "Data coverage"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:47
-msgid "Available statistics history since:"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:47
-msgid "No data available"
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:47
-msgid "This is the earliest retained record, not necessarily the original installation date."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:52
-#, php-format
-msgid "Retained records: %1$s to %2$s, with pageviews on %3$d days."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:53
-msgid "An initial observation basis is available. This is not a guarantee of statistical significance."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:53
-msgid "Early or sparse data: allow at least 30 calendar days, sufficient traffic and regular recorded days before comparing categories."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:55
-msgid "The initial-basis indicator requires at least 30 calendar days, records on 14 days and 100 pageviews. It is an orientation aid, not a significance test."
-msgstr ""
-
-#: work/tabulamea/includes/DimensionReports.php:56
-msgid "Days without records may mean no traffic or a collection gap. Thirty days alone do not guarantee a useful comparison. Missing history is never estimated."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:12
-#: work/tabulamea/includes/Admin.php:106
-msgid "Your content. Its impact. All in view."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:19
-msgid "Action completed."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:19
-#: work/tabulamea/includes/DataCare.php:57
-msgid "The action could not be completed. Check the input or create a new preview if it expired or the target settings changed."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/Settings.php:41
-msgid "Overview"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:11
-#: work/tabulamea/includes/Insights.php:62
-msgid "Measurement"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/AccessTools.php:33
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Access"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Dashboard"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Additional collection"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Content lists"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-msgid "Shortcodes & blocks"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:27
-#: work/tabulamea/includes/Settings.php:70
-msgid "Data & transfer"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:31
-msgid "The statistics store is unavailable. Check database permissions and reactivate the plugin."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:33
-msgid "Settings sections"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:41
-msgid "Content rankings use retained pageviews for posts and pages. Additional statistics show independently collected country and technology totals."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:47
-msgid "Access and dashboard"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:47
-msgid "Administrators retain access for recovery. Personal rules override role rules. Settings and access policy can only be changed by website administrators."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:48
-msgid "View statistics"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:48
-msgid "View compact dashboard widget"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:49
-msgid "Personal rules"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:49
-msgid "User"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:49
-msgid "Widget"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:49
-msgid "Remove personal rule"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:50
-msgid "Use role rules"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:50
-msgid "Allow"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:50
-msgid "Deny"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:50
-msgid "Use role rules again"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:54
-msgid "Allow explicitly published rankings on the public website"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:54
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Also allow exact pageview counts in public output"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:54
-msgid "Ranking order can be published without exact counts. Counters remain empty until exact counts are allowed."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:57
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/OverviewTools.php:14
-msgid "Dashboard widgets"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:57
-msgid "The overview widget follows statistics access. The compact widget uses its own access rules. Both retain WordPress screen options."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:59
-#: work/tabulamea/includes/AccessTools.php:34
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Compact widget"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:59
-msgid "Enable compact dashboard widget"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:64
-msgid "Optional country and technology reports"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:64
-msgid "These reports count accepted pageviews from activation onward. No additional browser request is sent. They do not identify visitors and cannot reconstruct past country or technology data."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:65
-msgid "Collect device, browser and operating system categories"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:65
-msgid "Collect country categories using a local GeoIP database"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:65
-msgid "Allow downloading and monthly updating DB-IP Country Lite from download.db-ip.com"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:66
-msgid "Only country and technology totals are stored, without IP addresses or full browser headers. Country lookup uses the direct connection address; reverse proxies require correct server configuration. Browser and device detection is approximate."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:66
-msgid "Keep dimension reports for months"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:71
-msgid "Delete all TabulaMea settings, statistics, rankings and snapshots when uninstalling on this website. Source data belonging to other plugins is preserved."
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:76
-msgid "Country database"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:76
-msgid "Database month:"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:76
-msgid "Not installed"
-msgstr ""
-
-#: work/tabulamea/includes/Settings.php:76
-msgid "Download or refresh country database"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:13
-msgid "WordPress website-administration capability"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:14
-#: work/tabulamea/includes/Admin.php:47
-msgid "User not found on this website."
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:15
-msgid "Administrator recovery access"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:17
-msgid "Personal permission"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:17
-msgid "Personal restriction"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:17
-msgid "Role rules"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:25
-msgid "Find a user"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:26
-msgid "Search by name, login or email"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:26
-msgid "Search users"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:29
-msgid "Up to 20 matches. Select a user to inspect permissions or add a personal rule."
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:33
-msgid "Effective access"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:33
-msgid "This checks permissions without signing in as the selected user. WordPress screen options may still hide a widget."
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:33
-msgid "Area"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:33
-msgid "Reason"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:34
-msgid "Full statistics"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:34
-msgid "Rankings, search and additional reports"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:34
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Statistics overview widget"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:34
-msgid "Plugin settings and access policy"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:35
-msgid "Allowed"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:35
-msgid "Unavailable"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:35
-msgid "Statistics storage is unavailable"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:35
-msgid "A website display switch or an access rule may restrict this area."
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:37
-msgid "Add personal access rule"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:44
-msgid "Administrators only"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:44
-msgid "Editors may view statistics"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:44
-msgid "Editors see the compact widget only"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:48
-msgid "Permission templates"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:48
-msgid "Templates change role rules. Existing personal rules keep their priority; administrator recovery access remains available. Review the changes before applying."
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:49
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Template"
-msgstr ""
-
-#: work/tabulamea/includes/AccessTools.php:49
-msgid "Preview changes"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:8
-msgid "Which ranking method fits?"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:10
-#: work/tabulamea/includes/RankingAdmin.php:11
-msgid "Most viewed"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:10
-msgid "Example: the ten posts with the most recorded pageviews in the selected year."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:11
-#: work/tabulamea/includes/RankingAdmin.php:11
-msgid "Gaining attention"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:11
-msgid "Example: content with the largest absolute increase compared with the preceding equally long period. Small changes are not proof of a trend."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:12
-#: work/tabulamea/includes/RankingAdmin.php:11
-msgid "Losing attention"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:12
-msgid "Example: previously popular content whose recorded views fell most. This does not assess content quality."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:13
-#: work/tabulamea/includes/RankingAdmin.php:11
-msgid "Popular every month"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:13
-msgid "Example: content reaching at least ten views in each of three complete calendar months. Requires retained history for every selected month."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:14
-#: work/tabulamea/includes/RankingAdmin.php:11
-msgid "Older content gaining attention"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:14
-msgid "Example: a post published over a year ago that is now receiving more views. Uses publication age and an absolute period comparison."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:23
-msgid "The retained history does not cover all requested complete months. Save this definition for later, or choose fewer months before interpreting its results."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:24
-msgid "This period starts before the retained measurement history. Results describe the available records only."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:32
-msgid "Changes are absolute counts. The minimum baseline avoids treating tiny numbers as meaningful trends. These numbers do not measure quality or conversions."
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:33
-msgid "Rules captured with this snapshot"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:35
-#, php-format
-msgid "Maximum items: %d"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:37
-#, php-format
-msgid "Minimum views: %1$d · Complete months: %2$d"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:39
-#, php-format
-msgid "Excluded contents: %1$d · Publication year: %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:39
-msgid "All years"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:47
-msgid "Remove from my favorites"
-msgstr ""
-
-#: work/tabulamea/includes/RankingEnhancements.php:47
-msgid "Add to my favorites"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:19
-#: work/tabulamea/includes/Admin.php:16
-#: work/tabulamea/includes/Navigation.php:11
-msgid "Statistics overview"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:19
-#: work/tabulamea/includes/RankingAdmin.php:28
-#: work/tabulamea/includes/Admin.php:18
-#: work/tabulamea/includes/Navigation.php:11
-msgid "Content rankings"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:21
-msgid "TabulaMea: Statistics for this content"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:24
-msgid "Measurement status and diagnostics"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:24
-msgid "Shortcode generator and blocks"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:24
-msgid "Import, export and data care"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:24
-#: work/tabulamea/includes/RankingAdmin.php:31
-#: work/tabulamea/includes/RankingAdmin.php:38
-msgid "Create a ranking"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:31
-msgid "TabulaMea statistics storage"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:31
-msgid "TabulaMea maintenance"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:39
-msgid "Review TabulaMea status"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:43
-msgid "TabulaMea storage is available"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:43
-msgid "TabulaMea storage needs attention"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:43
-msgid "Checks the plugin schema and transactional tables. This does not prove that every browser can deliver pageviews. Use the guided frontend test for that."
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:49
-msgid "TabulaMea maintenance is configured"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:49
-msgid "Review TabulaMea measurement capacity"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:49
-msgid "Review TabulaMea maintenance or country data"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:49
-msgid "The anonymous request budget was reached repeatedly in the last ten minutes. Some deliveries were rejected. Review the configured limit and server capacity."
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:49
-msgid "Checks overdue scheduled work and required local country data. Low traffic, paused collection and disabled optional reports are not errors."
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Plugin version"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "WordPress version"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "PHP version"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Multisite"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Statistics storage"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Last accepted request"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-msgid "Technology collection"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-msgid "Country collection"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Country database readable"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Scheduled maintenance"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Additional retention in months"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Storage schema"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Measurement.php:128
-msgid "Maximum valid measurement requests per minute (site-wide)"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Recent operational status"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Last successful maintenance"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Network activation"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/Insights.php:62
-msgid "Search collection"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Approximate storage in bytes"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Retained from"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Retained through"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Country database month"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Network display defaults"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-#: work/tabulamea/includes/ConfigurationTools.php:103
-#: work/tabulamea/includes/OverviewTools.php:16
-msgid "Enabled"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Not yet recorded"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "No recent error"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Request limit reached"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Storage error"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:56
-msgid "Operational settings only; no visitor or content details."
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:65
-msgid "Statistics are shown only for public content."
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:65
-#: work/tabulamea/includes/ReportTools.php:11
-#: work/tabulamea/includes/ContentColumns.php:22
-msgid "Last 30 days"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:67
-#, php-format
-msgid "Pageviews: %1$s · Previous period: %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:67
-msgid "Open content statistics"
-msgstr ""
-
-#: work/tabulamea/includes/WordPressIntegration.php:73
-msgid "Content statistics"
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:13
-msgid "Private mode must be boolean."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:15
-msgid "Invalid authentication provider."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:17
-msgid "The plugin must be installed in a stable slug directory."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:19
-msgid "Invalid GitHub repository URL."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:21
-msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:23
-msgid "Could not create the update download file."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:25
-msgid "The private update download failed. Check credentials and try again."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:27
-msgid "Could not access the update filesystem."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:29
-msgid "GitHub release does not contain the plugin main file."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:31
-msgid "Could not prepare the GitHub release package."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:33
-msgid "See the release on GitHub."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:35
-msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:37
-msgid "Manage installed plugins"
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:39
-msgid "Dismiss this notice"
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:41
-msgid "Permission denied."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:43
-msgid "Public catalog callbacks require both providers and cannot be used in private mode."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:45
-msgid "The approved release could not be verified."
-msgstr ""
-
-#: work/tabulamea/includes/updater-translations.php:47
-msgid "The approved release changed. Refresh updates first."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:8
-msgid "Use the widget filters below"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:9
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Saved ranking in the compact widget"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:10
-msgid "A selected saved ranking keeps its own filters, period and snapshot. Public publication is not required for this private widget."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:11
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Default widget period"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:12
-msgid "Number of widget items (1–20)"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:13
-#: work/tabulamea/includes/Insights.php:29
-#: work/tabulamea/includes/RankingAdmin.php:99
-msgid "All public content types"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:14
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Widget content type"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:15
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Show pageview total"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:16
-msgid "TabulaMea counts pageviews without identifying individual visitors. Personal periods affect only the current user on this website."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:28
-#: work/tabulamea/includes/Rankings.php:24
-#: work/tabulamea/includes/RankingAdmin.php:37
-#: work/tabulamea/includes/RankingAdmin.php:52
-#: work/tabulamea/includes/RankingAdmin.php:86
-msgid "Saved snapshot"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:30
-msgid "No site total was saved with this older snapshot."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:31
-msgid "Saved site pageviews:"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:31
-msgid "Pageviews:"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:35
-msgid "My widget period"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:35
-#: work/tabulamea/includes/DashboardTools.php:70
-#: work/tabulamea/includes/ReportTools.php:31
-#: work/tabulamea/includes/RankingAdmin.php:103
-msgid "Period"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:35
-#: work/tabulamea/includes/DashboardTools.php:70
-msgid "Save my display"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:40
-msgid "General widget settings"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:41
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/NetworkSettings.php:18
-msgid "Allow personal widget adjustments"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:41
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/NetworkSettings.php:19
-msgid "Maximum personal widget items (1–20)"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:42
-msgid "Personal choices apply only to that user on this website. Turning them off restores website defaults without deleting saved preferences. Saved compact rankings keep their own definition."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:45
-msgid "Period comparison"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:45
-msgid "Pageview chart"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:53
-msgid "Pageviews and period are always shown."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:53
-msgid "Optional modules"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:58
-msgid "Large widget"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:58
-msgid "Enable statistics overview widget"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:59
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/NetworkSettings.php:20
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Overview widget period"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:59
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/NetworkSettings.php:19
-msgid "Default overview items (1–10)"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:60
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Default chart style"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:60
-#: work/tabulamea/includes/Insights.php:39
-msgid "Line"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:60
-#: work/tabulamea/includes/Insights.php:39
-msgid "Bars"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:61
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Default modules"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:62
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Modules users may choose"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:62
-msgid "Only these modules can be added in personal widget settings. Website defaults remain available."
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:70
-msgid "Customize my overview"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:70
-msgid "Reset to website defaults"
-msgstr ""
-
-#: work/tabulamea/includes/DashboardTools.php:70
-msgid "Display settings are managed by the website administrator."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:16
-msgid "Import Statify statistics"
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:16
-#: work/tabulamea/includes/StatifyImport.php:30
-msgid "No supported Statify table was found on this website."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:19
-#, php-format
-msgid "Source: %1$s to %2$s · %3$s records. Import through %4$s."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:19
-msgid "Each source row becomes one historical pageview. Public content is mapped by its current local URL where possible. Unmapped content contributes to overview totals only. Referrers are reduced to external domains; search strings and other query parameters are not retained."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:20
-msgid "Another statistics source has already been imported. Combining sources cannot reliably identify overlapping pageviews, so this import is unavailable on this website."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:21
-msgid "Pause measurement before importing. Also pause Statify collection and make a database backup."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:24
-#, php-format
-msgid "Processed source rows: %1$d · Mapped public contents: %2$d · Status: %3$s"
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:24
-msgid "In progress"
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:25
-msgid "I have a backup, reviewed the source and paused both collectors."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:25
-msgid "Continue next batch"
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:25
-msgid "Start reviewed import"
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:25
-msgid "The source is read only. Repeated imports skip known source IDs. Do not reset or replace the source table between imports. Source records at or after the first TabulaMea collection day are excluded."
-msgstr ""
-
-#: work/tabulamea/includes/StatifyImport.php:29
-msgid "Pause measurement and review source compatibility first."
-msgstr ""
-
-#: work/tabulamea/includes/Plugin.php:119
-msgid "Website statistics"
-msgstr ""
-
-#: work/tabulamea/includes/Tracking.php:37
-msgid "Unknown"
-msgstr ""
-
-#: work/tabulamea/includes/Tracking.php:37
-msgid "Desktop"
-msgstr ""
-
-#: work/tabulamea/includes/Tracking.php:37
-msgid "Tablet"
-msgstr ""
-
-#: work/tabulamea/includes/Tracking.php:37
-msgid "Smartphone"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:24
-#: work/tabulamea/includes/RankingAdmin.php:88
-msgid "Public output enabled"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:24
-#: work/tabulamea/includes/OverviewTools.php:18
-msgid "Public output is disabled in Plugin settings."
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:24
-#: work/tabulamea/includes/RankingAdmin.php:37
-#: work/tabulamea/includes/RankingAdmin.php:52
-#: work/tabulamea/includes/RankingAdmin.php:86
-msgid "Live ranking"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:26
-msgid "Choose a published ranking. Its filters and appearance are managed on the Content rankings page."
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:26
-msgid "No published ranking selected. Create and publish a ranking in Plugin settings first."
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:155
-#: work/tabulamea/includes/RankingAdmin.php:129
-msgid "pageviews"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:159
-#, php-format
-msgid "Previous period: %1$s · Change: %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:163
-msgid "Percentages refer to all recorded site pageviews in this period, including content outside this list."
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:163
-msgid "A saved site total is unavailable; percentage shares are not shown."
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:166
-#, php-format
-msgid "Recorded pageviews · %1$s to %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/Rankings.php:190
-#, php-format
-msgid "%s recorded pageviews (configured collection scope)"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Ranking defaults"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:11
-msgid "Uninstall preference"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:86
-msgid "A configuration preview is waiting for review."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:87
-msgid "Last application result"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:87
-msgid "Skipped: plugin inactive"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:87
-msgid "Applied or already unchanged"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:87
-msgid "Could not save; review this website and create a new preview"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:89
-msgid "Review configuration changes"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:89
-msgid "Nothing has been applied yet. This preview expires after 15 minutes. If a target configuration changes, create a new preview."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:90
-msgid "No permitted target websites were selected."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:91
-msgid "The plugin is inactive on this target website. Its configuration will not be changed."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:91
-msgid "Setting"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:91
-msgid "Current value"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:91
-msgid "New value"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:93
-msgid "New ranking definitions:"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:93
-msgid "Skipped ranking IDs (existing, unsupported on target or capacity reached):"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:93
-msgid "Individual settings preserved:"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:95
-msgid "Apply the reviewed changes"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:95
-msgid "Discard preview"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:106
-#, php-format
-msgid "Personal rules: %d"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Roles allowed to view reports"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Management roles"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Roles allowed to view the compact widget"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Personal access rules"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Public ranking output"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Hide upgrade advertising"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Country database download consent"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Dimension retention in months"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Excluded content"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/RankingAdmin.php:115
-msgid "Exclude the static front page"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Delete plugin data on uninstall"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Widget item limit"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-msgid "Visitor totals are unavailable"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Measurement.php:124
-msgid "Enable pageview measurement"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-msgid "Excluded roles"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Measurement.php:127
-msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Measurement.php:129
-msgid "Hide these referrer domains from future referrer counts (one per line)"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/MeasurementPolicy.php:79
-msgid "Exclude recognizable search-engine bots from statistics"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/MeasurementPolicy.php:80
-msgid "Exclude recognizable AI bots and assistants from statistics"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "Collection scope"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:82
-msgid "Content types"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Archive types"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Count search-result views separately"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Selected search terms"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/ContentColumns.php:84
-msgid "Pageviews in content lists"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:115
-#: work/tabulamea/includes/ContentColumns.php:86
-msgid "Period for list-table counts"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:150
-msgid "Settings sections to include"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:154
-msgid "Ranking definitions to include"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:155
-msgid "Personal rules, snapshots, content exclusions by ID, category IDs, collected statistics and download consent are excluded. Imported collection and public output stay disabled for review."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:159
-msgid "Selective configuration export"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:159
-msgid "Download configuration"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:160
-msgid "Import with preview"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:160
-msgid "Import ranking definitions from the file"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:160
-msgid "Configuration JSON file"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:160
-msgid "Preview import"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:161
-msgid "Named configuration templates"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:161
-msgid "Save a portable selection for reuse. For example: Customer website, Editorial project or Own website. Templates do not grant collection or download consent."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:162
-msgid "Template name"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:162
-msgid "Save new template"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:163
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Include saved ranking definitions"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:163
-msgid "Preview template"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:163
-msgid "Delete template"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Apply a template to selected websites"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Only checked websites are considered. Individual settings are preserved by default. The preview lists changes and skipped conflicts for every website."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Search website domain or path"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:166
-msgid "Find websites"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:168
-msgid "Up to 100 websites are listed; a single preview supports at most 50 selected websites."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:168
-msgid "Preserve settings that differ from installation defaults"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:168
-msgid "Preview selected websites"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:170
-msgid "Reset one settings section"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:170
-msgid "Only the chosen section is reset after preview. Rankings, snapshots, collected statistics and the retention period are preserved. Resetting Access also clears personal access rules."
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:170
-msgid "Settings section"
-msgstr ""
-
-#: work/tabulamea/includes/ConfigurationTools.php:170
-msgid "Preview reset"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:28
-msgid "Filter content"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:28
-msgid "Filters active"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:31
-msgid "Find content by title"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:31
-msgid "Rows per list"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:31
-#: work/tabulamea/includes/Insights.php:39
-#: work/tabulamea/includes/ReportTools.php:35
-msgid "Apply"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:32
-msgid "Content filters active"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:32
-msgid "Reset filters"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:39
-msgid "Display"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:39
-msgid "Compare previous period"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:39
-msgid "Chart style is remembered for you on this website."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:53
-msgid "Browse periods"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:53
-msgid "Previous period"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:53
-msgid "Next period"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:60
-msgid "Coverage and interpretation"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:60
-msgid "A missing record is not proof of zero visits. Only known setting changes can explain pauses; historical outages cannot be reconstructed. The current day is incomplete. Comparisons use the preceding interval with the same number of calendar days."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:61
-msgid "Current collection covers only the selected part of this website. Historical totals can include earlier collection scopes."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-msgid "No collection setting changes are recorded for this period."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-msgid "Technical collection changes"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-msgid "Search-engine bot filter"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-msgid "AI bot filter"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-msgid "Retention"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/OverviewTools.php:8
-msgid "Measurement enabled"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:62
-#: work/tabulamea/includes/OverviewTools.php:8
-msgid "Measurement paused"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:66
-msgid "Guided measurement test"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:66
-msgid "Open the public homepage using this link, then return here and reload. The signed test bypasses your role exclusion but does not add a pageview. Measurement must be enabled. A successful test proves this browser delivery only."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:66
-msgid "Open frontend test"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:68
-#, php-format
-msgid "Last successful test: %s"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:68
-msgid "No test received yet."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:74
-msgid "How pageviews are distributed"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:74
-msgid "Archives and overview pages"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:74
-msgid "Unavailable or no longer public content"
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:74
-msgid "Content-list shares refer to all recorded website pageviews in the same period, including archives and content outside the list."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:84
-#: work/tabulamea/includes/Admin.php:132
-msgid "Invalid ranking."
-msgstr ""
-
-#: work/tabulamea/includes/Insights.php:86
-#: work/tabulamea/includes/Admin.php:129
-#: work/tabulamea/includes/ToolsActions.php:9
-#: work/tabulamea/includes/DataCare.php:59
-msgid "Unknown action."
-msgstr ""
-
-#: work/tabulamea/includes/InterfaceTools.php:63
-msgid "Select the text and copy it with the keyboard."
-msgstr ""
-
-#: work/tabulamea/includes/InterfaceTools.php:63
-msgid "Copy"
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:27
-#: work/tabulamea/includes/SearchStats.php:29
-#: work/tabulamea/includes/SearchStats.php:30
-msgid "Invalid search delivery."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:35
-#: work/tabulamea/includes/Measurement.php:91
-#: work/tabulamea/includes/Measurement.php:97
-msgid "Statistics could not be saved."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:50
-msgid "First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:52
-#, php-format
-msgid "Search-result views: %1$s · Without results: %2$s"
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:53
-msgid "Search collection is disabled. Existing history remains available."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:54
-msgid "Most used approved search topics"
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:54
-msgid "Only approved topics with at least five recorded views are listed. Unknown search phrases are never saved. Select a calendar year for a year-in-review ranking."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:55
-msgid "No approved topic meets the display threshold in this period."
-msgstr ""
-
-#: work/tabulamea/includes/SearchStats.php:55
-#: work/tabulamea/includes/OverviewTools.php:11
-#: work/tabulamea/includes/OverviewTools.php:19
-#: work/tabulamea/includes/OverviewTools.php:25
-msgid "Review settings"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Today"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Yesterday"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last 7 days"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last 14 days"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last 90 days"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last 180 days"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last 365 days"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "This month"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Last month"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-#: work/tabulamea/includes/ReportTools.php:32
-#: work/tabulamea/includes/RankingAdmin.php:104
-#: work/tabulamea/includes/RankingAdmin.php:136
-msgid "Calendar year"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Previous calendar year"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:11
-msgid "Custom dates"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:33
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Start date for custom period"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:34
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "End date for custom period"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:35
-msgid "Date fields apply only to Custom dates. Calendar year uses the year field."
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:37
-msgid "Use this period as my default"
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:61
-#, php-format
-msgid "Retained days with pageviews: %d. Days without records may mean no traffic or interrupted collection. Missing history is not estimated."
-msgstr ""
-
-#: work/tabulamea/includes/ReportTools.php:62
-msgid "The retained history does not cover the start of this period. Interpret totals and changes with care."
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:75
-#: work/tabulamea/includes/Measurement.php:80
-#: work/tabulamea/includes/Measurement.php:81
-#: work/tabulamea/includes/Measurement.php:82
-#: work/tabulamea/includes/Measurement.php:90
-msgid "Invalid pageview."
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:123
-msgid "Privacy-friendly measurement"
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:123
-msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:125
-msgid "Do not count logged-in users with these roles"
-msgstr ""
-
-#: work/tabulamea/includes/Measurement.php:129
-msgid "Pageviews still count. Existing referrer totals remain unchanged. No query strings or referrer paths are stored."
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:17
-msgid "Network defaults"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:17
-msgid "Each website measures and stores its own statistics, including the main website. These are display defaults only. Website choices override network defaults; personal choices stay within website limits. Collection, access rights and external-download consent are configured separately on each website."
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:18
-msgid "Enable configurable overview widget"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:18
-msgid "Enable compact widget"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:20
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Compact widget period"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Website and network display defaults"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Explicit website choices override network defaults. Personal widget preferences remain within the website limits."
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Overview widget"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Personal adjustments"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Personal item limit"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Overview items"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Website override"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Network default"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:25
-msgid "Restore network display defaults on this website"
-msgstr ""
-
-#: work/tabulamea/includes/NetworkSettings.php:29
-msgid "Invalid input."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:78
-msgid "Automated requests"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:79
-msgid "For example Google, Bing and DuckDuckGo. People arriving through these search engines are still counted."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:80
-msgid "For example OpenAI, Anthropic and Perplexity. People following links from these services are still counted. These options do not block access or change robots.txt. Bots without a measurement request remain invisible, even when an exclusion is disabled."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "Which pages should be measured?"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "All public pages"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "Selected content and archive types"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "Choose content and archive types"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:81
-msgid "These choices apply only to selected collection. Existing totals are retained. The website total then covers only the selected part of your website."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Front page"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Posts overview"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Category, tag and public taxonomy archives"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Content-type archives"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Author archives"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Date archives"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:83
-msgid "Other public overview pages"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "See which offers people search for, without retaining arbitrary search inputs. Select non-personal terms in advance; matching results-page views are counted under these terms. Names, email addresses and other unselected inputs are not saved as search text."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Counts the first results page and searches without results. Reloads count again. Free search strings are never retained. Search counts do not increase regular pageview totals."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Selected search terms: one exact phrase per line"
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Use only non-personal topics. Matching ignores letter case and repeated spaces; unknown terms are not saved."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Examples for a club: Donations, Volunteering, Become a member, Events, Contact. These suggestions are not enabled automatically."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Example: if Donations is selected, a search for donations increases that counter. A search for Donations wanted does not match unless that whole phrase is selected separately. Other searches increase only the overall search total; their text is not retained. This does not change WordPress search results."
-msgstr ""
-
-#: work/tabulamea/includes/MeasurementPolicy.php:84
-msgid "Example report: Donations · 18 search-result views · Last 30 days · Open search on website. Term totals appear from five views; missing terms do not prove zero interest. Counts describe first results-page loads, not people, and reloads count again. This feature monitors selected terms rather than discovering unknown queries."
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:8
-msgid "Most popular posts"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:8
-msgid "Most popular pages"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:8
-msgid "Top 10 of the previous year"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:8
-msgid "Popular posts in a category"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:22
-msgid "Contents to exclude"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:30
-msgid "Turn recorded pageviews into useful reading lists: popular content, growing interest, monthly favorites or a year in review. Start privately; publish a ranking only when you choose."
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:30
-msgid "Ranking workspace"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:31
-msgid "My rankings"
-msgstr ""
-
-#: work/tabulamea/includes/RankingAdmin.php:31
-#: work/tabulamea/includes/RankingAdmin.php:136
 msgid "Year in review"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:37
-msgid "Published"
+msgid "Pageviews with a label"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:37
-msgid "Private"
+msgid "Pageviews: "
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:37
-msgid "View results"
+msgid "Choose a saved calendar-year ranking in the block sidebar. Public output requires explicit permission."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:37
-#: work/tabulamea/includes/RankingAdmin.php:86
-#: work/tabulamea/includes/RankingAdmin.php:94
-msgid "Edit ranking"
+msgid "A starting point using recorded pageviews. Adjust the block in its sidebar."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:38
-msgid "Your first useful overview"
+msgid "TabulaMea pageview counter"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:38
-msgid "Create a ranking from a template, choose a period and inspect the results. No content is published automatically."
+msgid "TabulaMea popular content"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:50
-msgid "Ranking preview"
+msgid "Days"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:53
-msgid "Snapshot saved:"
+msgid "Number of items"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:53
-msgid "Counts are frozen. Contents that are no longer public remain hidden."
+msgid "Count the whole website"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:56
-msgid "This ranking uses complete calendar months. Every listed content must reach the minimum pageviews in every selected month."
+msgid "Content type"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:57
-msgid "Comparison with the preceding equally long period:"
+msgid "Counters also require permission to publish exact numbers."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:70
-msgid "The snapshot has no currently eligible public contents. Content visibility or exclusions may have changed."
+msgid "Uses recorded pageviews. Public output must be enabled in TabulaMea settings."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:73
-msgid "No public, unprotected contents are available. Publish a suitable post or page first."
+msgid "Text before the number"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:75
-msgid "No content pageviews are retained for this period. Choose a period with existing statistics history."
+msgid "Text after the number"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:76
-msgid "Pageviews exist, but the selected type, category, publication year or exclusions leave no matching contents. Relax the filters or change the period."
+msgid "Display settings"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:76
-msgid "No content meets this method’s minimum traffic and comparison rules. Try a longer period, a lower minimum or Most viewed."
+msgid "Public output is disabled. Your block settings are preserved. An administrator can allow output under TabulaMea → Access."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:84
-msgid "Create a ranking from a template"
+msgid "Publishing exact numbers is disabled. Your counter settings are preserved. An administrator can allow numbers under TabulaMea → Access."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:84
-msgid "Starting point"
+msgid "No matching recorded pageviews are available for this selection. Try another period or content type. Your settings are preserved."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:84
-msgid "Category for the category template"
+msgid "No public output is available. Check publication permissions, the content selection and recorded data."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:84
-#: work/tabulamea/includes/RankingAdmin.php:106
-msgid "All categories"
+msgid "TabulaMea popular content loop"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:84
-msgid "Create unpublished ranking"
+msgid "Access denied."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:86
-msgid "Open shortcode generator"
+msgid "Choose a valid date range."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:87
-msgid "Shortcode for this ranking"
+msgid "View content"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:88
-msgid "The ranking is published, but global public output is disabled."
+msgid "Edit content"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:88
-msgid "Private ranking: public shortcodes and blocks remain empty."
+msgid "Compared with previous period"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:89
-msgid "Duplicate as a private live ranking"
+msgid "%s%% change"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:90
-msgid "Return to live ranking"
+msgid "The previous baseline is too small for a useful percentage."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:90
-msgid "Save snapshot"
+msgid "Comparison period:"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:90
-msgid "Delete ranking"
+msgid "Today is still incomplete."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:93
-msgid "Unsaved preview"
+msgid "Lists filtered to %s"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:94
-msgid "Create a custom ranking"
+msgid "Clear day filter"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:96
-msgid "Choose content and ranking method"
+msgid "Most viewed content"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:96
-msgid "Give the overview a recognizable title. Most viewed is the simplest starting point."
+msgid "Referring websites"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:97
-msgid "Ranking title"
+msgid "How these numbers are measured"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:97
-msgid "Shortcode identifier (optional for a new ranking)"
+msgid "Pageviews count visible page loads. Reloads count again. Recognizable bots, previews, search pages and excluded roles are omitted. No unique people, sessions or visitor profiles are calculated. Browser blocking and missing JavaScript can reduce counts."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:98
-msgid "Use a short identifier without spaces. New rankings get an identifier from the title when this field is empty. Reusing an existing identifier updates that definition."
+msgid "This list is being rebuilt or could not be refreshed. Try refreshing this view shortly; an empty response is not proof of zero pageviews."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:100
-msgid "Ranking method"
+msgid "No matching public content with recorded pageviews was found for these filters."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:101
-msgid "Movers compare absolute pageview changes with the preceding equally long period. Older content must also be gaining views. Popular every month uses complete months instead of the period below."
+msgid "Content"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:102
-msgid "Set the period and filters"
+msgid "Statistics"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Publication year (0 = any)"
+msgid "No external referrers recorded for this period."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Number of items (1–50)"
+msgid "opens in a new tab"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Minimum pageviews (at least 5; per month for monthly rankings)"
+msgid "Only domains are retained. Missing referrers cannot be reconstructed; these counts do not represent all traffic sources."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Complete months for monthly rankings (2–12)"
+msgid "Week beginning"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:104
-msgid "Minimum content age in days for rediscovered content"
+msgid "Pageviews over time"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:105
-msgid "The period refers to pageview dates. Publication year separately filters when the content was published."
+msgid "Monthly totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:107
-msgid "Use the website-wide ranking exclusions"
+msgid "Weekly totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:108
-msgid "Exclude individual content"
+msgid "Daily totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:110
-msgid "Choose appearance and publication"
+msgid "Chart help"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:110
-msgid "A private ranking is available in the admin. Frontend output needs this ranking’s publication switch and the website-wide public-output permission."
+msgid "Grouped values sum retained records only. Missing days and partial weeks or months are not estimated."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:111
-msgid "Show period below this ranking"
+msgid "Hover or tap for exact values. Use Tab and arrow keys; activate a daily point to filter the lists. Gaps mean no retained record, not proven zero traffic."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:111
-msgid "List appearance"
+msgid "Dotted connection: no retained values between these points. It does not estimate daily counts."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:111
-msgid "Numbered list"
+msgid "No bar: zero views or no retained record. Hover, tap or use the values table to check each date."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:111
-msgid "Simple link list"
+msgid "Boundary weeks or months may contain different numbers of days in the two periods. Compare whole-period totals for equal-length intervals."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:111
-msgid "List with featured images"
+msgid "Solid: selected period · Long dashes: preceding period"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:112
-msgid "Publish this ranking"
+msgid "Interactive pageview chart"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:112
-msgid "Show pageview counts"
+msgid "Known collection pause within this interval"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:112
-msgid "Show featured images"
+msgid "Show monthly values"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:112
-msgid "Show the previous period and absolute change"
+msgid "Show weekly values"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:112
-msgid "Show share of all site pageviews"
+msgid "Show daily values"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:113
-msgid "Editing a frozen ranking preserves its snapshot until you return it to live mode."
+msgid "Previous period"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:113
-msgid "Preview without saving"
+msgid "Import Koko Analytics statistics"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:113
-msgid "Save ranking"
+msgid "No supported Koko Analytics tables were found on this website. The source plugin does not need to be active."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:114
-msgid "Search content for exclusion lists"
+msgid "Pause TabulaMea measurement under Measurement before importing. Enable it again after the import is complete."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:114
-msgid "Content title search"
+msgid "Statify data has already been imported. Combining sources cannot reliably remove overlaps."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:114
-msgid "Find content"
+msgid "Source: %1$s to %2$s · %3$s pageviews. Import through %4$s."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:114
-msgid "Search before changing selections. Results appear in both exclusion pickers; saved selections stay available. Save an edited ranking before starting another search."
+msgid "Imports daily pageviews, content counts and referrer domains. Visitor counts are not imported because their measurement differs. Dates already measured by TabulaMea are excluded to prevent overlapping totals. Koko tables remain unchanged."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:115
-msgid "Website-wide ranking exclusions"
+msgid "Eligible source pageviews: %1$s · Excluded overlapping pageviews: %2$s"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:115
-msgid "Save ranking defaults"
+msgid "Import status: %1$s · processed rows: %2$d."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:126
-#, php-format
-msgid "Most read contents in %s"
+msgid "Site totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:128
-#, php-format
-msgid "Recorded pageviews from %1$s to %2$s."
+msgid "Content totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:128
-msgid "Source: saved snapshot."
+msgid "Referrer totals"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:128
-msgid "Source: current retained statistics."
+msgid "Completed"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:130
-msgid "This list describes recorded pageviews, not an editorial quality assessment. Missing history is not estimated."
+msgid "Continue import (next batch)"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:134
-msgid "Print this review"
+msgid "Pause automatic import"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:135
-msgid "Create a top-10 post list for the selected year"
+msgid "Import completed."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:136
-msgid "Generate a factual draft with titles, pageview counts and links. It is never published automatically. A selected saved ranking keeps its filters, year and snapshot."
+msgid "Import paused. Reload this page and try again."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:136
-msgid "Optional saved year ranking"
+msgid "Continue automatically"
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:136
-msgid "Generate review text"
+msgid "I have a current database backup and have reviewed the source period above."
 msgstr ""
 
-#: work/tabulamea/includes/RankingAdmin.php:137
-msgid "Text draft to copy and edit"
+msgid "Import these statistics"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:35
-msgid "No recorded pageviews in this period. This is not proof of zero visits."
+msgid "Import runs in small batches. Continue until it reports done. Repeating it adds only source increases already identified by the import ledger. Keep Koko collection paused during the import for a consistent source."
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:79
-msgid "Filter recorded pageviews"
+msgid "Import completed"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:80
-msgid "All pageview states"
+msgid "Cumulative source values retained by the import ledger, including previous batches. Site, content and referrer totals overlap and must not be added together. Source tables remain unchanged. Re-enable measurement after reviewing the result."
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:80
-msgid "With recorded pageviews"
+msgid "Site pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:80
-msgid "Without recorded pageviews"
+msgid "Content pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:80
-msgid "Pageview period"
+msgid "Referrer pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:80
-msgid "Reset view filters"
+msgid "Imported Statify pageviews"
 msgstr ""
 
-#: work/tabulamea/includes/ContentColumns.php:84
-msgid "Enable a sortable Pageviews column for selected public content types. Only statistics viewers see it. Missing records are shown as a dash; they do not prove zero visits."
+msgid "Pause measurement before importing."
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:61
-#: work/tabulamea/includes/Navigation.php:12
-msgid "Settings"
+msgid "Invalid import state."
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:102 work/tabulamea/includes/Admin.php:103
-msgid "Documentation"
+msgid "Your overview, inside WordPress or on your website. Choose a saved ranking, a simple popular-content list or a pageview counter. All public output is opt-in."
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:103
-msgid "FAQ"
+msgid "Equivalent blocks: saved ranking → TabulaMea content ranking; popular list → TabulaMea popular content; counter → TabulaMea pageview counter. Exact counts need their own publication permission."
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:103
-msgid "Changelog"
+msgid "Shortcode generator"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:106
-msgid "About this plugin"
+msgid "Choose an output and copy its shortcode into a Shortcode block or a compatible builder field. Public output requires explicit permission in Settings."
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:106
-msgid "Version"
+msgid "Output"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:106
-msgid "More plugins"
+msgid "Saved content ranking"
 msgstr ""
 
-#: work/tabulamea/includes/Admin.php:106
-msgid "Close"
+msgid "Pageview counter"
 msgstr ""
 
-#: work/tabulamea/includes/ToolsActions.php:34
-#, php-format
-msgid "Copy of %s"
+msgid "Saved ranking"
 msgstr ""
 
-#: work/tabulamea/includes/ToolsActions.php:76
-#: work/tabulamea/includes/ToolsActions.php:77
-#: work/tabulamea/includes/ToolsActions.php:78
-#: work/tabulamea/includes/ToolsActions.php:79
-msgid "Invalid report."
+msgid "Choose a ranking"
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:9
-msgid "Measurement status"
+msgid "Public output requires both the global public-ranking setting and publication of the selected ranking. A private ranking returns no public output."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:9
+msgid "Number of posts"
+msgstr ""
+
+msgid "Metric"
+msgstr ""
+
+msgid "Count the whole website instead of the current content"
+msgstr ""
+
+msgid "Defaults to 30 days. Minimum: 1 day."
+msgstr ""
+
+msgid "Generated shortcode"
+msgstr ""
+
+msgid "Copied."
+msgstr ""
+
+msgid "Select the shortcode and copy it with the keyboard."
+msgstr ""
+
+msgid "Copy shortcode"
+msgstr ""
+
+msgid "JavaScript is needed for the generator. Copy and adapt one of the examples below."
+msgstr ""
+
+msgid "Available shortcodes"
+msgstr ""
+
+msgid "Uses a saved ranking, including its period, content filters, count/image settings and optional snapshot. The only parameter is id."
+msgstr ""
+
+msgid "Linked list of popular content. Parameters: number (default 5), days (30), post_type (post)."
+msgstr ""
+
+msgid "Pageview counter. Parameters: days (default 30), global (false = current content; true = whole website). No visitor identification."
+msgstr ""
+
+msgid "Available blocks"
+msgstr ""
+
+msgid "In the block editor, open the block inserter and search for the block name. Shortcodes can also be inserted using the WordPress Shortcode block."
+msgstr ""
+
+msgid "TabulaMea content ranking"
+msgstr ""
+
+msgid "Displays a saved ranking. Select a published ranking in the block settings; public output must also be enabled globally."
+msgstr ""
+
+msgid "Displays current-content or whole-site pageviews. Choose the period and scope in the block sidebar; the block itself previews the output."
+msgstr ""
+
+msgid "Linked popular-content list with controls for period, item count and public content type."
+msgstr ""
+
+msgid "Based on the WordPress Query Loop block, ordered by recorded pageviews over the last 30 days. Design titles, images and excerpts using normal blocks. Up to 50 ranked contents; public output must be enabled."
+msgstr ""
+
+msgid "Technical details"
+msgstr ""
+
+msgid "Devices"
+msgstr ""
+
+msgid "Browsers"
+msgstr ""
+
+msgid "Operating systems"
+msgstr ""
+
+msgid "Countries"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Collection is technically paused"
+msgstr ""
+
+msgid "Country database missing; countries remain unknown"
+msgstr ""
+
+msgid "Collecting"
+msgstr ""
+
+msgid "Waiting for the first accepted pageview"
+msgstr ""
+
+msgid "Additional statistics"
+msgstr ""
+
+msgid "These reports count pageviews, not unique people. Percentages use displayed categories only; categories below 5 pageviews and their totals are never exported."
+msgstr ""
+
+msgid "Choose a valid date range; the end must not precede the start."
+msgstr ""
+
+msgid "Collection started:"
+msgstr ""
+
+msgid "Not collected yet"
+msgstr ""
+
+msgid "No categories reach the display threshold in this period. Check the collection status and try a longer period."
+msgstr ""
+
+msgid "Category"
+msgstr ""
+
+msgid "Share of displayed categories"
+msgstr ""
+
+msgid "How to read this report"
+msgstr ""
+
+msgid "Detection is approximate. Unknown includes requests that could not be classified. Its percentage is shown only when that category meets the same display threshold. Hidden categories are excluded from percentage denominators."
+msgstr ""
+
+msgid "Data coverage"
+msgstr ""
+
+msgid "Available statistics history since:"
+msgstr ""
+
+msgid "No data available"
+msgstr ""
+
+msgid "This is the earliest retained record, not necessarily the original installation date."
+msgstr ""
+
+msgid "Retained records: %1$s to %2$s, with pageviews on %3$d days."
+msgstr ""
+
+msgid "An initial observation basis is available. This is not a guarantee of statistical significance."
+msgstr ""
+
+msgid "Early or sparse data: allow at least 30 calendar days, sufficient traffic and regular recorded days before comparing categories."
+msgstr ""
+
+msgid "The initial-basis indicator requires at least 30 calendar days, records on 14 days and 100 pageviews. It is an orientation aid, not a significance test."
+msgstr ""
+
+msgid "Days without records may mean no traffic or a collection gap. Thirty days alone do not guarantee a useful comparison. Missing history is never estimated."
+msgstr ""
+
+msgid "Your content. Its impact. All in view."
+msgstr ""
+
+msgid "Action completed."
+msgstr ""
+
+msgid "The action could not be completed. Check the input or create a new preview if it expired or the target settings changed."
+msgstr ""
+
+msgid "Overview"
+msgstr ""
+
+msgid "Measurement"
+msgstr ""
+
+msgid "Access"
+msgstr ""
+
+msgid "Dashboard"
+msgstr ""
+
+msgid "Additional collection"
+msgstr ""
+
+msgid "Content lists"
+msgstr ""
+
+msgid "Shortcodes & blocks"
+msgstr ""
+
+msgid "Data & transfer"
+msgstr ""
+
+msgid "The statistics store is unavailable. Check database permissions and reactivate the plugin."
+msgstr ""
+
+msgid "Settings sections"
+msgstr ""
+
+msgid "Content rankings use retained pageviews for posts and pages. Additional statistics show independently collected country and technology totals."
+msgstr ""
+
+msgid "Access and dashboard"
+msgstr ""
+
+msgid "Administrators retain access for recovery. Personal rules override role rules. Settings and access policy can only be changed by website administrators."
+msgstr ""
+
+msgid "View statistics"
+msgstr ""
+
+msgid "View compact dashboard widget"
+msgstr ""
+
+msgid "Personal rules"
+msgstr ""
+
+msgid "User"
+msgstr ""
+
+msgid "Widget"
+msgstr ""
+
+msgid "Remove personal rule"
+msgstr ""
+
+msgid "Use role rules"
+msgstr ""
+
+msgid "Allow"
+msgstr ""
+
+msgid "Deny"
+msgstr ""
+
+msgid "Use role rules again"
+msgstr ""
+
+msgid "Allow explicitly published rankings on the public website"
+msgstr ""
+
+msgid "Also allow exact pageview counts in public output"
+msgstr ""
+
+msgid "Ranking order can be published without exact counts. Counters remain empty until exact counts are allowed."
+msgstr ""
+
+msgid "Dashboard widgets"
+msgstr ""
+
+msgid "The overview widget follows statistics access. The compact widget uses its own access rules. Both retain WordPress screen options."
+msgstr ""
+
+msgid "Compact widget"
+msgstr ""
+
+msgid "Enable compact dashboard widget"
+msgstr ""
+
+msgid "Optional country and technology reports"
+msgstr ""
+
+msgid "These reports count accepted pageviews from activation onward. No additional browser request is sent. They do not identify visitors and cannot reconstruct past country or technology data."
+msgstr ""
+
+msgid "Collect device, browser and operating system categories"
+msgstr ""
+
+msgid "Collect country categories using a local GeoIP database"
+msgstr ""
+
+msgid "Allow downloading and monthly updating DB-IP Country Lite from download.db-ip.com"
+msgstr ""
+
+msgid "Only country and technology totals are stored, without IP addresses or full browser headers. Country lookup uses the direct connection address; reverse proxies require correct server configuration. Browser and device detection is approximate."
+msgstr ""
+
+msgid "Keep dimension reports for months"
+msgstr ""
+
+msgid "Delete all TabulaMea settings, statistics, rankings and snapshots when uninstalling on this website. Source data belonging to other plugins is preserved."
+msgstr ""
+
+msgid "Country database"
+msgstr ""
+
+msgid "Database month:"
+msgstr ""
+
+msgid "Not installed"
+msgstr ""
+
+msgid "Download or refresh country database"
+msgstr ""
+
+msgid "WordPress website-administration capability"
+msgstr ""
+
+msgid "User not found on this website."
+msgstr ""
+
+msgid "Administrator recovery access"
+msgstr ""
+
+msgid "Personal permission"
+msgstr ""
+
+msgid "Personal restriction"
+msgstr ""
+
+msgid "Role rules"
+msgstr ""
+
+msgid "Find a user"
+msgstr ""
+
+msgid "Search by name, login or email"
+msgstr ""
+
+msgid "Search users"
+msgstr ""
+
+msgid "Up to 20 matches. Select a user to inspect permissions or add a personal rule."
+msgstr ""
+
+msgid "Effective access"
+msgstr ""
+
+msgid "This checks permissions without signing in as the selected user. WordPress screen options may still hide a widget."
+msgstr ""
+
+msgid "Area"
+msgstr ""
+
+msgid "Reason"
+msgstr ""
+
+msgid "Full statistics"
+msgstr ""
+
+msgid "Rankings, search and additional reports"
+msgstr ""
+
+msgid "Statistics overview widget"
+msgstr ""
+
+msgid "Plugin settings and access policy"
+msgstr ""
+
+msgid "Allowed"
+msgstr ""
+
+msgid "Unavailable"
+msgstr ""
+
+msgid "Statistics storage is unavailable"
+msgstr ""
+
+msgid "A website display switch or an access rule may restrict this area."
+msgstr ""
+
+msgid "Add personal access rule"
+msgstr ""
+
+msgid "Administrators only"
+msgstr ""
+
+msgid "Editors may view statistics"
+msgstr ""
+
+msgid "Editors see the compact widget only"
+msgstr ""
+
+msgid "Permission templates"
+msgstr ""
+
+msgid "Templates change role rules. Existing personal rules keep their priority; administrator recovery access remains available. Review the changes before applying."
+msgstr ""
+
+msgid "Template"
+msgstr ""
+
+msgid "Preview changes"
+msgstr ""
+
+msgid "Ready to use TabulaMea"
+msgstr ""
+
+msgid "Statistics storage is ready."
+msgstr ""
+
+msgid "Statistics storage needs attention."
+msgstr ""
+
+msgid "Measurement is switched on."
+msgstr ""
+
 msgid "Measurement is paused."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:11
-#, php-format
+msgid "Your signed-in role is excluded from regular pageviews."
+msgstr ""
+
+msgid "Your signed-in role is not excluded from regular pageviews."
+msgstr ""
+
+msgid "Country, technology and search reporting are independent optional choices."
+msgstr ""
+
+msgid "Next step: use the guided measurement test. It checks delivery from this browser and does not add a pageview. Privacy signals still apply."
+msgstr ""
+
+msgid "Recent technical operation"
+msgstr ""
+
+msgid "Last successful maintenance:"
+msgstr ""
+
+msgid "Not yet recorded"
+msgstr ""
+
+msgid "A statistics write failed."
+msgstr ""
+
+msgid "The measurement request limit was reached."
+msgstr ""
+
+msgid "The country database could not be updated. An existing database is not replaced."
+msgstr ""
+
+msgid "A regular pageview was stored successfully afterwards."
+msgstr ""
+
+msgid "Only technical categories and times are retained, at most 20 entries. A later success does not reconstruct missed pageviews."
+msgstr ""
+
+msgid "Which ranking method fits?"
+msgstr ""
+
+msgid "Most viewed"
+msgstr ""
+
+msgid "Example: the ten posts with the most recorded pageviews in the selected year."
+msgstr ""
+
+msgid "Gaining attention"
+msgstr ""
+
+msgid "Example: content with the largest absolute increase compared with the preceding equally long period. Small changes are not proof of a trend."
+msgstr ""
+
+msgid "Losing attention"
+msgstr ""
+
+msgid "Example: previously popular content whose recorded views fell most. This does not assess content quality."
+msgstr ""
+
+msgid "Popular every month"
+msgstr ""
+
+msgid "Example: content reaching at least ten views in each of three complete calendar months. Requires retained history for every selected month."
+msgstr ""
+
+msgid "Older content gaining attention"
+msgstr ""
+
+msgid "Example: a post published over a year ago that is now receiving more views. Uses publication age and an absolute period comparison."
+msgstr ""
+
+msgid "The retained history does not cover all requested complete months. Save this definition for later, or choose fewer months before interpreting its results."
+msgstr ""
+
+msgid "This period starts before the retained measurement history. Results describe the available records only."
+msgstr ""
+
+msgid "Changes are absolute counts. The minimum baseline avoids treating tiny numbers as meaningful trends. These numbers do not measure quality or conversions."
+msgstr ""
+
+msgid "Rules captured with this snapshot"
+msgstr ""
+
+msgid "Maximum items: %d"
+msgstr ""
+
+msgid "Minimum views: %1$d · Complete months: %2$d"
+msgstr ""
+
+msgid "Excluded contents: %1$d · Publication year: %2$s"
+msgstr ""
+
+msgid "All years"
+msgstr ""
+
+msgid "Remove from my favorites"
+msgstr ""
+
+msgid "Add to my favorites"
+msgstr ""
+
+msgid "Statistics overview"
+msgstr ""
+
+msgid "Content rankings"
+msgstr ""
+
+msgid "TabulaMea: Statistics for this content"
+msgstr ""
+
+msgid "Measurement status and diagnostics"
+msgstr ""
+
+msgid "Shortcode generator and blocks"
+msgstr ""
+
+msgid "Import, export and data care"
+msgstr ""
+
+msgid "Create a ranking"
+msgstr ""
+
+msgid "TabulaMea statistics storage"
+msgstr ""
+
+msgid "TabulaMea maintenance"
+msgstr ""
+
+msgid "Review TabulaMea status"
+msgstr ""
+
+msgid "TabulaMea storage is available"
+msgstr ""
+
+msgid "TabulaMea storage needs attention"
+msgstr ""
+
+msgid "Checks the plugin schema and transactional tables. This does not prove that every browser can deliver pageviews. Use the guided frontend test for that."
+msgstr ""
+
+msgid "TabulaMea maintenance is configured"
+msgstr ""
+
+msgid "Review TabulaMea measurement capacity"
+msgstr ""
+
+msgid "Review TabulaMea maintenance or country data"
+msgstr ""
+
+msgid "The anonymous request budget was reached repeatedly in the last ten minutes. Some deliveries were rejected. Review the configured limit and server capacity."
+msgstr ""
+
+msgid "Checks overdue scheduled work, the last recorded successful maintenance and required local country data. Low traffic, paused collection and disabled optional reports are not errors."
+msgstr ""
+
+msgid "Plugin version"
+msgstr ""
+
+msgid "WordPress version"
+msgstr ""
+
+msgid "PHP version"
+msgstr ""
+
+msgid "Multisite"
+msgstr ""
+
+msgid "Statistics storage"
+msgstr ""
+
+msgid "Last accepted request"
+msgstr ""
+
+msgid "Technology collection"
+msgstr ""
+
+msgid "Country collection"
+msgstr ""
+
+msgid "Country database readable"
+msgstr ""
+
+msgid "Scheduled maintenance"
+msgstr ""
+
+msgid "Additional retention in months"
+msgstr ""
+
+msgid "Storage schema"
+msgstr ""
+
+msgid "Maximum valid measurement requests per minute (site-wide)"
+msgstr ""
+
+msgid "Recent operational status"
+msgstr ""
+
+msgid "Last successful maintenance"
+msgstr ""
+
+msgid "Network activation"
+msgstr ""
+
+msgid "Search collection"
+msgstr ""
+
+msgid "Approximate storage in bytes"
+msgstr ""
+
+msgid "Retained from"
+msgstr ""
+
+msgid "Retained through"
+msgstr ""
+
+msgid "Country database month"
+msgstr ""
+
+msgid "Network display defaults"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "No recent error"
+msgstr ""
+
+msgid "Request limit reached"
+msgstr ""
+
+msgid "Storage error"
+msgstr ""
+
+msgid "Operational settings only; no visitor or content details."
+msgstr ""
+
+msgid "Statistics are shown only for public content."
+msgstr ""
+
+msgid "Last 30 days"
+msgstr ""
+
+msgid "Pageviews: %1$s · Previous period: %2$s"
+msgstr ""
+
+msgid "Open content statistics"
+msgstr ""
+
+msgid "Content statistics"
+msgstr ""
+
+msgid "Private mode must be boolean."
+msgstr ""
+
+msgid "Invalid authentication provider."
+msgstr ""
+
+msgid "The plugin must be installed in a stable slug directory."
+msgstr ""
+
+msgid "Invalid GitHub repository URL."
+msgstr ""
+
+msgid "The private update could not be authorized. Check the repository credentials and refresh updates."
+msgstr ""
+
+msgid "Could not create the update download file."
+msgstr ""
+
+msgid "The private update download failed. Check credentials and try again."
+msgstr ""
+
+msgid "Could not access the update filesystem."
+msgstr ""
+
+msgid "GitHub release does not contain the plugin main file."
+msgstr ""
+
+msgid "Could not prepare the GitHub release package."
+msgstr ""
+
+msgid "See the release on GitHub."
+msgstr ""
+
+msgid "Git Updater is active. If a deckerweb installation or update fails, temporarily deactivate Git Updater and retry. Reactivate it afterwards if other plugins or themes need it. Only leave it disabled when those extensions have another reliable update provider."
+msgstr ""
+
+msgid "Manage installed plugins"
+msgstr ""
+
+msgid "Dismiss this notice"
+msgstr ""
+
+msgid "Permission denied."
+msgstr ""
+
+msgid "Public catalog callbacks require both providers and cannot be used in private mode."
+msgstr ""
+
+msgid "The approved release could not be verified."
+msgstr ""
+
+msgid "The approved release changed. Refresh updates first."
+msgstr ""
+
+msgid "Catalog diagnostics require a public catalog provider."
+msgstr ""
+
+msgid "Catalog approval"
+msgstr ""
+
+msgid "Package download"
+msgstr ""
+
+msgid "Checksum verification"
+msgstr ""
+
+msgid "Archive verification"
+msgstr ""
+
+msgid "The update server could not be reached. Try again later."
+msgstr ""
+
+msgid "The update request timed out. Try again later."
+msgstr ""
+
+msgid "The update server address could not be resolved."
+msgstr ""
+
+msgid "The secure connection to the update server failed."
+msgstr ""
+
+msgid "The update server returned an unsuccessful HTTP response."
+msgstr ""
+
+msgid "The update provider did not return valid update data."
+msgstr ""
+
+msgid "The package does not match the approved checksum. Installation was stopped."
+msgstr ""
+
+msgid "The archive or plugin identity could not be verified. Installation was stopped."
+msgstr ""
+
+msgid "Update stopped at %1$s: %2$s"
+msgstr ""
+
+msgid "HTTP status: %d."
+msgstr ""
+
+msgid "Invalid private download limits."
+msgstr ""
+
+msgid "Invalid package cleanup provider."
+msgstr ""
+
+msgid "Safe package cleanup is unavailable for this update provider."
+msgstr ""
+
+msgid "The update package identity, version or requirements could not be verified."
+msgstr ""
+
+msgid "Use the widget filters below"
+msgstr ""
+
+msgid "Saved ranking in the compact widget"
+msgstr ""
+
+msgid "A selected saved ranking keeps its own filters, period and snapshot. Public publication is not required for this private widget."
+msgstr ""
+
+msgid "Default widget period"
+msgstr ""
+
+msgid "Number of widget items (1–20)"
+msgstr ""
+
+msgid "All public content types"
+msgstr ""
+
+msgid "Widget content type"
+msgstr ""
+
+msgid "Show pageview total"
+msgstr ""
+
+msgid "TabulaMea counts pageviews without identifying individual visitors. Personal periods affect only the current user on this website."
+msgstr ""
+
+msgid "Saved snapshot"
+msgstr ""
+
+msgid "No site total was saved with this older snapshot."
+msgstr ""
+
+msgid "Saved site pageviews:"
+msgstr ""
+
+msgid "Pageviews:"
+msgstr ""
+
+msgid "My widget period"
+msgstr ""
+
+msgid "Period"
+msgstr ""
+
+msgid "Save my display"
+msgstr ""
+
+msgid "General widget settings"
+msgstr ""
+
+msgid "Allow personal widget adjustments"
+msgstr ""
+
+msgid "Maximum personal widget items (1–20)"
+msgstr ""
+
+msgid "Personal choices apply only to that user on this website. Turning them off restores website defaults without deleting saved preferences. Saved compact rankings keep their own definition."
+msgstr ""
+
+msgid "Period comparison"
+msgstr ""
+
+msgid "Pageview chart"
+msgstr ""
+
+msgid "Pageviews and period are always shown."
+msgstr ""
+
+msgid "Optional modules"
+msgstr ""
+
+msgid "Large widget"
+msgstr ""
+
+msgid "Enable statistics overview widget"
+msgstr ""
+
+msgid "Overview widget period"
+msgstr ""
+
+msgid "Default overview items (1–10)"
+msgstr ""
+
+msgid "Default chart style"
+msgstr ""
+
+msgid "Line"
+msgstr ""
+
+msgid "Bars"
+msgstr ""
+
+msgid "Default modules"
+msgstr ""
+
+msgid "Modules users may choose"
+msgstr ""
+
+msgid "Only these modules can be added in personal widget settings. Website defaults remain available."
+msgstr ""
+
+msgid "Customize my overview"
+msgstr ""
+
+msgid "Reset to website defaults"
+msgstr ""
+
+msgid "Display settings are managed by the website administrator."
+msgstr ""
+
+msgid "Import Statify statistics"
+msgstr ""
+
+msgid "No supported Statify table was found on this website."
+msgstr ""
+
+msgid "Source: %1$s to %2$s · %3$s records. Import through %4$s."
+msgstr ""
+
+msgid "Each source row becomes one historical pageview. Public content is mapped by its current local URL where possible. Unmapped content contributes to overview totals only. Referrers are reduced to external domains; search strings and other query parameters are not retained."
+msgstr ""
+
+msgid "Another statistics source has already been imported. Combining sources cannot reliably identify overlapping pageviews, so this import is unavailable on this website."
+msgstr ""
+
+msgid "Pause measurement before importing. Also pause Statify collection and make a database backup."
+msgstr ""
+
+msgid "Processed source rows: %1$d · Mapped public contents: %2$d · Status: %3$s"
+msgstr ""
+
+msgid "In progress"
+msgstr ""
+
+msgid "I have a backup, reviewed the source and paused both collectors."
+msgstr ""
+
+msgid "Continue next batch"
+msgstr ""
+
+msgid "Start reviewed import"
+msgstr ""
+
+msgid "The source is read only. Repeated imports skip known source IDs. Do not reset or replace the source table between imports. Source records at or after the first TabulaMea collection day are excluded."
+msgstr ""
+
+msgid "Pause measurement and review source compatibility first."
+msgstr ""
+
+msgid "Website statistics"
+msgstr ""
+
+msgid "Unknown"
+msgstr ""
+
+msgid "Desktop"
+msgstr ""
+
+msgid "Tablet"
+msgstr ""
+
+msgid "Smartphone"
+msgstr ""
+
+msgid "Public output enabled"
+msgstr ""
+
+msgid "Public output is disabled in Plugin settings."
+msgstr ""
+
+msgid "Live ranking"
+msgstr ""
+
+msgid "Choose a published ranking. Its filters and appearance are managed on the Content rankings page."
+msgstr ""
+
+msgid "No published ranking selected. Create and publish a ranking in Plugin settings first."
+msgstr ""
+
+msgid "pageviews"
+msgstr ""
+
+msgid "Previous period: %1$s · Change: %2$s"
+msgstr ""
+
+msgid "Percentages refer to all recorded site pageviews in this period, including content outside this list."
+msgstr ""
+
+msgid "A saved site total is unavailable; percentage shares are not shown."
+msgstr ""
+
+msgid "Recorded pageviews · %1$s to %2$s"
+msgstr ""
+
+msgid "%s recorded pageviews (configured collection scope)"
+msgstr ""
+
+msgid "Ranking defaults"
+msgstr ""
+
+msgid "Uninstall preference"
+msgstr ""
+
+msgid "A configuration preview is waiting for review."
+msgstr ""
+
+msgid "Last application result"
+msgstr ""
+
+msgid "Skipped: plugin inactive"
+msgstr ""
+
+msgid "Applied or already unchanged"
+msgstr ""
+
+msgid "Could not save; review this website and create a new preview"
+msgstr ""
+
+msgid "Review configuration changes"
+msgstr ""
+
+msgid "Nothing has been applied yet. This preview expires after 15 minutes. If a target configuration changes, create a new preview."
+msgstr ""
+
+msgid "No permitted target websites were selected."
+msgstr ""
+
+msgid "The plugin is inactive on this target website. Its configuration will not be changed."
+msgstr ""
+
+msgid "Setting"
+msgstr ""
+
+msgid "Current value"
+msgstr ""
+
+msgid "New value"
+msgstr ""
+
+msgid "New ranking definitions:"
+msgstr ""
+
+msgid "Skipped ranking IDs (existing, unsupported on target or capacity reached):"
+msgstr ""
+
+msgid "Individual settings preserved:"
+msgstr ""
+
+msgid "Apply the reviewed changes"
+msgstr ""
+
+msgid "Discard preview"
+msgstr ""
+
+msgid "Personal rules: %d"
+msgstr ""
+
+msgid "Roles allowed to view reports"
+msgstr ""
+
+msgid "Management roles"
+msgstr ""
+
+msgid "Roles allowed to view the compact widget"
+msgstr ""
+
+msgid "Personal access rules"
+msgstr ""
+
+msgid "Public ranking output"
+msgstr ""
+
+msgid "Hide upgrade advertising"
+msgstr ""
+
+msgid "Country database download consent"
+msgstr ""
+
+msgid "Dimension retention in months"
+msgstr ""
+
+msgid "Excluded content"
+msgstr ""
+
+msgid "Exclude the static front page"
+msgstr ""
+
+msgid "Delete plugin data on uninstall"
+msgstr ""
+
+msgid "Widget item limit"
+msgstr ""
+
+msgid "Visitor totals are unavailable"
+msgstr ""
+
+msgid "Enable pageview measurement"
+msgstr ""
+
+msgid "Excluded roles"
+msgstr ""
+
+msgid "Keep basic statistics for months (0 = keep until explicitly deleted)"
+msgstr ""
+
+msgid "Hide these referrer domains from future referrer counts (one per line)"
+msgstr ""
+
+msgid "Exclude recognizable search-engine bots from statistics"
+msgstr ""
+
+msgid "Exclude recognizable AI bots and assistants from statistics"
+msgstr ""
+
+msgid "Collection scope"
+msgstr ""
+
+msgid "Content types"
+msgstr ""
+
+msgid "Archive types"
+msgstr ""
+
+msgid "Count search-result views separately"
+msgstr ""
+
+msgid "Selected search terms"
+msgstr ""
+
+msgid "Pageviews in content lists"
+msgstr ""
+
+msgid "Period for list-table counts"
+msgstr ""
+
+msgid "Settings sections to include"
+msgstr ""
+
+msgid "Ranking definitions to include"
+msgstr ""
+
+msgid "Personal rules, snapshots, content exclusions by ID, category IDs, collected statistics and download consent are excluded. Imported collection and public output stay disabled for review."
+msgstr ""
+
+msgid "Selective configuration export"
+msgstr ""
+
+msgid "Download configuration"
+msgstr ""
+
+msgid "Import with preview"
+msgstr ""
+
+msgid "Import ranking definitions from the file"
+msgstr ""
+
+msgid "Configuration JSON file"
+msgstr ""
+
+msgid "Preview import"
+msgstr ""
+
+msgid "Named configuration templates"
+msgstr ""
+
+msgid "Save a portable selection for reuse. For example: Customer website, Editorial project or Own website. Templates do not grant collection or download consent."
+msgstr ""
+
+msgid "Template name"
+msgstr ""
+
+msgid "Save new template"
+msgstr ""
+
+msgid "Include saved ranking definitions"
+msgstr ""
+
+msgid "Preview template"
+msgstr ""
+
+msgid "Delete template"
+msgstr ""
+
+msgid "Apply a template to selected websites"
+msgstr ""
+
+msgid "Only checked websites are considered. Individual settings are preserved by default. The preview lists changes and skipped conflicts for every website."
+msgstr ""
+
+msgid "Search website domain or path"
+msgstr ""
+
+msgid "Find websites"
+msgstr ""
+
+msgid "Up to 100 websites are listed; a single preview supports at most 50 selected websites."
+msgstr ""
+
+msgid "Preserve settings that differ from installation defaults"
+msgstr ""
+
+msgid "Preview selected websites"
+msgstr ""
+
+msgid "Reset one settings section"
+msgstr ""
+
+msgid "Only the chosen section is reset after preview. Rankings, snapshots, collected statistics and the retention period are preserved. Resetting Access also clears personal access rules."
+msgstr ""
+
+msgid "Settings section"
+msgstr ""
+
+msgid "Preview reset"
+msgstr ""
+
+msgid "Filter content"
+msgstr ""
+
+msgid "Filters active"
+msgstr ""
+
+msgid "Find content by title"
+msgstr ""
+
+msgid "Rows per list"
+msgstr ""
+
+msgid "Apply"
+msgstr ""
+
+msgid "Display"
+msgstr ""
+
+msgid "Group chart values"
+msgstr ""
+
+msgid "Weeks"
+msgstr ""
+
+msgid "Months"
+msgstr ""
+
+msgid "Compare previous period"
+msgstr ""
+
+msgid "Chart style is remembered for you on this website."
+msgstr ""
+
+msgid "Browse periods"
+msgstr ""
+
+msgid "Next period"
+msgstr ""
+
+msgid "Coverage and interpretation"
+msgstr ""
+
+msgid "A missing record is not proof of zero visits. Only known setting changes can explain pauses; historical outages cannot be reconstructed. The current day is incomplete. Comparisons use the preceding interval with the same number of calendar days."
+msgstr ""
+
+msgid "Current collection covers only the selected part of this website. Historical totals can include earlier collection scopes."
+msgstr ""
+
+msgid "No collection setting changes are recorded for this period."
+msgstr ""
+
+msgid "Technical collection changes"
+msgstr ""
+
+msgid "Search-engine bot filter"
+msgstr ""
+
+msgid "AI bot filter"
+msgstr ""
+
+msgid "Retention"
+msgstr ""
+
+msgid "Measurement enabled"
+msgstr ""
+
+msgid "Measurement paused"
+msgstr ""
+
+msgid "Guided measurement test"
+msgstr ""
+
+msgid "Open the public homepage using this link, then return here and reload. The signed test bypasses your role exclusion but does not add a pageview. Measurement must be enabled. A successful test proves this browser delivery only."
+msgstr ""
+
+msgid "Open frontend test"
+msgstr ""
+
+msgid "Last successful test: %s"
+msgstr ""
+
+msgid "No test received yet."
+msgstr ""
+
+msgid "How pageviews are distributed"
+msgstr ""
+
+msgid "Archives and overview pages"
+msgstr ""
+
+msgid "Unavailable or no longer public content"
+msgstr ""
+
+msgid "Content-list shares refer to all recorded website pageviews in the same period, including archives and content outside the list."
+msgstr ""
+
+msgid "Invalid ranking."
+msgstr ""
+
+msgid "Unknown action."
+msgstr ""
+
+msgid "Select the text and copy it with the keyboard."
+msgstr ""
+
+msgid "Copy"
+msgstr ""
+
+msgid "Invalid search delivery."
+msgstr ""
+
+msgid "Statistics could not be saved."
+msgstr ""
+
+msgid "First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews."
+msgstr ""
+
+msgid "Search-result views: %1$s · Without results: %2$s"
+msgstr ""
+
+msgid "Search collection is disabled. Existing history remains available."
+msgstr ""
+
+msgid "Most used approved search topics"
+msgstr ""
+
+msgid "Only approved topics with at least five recorded views are listed. Unknown search phrases are never saved. Select a calendar year for a year-in-review ranking."
+msgstr ""
+
+msgid "No approved topic meets the display threshold in this period."
+msgstr ""
+
+msgid "Review settings"
+msgstr ""
+
+msgid "Today"
+msgstr ""
+
+msgid "Yesterday"
+msgstr ""
+
+msgid "Last 7 days"
+msgstr ""
+
+msgid "Last 14 days"
+msgstr ""
+
+msgid "Last 90 days"
+msgstr ""
+
+msgid "Last 180 days"
+msgstr ""
+
+msgid "Last 365 days"
+msgstr ""
+
+msgid "This month"
+msgstr ""
+
+msgid "Last month"
+msgstr ""
+
+msgid "Calendar year"
+msgstr ""
+
+msgid "Previous calendar year"
+msgstr ""
+
+msgid "Custom dates"
+msgstr ""
+
+msgid "Start date for custom period"
+msgstr ""
+
+msgid "End date for custom period"
+msgstr ""
+
+msgid "Compare completed days only"
+msgstr ""
+
+msgid "Date fields apply only to Custom dates. Calendar year uses the year field."
+msgstr ""
+
+msgid "Use this period as my default"
+msgstr ""
+
+msgid "Retained days with pageviews: %d. Days without records may mean no traffic or interrupted collection. Missing history is not estimated."
+msgstr ""
+
+msgid "The retained history does not cover the start of this period. Interpret totals and changes with care."
+msgstr ""
+
+msgid "Invalid pageview."
+msgstr ""
+
+msgid "Privacy-friendly measurement"
+msgstr ""
+
+msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
+msgstr ""
+
+msgid "After updating, clear the full-page/CDN HTML cache. Keep cached HTML for less than seven days; one day is recommended. Public signatures validate paths, not human visits. At most 1,000 different referrer domains are stored per site and day; pageview totals continue counting."
+msgstr ""
+
+msgid "Do not count logged-in users with these roles"
+msgstr ""
+
+msgid "Pageviews still count. Existing referrer totals remain unchanged. No query strings or referrer paths are stored."
+msgstr ""
+
+msgid "Network defaults"
+msgstr ""
+
+msgid "Each website measures and stores its own statistics, including the main website. These are display defaults only. Website choices override network defaults; personal choices stay within website limits. Collection, access rights and external-download consent are configured separately on each website."
+msgstr ""
+
+msgid "Enable configurable overview widget"
+msgstr ""
+
+msgid "Enable compact widget"
+msgstr ""
+
+msgid "Compact widget period"
+msgstr ""
+
+msgid "Website and network display defaults"
+msgstr ""
+
+msgid "Explicit website choices override network defaults. Personal widget preferences remain within the website limits."
+msgstr ""
+
+msgid "Overview widget"
+msgstr ""
+
+msgid "Personal adjustments"
+msgstr ""
+
+msgid "Personal item limit"
+msgstr ""
+
+msgid "Overview items"
+msgstr ""
+
+msgid "Website override"
+msgstr ""
+
+msgid "Network default"
+msgstr ""
+
+msgid "Restore network display defaults on this website"
+msgstr ""
+
+msgid "Invalid input."
+msgstr ""
+
+msgid "Automated requests"
+msgstr ""
+
+msgid "For example Google, Bing and DuckDuckGo. People arriving through these search engines are still counted."
+msgstr ""
+
+msgid "For example OpenAI, Anthropic and Perplexity. People following links from these services are still counted. These options do not block access or change robots.txt. Bots without a measurement request remain invisible, even when an exclusion is disabled."
+msgstr ""
+
+msgid "Which pages should be measured?"
+msgstr ""
+
+msgid "All public pages"
+msgstr ""
+
+msgid "Selected content and archive types"
+msgstr ""
+
+msgid "Choose content and archive types"
+msgstr ""
+
+msgid "These choices apply only to selected collection. Existing totals are retained. The website total then covers only the selected part of your website."
+msgstr ""
+
+msgid "Front page"
+msgstr ""
+
+msgid "Posts overview"
+msgstr ""
+
+msgid "Category, tag and public taxonomy archives"
+msgstr ""
+
+msgid "Content-type archives"
+msgstr ""
+
+msgid "Author archives"
+msgstr ""
+
+msgid "Date archives"
+msgstr ""
+
+msgid "Other public overview pages"
+msgstr ""
+
+msgid "See which offers people search for, without retaining arbitrary search inputs. Select non-personal terms in advance; matching results-page views are counted under these terms. Names, email addresses and other unselected inputs are not saved as search text."
+msgstr ""
+
+msgid "Counts the first results page and searches without results. Reloads count again. Free search strings are never retained. Search counts do not increase regular pageview totals."
+msgstr ""
+
+msgid "Selected search terms: one exact phrase per line"
+msgstr ""
+
+msgid "Use only non-personal topics. Matching ignores letter case and repeated spaces; unknown terms are not saved."
+msgstr ""
+
+msgid "Examples for a club: Donations, Volunteering, Become a member, Events, Contact. These suggestions are not enabled automatically."
+msgstr ""
+
+msgid "Example: if Donations is selected, a search for donations increases that counter. A search for Donations wanted does not match unless that whole phrase is selected separately. Other searches increase only the overall search total; their text is not retained. This does not change WordPress search results."
+msgstr ""
+
+msgid "Example report: Donations · 18 search-result views · Last 30 days · Open search on website. Term totals appear from five views; missing terms do not prove zero interest. Counts describe first results-page loads, not people, and reloads count again. This feature monitors selected terms rather than discovering unknown queries."
+msgstr ""
+
+msgid "Most popular posts"
+msgstr ""
+
+msgid "Most popular pages"
+msgstr ""
+
+msgid "Top 10 of the previous year"
+msgstr ""
+
+msgid "Popular posts in a category"
+msgstr ""
+
+msgid "Contents to exclude"
+msgstr ""
+
+msgid "Turn recorded pageviews into useful reading lists: popular content, growing interest, monthly favorites or a year in review. Start privately; publish a ranking only when you choose."
+msgstr ""
+
+msgid "Ranking workspace"
+msgstr ""
+
+msgid "My rankings"
+msgstr ""
+
+msgid "Published"
+msgstr ""
+
+msgid "Private"
+msgstr ""
+
+msgid "View results"
+msgstr ""
+
+msgid "Edit ranking"
+msgstr ""
+
+msgid "Your first useful overview"
+msgstr ""
+
+msgid "Create a ranking from a template, choose a period and inspect the results. No content is published automatically."
+msgstr ""
+
+msgid "Ranking preview"
+msgstr ""
+
+msgid "Snapshot saved:"
+msgstr ""
+
+msgid "Counts are frozen. Contents that are no longer public remain hidden."
+msgstr ""
+
+msgid "This ranking uses complete calendar months. Every listed content must reach the minimum pageviews in every selected month."
+msgstr ""
+
+msgid "Comparison with the preceding equally long period:"
+msgstr ""
+
+msgid "The snapshot has no currently eligible public contents. Content visibility or exclusions may have changed."
+msgstr ""
+
+msgid "No public, unprotected contents are available. Publish a suitable post or page first."
+msgstr ""
+
+msgid "No content pageviews are retained for this period. Choose a period with existing statistics history."
+msgstr ""
+
+msgid "Pageviews exist, but the selected type, category, publication year or exclusions leave no matching contents. Relax the filters or change the period."
+msgstr ""
+
+msgid "No content meets this method’s minimum traffic and comparison rules. Try a longer period, a lower minimum or Most viewed."
+msgstr ""
+
+msgid "Create a ranking from a template"
+msgstr ""
+
+msgid "Starting point"
+msgstr ""
+
+msgid "Category for the category template"
+msgstr ""
+
+msgid "All categories"
+msgstr ""
+
+msgid "Create unpublished ranking"
+msgstr ""
+
+msgid "Open shortcode generator"
+msgstr ""
+
+msgid "Shortcode for this ranking"
+msgstr ""
+
+msgid "The ranking is published, but global public output is disabled."
+msgstr ""
+
+msgid "Private ranking: public shortcodes and blocks remain empty."
+msgstr ""
+
+msgid "Duplicate as a private live ranking"
+msgstr ""
+
+msgid "Return to live ranking"
+msgstr ""
+
+msgid "Save snapshot"
+msgstr ""
+
+msgid "Delete ranking"
+msgstr ""
+
+msgid "Unsaved preview"
+msgstr ""
+
+msgid "Create a custom ranking"
+msgstr ""
+
+msgid "Choose content and ranking method"
+msgstr ""
+
+msgid "Give the overview a recognizable title. Most viewed is the simplest starting point."
+msgstr ""
+
+msgid "Ranking title"
+msgstr ""
+
+msgid "Shortcode identifier (optional for a new ranking)"
+msgstr ""
+
+msgid "Use a short identifier without spaces. New rankings get an identifier from the title when this field is empty. Reusing an existing identifier updates that definition."
+msgstr ""
+
+msgid "Ranking method"
+msgstr ""
+
+msgid "Movers compare absolute pageview changes with the preceding equally long period. Older content must also be gaining views. Popular every month uses complete months instead of the period below."
+msgstr ""
+
+msgid "Set the period and filters"
+msgstr ""
+
+msgid "Publication year (0 = any)"
+msgstr ""
+
+msgid "Number of items (1–50)"
+msgstr ""
+
+msgid "Minimum pageviews (at least 5; per month for monthly rankings)"
+msgstr ""
+
+msgid "Complete months for monthly rankings (2–12)"
+msgstr ""
+
+msgid "Minimum content age in days for rediscovered content"
+msgstr ""
+
+msgid "The period refers to pageview dates. Publication year separately filters when the content was published."
+msgstr ""
+
+msgid "Use the website-wide ranking exclusions"
+msgstr ""
+
+msgid "Exclude individual content"
+msgstr ""
+
+msgid "Choose appearance and publication"
+msgstr ""
+
+msgid "A private ranking is available in the admin. Frontend output needs this ranking’s publication switch and the website-wide public-output permission."
+msgstr ""
+
+msgid "Show period below this ranking"
+msgstr ""
+
+msgid "List appearance"
+msgstr ""
+
+msgid "Numbered list"
+msgstr ""
+
+msgid "Simple link list"
+msgstr ""
+
+msgid "List with featured images"
+msgstr ""
+
+msgid "Publish this ranking"
+msgstr ""
+
+msgid "Show pageview counts"
+msgstr ""
+
+msgid "Show featured images"
+msgstr ""
+
+msgid "Show the previous period and absolute change"
+msgstr ""
+
+msgid "Show share of all site pageviews"
+msgstr ""
+
+msgid "Editing a frozen ranking preserves its snapshot until you return it to live mode."
+msgstr ""
+
+msgid "Preview without saving"
+msgstr ""
+
+msgid "Save ranking"
+msgstr ""
+
+msgid "Search content for exclusion lists"
+msgstr ""
+
+msgid "Content title search"
+msgstr ""
+
+msgid "Find content"
+msgstr ""
+
+msgid "Search before changing selections. Results appear in both exclusion pickers; saved selections stay available. Save an edited ranking before starting another search."
+msgstr ""
+
+msgid "Website-wide ranking exclusions"
+msgstr ""
+
+msgid "Save ranking defaults"
+msgstr ""
+
+msgid "Most read contents in %s"
+msgstr ""
+
+msgid "Recorded pageviews from %1$s to %2$s."
+msgstr ""
+
+msgid "Source: saved snapshot."
+msgstr ""
+
+msgid "Source: current retained statistics."
+msgstr ""
+
+msgid "This list describes recorded pageviews, not an editorial quality assessment. Missing history is not estimated."
+msgstr ""
+
+msgid "Print this review"
+msgstr ""
+
+msgid "Create a top-10 post list for the selected year"
+msgstr ""
+
+msgid "Generate a factual draft with titles, pageview counts and links. It is never published automatically. A selected saved ranking keeps its filters, year and snapshot."
+msgstr ""
+
+msgid "Optional saved year ranking"
+msgstr ""
+
+msgid "Generate review text"
+msgstr ""
+
+msgid "Text draft to copy and edit"
+msgstr ""
+
+msgid "No recorded pageviews in this period. This is not proof of zero visits."
+msgstr ""
+
+msgid "Filter recorded pageviews"
+msgstr ""
+
+msgid "All pageview states"
+msgstr ""
+
+msgid "With recorded pageviews"
+msgstr ""
+
+msgid "Without recorded pageviews"
+msgstr ""
+
+msgid "Pageview period"
+msgstr ""
+
+msgid "Reset view filters"
+msgstr ""
+
+msgid "Enable a sortable Pageviews column for selected public content types. Only statistics viewers see it. Missing records are shown as a dash; they do not prove zero visits."
+msgstr ""
+
+msgid "Settings"
+msgstr ""
+
+msgid "Documentation"
+msgstr ""
+
+msgid "FAQ"
+msgstr ""
+
+msgid "Changelog"
+msgstr ""
+
+msgid "About this plugin"
+msgstr ""
+
+msgid "Version"
+msgstr ""
+
+msgid "Plugin website"
+msgstr ""
+
+msgid "Close"
+msgstr ""
+
+msgid "Copy of %s"
+msgstr ""
+
+msgid "Invalid report."
+msgstr ""
+
+msgid "Measurement status"
+msgstr ""
+
 msgid "Last accepted pageview: %s ago. Status is updated at most every five minutes."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:11
 msgid "No pageviews accepted yet."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:11
-msgid "For a practical check, open a public page in a private browser window. Your logged-in role may be excluded."
+msgid "Use the guided test to check this browser. Regular visits may be excluded by your role, privacy signals or browser blocking."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:12
 msgid "Access policy"
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:14
-#, php-format
 msgid "Report roles: %1$s. Personal rules: %2$d. Plugin settings remain restricted to website administrators."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:16
-#, php-format
 msgid "Overview widget: %1$s. Compact widget: %2$s."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:16
 msgid "Optional collection"
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:18
-#, php-format
 msgid "Technology: %1$s. Countries: %2$s."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:18
 msgid "Publishing"
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:18
 msgid "Explicitly published rankings may appear on the website."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:20
 msgid "The measurement request limit was reached within the last 24 hours. Some pageviews may be missing. Review the site-wide request limit."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:20
 msgid "A measurement write failed within the last 24 hours. Some pageviews may be missing. Review database availability before relying on totals."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:21
 msgid "A ranking is published, but public output is globally disabled."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:22
 msgid "Country collection is selected, but its local database is missing. Review the download setting and install the database."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:23
 msgid "Additional collection is paused by the collector configuration. Review the collection status."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:24
 msgid "The ranking selected for the widget no longer exists. The widget currently uses its normal filters."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:33
 msgid "Diagnostics for support"
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:33
 msgid "Contains versions and operational states only. No credentials, user names, visitor details, URLs or server paths are included."
 msgstr ""
 
-#: work/tabulamea/includes/OverviewTools.php:33
 msgid "Diagnostic information"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:14
 msgid "This website uses TabulaMea to count pageviews without cookies, persistent browser storage, visitor profiles or unique-person counts."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:14
 msgid "Recorded data consists of local daily totals, content identifiers, query-free page paths and external referring domains. Do Not Track and Global Privacy Control are respected."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:14
 msgid "A random per-document delivery token is held only in memory. Its unlinked hash is retained temporarily on the server to prevent duplicate retries; it expires after ten minutes and is removed during cleanup. No address or browser identity is stored with it."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:15
 msgid "Collection is currently paused."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:16
 msgid "Coarse device, browser and operating-system categories are retained as separate daily totals, without raw browser headers."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:17
 msgid "Country categories are derived locally from the connection address without storing the address. Categories are aggregated independently."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:18
 msgid "Search-result views and views without results are counted separately. Free search strings are not retained; only explicitly approved non-personal topics can receive aggregate counts."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:21
-#, php-format
 msgid "Core statistics are retained for %d months."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:21
 msgid "Core statistics have no automatic age limit."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:23
-#, php-format
 msgid "Optional category statistics are retained for %d months."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:23
 msgid "The server is permitted to download the country database from DB-IP; visitor addresses are not sent to that service."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:23
 msgid "Automatic deletion runs in small scheduled batches. Delayed WordPress scheduled tasks can retain older data for longer."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:23
 msgid "Hosting access logs and other installed software are outside this description. Review this text for your actual website and legal requirements before publishing it."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:28
 msgid "Text suggestion for your privacy policy"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:28
 msgid "This text describes the current TabulaMea configuration. Review and adapt it before adding it to your WordPress privacy policy page. Nothing is changed automatically."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:30
 msgid "Edit privacy policy page"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:30
 msgid "View privacy policy page"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:30
 msgid "No WordPress privacy policy page is assigned."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:30
 msgid "Settings → Privacy"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:31
 msgid "Non-binding text suggestion without warranty of accuracy, completeness or currency. Errors excepted. Not legal advice. Review and adapt it to your website before publication. It describes TabulaMea only and does not replace a complete privacy policy."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:32
 msgid "Configuration-dependent privacy text"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:32
 msgid "Copy text suggestion"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:41
 msgid "Data care"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:43
-#, php-format
 msgid "Approximate storage: %1$s · Retained core history: %2$s to %3$s"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:43
 msgid "Storage is an approximate database estimate, refreshed hourly. Cleanup removes dated TabulaMea aggregates only. Definitions, snapshots and import receipts remain; other plugins are never changed."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:44
 msgid "Review deletion"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:46
-#, php-format
 msgid "Delete aggregate records before %s. This cannot be undone without your backup."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:46
 msgid "I reviewed the date and have a backup. Delete the next batch."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:46
 msgid "Delete next batch"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:46
 msgid "Each action removes at most 1,000 rows per aggregate table. Continue until no rows remain; reports may be incomplete while cleanup is in progress."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:47
 msgid "Delete records before this date"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:47
 msgid "Preview affected data"
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:57
 msgid "Choose a valid historical cutoff."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:58
 msgid "Create a fresh preview first."
 msgstr ""
 
-#: work/tabulamea/includes/DataCare.php:58
 msgid "Cleanup stopped after a storage error. Review the remaining data."
 msgstr ""
 
-#: work/tabulamea/includes/Navigation.php:13
 msgid "Statistics shortcuts"
+msgstr ""
+
+msgid "Refresh this view"
+msgstr ""
+
+msgid "Page loaded:"
+msgstr ""
+
+msgid "Lists normally refresh within one minute; historical rankings within 15 minutes. During a rebuild, the previous result can remain visible briefly. Refresh requests a new result without resetting filters."
+msgstr ""
+
+msgid "Title filter"
+msgstr ""
+
+msgid "Selected day"
+msgstr ""
+
+msgid "Remove filter"
+msgstr ""
+
+msgid "Clear content filters; keep period"
+msgstr ""
+
+msgid "My saved report views"
+msgstr ""
+
+msgid "These views belong to you on this website. They do not change website defaults or publish a ranking."
+msgstr ""
+
+msgid "Delete this saved view"
+msgstr ""
+
+msgid "Name this view"
+msgstr ""
+
+msgid "Save my report view"
+msgstr ""
+
+msgid "Reset my report display"
+msgstr ""
+
+msgid "Resets your report period and chart style only. Saved views, widget choices, website settings and statistics are preserved."
+msgstr ""
+
+msgid "Use a name and keep at most 20 saved views."
+msgstr ""
+
+msgid "%1$s of %2$s plugins"
+msgstr ""
+
+msgid "%s is installed but inactive. Activate it first."
+msgstr ""
+
+msgid "%s is missing. Install and activate it first."
+msgstr ""
+
+msgid "%s must be network activated first."
+msgstr ""
+
+msgid "%s supports activation per site only."
+msgstr ""
+
+msgid "Action cancelled."
+msgstr ""
+
+msgid "Activate"
+msgstr ""
+
+msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
+msgstr ""
+
+msgid "Activating…"
+msgstr ""
+
+msgid "Active"
+msgstr ""
+
+msgid "Active filters: "
+msgstr ""
+
+msgid "Admin"
+msgstr ""
+
+msgid "Affected features remain paused until their requirements are met."
+msgstr ""
+
+msgid "All"
+msgstr ""
+
+msgid "Already active"
+msgstr ""
+
+msgid "Already up to date."
+msgstr ""
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr ""
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr ""
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
+msgstr ""
+
+msgid "Apr"
+msgstr ""
+
+msgid "April"
+msgstr ""
+
+msgid "Archive contains too many files."
+msgstr ""
+
+msgid "Archive symlinks are not permitted."
+msgstr ""
+
+msgid "As of "
+msgstr ""
+
+msgid "Aug"
+msgstr ""
+
+msgid "August"
+msgstr ""
+
+msgid "Back to deckerweb"
+msgstr ""
+
+msgid "Builder"
+msgstr ""
+
+msgid "Bundled catalog"
+msgstr ""
+
+msgid "Cached or bundled catalog"
+msgstr ""
+
+msgid "Cannot create temporary file."
+msgstr ""
+
+msgid "Cannot create verified archive."
+msgstr ""
+
+msgid "Cannot finalize archive."
+msgstr ""
+
+msgid "Cannot normalize archive."
+msgstr ""
+
+msgid "Cannot read archive entry."
+msgstr ""
+
+msgid "Catalog URL"
+msgstr ""
+
+msgid "Catalog refreshed."
+msgstr ""
+
+msgid "Catalog retrieval does not limit updates of installed plugins. Those use their normal WordPress update provider."
+msgstr ""
+
+msgid "Catalog verification"
+msgstr ""
+
+msgid "Check status"
+msgstr ""
+
+msgid "Checking status…"
+msgstr ""
+
+msgid "Commerce"
+msgstr ""
+
+msgid "Compatible additions only"
+msgstr ""
+
+msgid "Connection failed. Please try again later."
+msgstr ""
+
+msgid "Copy diagnostic information"
+msgstr ""
+
+msgid "Dec"
+msgstr ""
+
+msgid "December"
+msgstr ""
+
+msgid "Delete Library settings when removing the last host plugin"
+msgstr ""
+
+msgid "Details & requirements"
+msgstr ""
+
+msgid "Discover more plugins by deckerweb"
+msgstr ""
+
+msgid "Discover randomly"
+msgstr ""
+
+msgid "Dismiss permanently"
+msgstr ""
+
+msgid "Done. The plugin is active."
+msgstr ""
+
+msgid "Enter a catalog URL first."
+msgstr ""
+
+msgid "Expanded archive is too large."
+msgstr ""
+
+msgid "F j, Y"
+msgstr ""
+
+msgid "Feb"
+msgstr ""
+
+msgid "February"
+msgstr ""
+
+msgid "Filesystem credentials are required."
+msgstr ""
+
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
+msgstr ""
+
+msgid "Filter"
+msgstr ""
+
+msgid "Fits my installation"
+msgstr ""
+
+msgid "Fixed"
+msgstr ""
+
+msgid "Fri"
+msgstr ""
+
+msgid "Friday"
+msgstr ""
+
+msgid "GitHub Stars"
+msgstr ""
+
+msgid "Hide catalog"
+msgstr ""
+
+msgid "Improved"
+msgstr ""
+
+msgid "Inactive"
+msgstr ""
+
+msgid "Install and activate this plugin in the network admin."
+msgstr ""
+
+msgid "Install deckerweb plugin"
+msgstr ""
+
+msgid "Install now"
+msgstr ""
+
+msgid "Installation cancelled."
+msgstr ""
+
+msgid "Installation failed."
+msgstr ""
+
+msgid "Installed"
+msgstr ""
+
+msgid "Installed plugin identity does not match the approved release."
+msgstr ""
+
+msgid "Installed plugins use their normal update provider. Reload the update information and try again."
+msgstr ""
+
+msgid "Installed · inactive"
+msgstr ""
+
+msgid "Installed: "
+msgstr ""
+
+msgid "Installing…"
+msgstr ""
+
+msgid "Invalid ZIP archive."
+msgstr ""
+
+msgid "Invalid approval flag."
+msgstr ""
+
+msgid "Invalid catalog field: "
+msgstr ""
+
+msgid "Invalid catalog revision."
+msgstr ""
+
+msgid "Invalid catalog schema."
+msgstr ""
+
+msgid "Invalid catalog timestamp."
+msgstr ""
+
+msgid "Invalid dependencies."
+msgstr ""
+
+msgid "Invalid dependency URL."
+msgstr ""
+
+msgid "Invalid dependency metadata."
+msgstr ""
+
+msgid "Invalid display field."
+msgstr ""
+
+msgid "Invalid icon color."
+msgstr ""
+
+msgid "Invalid icon label."
+msgstr ""
+
+msgid "Invalid identity or release metadata."
+msgstr ""
+
+msgid "Invalid local icon."
+msgstr ""
+
+msgid "Invalid network policy."
+msgstr ""
+
+msgid "Invalid network requirement."
+msgstr ""
+
+msgid "Invalid platform version."
+msgstr ""
+
+msgid "Invalid plugin series."
+msgstr ""
+
+msgid "Invalid sort order."
+msgstr ""
+
+msgid "Invalid star count."
+msgstr ""
+
+msgid "Invalid stars date."
+msgstr ""
+
+msgid "Invalid status filter."
+msgstr ""
+
+msgid "Jan"
+msgstr ""
+
+msgid "January"
+msgstr ""
+
+msgid "Jul"
+msgstr ""
+
+msgid "July"
+msgstr ""
+
+msgid "Jun"
+msgstr ""
+
+msgid "June"
+msgstr ""
+
+msgid "Last successful check: "
+msgstr ""
+
+msgid "Library"
+msgstr ""
+
+msgid "Library changelog"
+msgstr ""
+
+msgid "Library settings"
+msgstr ""
+
+msgid "Library settings saved."
+msgstr ""
+
+msgid "Manage Content"
+msgstr ""
+
+msgid "Mar"
+msgstr ""
+
+msgid "March"
+msgstr ""
+
+msgid "May"
+msgstr ""
+
+msgid "Misc"
+msgstr ""
+
+msgid "Missing display text."
+msgstr ""
+
+msgid "Missing plugin header."
+msgstr ""
+
+msgid "Mon"
+msgstr ""
+
+msgid "Monday"
+msgstr ""
+
+msgid "More by deckerweb"
+msgstr ""
+
+msgid "Name A–Z"
+msgstr ""
+
+msgid "Name Z–A"
+msgstr ""
+
+msgid "Network activate"
+msgstr ""
+
+msgid "Network active"
+msgstr ""
+
+msgid "Network permission denied."
+msgstr ""
+
+msgid "New"
+msgstr ""
+
+msgid "No approved plugins match this selection."
+msgstr ""
+
+msgid "No update reported."
+msgstr ""
+
+msgid "Not installed. You can try again."
+msgstr ""
+
+msgid "Nov"
+msgstr ""
+
+msgid "November"
+msgstr ""
+
+msgid "Oct"
+msgstr ""
+
+msgid "October"
+msgstr ""
+
+msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
+msgstr ""
+
+msgid "Online catalog"
+msgstr ""
+
+msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
+msgstr ""
+
+msgid "Only approved releases"
+msgstr ""
+
+msgid "Open catalog"
+msgstr ""
+
+msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
+msgstr ""
+
+msgid "PHP ZIP support is required."
+msgstr ""
+
+msgid "POST required."
+msgstr ""
+
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr ""
+
+msgid "Planned: "
+msgstr ""
+
+msgid "Plugin identity or version does not match the catalog."
+msgstr ""
+
+msgid "Plugin is not installed."
+msgstr ""
+
+msgid "Plugin series"
+msgstr ""
+
+msgid "Plugin status"
+msgstr ""
+
+msgid "Product website"
+msgstr ""
+
+msgid "Recently updated"
+msgstr ""
+
+msgid "Refresh catalog"
+msgstr ""
+
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr ""
+
+msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr ""
+
+msgid "Release in preparation"
+msgstr ""
+
+msgid "Release must contain exactly the approved plugin directory."
+msgstr ""
+
+msgid "Remove filter: "
+msgstr ""
+
+msgid "Repository & documentation"
+msgstr ""
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr ""
+
+msgid "Requires PHP %s or newer."
+msgstr ""
+
+msgid "Requires WordPress %s or newer."
+msgstr ""
+
+msgid "Requires a WordPress Multisite network."
+msgstr ""
+
+msgid "Reset filters"
+msgstr ""
+
+msgid "Reset view"
+msgstr ""
+
+msgid "Retrieve approved catalog updates online"
+msgstr ""
+
+msgid "Sat"
+msgstr ""
+
+msgid "Saturday"
+msgstr ""
+
+msgid "Save settings"
+msgstr ""
+
+msgid "Scripts"
+msgstr ""
+
+msgid "Search this catalog"
+msgstr ""
+
+msgid "Select and copy the text."
+msgstr ""
+
+msgid "Selected by deckerweb · Installed from GitHub releases"
+msgstr ""
+
+msgid "Sep"
+msgstr ""
+
+msgid "September"
+msgstr ""
+
+msgid "Settings saved."
+msgstr ""
+
+msgid "Shop"
+msgstr ""
+
+msgid "Show deckerweb under Add Plugins"
+msgstr ""
+
+msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr ""
+
+msgid "Shuffle again"
+msgstr ""
+
+msgid "Small plugins. Practical improvements."
+msgstr ""
+
+msgid "Sort by"
+msgstr ""
+
+msgid "Source: GitHub"
+msgstr ""
+
+msgid "Stage: %1$s. %2$s"
+msgstr ""
+
+msgid "Standard"
+msgstr ""
+
+msgid "Sun"
+msgstr ""
+
+msgid "Sunday"
+msgstr ""
+
+msgid "Technical information"
+msgstr ""
+
+msgid "The GitHub release could not be downloaded."
+msgstr ""
+
+msgid "The action is still running. Check its status again."
+msgstr ""
+
+msgid "The approved package could not be verified."
+msgstr ""
+
+msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
+msgstr ""
+
+msgid "The catalog could not be verified. Please try again later."
+msgstr ""
+
+msgid "The catalog is disabled."
+msgstr ""
+
+msgid "The catalog is hidden."
+msgstr ""
+
+msgid "The catalog response is invalid, incompatible or too large."
+msgstr ""
+
+msgid "The connection timed out. Please try again later."
+msgstr ""
+
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr ""
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr ""
+
+msgid "The installed plugin identity could not be verified. Use the Plugins screen to review it."
+msgstr ""
+
+msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
+msgstr ""
+
+msgid "The online catalog source is not trusted."
+msgstr ""
+
+msgid "The package checksum does not match the approved release. Installation was stopped."
+msgstr ""
+
+msgid "The package did not pass the archive or plugin identity checks. Installation was stopped."
+msgstr ""
+
+msgid "The release checksum does not match. Installation stopped."
+msgstr ""
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr ""
+
+msgid "The requirements below describe the catalog version for first installation, not an installed-plugin update."
+msgstr ""
+
+msgid "The requirements below describe the offered release."
+msgstr ""
+
+msgid "The secure connection could not be verified."
+msgstr ""
+
+msgid "The server address could not be resolved."
+msgstr ""
+
+msgid "The server returned HTTP %d. Please try again later."
+msgstr ""
+
+msgid "The update has not been confirmed. You can try again."
+msgstr ""
+
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr ""
+
+msgid "This catalog requires a newer Library."
+msgstr ""
+
+msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
+msgstr ""
+
+msgid "This release is no longer approved."
+msgstr ""
+
+msgid "This release is not approved."
+msgstr ""
+
+msgid "Thu"
+msgstr ""
+
+msgid "Thursday"
+msgstr ""
+
+msgid "Tools"
+msgstr ""
+
+msgid "Tue"
+msgstr ""
+
+msgid "Tuesday"
+msgstr ""
+
+msgid "Unsafe archive path."
+msgstr ""
+
+msgid "Untrusted release URL."
+msgstr ""
+
+msgid "Update %1$s to version %2$s or newer."
+msgstr ""
+
+msgid "Update available"
+msgstr ""
+
+msgid "Update available: %s"
+msgstr ""
+
+msgid "Update failed."
+msgstr ""
+
+msgid "Update information changed. Reload the page and try again."
+msgstr ""
+
+msgid "Update to %s"
+msgstr ""
+
+msgid "Updated"
+msgstr ""
+
+msgid "Updating…"
+msgstr ""
+
+msgid "Use the Plugins screen to manage this installed plugin."
+msgstr ""
+
+msgid "Verified first installations · Independent plugin updates"
+msgstr ""
+
+msgid "View plugins"
+msgstr ""
+
+msgid "Visibility"
+msgstr ""
+
+msgid "Wed"
+msgstr ""
+
+msgid "Wednesday"
+msgstr ""
+
+msgid "WordPress"
+msgstr ""
+
+msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
 msgstr ""

@@ -25,7 +25,7 @@ if ( ! class_exists( StructuredFooter::class, false ) ) {
 				$target = $id . '-document-' . sanitize_html_class( $key );
 				echo ' · <a href="' . esc_url( $document['url'] ) . '" data-ddw-document="' . esc_attr( $target ) . '">' . esc_html( $document['label'] ) . '</a>';
 			}
-			echo '<p>' . esc_html( $config['slogan'] ) . '</p></div><div><span>' . esc_html( $config['copyright'] ) . ' <a href="https://github.com/deckerweb" target="_blank" rel="noopener noreferrer">David Decker – DECKERWEB</a></span><a href="' . esc_url( $config['repository'] ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $config['website'] ) . '</a></div></footer>';
+			echo '<p>' . esc_html( $config['slogan'] ) . '</p></div><div><span>' . esc_html( $config['copyright'] ) . ' <a href="' . esc_url($config['author_url'] ?? 'https://deckerwebplugins.com/') . '" target="_blank" rel="noopener noreferrer">David Decker – DECKERWEB</a></span><a href="' . esc_url( $config['repository'] ) . '" target="_blank" rel="noopener noreferrer">' . esc_html( $config['website'] ) . '</a></div></footer>';
 			foreach ( $config['documents'] as $key => $document ) {
 				$target = $id . '-document-' . sanitize_html_class( $key );
 				$text = (string) $document['text'];

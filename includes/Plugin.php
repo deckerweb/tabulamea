@@ -44,6 +44,9 @@ final class Plugin {
         add_action('admin_post_tbm_action', [Admin::class, 'action']);
         add_action('admin_enqueue_scripts', [Admin::class, 'assets']);
         add_filter('plugin_action_links_' . plugin_basename(TBM_FILE), [Admin::class, 'links']);
+        add_action('admin_init',[ReportWorkspace::class,'hydrate']);
+        add_action('admin_post_tbm_workspace',[ReportWorkspace::class,'action']);
+        foreach(['save_post','deleted_post','set_object_terms'] as $hook){add_action($hook,[ReportCache::class,'editorial']);}
         Measurement::boot();
         MeasurementPolicy::boot();
         SearchStats::boot();
@@ -145,8 +148,10 @@ final class Plugin {
      */
     public static function new_site(\WP_Site $site): void {
         if(!function_exists('is_plugin_active_for_network')){require_once ABSPATH.'wp-admin/includes/plugin.php';}
-        if (!is_plugin_active_for_network(plugin_basename(TBM_FILE))) { return; }
-        switch_to_blog($site->blog_id); self::install(); restore_current_blog();
+        $active=(array)get_network_option((int)$site->network_id,'active_sitewide_plugins',[]);
+        if (!isset($active[plugin_basename(TBM_FILE)])) { return; }
+        switch_to_blog((int)$site->blog_id);
+        try { self::install(); } finally { restore_current_blog(); }
     }
     /**
      * Clear background tasks on every relevant site, preserving data.
@@ -156,7 +161,7 @@ final class Plugin {
     public static function deactivate(bool $network = false): void {
         if ($network && is_multisite()) {
             $offset=0;
-            do { $ids=get_sites(['fields'=>'ids','number'=>100,'offset'=>$offset]); foreach ($ids as $id) { switch_to_blog($id); wp_clear_scheduled_hook('tbm_maintenance'); wp_clear_scheduled_hook('tbm_maintenance_batch'); restore_current_blog(); } $offset+=100; } while(count($ids)===100);
+            do { $ids=get_sites(['network_id'=>get_current_network_id(),'fields'=>'ids','number'=>100,'offset'=>$offset]); foreach ($ids as $id) { switch_to_blog($id); try { wp_clear_scheduled_hook('tbm_maintenance'); wp_clear_scheduled_hook('tbm_maintenance_batch'); } finally { restore_current_blog(); } } $offset+=100; } while(count($ids)===100);
         } else { wp_clear_scheduled_hook('tbm_maintenance'); wp_clear_scheduled_hook('tbm_maintenance_batch'); }
     }
 }

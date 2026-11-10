@@ -9,8 +9,18 @@ final class OutputBlocks {
         register_block_type('tabulamea/counter',['api_version'=>3,'editor_script'=>'tbm-output-blocks','supports'=>self::supports(),'uses_context'=>['postId'],'attributes'=>['before'=>['type'=>'string','default'=>''],'after'=>['type'=>'string','default'=>''],'days'=>['type'=>'number','default'=>30],'global'=>['type'=>'boolean','default'=>false]],'render_callback'=>[self::class,'counter']]);
         register_block_type('tabulamea/popular',['api_version'=>3,'editor_style'=>'tbm-ranking','style'=>'tbm-ranking','editor_script'=>'tbm-output-blocks','supports'=>self::supports(),'attributes'=>['days'=>['type'=>'number','default'=>30],'number'=>['type'=>'number','default'=>5],'postType'=>['type'=>'string','default'=>'post']],'render_callback'=>[self::class,'popular']]);
         add_filter('query_loop_block_query_vars',[self::class,'query_loop'],20,2);
-        add_action('init',[self::class,'collections'],30);
+        add_action('init',[self::class,'collections'],30);add_action('init',[self::class,'patterns'],31);
         add_action('enqueue_block_editor_assets',[self::class,'labels']);
+    }
+    /** Register three native starting points without hard-coded content IDs or invented counts. @return void */
+    public static function patterns(): void {
+        register_block_pattern_category('tabulamea',['label'=>'TabulaMea']);
+        $patterns=[
+            'popular-articles'=>[__('Popular articles','tabulamea'),'<!-- wp:tabulamea/popular /-->'],
+            'year-review'=>[__('Year in review','tabulamea'),'<!-- wp:tabulamea/ranking /-->'],
+            'pageview-label'=>[__('Pageviews with a label','tabulamea'),'<!-- wp:tabulamea/counter '.wp_json_encode(['before'=>__('Pageviews: ','tabulamea')]).' /-->']
+        ];
+        foreach($patterns as $slug=>$pattern){register_block_pattern('tabulamea/'.$slug,['title'=>$pattern[0],'categories'=>['tabulamea'],'description'=>$slug==='year-review'?__('Choose a saved calendar-year ranking in the block sidebar. Public output requires explicit permission.','tabulamea'):__('A starting point using recorded pageviews. Adjust the block in its sidebar.','tabulamea'),'content'=>'<!-- wp:group {"layout":{"type":"constrained"}} --><div class="wp-block-group">'.$pattern[1].'</div><!-- /wp:group -->']);}
     }
     /** Register native collection filters after public custom types have been registered. @return void */
     public static function collections(): void {
@@ -21,7 +31,7 @@ final class OutputBlocks {
     /** Provide translated labels and available public types without exposing statistics. @return void */
     public static function labels(): void {
         $types=[];foreach(get_post_types(['public'=>true],'objects') as $type){if($type->name!=='attachment'){$types[]=['value'=>$type->name,'label'=>$type->labels->name];}}
-        wp_localize_script('tbm-output-blocks','tbmOutputLabels',['enabled'=>(bool)Plugin::settings()['public_rankings'],'counts'=>(bool)Plugin::settings()['public_counts'],'counter'=>__('TabulaMea pageview counter','tabulamea'),'popular'=>__('TabulaMea popular content','tabulamea'),'days'=>__('Days','tabulamea'),'number'=>__('Number of items','tabulamea'),'global'=>__('Count the whole website','tabulamea'),'type'=>__('Content type','tabulamea'),'countHelp'=>__('Counters also require permission to publish exact numbers.','tabulamea'),'help'=>__('Uses recorded pageviews. Public output must be enabled in TabulaMea settings.','tabulamea'),'before'=>__('Text before the number','tabulamea'),'after'=>__('Text after the number','tabulamea'),'settings'=>__('Display settings','tabulamea'),'unavailable'=>__('No public output is available. Check publication permissions, the content selection and recorded data.','tabulamea'),'types'=>$types,'query'=>__('TabulaMea popular content loop','tabulamea')]);
+        wp_localize_script('tbm-output-blocks','tbmOutputLabels',['enabled'=>(bool)Plugin::settings()['public_rankings'],'counts'=>(bool)Plugin::settings()['public_counts'],'counter'=>__('TabulaMea pageview counter','tabulamea'),'popular'=>__('TabulaMea popular content','tabulamea'),'days'=>__('Days','tabulamea'),'number'=>__('Number of items','tabulamea'),'global'=>__('Count the whole website','tabulamea'),'type'=>__('Content type','tabulamea'),'countHelp'=>__('Counters also require permission to publish exact numbers.','tabulamea'),'help'=>__('Uses recorded pageviews. Public output must be enabled in TabulaMea settings.','tabulamea'),'before'=>__('Text before the number','tabulamea'),'after'=>__('Text after the number','tabulamea'),'settings'=>__('Display settings','tabulamea'),'disabled'=>__('Public output is disabled. Your block settings are preserved. An administrator can allow output under TabulaMea → Access.','tabulamea'),'countsDisabled'=>__('Publishing exact numbers is disabled. Your counter settings are preserved. An administrator can allow numbers under TabulaMea → Access.','tabulamea'),'empty'=>__('No matching recorded pageviews are available for this selection. Try another period or content type. Your settings are preserved.','tabulamea'),'unavailable'=>__('No public output is available. Check publication permissions, the content selection and recorded data.','tabulamea'),'types'=>$types,'query'=>__('TabulaMea popular content loop','tabulamea')]);
     }
     /** Render the pageview counter with the same publication guard as its shortcode.
      * @param array $attributes Block attributes.

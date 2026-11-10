@@ -5,10 +5,10 @@ defined('ABSPATH') || exit;
 final class OverviewTools {
     /** Render the current configuration and practical next actions. @return void */
     public static function render(): void {
-        Insights::test_panel();$s=Plugin::settings();$last=(int)get_option('tbm_last_received',0);echo '<p class="tbm-state">'.esc_html($s['measurement']?__('Measurement enabled','tabulamea'):__('Measurement paused','tabulamea')).'</p>';
+        OperationalStatus::setup();Insights::test_panel();OperationalStatus::panel();$s=Plugin::settings();$last=(int)get_option('tbm_last_received',0);echo '<p class="tbm-state">'.esc_html($s['measurement']?__('Measurement enabled','tabulamea'):__('Measurement paused','tabulamea')).'</p>';
         echo '<section class="tbm-card"><h2>'.esc_html__('Measurement status','tabulamea').'</h2><p>'.esc_html(!$s['measurement']?__('Measurement is paused.','tabulamea'):($last?sprintf(
 /* translators: %s: localized elapsed time since the last accepted pageview. */
-__('Last accepted pageview: %s ago. Status is updated at most every five minutes.','tabulamea'),human_time_diff($last)):__('No pageviews accepted yet.','tabulamea'))).'</p><p>'.esc_html__('For a practical check, open a public page in a private browser window. Your logged-in role may be excluded.','tabulamea').'</p><a href="'.esc_url(InterfaceTools::settings_url('measurement')).'">'.esc_html__('Review settings','tabulamea').'</a></section><div class="tbm-grid">';
+__('Last accepted pageview: %s ago. Status is updated at most every five minutes.','tabulamea'),human_time_diff($last)):__('No pageviews accepted yet.','tabulamea'))).'</p><p>'.esc_html__('Use the guided test to check this browser. Regular visits may be excluded by your role, privacy signals or browser blocking.','tabulamea').'</p><a href="'.esc_url(InterfaceTools::settings_url('measurement')).'">'.esc_html__('Review settings','tabulamea').'</a></section><div class="tbm-grid">';
         $cards=[['access',__('Access policy','tabulamea'),sprintf(
 /* translators: %1$s: role names; %2$d: number of personal permission rules. */
 __('Report roles: %1$s. Personal rules: %2$d. Plugin settings remain restricted to website administrators.','tabulamea'),implode(', ',array_map(static fn($role)=>translate_user_role(wp_roles()->roles[$role]['name'] ?? $role),$s['view_roles'])),count($s['users']))],['dashboard',__('Dashboard widgets','tabulamea'),sprintf(

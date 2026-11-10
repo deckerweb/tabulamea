@@ -20,6 +20,15 @@ final class ReportTools {
         $a=['period'=>array_key_exists($period,self::periods())?$period:'30_days','year'=>(int)InterfaceTools::text($_GET,'year',wp_date('Y')),'start'=>InterfaceTools::text($_GET,'start'),'end'=>InterfaceTools::text($_GET,'end')];
         return $a;
     }
+    /** Resolve the same completed-day interval for all reports and exports.
+     * @param array $a Selected period definition.
+     * @return array Effective inclusive dates, or an empty array for invalid dates.
+     */
+    public static function range(array $a): array {
+        $range=Rankings::dates($a);
+        if($range&&InterfaceTools::text($_GET,'completed')==='1'&&$range[1]>=wp_date('Y-m-d')&&$range[0]<wp_date('Y-m-d')){$range[1]=(new \DateTimeImmutable('today',wp_timezone()))->modify('-1 day')->format('Y-m-d');}
+        return $range;
+    }
     /**
      * Render native GET period controls and an independent personal-default action.
      * @param string $page Registered report slug.
@@ -27,11 +36,11 @@ final class ReportTools {
      * @return void
      */
     public static function controls(string $page,array $a): void {
-        Insights::navigate($page,$a);echo '<form method="get" class="tbm-card tbm-period"><input type="hidden" name="page" value="'.esc_attr($page).'">';
-        if(Insights::content()){echo '<input type="hidden" name="content" value="'.(int)Insights::content().'">';}foreach(['content_type','content_search','items','chart','compare'] as $key){if(isset($_GET[$key])){echo '<input type="hidden" name="'.esc_attr($key).'" value="'.esc_attr(InterfaceTools::text($_GET,$key)).'">';}}InterfaceTools::select('period',__('Period','tabulamea'),self::periods(),$a['period']);
-        InterfaceTools::input('year',__('Calendar year','tabulamea'),$a['year'],'number');
-        InterfaceTools::input('start',__('Start date for custom period','tabulamea'),$a['start'],'date');
-        InterfaceTools::input('end',__('End date for custom period','tabulamea'),$a['end'],'date');
+        ReportWorkspace::controls($a);Insights::navigate($page,$a);echo '<form method="get" class="tbm-card tbm-period"><input type="hidden" name="page" value="'.esc_attr($page).'">';
+        if(Insights::content()){echo '<input type="hidden" name="content" value="'.(int)Insights::content().'">';}foreach(['content_type','content_search','items','chart','compare','resolution','focus_date'] as $key){if(isset($_GET[$key])){echo '<input type="hidden" name="'.esc_attr($key).'" value="'.esc_attr(InterfaceTools::text($_GET,$key)).'">';}}InterfaceTools::select('period',__('Period','tabulamea'),self::periods(),$a['period']);
+        echo '<span data-tbm-period-field="year"'.($a['period']==='year'?'':' hidden').'>';InterfaceTools::input('year',__('Calendar year','tabulamea'),$a['year'],'number');echo '</span>';
+        echo '<span data-tbm-period-field="custom"'.($a['period']==='custom'?'':' hidden').'>';InterfaceTools::input('start',__('Start date for custom period','tabulamea'),$a['start'],'date');
+        InterfaceTools::input('end',__('End date for custom period','tabulamea'),$a['end'],'date');echo '</span>';InterfaceTools::check('completed',__('Compare completed days only','tabulamea'),InterfaceTools::text($_GET,'completed')==='1');
         echo '<button class="button button-primary">'.esc_html__('Apply','tabulamea').'</button><p class="description">'.esc_html__('Date fields apply only to Custom dates. Calendar year uses the year field.','tabulamea').'</p></form>';
         if(in_array($a['period'],['today','yesterday','7_days','14_days','30_days','90_days','180_days','365_days','month','previous_month','previous_year'],true)){
             InterfaceTools::form('preference',['area'=>'report_period','period'=>$a['period'],'return_page'=>$page]);submit_button(__('Use this period as my default','tabulamea'),'secondary','submit',false);echo '</form>';
@@ -46,7 +55,7 @@ final class ReportTools {
         global $wpdb;
         if(count($range)!==2 || !Plugin::ready()){return ['first'=>'','last'=>'','days'=>0,'views'=>0,'partial'=>true];}
         $row=(array)$wpdb->get_row($wpdb->prepare("SELECT MIN(date) first,MAX(date) last,COUNT(DISTINCT date) days,COALESCE(SUM(pageviews),0) views FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s AND pageviews>0",$range),ARRAY_A);
-        $first=$wpdb->get_var("SELECT MIN(date) FROM {$wpdb->prefix}tbm_site_stats WHERE pageviews>0");
+        $first=ReportCache::once('first-day',static fn()=>$wpdb->get_var("SELECT MIN(date) FROM {$wpdb->prefix}tbm_site_stats WHERE pageviews>0"));
         $row['partial']=!$first || $first>$range[0];return $row;
     }
     /**

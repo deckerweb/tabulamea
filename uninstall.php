@@ -2,7 +2,7 @@
 /** Remove only TabulaMea data; preserve all other plugins’ tables. */
 defined('WP_UNINSTALL_PLUGIN') || exit;
 require_once __DIR__.'/includes/deckerweb-plugin-library/lifecycle.php';
-deckerweb_library_uninstall_v3(__DIR__.'/tabulamea.php');
+deckerweb_library_uninstall_v4(__DIR__.'/tabulamea.php');
 // Clear only TabulaMea's current and legacy updater metadata.
 $tabulamea_updater_class=require __DIR__.'/includes/deckerweb-github-release-updater-v2.php';
 if(is_string($tabulamea_updater_class)&&method_exists($tabulamea_updater_class,'clear_repository_cache')){
@@ -20,14 +20,14 @@ function tbm_uninstall_site(): void {
     delete_option('tbm_workflow_keys');delete_transient('tbm_storage_summary');
     delete_option('tbm_import_state');delete_option('tbm_statify_import');
     foreach(['receipts','rate'] as $table){$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}tbm_{$table}");}
-    delete_option('tbm_core_error');delete_option('tbm_test_received');delete_option('tbm_schema');
+    foreach((array)$wpdb->get_col($wpdb->prepare("SELECT option_name FROM {$wpdb->options} WHERE option_name LIKE %s",$wpdb->esc_like('tbm_report_lock_').'%')) as $name){delete_option($name);}delete_option('tbm_operations');delete_option('tbm_core_error');delete_option('tbm_test_received');delete_option('tbm_schema');
     $s=get_option('tbm_settings',[]);
     $dir=wp_upload_dir(null,false)['basedir'].'/tabulamea';
     foreach(['country.download.gz','country.download.mmdb','update.lock'] as $file){if(is_file($dir.'/'.$file)){wp_delete_file($dir.'/'.$file);}}
     if(empty($s['delete_data'])){return;}
     foreach(['dimensions','site_stats','post_stats','referrer_stats','import_ledger','search_stats'] as $table){$wpdb->query("DROP TABLE IF EXISTS {$wpdb->prefix}tbm_{$table}");}
     foreach(['tbm_settings','tbm_rankings','tbm_schema','tbm_revision','tbm_geo_month','tbm_geo_updated','tbm_since_device','tbm_since_browser','tbm_since_os','tbm_since_country','tbm_templates','tbm_last_received','tbm_live_since','tbm_import_state','tbm_changes','tbm_last_maintenance','tbm_test_received','tbm_search_since'] as $name){delete_option($name);}
-    delete_metadata('user',0,$wpdb->prefix.'tbm_preferences','',true);
+    delete_metadata('user',0,$wpdb->prefix.'tbm_preferences','',true);delete_metadata('user',0,$wpdb->prefix.'tbm_report_views','',true);
     if(is_file($dir.'/country.mmdb')){wp_delete_file($dir.'/country.mmdb');}
 }
 if(is_multisite()){

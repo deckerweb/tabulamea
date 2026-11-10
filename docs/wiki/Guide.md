@@ -2,9 +2,13 @@
 
 [English](Guide) · [Deutsch](Guide-de)
 
+> **After installation or an update: clear the page/CDN cache**
+>
+> Clear the full-page HTML cache in your caching plugin and, if present, at your host or CDN. Keep the HTML cache lifetime below seven days; one day (24 hours) is recommended. Reload already open test tabs. Measurement signatures expire after seven days, so old cached HTML can stop contributing counts. This does not require disabling page caching or changing browser image/CSS caches.
+
 ## Quick start
 
-1. Download the installable tabulamea-0.9.1.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+1. Download the installable tabulamea-1.0.0.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -13,6 +17,8 @@
 For the guided test, sign in as an administrator and open the supplied frontend link. Return and reload Overview. The test bypasses role exclusions but creates no regular pageview. Do Not Track and Global Privacy Control remain respected, so a private browser window is not a guaranteed counting test.
 
 ## Reading the statistics
+
+![TabulaMea – Reading the statistics](https://raw.githubusercontent.com/deckerweb/tabulamea/main/docs/assets/screenshots/statistics-en.jpg)
 
 The overview shows pageviews, the preceding-period comparison, a chart, popular content and referring websites. Choose periods including 7, 14, 30, 90, 180 or 365 days, a calendar month or year, or custom dates. Comparison intervals use the same number of calendar days.
 
@@ -24,6 +30,8 @@ Filter content by title and type. Content shares use all recorded site pageviews
 
 ## Maintaining your content
 
+![TabulaMea – Maintaining your content](https://raw.githubusercontent.com/deckerweb/tabulamea/main/docs/assets/screenshots/content-list-en.jpg)
+
 Enable the pageview column for pages, posts or other public content types under Settings → TabulaMea → Content lists. In each WordPress list, choose a period, sort by pageviews and filter items with or without recorded counts.
 
 Find frequently viewed content where you edit it. Small counts are shown too. A dash means no aggregate is available for that content and period; it does not prove zero actual visits.
@@ -31,6 +39,8 @@ Find frequently viewed content where you edit it. Small counts are shown too. A 
 For public content, contextual statistics links in lists, the editor and admin toolbar open the detail report. Edit links follow WordPress permissions. Pageviews indicate attention, not content quality, satisfaction or completed goals.
 
 ## Rankings and yearly roundups
+
+![TabulaMea – Rankings and yearly roundups](https://raw.githubusercontent.com/deckerweb/tabulamea/main/docs/assets/screenshots/rankings-en.jpg)
 
 Create reusable reports under TabulaMea → Content rankings. Choose content type, period and item count, with optional category, publication year and exclusions. Favorites are personal to the current website.
 
@@ -141,7 +151,9 @@ Deactivation preserves data. Uninstall always removes temporary caches and sched
 
 ## GitHub updates and deckerweb Library
 
-TabulaMea includes deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+TabulaMea includes deckerweb Library 1.3.0 and deckerweb Updater 2.4.0 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+
+Normal updates of installed plugins use WordPress update offers and are independent of the Library catalog version, its online setting and catalog availability. Opening or sorting the catalog does not trigger extra GitHub update polls. First-time installations still require catalog approval and package verification.
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
@@ -149,4 +161,39 @@ TabulaMea is distributed through GitHub.
 
 ## Technical collection limits
 
-A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. Without secure browser randomness, one attempt is made without a token. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
+A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. If secure browser randomness is unavailable, a random retry token is generated in document memory. This token identifies a delivery attempt, not a person, and is not an authentication secret. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
+
+
+## Task guides
+
+### Find and maintain popular content
+
+1. Open TabulaMea → Statistics overview and choose a period.
+2. Optionally filter by title or content type. Remove individual active filters without losing the period.
+3. Use the edit link under Most viewed content. Alternatively enable a pageview column for the relevant public content type under Settings → Content lists.
+4. Save a frequent selection under My saved report views. It belongs only to you on this website and does not publish a ranking.
+
+### Compare periods and verify values
+
+1. Select a period such as the last 90 days. Compare completed days only excludes today when earlier days are included. A Today-only selection remains today.
+2. The preceding comparison interval appears below the totals and contains the same number of calendar days.
+3. Select days, weeks or months in the chart. Grouped values sum only retained records within the selected period. Boundary weeks and months can be incomplete.
+4. Check exact values with a pointer, touch, keyboard or the expandable values table. Missing records are not proof of zero traffic.
+5. Refresh this view requests fresh results and preserves your selection. There is no continuous background polling.
+
+### Publish a yearly ranking
+
+1. Create a ranking for the desired calendar year under Content rankings. Review content type, item count and appearance.
+2. Choose a live ranking or a fixed snapshot.
+3. Publish this ranking explicitly and enable public output under Access. Publishing exact numbers is a separate choice. Without numbers, a ranking shows the order; recorded counts remain available internally.
+4. Insert the TabulaMea Year in review pattern and choose your saved ranking in the block sidebar. The pattern does not choose a year automatically.
+5. Check the public page. Revoking consent or making content private takes effect in TabulaMea’s own data cache too. Also purge any external page or CDN cache.
+## Measurement integrity and cache configuration
+
+The public signature validates the website, content path and issue time. It is not a login, bot attestation or proof of a human visit. Signatures expire after seven days, with at most five minutes of clock skew. Old signatures without an expiry are not accepted. Clear the full-page and CDN HTML cache when installing this update. Keep HTML cache lifetimes below seven days; one day is recommended. Expired cached pages do not contribute counts until the HTML is refreshed. Also refresh long-lived tabs. The same rule applies to search-result delivery.
+
+The endpoint requires the website's Origin header and a 32-character per-document retry token. These are useful validation checks, not client identities: a direct HTTP client can imitate them. Reusing the same token is idempotent while its ten-minute receipt is retained. Choosing a different token within the signature lifetime can still create a separate count. Reloads intentionally remain separate pageviews. No IP address, persistent identifier or visitor profile is introduced by these safeguards.
+
+Live collection stores at most 1,000 distinct referrer domains per site and local calendar day. Once this limit is reached, new domains are omitted, but pageview totals and already recorded domains continue counting. Historic imports and existing records are not deleted or retroactively limited. Referrer reports therefore do not represent every arrival source. The configured retention period still applies; an unlimited history remains unlimited by choice.
+
+Set a suitable site-wide request budget under Settings → Measurement. At capacity the endpoint returns HTTP 429 and Retry-After: 60 without counting the rejected delivery. A shared anonymous budget does not prevent a hostile client from consuming capacity and displacing real measurements. For an exposed website, ask the host to add endpoint-specific rate and concurrency limits at the reverse proxy, WAF or webserver, before WordPress executes. Include both /wp-json/tabulamea/v1/pageview and the ?rest_route=/tabulamea/v1/pageview form, adapted to subdirectory and multisite installations. Configure thresholds for the actual website traffic; a blanket low per-IP limit can exclude visitors behind a shared gateway. Do not cache POST requests, block all REST routes or remove Origin headers. Check the guided measurement test after changing these rules. Server/edge logs and address-based rules are the host's separate privacy responsibility; TabulaMea itself retains no address-based profile. Distributed spoofed requests cannot be reliably distinguished from genuine anonymous traffic by this plugin alone.

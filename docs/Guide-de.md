@@ -1,0 +1,199 @@
+# Anleitung
+
+[English](Guide.md) · [Deutsch](Guide-de.md)
+
+> **Nach Installation oder Update: Seiten-/CDN-Cache leeren**
+>
+> Den vollständigen HTML-Seitencache im Cache-Plugin und gegebenenfalls beim Hoster oder CDN leeren. Die HTML-Cache-Laufzeit unter sieben Tagen halten; empfohlen ist ein Tag (24 Stunden). Bereits geöffnete Testtabs neu laden. Messsignaturen laufen nach sieben Tagen ab; altes zwischengespeichertes HTML kann deshalb keine Aufrufe mehr beitragen. Dafür müssen weder der Seitencache abgeschaltet noch Browser-Caches für Bilder oder CSS geändert werden.
+
+## Schnellstart
+
+1. Lade das Installationspaket tabulamea-1.0.0.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
+2. Öffne Einstellungen → TabulaMea → Übersicht. Dort siehst du Messstatus und geführten Messtest.
+3. Unter Messung legst du fest, welche öffentlichen Inhalte erfasst werden. Administratoren und Redakteure sind standardmäßig von regulären Aufrufen ausgeschlossen.
+4. Öffne TabulaMea → Statistikübersicht und wähle deinen Zeitraum. Neue Messdaten entstehen ab der Aktivierung; historische Daten lassen sich separat importieren.
+5. Passe unter Zugriff, Dashboard und Inhaltslisten die Anzeige an deine Website an. Länder-, Technik- und Sucherfassung sind freiwillige Zusatzfunktionen.
+
+Zum geführten Test meldest du dich als Administrator an und öffnest den dort angebotenen Frontend-Link. Danach lädst du die Übersicht neu. Der Test umgeht den Rollenausschluss, erzeugt aber keinen regulären Seitenaufruf. Do Not Track und Global Privacy Control bleiben wirksam. Ein privates Browserfenster ist deshalb kein garantierter Zähltest.
+
+## Statistik lesen
+
+![TabulaMea – Statistik lesen](assets/screenshots/statistics-de.jpg)
+
+Die Statistikübersicht zeigt Seitenaufrufe, den Vergleich zum vorherigen Zeitraum, den Verlauf, meistgelesene Inhalte und verweisende Websites. Du kannst unter anderem 7, 14, 30, 90, 180 oder 365 Tage, einen Kalendermonat, ein Kalenderjahr oder einen eigenen Zeitraum wählen. Vergleichsintervalle haben dieselbe Zahl an Kalendertagen.
+
+Linie und Balken lassen sich direkt am Diagramm umschalten. Diese persönliche Auswahl gilt für die Statistikseite; das Dashboard verwendet seine eigene Widget-Vorgabe. Maus, Touch und Tastatur erschließen die Werte. Ein aktivierter Tagespunkt begrenzt die Inhalts- und Referrerlisten auf diesen Tag. Die aufklappbare Wertetabelle bleibt eine Alternative zum Diagramm.
+
+Ein fehlender Datensatz beweist keine null Aufrufe. Gepunktete Verbindungen dienen nur zur Orientierung und schätzen keine Zwischenwerte. Der heutige Tag ist noch unvollständig. Bei sehr langen eigenen Zeiträumen ab zehn Jahren wird ausdrücklich auf Monatssummen umgestellt. Vergleiche mit einer Vorperiode unter zehn Aufrufen erhalten keine Prozentangabe.
+
+Die Inhaltsliste kann nach Titel und Inhaltstyp gefiltert werden. Ihre Prozentanteile beziehen sich auf alle gespeicherten Website-Aufrufe desselben Zeitraums, einschließlich Archiven und Inhalten außerhalb der Liste. Referrer zeigen ausschließlich Domains; fehlende Herkunftsangaben lassen sich nicht rekonstruieren. Diese Zahlen sind keine vollständige Übersicht aller Zugriffsquellen.
+
+## Inhalte gezielt pflegen
+
+![TabulaMea – Inhalte gezielt pflegen](assets/screenshots/content-list-de.jpg)
+
+Aktiviere unter Einstellungen → TabulaMea → Inhaltslisten die Aufrufspalte für Seiten, Beiträge oder weitere öffentliche Inhaltstypen. In der jeweiligen WordPress-Liste kannst du den Zeitraum ändern, nach Aufrufzahlen sortieren und Inhalte mit oder ohne gespeicherte Aufrufwerte filtern.
+
+So findest du häufig aufgerufene Seiten direkt dort, wo du sie bearbeitest. Ein kleiner Wert wird ebenfalls angezeigt; ein Strich bedeutet, dass für diesen Inhalt im Zeitraum kein Summenwert vorliegt. Er bedeutet nicht nachweislich null tatsächliche Besuche.
+
+Für öffentliche Inhalte führen Statistiklinks aus den Listen beziehungsweise über Editor und Adminleiste zur Detailansicht. Bearbeitungslinks folgen den WordPress-Berechtigungen. Aufrufe messen Aufmerksamkeit, keine Qualität, Zufriedenheit oder erfolgreichen Abschlüsse.
+
+## Rankings und Jahresrückblicke
+
+![TabulaMea – Rankings und Jahresrückblicke](assets/screenshots/rankings-de.jpg)
+
+Unter TabulaMea → Inhaltsrankings legst du wiederverwendbare Auswertungen an. Wähle Inhaltstyp, Zeitraum und Anzahl der Einträge; bei Bedarf kommen Kategorie, Veröffentlichungsjahr und Ausschlüsse hinzu. Favoriten bleiben persönlich auf dieser Website.
+
+Die fünf Methoden:
+- Meistgelesen: Inhalte mit den meisten gespeicherten Aufrufen im Zeitraum.
+- Zunehmende Aufmerksamkeit: Inhalte mit positivem absolutem Zuwachs gegenüber der gleich langen Vorperiode und ausreichender aktueller Basis.
+- Abnehmende Aufmerksamkeit: Inhalte mit negativem Zuwachs und ausreichender Basis in der Vorperiode.
+- Jeden Monat beliebt: Inhalte, die in jedem gewählten vollständigen Kalendermonat die festgelegte Mindestzahl erreichen. Wählbar sind zwei bis zwölf Monate.
+- Ältere Inhalte mit neuer Aufmerksamkeit: ältere Veröffentlichungen mit positivem Zuwachs und ausreichender aktueller Basis.
+
+Vergleichsmethoden benötigen passende Vorperiodendaten. Wenige oder fehlende Daten können deshalb zu einer kurzen oder leeren Liste führen. Eine solche Liste ist kein technischer Fehler und kein Qualitätsurteil über die Inhalte.
+
+Für „Die beliebtesten Blogartikel 2026“ wählst du Beiträge, Kalenderjahr 2026 und zehn Einträge. Das Veröffentlichungsjahr ist ein zusätzlicher Filter: Es begrenzt, wann ein Artikel erschienen ist, nicht wann seine Aufrufe gezählt wurden.
+
+Live-Rankings ändern sich mit den Daten. Eine Momentaufnahme hält Ergebnis, Zeitraum und Definition für einen Rückblick fest. Auch dabei werden nicht mehr öffentliche Inhalte vor der Ausgabe ausgeblendet. Die Kopier- und Druckausgabe hilft beim Erstellen eines Jahresrückblicks.
+
+## Zugriff und Dashboard
+
+Standardmäßig sehen Administratoren die Statistik. Unter Zugriff kannst du weitere Rollen zulassen und persönliche Regeln setzen. Persönliche Regeln gehen Rollenregeln vor; der Administratorzugang bleibt erhalten. Die Plugin-Einstellungen selbst bleiben Website-Administratoren vorbehalten. Das kompakte Widget besitzt eine eigene Zugriffsregel.
+
+Unter Dashboard stehen drei getrennte Bereiche:
+- Großes Widget: Aufrufsumme und Zeitraum bilden den festen Kern. Vergleich, Verlauf, meistgelesene Inhalte und verweisende Websites sind optional. Hier wird auch die Diagrammdarstellung des Widgets festgelegt.
+- Kompaktes Widget: kurze Inhaltsliste mit Zeitraum und optionaler Aufrufsumme. Du kannst eigene Filter oder ein gespeichertes Ranking verwenden. Ein gespeichertes Ranking behält seine eigene Definition und gegebenenfalls Momentaufnahme.
+- Allgemeine Widget-Einstellungen: persönliche Anpassungen und gemeinsame Grenzen.
+
+Wenn persönliche Anpassungen erlaubt sind, kann jeder seine Übersicht im Widget innerhalb der Administratorvorgaben ändern und auf die Website-Vorgaben zurücksetzen. Die WordPress-Option „Ansicht anpassen“ kann Widgets zusätzlich persönlich ausblenden. Das Datumsformat folgt der WordPress-Installation.
+
+## Blöcke und Shortcodes
+
+Die Ausgabe im Frontend ist standardmäßig aus. Unter Zugriff gibt es zwei getrennte Freigaben: öffentliche Ausgaben erlauben und zusätzlich genaue öffentliche Aufrufzahlen erlauben. Gespeicherte Rankings brauchen außerdem ihre eigene Veröffentlichungsfreigabe. Für Besucher kann dadurch nur die Rangfolge sichtbar sein, während berechtigte Benutzer im Admin weiterhin die erfassten Aufrufzahlen sehen; ein Aufrufzähler bleibt ohne Zahlenfreigabe leer. Diese Regeln ändern weder die Messung noch den privaten Adminzugriff.
+
+Im Block-Editor suchst du nach:
+- TabulaMea-Inhaltsranking: ein freigegebenes gespeichertes Ranking auswählen.
+- TabulaMea-Seitenaufrufzähler: aktueller Inhalt oder gesamte Website, Zeitraum und Text vor beziehungsweise nach der Zahl. Gestaltung über native Blockoptionen, soweit vom Theme unterstützt.
+- TabulaMea: Beliebte Inhalte: kompakte Liste mit Zeitraum, Anzahl und Inhaltstyp.
+- TabulaMea: Beliebte Inhalte als Beitragsliste: Variante des WordPress-Blocks Abfrage-Loop. Die Reihenfolge folgt den Aufrufen der letzten 30 Tage; Titel, Bilder und Auszüge gestaltest du mit normalen Blöcken. Die Auswahl umfasst höchstens 50 platzierte Inhalte.
+
+Einstellungen stehen rechts in der Block-Sidebar; der Inhaltsbereich zeigt die Ausgabe als Vorschau. Ohne passende Freigabe oder Daten erscheint ein Editorhinweis. Eine Vorschau veröffentlicht nichts automatisch.
+
+Shortcode-Beispiele:
+[tabulamea_ranking id="ranking-id"]
+[tabulamea_popular number="5" days="30" post_type="post"]
+[tabulamea_counter days="30" global="false"]
+
+Beim Ranking ersetzt du ranking-id durch die Kennung deiner gespeicherten Auswertung. Beim Zähler bedeutet global="false" den aktuellen Inhalt im WordPress-Inhaltskontext und global="true" die gesamte Website. Ohne passenden Inhaltskontext verwende den globalen Zähler. days ist die Zahl der Tage einschließlich heute; number begrenzt die populäre Liste auf höchstens 50 Inhalte. Die beiden einfachen Shortcodes verwenden standardmäßig 30 Tage, die Liste fünf Beiträge. post_type bezeichnet den technischen Inhaltstyp, etwa post oder page.
+
+Der Generator unter Shortcodes & Blöcke hilft bei den Parametern. Gespeicherte Rankings können ihren Zeitraum zusätzlich ausgeben; ein Rücklink oder sichtbares Branding ist nicht vorgeschrieben. Die Zahlenfreigabe betrifft auch öffentliche Anteile und zahlenmäßige Änderungen.
+
+## Ausgewählte Suchbegriffe
+
+Die optionale interne Suchauswertung beobachtet Begriffe, die du vorher festlegst. Sie entdeckt keine unbekannten Suchanfragen. Aktiviere sie unter Messung und hinterlege ausschließlich nicht personenbezogene Begriffe oder genaue Phrasen, jeweils eine pro Zeile.
+
+Beispiele für einen Verein: Spenden, Ehrenamt, Mitglied werden, Veranstaltungen, Kontakt. Diese Vorschläge werden nicht automatisch aktiviert.
+
+So funktioniert die Zuordnung:
+- Hinterlegt: Spenden. Suche: spenden. Ergebnis: Der Zähler „Spenden“ steigt.
+- Hinterlegt: Kontakt. Suche: KONTAKT. Ergebnis: Der Zähler „Kontakt“ steigt.
+- Hinterlegt: Ehrenamt. Suche: Ehrenamt gesucht. Ergebnis: keine Zuordnung; diese ganze Phrase müsste zusätzlich hinterlegt sein.
+- Nicht hinterlegte Eingabe: Nur die allgemeine Suchsumme steigt; der Suchtext wird nicht gespeichert.
+
+Groß-/Kleinschreibung und mehrfache Leerzeichen werden vereinheitlicht. Darüber hinaus muss die Phrase übereinstimmen. Es gibt keine automatische Themen- oder Synonym-Erkennung, und die WordPress-Suchergebnisse bleiben unverändert.
+
+Ein Beispiel für die Auswertung: „Spenden · 18 Suchaufrufe · Letzte 30 Tage“. Ein Link öffnet die entsprechende Suche auf der Website. Begriffe werden erst ab fünf Aufrufen im gewählten Zeitraum gezeigt. Fehlende Einträge belegen deshalb kein fehlendes Interesse.
+
+Gezählt werden Aufrufe der ersten Suchergebnisseite; Neuladen zählt erneut. Ergebnislose Suchen erhalten zusätzlich eine allgemeine Summe. Weitere Ergebnisseiten werden nicht gezählt. Suchaufrufe bleiben von regulären Seitenaufrufen getrennt. Freie Sucheingaben und Abfrageparameter werden nicht gespeichert. Eine absichtlich hinterlegte persönliche Phrase wäre trotzdem personenbezogen: Die Auswahl allein macht sie nicht anonym.
+
+## Messumfang, Bots und Datenschutzsignale
+
+Das Frontend sendet je sichtbarem Dokument eine anonyme Anfrage. Keine Cookies, Browserspeicherung, Besucherkennungen, Fingerprinting oder individuellen Verläufe. Do Not Track und Global Privacy Control werden berücksichtigt. Erkennbare automatisierte Aufrufe und Vorabladevorgänge werden ausgeschlossen; eine ausschließlich menschliche Nutzung lässt sich damit nicht garantieren. Gespeichert werden lokale Tageszähler, Inhalts-IDs und Pfade ohne Abfrageparameter sowie externe Referrer-Domains. Browserblockaden und deaktiviertes JavaScript können die Zahlen verringern. Länder, Browser, Betriebssystem und Gerätetyp bleiben getrennte Summen; Kategorien unter fünf Seitenaufrufen im gewählten Zeitraum werden ausgeblendet. Diese Berichte beginnen erst mit ihrer Aktivierung; für eine erste Datenbasis sind mindestens 30 Tage sinnvoll. Daraus folgt keine pauschale Rechtskonformität jeder Website-Konfiguration. Zugriffsprotokolle des Hostings liegen außerhalb der Datenhaltung dieses Plugins.
+
+Standardmäßig werden weiterhin alle geeigneten öffentlichen Seiten gemessen. Eine eingeschränkte Auswahl kann öffentliche Inhaltstypen begrenzen und Startseite, Beitragsübersicht und Archivgruppen getrennt einbeziehen. Künftige Zähler beschreiben dann diesen Messumfang; historische Summen können frühere Messumfänge enthalten. Globale öffentliche Zähler kennzeichnen eine eingeschränkte Erfassung. Erkennbare Suchmaschinen- und KI-Bots haben getrennte Ausschlüsse, beide standardmäßig aktiv. Dies sind Statistikfilter, keine Zugriffssperren oder robots.txt-Regeln. Ein ausgeschalteter Filter erfasst keine Bots, die niemals eine Messanfrage ausführen. Lokale Kennungen sind näherungsweise Erkennung, keine verifizierten Botidentitäten.
+
+## Länder und Technik
+
+Ländererfassung ist standardmäßig aus. Sie benötigt eine lokale Datenbank DB-IP Country Lite. Download und monatliche Aktualisierung erfordern eine gesonderte Zustimmung und verbinden sich mit download.db-ip.com; der Dienst sieht dabei die Server-IP. Besucheradressen werden nicht dorthin übertragen. Die Zuordnung nutzt die direkte Verbindungsadresse und vertraut keinen weitergeleiteten IP-Headern. Reverse-Proxys benötigen eine korrekte Serverkonfiguration. MaxMind DB Reader 1.13.1 unter Apache-2.0 liest ausschließlich das lokale MMDB-Format. Datenquelle DB-IP Country Lite: https://db-ip.com/ · CC BY 4.0.
+
+Gerätetyp, Browser und Betriebssystem sind ebenfalls optional und werden nur als grobe, getrennte Tageskategorien gespeichert. Es entstehen keine kombinierten Besucherprofile. Kategorien unter fünf Aufrufen im gewählten Zeitraum werden ausgeblendet. Rückwirkende Informationen lassen sich aus reinen Aufrufzahlen nicht herleiten. Für erste Auswertungen sind mindestens 30 Tage sinnvoll; auf kleinen Websites kann mehr Zeit nötig sein.
+
+Browser- und Geräteerkennung sowie Länderzuordnung sind Näherungen. Ohne zuverlässig verfügbare Information kann ein unbekannter Wert entstehen. Die Länderanzeige ist keine präzise Standortmessung.
+
+## Historische Daten importieren
+
+Daten & Übertragung → Koko-Analytics-Statistiken importieren. Erstelle eine Datenbanksicherung. Pausiere zunächst die TabulaMea-Messung und die Koko-Erfassung, prüfe den verfügbaren Zeitraum und starte den Import. Führe die kleinen Pakete fort, bis der Status abgeschlossen ist. Aktiviere danach die TabulaMea-Messung und lasse die Koko-Erfassung deaktiviert. Die Quelltabellen müssen zur selben WordPress-Website gehören. Unterstützt werden das ältere Format mit Beitrags-IDs und Referrer-URLs sowie das Pfad-ID-/Referrer-Label-Format von Koko 2.5.3. Die Quelltabellen werden ausschließlich gelesen. Übernommen werden tägliche Seitenaufrufe, Inhaltszähler und bereinigte Referrer-Domains. Besucherzahlen entfallen bewusst. Alle Tage ab dem ersten von TabulaMea gemessenen Tag werden gegen Überlappung ausgeschlossen. Wiederholte Importe ergänzen nur positive Zuwächse der Quelldaten; spätere Verringerungen werden nicht abgezogen. Setze die Quelldatenbank zwischen wiederholten Importen nicht zurück und ersetze sie nicht: Quell-IDs kennzeichnen bereits importierte Zeilen. Länder und Technikdaten werden nicht rückwirkend erzeugt. Geänderte Beitrags-IDs nach einem Umzug auf eine andere WordPress-Website können nicht automatisch zugeordnet werden. Der Statify-Import verwendet die lokale Struktur id/created/referrer/target. Beide Erfassungen pausieren, Quellvorschau prüfen und Sicherung bestätigen. Jede Zeile zählt einmal; dauerhafte Quell-ID-Belege verhindern Doppelzählung bei Wiederholungen. Aktuelle lokale öffentliche URLs werden nach Möglichkeit Inhalten zugeordnet. Nicht zugeordnete Datensätze erhalten nur Übersichtssummen, ohne ursprüngliche Zielstrings zu speichern. Referrer bleiben auf Domains beschränkt. Koko- und Statify-Import lassen sich auf derselben Website nicht kombinieren, weil überlappende Aufrufe nicht zuverlässig erkennbar sind. Kein Importer verändert Quelltabellen. Eine automatische Rücknahme gibt es nicht; bei Bedarf die eigene Sicherung wiederherstellen.
+
+## Export, Aufbewahrung und Datenpflege
+
+Private CSV-Exporte verwenden die gewählten Berichtsdaten und Datenschutzregeln. Verfügbar sind Tagesaufrufe, öffentliche Inhaltssummen, Referrer-Domains und Ausgaben aus Rankings, Zusatzstatistiken beziehungsweise der Suchauswertung. Inhalts-Exporte sind auf 50 passende öffentliche Inhalte begrenzt, Referrer-Exporte auf 1.000 Domains. CSV ist keine vollständige Datenbanksicherung und kein universelles Wiederherstellungsformat.
+
+Konfigurationsübertragung und Statistikimport haben unterschiedliche Aufgaben. Übertragbare Einstellungen und geeignete Ranking-Definitionen lassen sich vor der Übernahme prüfen. Persönliche Regeln, lokale Inhalts-IDs, Suchbegriffslisten, Download-Zustimmungen, Momentaufnahmen und Statistikdaten gehören nicht in dieses Konfigurationspaket.
+
+Grundstatistiken können zeitlich begrenzt oder ohne automatische Alterslöschung aufbewahrt werden; 0 Monate bedeutet Aufbewahrung bis zu einer ausdrücklichen Löschung. Für Zusatzstatistiken gilt eine eigene Aufbewahrung. Geplante Bereinigung läuft in kleinen Paketen und kann sich durch WP-Cron verzögern.
+
+Die Datenpflege zeigt vor einer Löschung Stichtag und betroffene Summenzeilen. Erstelle vorher eine Datenbanksicherung. Definitionen, Momentaufnahmen und dauerhafte Importbelege bleiben dabei erhalten. Bereits gelöschte historische Summen werden nicht rekonstruiert.
+
+Die automatische Löschung läuft in begrenzten geplanten Schritten. Bei größeren Rückständen werden weitere Schritte eingeplant. Verzögerte WordPress-Hintergrundaufgaben können die tatsächliche Löschung aufschieben.
+
+## Datenschutzseite und technische Diagnose
+
+Unter Übersicht findest du einen Textvorschlag zur aktuellen TabulaMea-Konfiguration. Die Bearbeitungs- und Frontendlinks führen zur zugewiesenen WordPress-Datenschutzseite; fehlt sie, führt der Hinweis zu Einstellungen → Datenschutz. Kopiere den Vorschlag, prüfe ihn und passe ihn vor der Veröffentlichung an deine Website an. Er ersetzt weder eine vollständige Datenschutzerklärung noch eine rechtliche Prüfung.
+
+Der Messstatus zeigt die letzte angenommene Speicherung; dieser Zeitstempel wird höchstens alle fünf Minuten aktualisiert. Ein erfolgreicher geführter Messtest bestätigt dagegen die Zustellung aus diesem Browser und erzeugt keinen regulären Seitenaufruf.
+
+Website-Zustand prüft unter anderem Speicherstruktur, Tabellen und geplante Aufgaben. Die kopierbare Diagnose enthält Betriebsdaten, keine Besucherprofile oder Zugangsdaten. Fehlende neue Aufrufe allein bedeuten noch keinen technischen Defekt. Die Befehlspalette öffnet berechtigte Berichte, Zeiträume, Rankings und Einstellungen.
+
+## Multisite und Entfernen
+
+Deaktivierung erhält Daten. Deinstallation entfernt immer temporäre Caches und eigene Aufgaben. Dauerhafte Statistiken, Einstellungen, Rankings und Momentaufnahmen bleiben erhalten, sofern die ausdrückliche Löschoption dieser Website nicht aktiviert ist. Daten anderer Plugins werden niemals gelöscht. Multisite verwaltet Einstellungen und Statistiken je Website. Neue Netzwerk-Websites erhalten eigene Tabellen. Konfigurationsübertragungen enthalten keine persönlichen Regeln, Momentaufnahmen, Inhalts-IDs, Download-Zustimmungen oder erfassten Statistiken. Deinstallation entfernt außerdem immer vorübergehende Zustellbelege, Anfragebudgets und den groben Fehlerstatus. Netzwerkvorgaben betreffen ausschließlich Widget-Anzeige und persönliche Anpassungsgrenzen; ausdrückliche Website-Einstellungen haben Vorrang. Erfassungszustimmungen und Zugriffsrechte bleiben je Website getrennt. Persönliche Widget-Einstellungen bleiben innerhalb der Administratorvorgaben.
+
+## GitHub-Updates und deckerweb Library
+
+TabulaMea enthält die deckerweb Library 1.3.0 und den deckerweb Updater 2.4.0 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
+
+Normale Updates installierter Plugins verwenden WordPress-Updateangebote und sind unabhängig von Katalogversion, Online-Einstellung und Katalogverfügbarkeit. Öffnen oder Sortieren des Katalogs löst keine zusätzlichen GitHub-Updateabfragen aus. Erstinstallationen benötigen weiterhin Katalogfreigabe und Paketprüfung.
+
+Die Library bietet unter Plugins → Installieren → deckerweb einen zusätzlichen Plugin-Katalog. Der optionale Online-Abruf ist standardmäßig ausgeschaltet. Bei Aktivierung lädt er den freigegebenen Katalog von GitHub; Installation und Aktivierung weiterer Plugins werden jeweils bewusst ausgelöst. Der Dienst sieht dabei die Server-IP, aber keine TabulaMea-Statistikdaten. Library-Einstellungen und Verwaltungsdaten sind gemeinsame Komponentendaten: Sie bleiben erhalten, solange ein weiterer Host installiert ist, auch wenn dieser deaktiviert ist. Beim letzten Host werden temporäre Daten bereinigt; die eigene optionale Löschung dauerhafter Library-Einstellungen ist standardmäßig aus. Installierte andere Plugins und deren Inhalte werden nicht gelöscht.
+
+TabulaMea wird über GitHub veröffentlicht.
+
+## Technische Messgrenzen
+
+Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten Dokuments und wird für höchstens drei Versuche nach Netzwerk- oder Serverfehlern wiederverwendet. Der Server speichert vorübergehend ausschließlich ihren Hash und Ablaufzeitpunkt, ohne Zuordnung zu Inhalt, Adresse oder Browser. Die Kennung läuft nach zehn Minuten ab und wird in kleinen Bereinigungspaketen entfernt; verzögerte Bereinigung kann abgelaufene Hashes länger erhalten. Sie verhindert doppelte Zustellung, keine wiederholten Besuche. Fehlt die sichere Browserzufallsquelle, wird eine zufällige Wiederholungskennung im Arbeitsspeicher des Dokuments erzeugt. Sie bezeichnet eine Lieferung, keine Person, und ist kein Anmeldegeheimnis. Atomare InnoDB-Transaktionen halten die Zähler bei Schreibfehlern konsistent. Ein anonymes Anfragebudget je Website liegt standardmäßig bei 60.000 validierten Anfragen pro Minute einschließlich Wiederholungsversuchen, ist einstellbar und verwendet keine IP-Adressen. Oberhalb des Limits werden Anfragen abgewiesen. Das schützt Ressourcen, verhindert aber nicht jede bewusste Manipulation. Nach einem Datenbankfehler stoppt die Verarbeitung sofort und die gesamte Zählertransaktion wird zurückgerollt. Bei Deadlocks und Sperrzeitüberschreitungen sind höchstens drei vollständige Versuche vorgesehen; Verbindungsabbrüche und unklare Commit-Bestätigungen werden intern nicht erneut ausgeführt. Die Zustellkennung des Dokuments schützt einen nachfolgenden Zustellversuch innerhalb der Beleglaufzeit vor Doppelzählungen.
+
+
+## Aufgabenanleitungen
+
+### Beliebte Inhalte finden und pflegen
+
+1. Öffne TabulaMea → Statistikübersicht und wähle einen Zeitraum.
+2. Suche bei Bedarf im Inhaltsfilter nach einem Titel oder grenze den Inhaltstyp ein. Aktive Filter lassen sich einzeln entfernen.
+3. Öffne unter „Meistgelesene Inhalte“ den Bearbeiten-Link. Alternativ aktiviere unter Einstellungen → Inhaltslisten die Aufrufspalte für den gewünschten öffentlichen Inhaltstyp.
+4. Speichere eine häufig verwendete Auswahl unter „Meine gespeicherten Berichtsansichten“. Diese Ansicht gilt nur für dich auf dieser Website und ist kein öffentliches Ranking.
+
+### Zeiträume vergleichen und Werte prüfen
+
+1. Wähle z. B. die letzten 90 Tage. „Nur abgeschlossene Tage vergleichen“ lässt den heutigen Tag weg, wenn der Zeitraum auch frühere Tage enthält. Eine reine Heute-Ansicht bleibt bei heute.
+2. Der Vergleichszeitraum steht unter den Summen. Er umfasst dieselbe Anzahl vorhergehender Kalendertage.
+3. Wähle im Diagramm Tage, Wochen oder Monate. Gruppierte Werte summieren ausschließlich gespeicherte Datensätze innerhalb des gewählten Zeitraums. Randwochen und Randmonate können unvollständig sein.
+4. Prüfe genaue Werte per Maus, Touch oder Tastatur bzw. in der aufklappbaren Wertetabelle. Fehlende Datensätze beweisen nicht null Aufrufe.
+5. „Diese Ansicht aktualisieren“ fordert einen frischen Bericht an und behält deine Auswahl bei. Es gibt keine automatische Dauerabfrage.
+
+### Ein Jahresranking veröffentlichen
+
+1. Erstelle unter Inhaltsrankings ein Ranking für das gewünschte Kalenderjahr. Prüfe Inhaltstyp, Anzahl und Darstellung.
+2. Entscheide dich für ein laufendes Ranking oder eine Momentaufnahme mit festem Stand.
+3. Veröffentliche das Ranking ausdrücklich und erlaube unter Zugriff die öffentliche Ausgabe. Die Veröffentlichung genauer Zahlen ist eine getrennte Entscheidung. Ohne Zahlen zeigt ein Ranking die Reihenfolge; intern bleiben die erfassten Zahlen verfügbar.
+4. Füge im Block-Editor die TabulaMea-Vorlage „Jahresrückblick“ ein und wähle in der Seitenleiste dein gespeichertes Ranking. Die Vorlage wählt selbst kein Jahr aus.
+5. Prüfe die öffentliche Seite. Deaktivierst du die Freigabe oder wird ein Inhalt privat, darf TabulaMeas eigener Daten-Cache keine Ausgabe erzwingen. Leere zusätzlich einen vorhandenen Seiten-Cache oder CDN-Cache.
+## Integrität der Messung und Cache-Konfiguration
+
+Die öffentliche Signatur prüft Website, Inhaltspfad und Ausstellungszeit. Sie ist weder Anmeldung noch Bot-Prüfung oder Beleg für einen menschlichen Besuch. Signaturen laufen nach sieben Tagen ab; höchstens fünf Minuten Uhrabweichung werden toleriert. Alte Signaturen ohne Ablauf werden nicht angenommen. Nach Installation dieses Updates den vollständigen Seiten- und CDN-HTML-Cache leeren. HTML kürzer als sieben Tage zwischenspeichern; ein Tag wird empfohlen. Abgelaufene Cache-Seiten liefern erst nach Erneuerung des HTML wieder Messwerte. Auch lange geöffnete Tabs neu laden. Dasselbe gilt für Suchergebnisse.
+
+Der Endpunkt verlangt den Origin-Header der Website und eine 32-stellige Wiederholungskennung je Dokument. Das sind hilfreiche Prüfungen, keine Besucheridentitäten: Ein direkter HTTP-Client kann beides nachbilden. Dieselbe Kennung wird während der zehnminütigen Belegaufbewahrung nur einmal gezählt. Eine neue Kennung innerhalb der Signaturgültigkeit kann weiterhin eine weitere Zählung auslösen. Neuladen zählt bewusst als weiterer Seitenaufruf. Diese Schutzmaßnahmen führen keine IP-Speicherung, dauerhafte Kennung oder Besucherprofile ein.
+
+Die laufende Erfassung speichert höchstens 1.000 unterschiedliche Referrer-Domains je Website und lokalem Kalendertag. Danach werden neue Domains ausgelassen; Seitenaufrufe und bereits erfasste Domains zählen weiter. Historische Importe und bestehende Datensätze werden weder gelöscht noch rückwirkend begrenzt. Referrer-Berichte bilden deshalb nicht jede Zugriffsquelle ab. Die eingestellte Aufbewahrungsdauer gilt weiterhin; eine unbegrenzte Historie bleibt auf Wunsch unbegrenzt.
+
+Unter Einstellungen → Messung ein angemessenes websiteweites Anfragebudget wählen. Bei ausgeschöpftem Budget antwortet der Endpunkt mit HTTP 429 und Retry-After: 60, ohne diese Lieferung zu zählen. Das gemeinsame anonyme Budget verhindert nicht, dass ein Angreifer Kapazität aufbraucht und echte Messungen verdrängt. Bei exponierten Websites den Hoster um zusätzliche Raten- und Parallelitätsgrenzen am Reverse Proxy, an der WAF oder am Webserver bitten, bevor WordPress ausgeführt wird. Dabei sowohl /wp-json/tabulamea/v1/pageview als auch ?rest_route=/tabulamea/v1/pageview berücksichtigen, angepasst an Unterverzeichnisse und Multisite. Grenzwerte am tatsächlichen Aufkommen orientieren; ein pauschal niedriges IP-Limit kann Besucher hinter gemeinsam genutzten Anschlüssen ausschließen. POST-Anfragen nicht cachen, nicht alle REST-Routen sperren und Origin-Header nicht entfernen. Anschließend den geführten Messtest prüfen. Server-/Edge-Logs und adressbezogene Regeln liegen in der gesonderten Datenschutzverantwortung des Hosters; TabulaMea selbst speichert keine adressbezogenen Profile. Verteilte Scheinanfragen kann das Plugin allein nicht zuverlässig von echten anonymen Aufrufen unterscheiden.

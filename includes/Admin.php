@@ -103,7 +103,7 @@ final class Admin {
         foreach(['readme'=>['DOCUMENTATION',__('Documentation','tabulamea')],'faq'=>['FAQ',__('FAQ','tabulamea')],'changelog'=>['CHANGELOG',__('Changelog','tabulamea')]] as $key=>[$file,$label]){
             $name=$file.($de?'-de':'').'.txt';$docs[$key]=['label'=>$label,'url'=>plugins_url($name,TBM_FILE),'text'=>(string)file_get_contents(dirname(TBM_FILE).'/'.$name)];
         }
-        \Deckerweb\AdminFooter\V1\StructuredFooter::render(['id'=>'tbm','about'=>__('About this plugin','tabulamea'),'name'=>'TabulaMea','version'=>TBM_VERSION,'version_label'=>__('Version','tabulamea'),'slogan'=>__('Your content. Its impact. All in view.','tabulamea'),'copyright'=>'© 2026','repository'=>'https://github.com/deckerweb','website'=>__('More plugins','tabulamea'),'close'=>__('Close','tabulamea'),'documents'=>$docs]);
+        \Deckerweb\AdminFooter\V1\StructuredFooter::render(['id'=>'tbm','about'=>__('About this plugin','tabulamea'),'name'=>'TabulaMea','version'=>TBM_VERSION,'version_label'=>__('Version','tabulamea'),'slogan'=>__('Your content. Its impact. All in view.','tabulamea'),'copyright'=>'© 2026','author_url'=>'https://deckerwebplugins.com/'.($de?'de/':'en/'),'repository'=>'https://deckerwebplugins.com/'.($de?'de':'en').'/plugins/tabulamea/','website'=>__('Plugin website','tabulamea'),'close'=>__('Close','tabulamea'),'documents'=>$docs]);
     }
     /**
      * Print nonce-protected action fields.

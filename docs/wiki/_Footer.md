@@ -4,5 +4,7 @@
 
 [Help & bugs / Hilfe & Fehler](https://github.com/deckerweb/tabulamea/issues) · [Discussions / Austausch](https://github.com/deckerweb/tabulamea/discussions) · [Security / Sicherheit](https://github.com/deckerweb/tabulamea/security/policy)
 
-© 2026 David Decker – DECKERWEB.  
+© 2026 [David Decker – DECKERWEB](https://deckerwebplugins.com/).<br>
 Plugin: [GPL v2 or later / GPL v2 oder höher](https://www.gnu.org/licenses/gpl-2.0.html).
+
+[Plugin website](https://deckerwebplugins.com/en/plugins/tabulamea/) · [Plugin-Website](https://deckerwebplugins.com/de/plugins/tabulamea/)

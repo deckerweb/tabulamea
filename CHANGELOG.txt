@@ -1,3 +1,12 @@
+1.0.0 — 2026-11-10
+New: Personal saved report views, clear active filters and shared periods; daily, weekly and monthly charts with exact-value tables.
+New: Native block patterns and illustrated guides for content maintenance, period comparisons and yearly rankings.
+Improved: Reused report queries, ranking caches with bounded rebuilds, maintenance diagnostics, import summaries and contextual CSV exports.
+Improved: Time-limited measurement signatures and bounded live referrer collection; clear cache setup and measurement-integrity guidance.
+Improved: deckerweb Library 1.3.0 and Updater 2.4.0; installed-plugin updates remain independent of the discovery catalog.
+Fixed: Registered shortcode calls, target-network lifecycle isolation, completed-day comparisons, abandoned cache locks and country database integrity checks.
+Misc: After installation or updating, clear the full-page/CDN HTML cache. Keep HTML cache lifetimes below seven days; one day is recommended. WordPress 7.1.2 and PHP 8.2 remain the minimum requirements.
+
 0.9.1 — 2026-10-21
 Improved: Updated deckerweb Library 1.1.0 and Updater 2.2.1 with approved catalog downloads and localized notices.
 Improved: Load the measurement script with a deferred strategy to avoid blocking rendering.

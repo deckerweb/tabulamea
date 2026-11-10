@@ -17,3 +17,5 @@
 .tbm-tools-menu-panel .tbm-shortcuts ul{display:grid;gap:6px}
 .tbm-tools-menu-panel .tbm-nav-link{display:flex;width:100%;white-space:normal}
 @media(max-width:600px){.tbm-shortcuts .tbm-nav-link{padding:7px 10px}.tbm-tools-menu-item .tbm-tools-menu-panel{max-width:calc(100vw - 40px)}}
+
+.tbm-workspace,.tbm-filter-chips{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:12px 0}.tbm-saved-views{margin:12px 0 20px}.tbm-saved-views li{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.tbm-saved-views form{margin:8px 0}.tbm-period [hidden]{display:none!important}.tbm-setup-check li{margin:8px 0}.tbm-filter-chips a:focus-visible,.tbm-workspace a:focus-visible{outline:2px solid currentColor;outline-offset:3px}@media(max-width:600px){.tbm-workspace{align-items:flex-start}.tbm-workspace .description{flex-basis:100%}.tbm-data-table{overflow-wrap:anywhere}}

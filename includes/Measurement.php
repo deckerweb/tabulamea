@@ -48,7 +48,22 @@ final class Measurement {
      * @param string $path Query-free local path.
      * @return string Message authentication code, never a visitor identifier.
      */
-    public static function signature(int $id,string $path): string { return hash_hmac('sha256',get_current_blog_id().'|'.$id.'|'.$path,wp_salt('auth')); }
+    public static function signature(int $id,string $path): string {
+        $issued=time();$value=get_current_blog_id().'|'.$id.'|'.$path.'|'.$issued;
+        return 'v2.'.$issued.'.'.hash_hmac('sha256',$value,wp_salt('auth'));
+    }
+    /** Check a public path proof with a seven-day lifetime, not proof of a human visit.
+     * @param int $id Claimed public content ID.
+     * @param string $path Claimed query-free path.
+     * @param string $signature Versioned timestamp and authentication code.
+     * @return bool Whether this site issued an unexpired path proof.
+     */
+    public static function valid_signature(int $id,string $path,string $signature): bool {
+        if(!preg_match('/^v2\.([0-9]{10})\.([a-f0-9]{64})$/D',$signature,$m)){return false;}
+        $issued=(int)$m[1];$now=time();
+        if($issued>$now+300||$issued<$now-7*DAY_IN_SECONDS){return false;}
+        return hash_equals(hash_hmac('sha256',get_current_blog_id().'|'.$id.'|'.$path.'|'.$issued,wp_salt('auth')),$m[2]);
+    }
     /** Enqueue a small beacon only on eligible public frontend documents. @return void */
     public static function enqueue(): void {
         $s=Plugin::settings();if(!MeasurementPolicy::eligible() && !MeasurementPolicy::testing()){return;}if(!$s['measurement'] || !Plugin::ready() || is_preview() || is_feed() || is_404() || is_search() || is_trackback()){return;}
@@ -77,9 +92,9 @@ final class Measurement {
         $ua=substr((string)($_SERVER['HTTP_USER_AGENT'] ?? ''),0,1024);
         if(self::automated($ua) || ($_SERVER['HTTP_DNT'] ?? '')==='1' || ($_SERVER['HTTP_SEC_GPC'] ?? '')==='1'){return new \WP_REST_Response(null,204);}
         $origin=(string)($_SERVER['HTTP_ORIGIN'] ?? '');
-        if($origin!=='' && !self::same_origin($origin)){return new \WP_Error('invalid_origin',__('Invalid pageview.','tabulamea'),['status'=>403]);}
+        if($origin==='' || !self::same_origin($origin)){return new \WP_Error('invalid_origin',__('Invalid pageview.','tabulamea'),['status'=>403]);}
         $a=$request->get_json_params();if(!is_array($a)){return new \WP_Error('invalid_payload',__('Invalid pageview.','tabulamea'),['status'=>400]);}$path=$a['path'] ?? null;$signature=$a['signature'] ?? null;$id=absint(is_scalar($a['post'] ?? null)?$a['post']:0);
-        if(!is_string($path)||!is_string($signature)||strlen($path)>768||!str_starts_with($path,'/')||str_contains($path,'?')||str_contains($path,'#')||preg_match('/[\x00-\x20\\\\]/',$path)||!hash_equals(self::signature($id,$path),$signature)){return new \WP_Error('invalid_page',__('Invalid pageview.','tabulamea'),['status'=>400]);}
+        if(!is_string($path)||!is_string($signature)||strlen($path)>768||!str_starts_with($path,'/')||str_contains($path,'?')||str_contains($path,'#')||preg_match('/[\x00-\x20\\\\]/',$path)||!self::valid_signature($id,$path,$signature)){return new \WP_Error('invalid_page',__('Invalid pageview.','tabulamea'),['status'=>400]);}
         if($id){$post=get_post($id);if(!$post||!is_post_publicly_viewable($post)||$post->post_password!==''){return new \WP_REST_Response(null,204);}}
         if(MeasurementPolicy::valid_test($a['test']??'')){update_option('tbm_test_received',time(),false);return new \WP_REST_Response(null,204);}
         if($id===0&&$path==='/__search__'&&is_array($a['context']??null)&&array_key_exists('topic',$a['context'])){return SearchStats::receive($a);}
@@ -87,7 +102,7 @@ final class Measurement {
         
         $ref=is_string($a['referrer'] ?? null)?self::domain(substr($a['referrer'],0,1024)):'';
         if($ref===self::domain(home_url())){$ref='';}
-        $event=$a['event']??'';if(!is_string($event)||($event!==''&&!preg_match('/^[a-f0-9]{32}$/D',$event))){return new \WP_Error('invalid_event',__('Invalid pageview.','tabulamea'),['status'=>400]);}
+        $event=$a['event']??'';if(!is_string($event)||(!preg_match('/^[a-f0-9]{32}$/D',$event))){return new \WP_Error('invalid_event',__('Invalid pageview.','tabulamea'),['status'=>400]);}
         $budget=CoreStore::budget();if($budget===null){CoreStore::failure('storage');return new \WP_Error('storage_failed',__('Statistics could not be saved.','tabulamea'),['status'=>503]);}
         if(!$budget){CoreStore::failure('capacity');$response=new \WP_REST_Response(null,429);$response->header('Retry-After','60');return $response;}
         $settings=Plugin::settings();$dimensions=$settings['technology']?Tracking::classify($ua):[];
@@ -121,6 +136,7 @@ final class Measurement {
     /** Render measurement controls inside the site's Settings API form. @return void */
     public static function fields(): void {
         $s=Plugin::settings();echo '<h2>'.esc_html__('Privacy-friendly measurement','tabulamea').'</h2><p>'.esc_html__('Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected.','tabulamea').'</p>';
+        echo '<p class="description">'.esc_html__('After updating, clear the full-page/CDN HTML cache. Keep cached HTML for less than seven days; one day is recommended. Public signatures validate paths, not human visits. At most 1,000 different referrer domains are stored per site and day; pageview totals continue counting.','tabulamea').'</p>';
         Admin::checkbox('measurement',__('Enable pageview measurement','tabulamea'),$s);
         echo '<fieldset><legend>'.esc_html__('Do not count logged-in users with these roles','tabulamea').'</legend>';
         foreach(wp_roles()->roles as $key=>$role){InterfaceTools::check('tbm_settings[exclude_roles][]',translate_user_role($role['name']),in_array($key,$s['exclude_roles'],true),$key);}echo '</fieldset>';

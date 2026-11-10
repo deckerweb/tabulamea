@@ -27,7 +27,7 @@ final class SearchStats {
         if(!is_array($c)||!is_string($c['topic']??null)||!in_array($c['empty']??null,[0,1],true)||!is_string($c['proof']??null)){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
         $topic=$c['topic'];$empty=$c['empty'];$proof=hash_hmac('sha256',get_current_blog_id().'|search|'.$topic.'|'.$empty,wp_salt('auth'));
         if(!hash_equals($proof,$c['proof'])||($topic!==''&&!isset($s['search_topics'][$topic]))){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
-        $event=$a['event']??'';if(!is_string($event)||($event!==''&&!preg_match('/^[a-f0-9]{32}$/D',$event))){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
+        $event=$a['event']??'';if(!is_string($event)||(!preg_match('/^[a-f0-9]{32}$/D',$event))){return new \WP_Error('invalid_search',__('Invalid search delivery.','tabulamea'),['status'=>400]);}
         $budget=CoreStore::budget();if($budget!==true){return new \WP_REST_Response(null,$budget===false?429:503);}
         $date=wp_date('Y-m-d');
         if (!CoreStore::search($date,$topic,$empty,$event)) {
@@ -47,7 +47,7 @@ final class SearchStats {
     }
     /** Render a private annual or rolling search ranking without arbitrary search strings. @return void */
     public static function page(): void {
-        if(!Plugin::allowed('view')){wp_die(esc_html__('Access denied.','tabulamea'),'',403);}echo '<div class="wrap tbm tbm-statistics">';Settings::header();Navigation::links();$a=ReportTools::requested();ReportTools::controls('tabulamea-search',$a);$range=Rankings::dates($a);if(!$range){echo '<p>'.esc_html__('Choose a valid date range.','tabulamea').'</p>';Admin::footer();echo '</div>';return;}$data=self::rows($range);$s=Plugin::settings();echo '<section class="tbm-card"><h2>'.esc_html__('Internal search','tabulamea').'</h2><p>'.esc_html__('First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews.','tabulamea').'</p><p>'.esc_html(sprintf(
+        if(!Plugin::allowed('view')){wp_die(esc_html__('Access denied.','tabulamea'),'',403);}echo '<div class="wrap tbm tbm-statistics">';Settings::header();Navigation::links();$a=ReportTools::requested();ReportTools::controls('tabulamea-search',$a);$range=ReportTools::range($a);if(!$range){echo '<p>'.esc_html__('Choose a valid date range.','tabulamea').'</p>';Admin::footer();echo '</div>';return;}$data=self::rows($range);$s=Plugin::settings();echo '<section class="tbm-card"><h2>'.esc_html__('Internal search','tabulamea').'</h2><p>'.esc_html__('First search-results page loads, including reloads. These are not unique searches or people. Search views are separate from regular pageviews.','tabulamea').'</p><p>'.esc_html(sprintf(
 /* translators: %1$s: formatted search-result pageviews; %2$s: formatted views of empty search results. */
 __('Search-result views: %1$s · Without results: %2$s','tabulamea'),number_format_i18n((int)$data['totals']['views']),number_format_i18n((int)$data['totals']['no_results_views']))).'</p>';
         if(!$s['search_enabled']){echo '<p class="tbm-attention">'.esc_html__('Search collection is disabled. Existing history remains available.','tabulamea').'</p>';}

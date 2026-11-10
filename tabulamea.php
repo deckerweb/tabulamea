@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name: TabulaMea
- * Plugin URI: https://github.com/deckerweb/tabulamea
+ * Plugin URI: https://deckerwebplugins.com/en/plugins/tabulamea/
  * Description: Privacy-friendly pageview statistics, popular content and referrers, with access controls and optional country and technology reports.
- * Version: 0.9.1
+ * Version: 1.0.0
  * Requires at least: 7.1.2
  * Requires PHP: 8.2
  * Author: David Decker – DECKERWEB
- * Author URI: https://github.com/deckerweb
+ * Author URI: https://deckerwebplugins.com/
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: tabulamea
@@ -20,12 +20,16 @@
  */
 defined('ABSPATH') || exit;
 define('TBM_FILE', __FILE__);
-define('TBM_VERSION', '0.9.1');
+define('TBM_VERSION', '1.0.0');
 require_once __DIR__ . '/includes/deckerweb-plugin-library/bootstrap.php';
 deckerweb_library_register_v2(__FILE__, [], __DIR__.'/includes/deckerweb-plugin-library');
 require_once __DIR__ . '/includes/UpdateIntegration.php';
 add_action('init',['Deckerweb\\TabulaMea\\UpdateIntegration','boot'],20);
 require_once __DIR__ . '/includes/Plugin.php';
+require_once __DIR__ . '/includes/ReportCache.php';
+require_once __DIR__ . '/includes/ReportWorkspace.php';
+require_once __DIR__ . '/includes/OperationalStatus.php';
+require_once __DIR__ . '/includes/ChartBuckets.php';
 require_once __DIR__ . '/includes/CoreStore.php';
 require_once __DIR__ . '/includes/DataExports.php';
 require_once __DIR__ . '/includes/StatifyImport.php';

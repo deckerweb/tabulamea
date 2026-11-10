@@ -1,5 +1,5 @@
 msgid ""
-msgstr "Project-Id-Version: TabulaMea 0.9.1\nLanguage: de_DE_formal\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+msgstr "Project-Id-Version: TabulaMea 1.0.0\nLanguage: de_DE_formal\nContent-Type: text/plain; charset=UTF-8\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
 
 msgid "Export this period"
 msgstr "Diesen Zeitraum exportieren"
@@ -24,6 +24,30 @@ msgstr "CSV herunterladen"
 
 msgid "Exports use the displayed dates and privacy rules. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains."
 msgstr "Exporte verwenden die angezeigten Daten und Datenschutzregeln. Inhaltsexporte enthalten bis zu 50 passende öffentliche Inhalte; Referrer-Exporte bis zu 1.000 Domains."
+
+msgid "Report"
+msgstr "Bericht"
+
+msgid "Period start"
+msgstr "Zeitraum von"
+
+msgid "Period end"
+msgstr "Zeitraum bis"
+
+msgid "Content type filter"
+msgstr "Inhaltstypfilter"
+
+msgid "Title filter (content report only)"
+msgstr "Titelfilter (nur Inhaltsbericht)"
+
+msgid "Selected day (content/referrer reports)"
+msgstr "Ausgewählter Tag (Inhalts-/Referrer-Berichte)"
+
+msgid "Current measurement scope (historical scope may differ)"
+msgstr "Aktueller Messumfang (historischer Umfang kann abweichen)"
+
+msgid "Generated at"
+msgstr "Erstellt am"
 
 msgid "Date"
 msgstr "Datum"
@@ -55,11 +79,29 @@ msgstr "Suchergebnis-Aufrufe"
 msgid "Privacy-friendly website statistics"
 msgstr "Datenschutzfreundliche Website-Statistik"
 
-msgid "TabulaMea updates require a compatible deckerweb Updater. Update the other plugins that bundle this component, then check again."
-msgstr "TabulaMea-Updates benötigen einen kompatiblen deckerweb Updater. Aktualisiere die anderen Plugins, die diese Komponente mitbringen, und prüfen Sie danach erneut."
+msgid "TabulaMea updates could not be initialized. Reinstall the current TabulaMea ZIP, then check again. Existing statistics are preserved."
+msgstr "TabulaMea-Updates konnten nicht initialisiert werden. Installieren Sie die aktuelle TabulaMea-ZIP erneut und prüfen Sie danach noch einmal. Vorhandene Statistiken bleiben erhalten."
 
 msgid "The update package does not match TabulaMea, its offered version or this website’s requirements. The installed version has not been replaced."
 msgstr "Das Update-Paket passt nicht zu TabulaMea, zur angebotenen Version oder zu den Anforderungen dieser Website. Die installierte Version wurde nicht ersetzt."
+
+msgid "Popular articles"
+msgstr "Beliebte Beiträge"
+
+msgid "Year in review"
+msgstr "Jahresrückblick"
+
+msgid "Pageviews with a label"
+msgstr "Seitenaufrufe mit Beschriftung"
+
+msgid "Pageviews: "
+msgstr "Seitenaufrufe: "
+
+msgid "Choose a saved calendar-year ranking in the block sidebar. Public output requires explicit permission."
+msgstr "Wählen Sie in der Block-Seitenleiste ein gespeichertes Kalenderjahr-Ranking. Die öffentliche Ausgabe muss ausdrücklich freigegeben sein."
+
+msgid "A starting point using recorded pageviews. Adjust the block in its sidebar."
+msgstr "Ein Ausgangspunkt mit erfassten Seitenaufrufen. Passen Sie den Block in seiner Seitenleiste an."
 
 msgid "TabulaMea pageview counter"
 msgstr "TabulaMea-Seitenaufrufzähler"
@@ -94,6 +136,15 @@ msgstr "Text nach der Zahl"
 msgid "Display settings"
 msgstr "Ausgabeeinstellungen"
 
+msgid "Public output is disabled. Your block settings are preserved. An administrator can allow output under TabulaMea → Access."
+msgstr "Die öffentliche Ausgabe ist deaktiviert. Ihre Block-Einstellungen bleiben erhalten. Ein Administrator kann die Ausgabe unter TabulaMea → Zugriff freigeben."
+
+msgid "Publishing exact numbers is disabled. Your counter settings are preserved. An administrator can allow numbers under TabulaMea → Access."
+msgstr "Die Veröffentlichung genauer Zahlen ist deaktiviert. Ihre Zähler-Einstellungen bleiben erhalten. Ein Administrator kann Zahlen unter TabulaMea → Zugriff freigeben."
+
+msgid "No matching recorded pageviews are available for this selection. Try another period or content type. Your settings are preserved."
+msgstr "Für diese Auswahl sind keine passenden erfassten Seitenaufrufe verfügbar. Versuchen Sie einen anderen Zeitraum oder Inhaltstyp. Ihre Einstellungen bleiben erhalten."
+
 msgid "No public output is available. Check publication permissions, the content selection and recorded data."
 msgstr "Keine öffentliche Ausgabe verfügbar. Bitte Freigaben, Inhaltsauswahl und vorhandene Daten prüfen Sien."
 
@@ -121,6 +172,9 @@ msgstr "%s%% Veränderung"
 msgid "The previous baseline is too small for a useful percentage."
 msgstr "Die vorherige Datenbasis ist für eine sinnvolle Prozentangabe zu klein."
 
+msgid "Comparison period:"
+msgstr "Vergleichszeitraum:"
+
 msgid "Today is still incomplete."
 msgstr "Der heutige Tag ist noch unvollständig."
 
@@ -142,6 +196,9 @@ msgstr "So entstehen diese Zahlen"
 msgid "Pageviews count visible page loads. Reloads count again. Recognizable bots, previews, search pages and excluded roles are omitted. No unique people, sessions or visitor profiles are calculated. Browser blocking and missing JavaScript can reduce counts."
 msgstr "Seitenaufrufe zählen sichtbare Seitenladungen. Erneutes Laden Sien zählt erneut. Erkennbare Bots, Vorschauen, Suchseiten und ausgeschlossene Rollen bleiben unberücksichtigt. Eindeutige Personen, Sitzungen oder Besucherprofile werden nicht berechnet. Browserblockaden und fehlendes JavaScript können die Zähler verringern."
 
+msgid "This list is being rebuilt or could not be refreshed. Try refreshing this view shortly; an empty response is not proof of zero pageviews."
+msgstr "Diese Liste wird gerade neu berechnet oder konnte nicht aktualisiert werden. Aktualisieren Sie die Ansicht gleich erneut; eine leere Antwort belegt nicht null Aufrufe."
+
 msgid "No matching public content with recorded pageviews was found for these filters."
 msgstr "Für diese Filter wurden keine passenden öffentlichen Inhalte mit gespeicherten Seitenaufrufen gefunden."
 
@@ -160,17 +217,26 @@ msgstr "öffnet einen neuen Tab"
 msgid "Only domains are retained. Missing referrers cannot be reconstructed; these counts do not represent all traffic sources."
 msgstr "Gespeichert werden nur Domains. Fehlende Referrer können nicht rekonstruiert werden; diese Zähler bilden nicht alle Zugriffsquellen ab."
 
+msgid "Week beginning"
+msgstr "Woche ab"
+
 msgid "Pageviews over time"
 msgstr "Seitenaufrufe im Zeitverlauf"
 
 msgid "Monthly totals"
 msgstr "Monatssummen"
 
+msgid "Weekly totals"
+msgstr "Wochensummen"
+
 msgid "Daily totals"
 msgstr "Tagessummen"
 
 msgid "Chart help"
 msgstr "Hilfe zum Diagramm"
+
+msgid "Grouped values sum retained records only. Missing days and partial weeks or months are not estimated."
+msgstr "Gruppierte Werte summieren ausschließlich gespeicherte Datensätze. Fehlende Tage und unvollständige Wochen oder Monate werden nicht geschätzt."
 
 msgid "Hover or tap for exact values. Use Tab and arrow keys; activate a daily point to filter the lists. Gaps mean no retained record, not proven zero traffic."
 msgstr "Genaue Werte erscheinen per Maus oder Touch. Mit Tab und Pfeiltasten navigieren; ein aktivierter Tagespunkt filtert die Listen. Lücken bedeuten fehlende Datensätze, nicht nachweislich null Aufrufe."
@@ -180,6 +246,9 @@ msgstr "Gepunktete Verbindung: Zwischen diesen Punkten liegen keine gespeicherte
 
 msgid "No bar: zero views or no retained record. Hover, tap or use the values table to check each date."
 msgstr "Kein Balken: null Aufrufe oder kein gespeicherter Datensatz. Der Wert je Datum lässt sich per Maus, Touch oder Wertetabelle prüfen Sien."
+
+msgid "Boundary weeks or months may contain different numbers of days in the two periods. Compare whole-period totals for equal-length intervals."
+msgstr "Randwochen oder Randmonate können in beiden Zeiträumen unterschiedlich viele Tage enthalten. Vergleichen Sie für gleich lange Intervalle die Gesamtsummen der Zeiträume."
 
 msgid "Solid: selected period · Long dashes: preceding period"
 msgstr "Durchgezogen: ausgewählter Zeitraum · Lang gestrichelt: Vorzeitraum"
@@ -193,8 +262,14 @@ msgstr "Bekannte Messpause innerhalb dieses Intervalls"
 msgid "Show monthly values"
 msgstr "Monatswerte anzeigen"
 
+msgid "Show weekly values"
+msgstr "Wochenwerte anzeigen"
+
 msgid "Show daily values"
 msgstr "Tageswerte anzeigen"
+
+msgid "Previous period"
+msgstr "Vorheriger Zeitraum"
 
 msgid "Import Koko Analytics statistics"
 msgstr "Koko-Analytics-Statistiken importieren"
@@ -255,6 +330,24 @@ msgstr "Diese Statistiken importieren"
 
 msgid "Import runs in small batches. Continue until it reports done. Repeating it adds only source increases already identified by the import ledger. Keep Koko collection paused during the import for a consistent source."
 msgstr "Der Import läuft in kleinen Paketen. Setzen Sie ihn bis zum Status abgeschlossen fort. Wiederholte Importe ergänzen nur Zuwächse bereits erkennbarer Quelldaten. Die Koko-Erfassung sollte während des Imports für eine unveränderte Quelle pausieren."
+
+msgid "Import completed"
+msgstr "Import abgeschlossen"
+
+msgid "Cumulative source values retained by the import ledger, including previous batches. Site, content and referrer totals overlap and must not be added together. Source tables remain unchanged. Re-enable measurement after reviewing the result."
+msgstr "Kumulierte Quellwerte laut Importverzeichnis, einschließlich früherer Schritte. Website-, Inhalts- und Referrer-Summen überschneiden sich und dürfen nicht addiert werden. Die Quelltabellen bleiben unverändert. Aktivieren Sie die Messung nach Prüfung des Ergebnisses wieder."
+
+msgid "Site pageviews"
+msgstr "Website-Seitenaufrufe"
+
+msgid "Content pageviews"
+msgstr "Inhalts-Seitenaufrufe"
+
+msgid "Referrer pageviews"
+msgstr "Referrer-Seitenaufrufe"
+
+msgid "Imported Statify pageviews"
+msgstr "Importierte Statify-Seitenaufrufe"
 
 msgid "Pause measurement before importing."
 msgstr "Vor dem Import die Messung pausieren."
@@ -664,6 +757,57 @@ msgstr "Vorlage"
 msgid "Preview changes"
 msgstr "Änderungen vorab prüfen Sien"
 
+msgid "Ready to use TabulaMea"
+msgstr "Bereit für TabulaMea"
+
+msgid "Statistics storage is ready."
+msgstr "Der Statistikspeicher ist bereit."
+
+msgid "Statistics storage needs attention."
+msgstr "Der Statistikspeicher benötigt Aufmerksamkeit."
+
+msgid "Measurement is switched on."
+msgstr "Die Messung ist eingeschaltet."
+
+msgid "Measurement is paused."
+msgstr "Die Messung pausiert."
+
+msgid "Your signed-in role is excluded from regular pageviews."
+msgstr "Ihre angemeldete Rolle ist von normalen Seitenaufrufen ausgeschlossen."
+
+msgid "Your signed-in role is not excluded from regular pageviews."
+msgstr "Ihre angemeldete Rolle ist nicht von normalen Seitenaufrufen ausgeschlossen."
+
+msgid "Country, technology and search reporting are independent optional choices."
+msgstr "Länder-, Technik- und Suchauswertungen sind voneinander unabhängige, optionale Funktionen."
+
+msgid "Next step: use the guided measurement test. It checks delivery from this browser and does not add a pageview. Privacy signals still apply."
+msgstr "Nächster Schritt: Verwenden Sie den geführten Messtest. Er prüft die Zustellung aus diesem Browser und erzeugt keinen Seitenaufruf. Datenschutzsignale werden weiterhin berücksichtigt."
+
+msgid "Recent technical operation"
+msgstr "Letzter technischer Betrieb"
+
+msgid "Last successful maintenance:"
+msgstr "Letzte erfolgreiche Wartung:"
+
+msgid "Not yet recorded"
+msgstr "Noch nicht erfasst"
+
+msgid "A statistics write failed."
+msgstr "Das Speichern von Statistikdaten ist fehlgeschlagen."
+
+msgid "The measurement request limit was reached."
+msgstr "Das Anfragelimit für die Messung wurde erreicht."
+
+msgid "The country database could not be updated. An existing database is not replaced."
+msgstr "Die Länderdatenbank konnte nicht aktualisiert werden. Eine vorhandene Datenbank wird nicht ersetzt."
+
+msgid "A regular pageview was stored successfully afterwards."
+msgstr "Danach wurde wieder ein normaler Seitenaufruf erfolgreich gespeichert."
+
+msgid "Only technical categories and times are retained, at most 20 entries. A later success does not reconstruct missed pageviews."
+msgstr "Gespeichert werden nur technische Kategorien und Zeitpunkte, höchstens 20 Einträge. Ein späterer Erfolg rekonstruiert keine verpassten Seitenaufrufe."
+
 msgid "Which ranking method fits?"
 msgstr "Welche Ranking-Methode passt?"
 
@@ -778,8 +922,8 @@ msgstr "TabulaMea-Wartung oder Länderdaten prüfen Sien"
 msgid "The anonymous request budget was reached repeatedly in the last ten minutes. Some deliveries were rejected. Review the configured limit and server capacity."
 msgstr "Das anonyme Anfragebudget wurde in den letzten zehn Minuten wiederholt erreicht. Einige Zustellungen wurden abgewiesen. Das eingestellte Limit und die Serverkapazität prüfen Sien."
 
-msgid "Checks overdue scheduled work and required local country data. Low traffic, paused collection and disabled optional reports are not errors."
-msgstr "Prüft überfällige Aufgaben und erforderliche lokale Länderdaten. Wenig Traffic, pausierte Messung und deaktivierte Zusatzberichte sind keine Fehler."
+msgid "Checks overdue scheduled work, the last recorded successful maintenance and required local country data. Low traffic, paused collection and disabled optional reports are not errors."
+msgstr "Prüft überfällige Hintergrundaufgaben, die letzte protokollierte erfolgreiche Wartung und erforderliche lokale Länderdaten. Wenig Traffic, eine pausierte Messung und deaktivierte optionale Auswertungen sind keine Fehler."
 
 msgid "Plugin version"
 msgstr "Plugin-Version"
@@ -849,9 +993,6 @@ msgstr "Netzwerk-Anzeigevorgaben"
 
 msgid "Enabled"
 msgstr "Aktiviert"
-
-msgid "Not yet recorded"
-msgstr "Noch nicht erfasst"
 
 msgid "No recent error"
 msgstr "Kein neuerer Fehler"
@@ -933,6 +1074,63 @@ msgstr "Die freigegebene Version konnte nicht geprüft werden."
 
 msgid "The approved release changed. Refresh updates first."
 msgstr "Die freigegebene Version hat sich geändert. Suchen Sie zuerst erneut nach Updates."
+
+msgid "Catalog diagnostics require a public catalog provider."
+msgstr "Die Katalogdiagnose benötigt einen öffentlichen Kataloganbieter."
+
+msgid "Catalog approval"
+msgstr "Katalogfreigabe"
+
+msgid "Package download"
+msgstr "Paketdownload"
+
+msgid "Checksum verification"
+msgstr "Prüfsummenprüfung"
+
+msgid "Archive verification"
+msgstr "Archivprüfung"
+
+msgid "The update server could not be reached. Try again later."
+msgstr "Der Updateserver ist nicht erreichbar. Versuchen Sie es später erneut."
+
+msgid "The update request timed out. Try again later."
+msgstr "Die Updateanfrage hat zu lange gedauert. Versuchen Sie es später erneut."
+
+msgid "The update server address could not be resolved."
+msgstr "Die Adresse des Updateservers konnte nicht aufgelöst werden."
+
+msgid "The secure connection to the update server failed."
+msgstr "Die sichere Verbindung zum Updateserver ist fehlgeschlagen."
+
+msgid "The update server returned an unsuccessful HTTP response."
+msgstr "Der Updateserver hat eine HTTP-Fehlerantwort zurückgegeben."
+
+msgid "The update provider did not return valid update data."
+msgstr "Der Updateanbieter hat keine gültigen Updatedaten geliefert."
+
+msgid "The package does not match the approved checksum. Installation was stopped."
+msgstr "Das Paket entspricht nicht der freigegebenen Prüfsumme. Die Installation wurde gestoppt."
+
+msgid "The archive or plugin identity could not be verified. Installation was stopped."
+msgstr "Das Archiv oder die Pluginidentität konnte nicht geprüft werden. Die Installation wurde gestoppt."
+
+msgid "Update stopped at %1$s: %2$s"
+msgstr "Update gestoppt bei %1$s: %2$s"
+
+msgid "HTTP status: %d."
+msgstr "HTTP-Status: %d."
+
+msgid "Invalid private download limits."
+msgstr "Ungültige Grenzen für private Downloads."
+
+msgid "Invalid package cleanup provider."
+msgstr "Ungültiger Anbieter für die Paketbereinigung."
+
+msgid "Safe package cleanup is unavailable for this update provider."
+msgstr "Für diesen Updateanbieter ist keine sichere Paketbereinigung verfügbar."
+
+msgid "The update package identity, version or requirements could not be verified."
+msgstr "Identität, Version oder Anforderungen des Updatepakets konnten nicht bestätigt werden."
 
 msgid "Use the widget filters below"
 msgstr "Die folgenden Widget-Filter verwenden"
@@ -1366,14 +1564,17 @@ msgstr "Zeilen je Liste"
 msgid "Apply"
 msgstr "Anwenden"
 
-msgid "Content filters active"
-msgstr "Inhaltsfilter aktiv"
-
-msgid "Reset filters"
-msgstr "Filter zurücksetzen"
-
 msgid "Display"
 msgstr "Darstellung"
+
+msgid "Group chart values"
+msgstr "Diagrammwerte gruppieren"
+
+msgid "Weeks"
+msgstr "Wochen"
+
+msgid "Months"
+msgstr "Monate"
 
 msgid "Compare previous period"
 msgstr "Vorzeitraum vergleichen"
@@ -1383,9 +1584,6 @@ msgstr "Die Diagrammdarstellung wird für Sie auf dieser Website gespeichert."
 
 msgid "Browse periods"
 msgstr "Zeiträume durchblättern"
-
-msgid "Previous period"
-msgstr "Vorheriger Zeitraum"
 
 msgid "Next period"
 msgstr "Nächster Zeitraum"
@@ -1528,6 +1726,9 @@ msgstr "Anfangsdatum für eigenen Zeitraum"
 msgid "End date for custom period"
 msgstr "Enddatum für eigenen Zeitraum"
 
+msgid "Compare completed days only"
+msgstr "Nur abgeschlossene Tage vergleichen"
+
 msgid "Date fields apply only to Custom dates. Calendar year uses the year field."
 msgstr "Datumsfelder gelten nur bei „Eigener Zeitraum“. „Kalenderjahr“ verwendet das Jahresfeld."
 
@@ -1548,6 +1749,9 @@ msgstr "Datenschutzfreundliche Messung"
 
 msgid "Counts visible pageviews without cookies, fingerprinting, visitor identifiers or individual browsing histories. Do Not Track and Global Privacy Control are respected."
 msgstr "Zählt sichtbare Seitenaufrufe ohne Cookies, Fingerprinting, Besucherkennungen oder individuelle Besuchsverläufe. Do Not Track und Global Privacy Control werden berücksichtigt."
+
+msgid "After updating, clear the full-page/CDN HTML cache. Keep cached HTML for less than seven days; one day is recommended. Public signatures validate paths, not human visits. At most 1,000 different referrer domains are stored per site and day; pageview totals continue counting."
+msgstr "Nach dem Update den vollständigen Seiten-/CDN-HTML-Cache leeren. HTML kürzer als sieben Tage zwischenspeichern; ein Tag wird empfohlen. Öffentliche Signaturen bestätigen Pfade, keine menschlichen Besuche. Je Website und Tag werden höchstens 1.000 unterschiedliche Referrer-Domains gespeichert; Seitenaufrufe zählen weiter."
 
 msgid "Do not count logged-in users with these roles"
 msgstr "Angemeldete Benutzer dieser Rollen nicht mitzählen"
@@ -1689,9 +1893,6 @@ msgstr "Ranking-Arbeitsbereich"
 
 msgid "My rankings"
 msgstr "Meine Rankings"
-
-msgid "Year in review"
-msgstr "Jahresrückblick"
 
 msgid "Published"
 msgstr "Freigegeben"
@@ -1972,8 +2173,8 @@ msgstr "Über dieses Plugin"
 msgid "Version"
 msgstr "Version"
 
-msgid "More plugins"
-msgstr "Weitere Plugins"
+msgid "Plugin website"
+msgstr "Plugin-Website"
 
 msgid "Close"
 msgstr "Schließen"
@@ -1987,17 +2188,14 @@ msgstr "Ungültiger Bericht."
 msgid "Measurement status"
 msgstr "Messstatus"
 
-msgid "Measurement is paused."
-msgstr "Die Messung pausiert."
-
 msgid "Last accepted pageview: %s ago. Status is updated at most every five minutes."
 msgstr "Letzter angenommener Seitenaufruf vor %s. Der Status wird höchstens alle fünf Minuten aktualisiert."
 
 msgid "No pageviews accepted yet."
 msgstr "Noch keine Seitenaufrufe angenommen."
 
-msgid "For a practical check, open a public page in a private browser window. Your logged-in role may be excluded."
-msgstr "Öffne zur praktischen Prüfung eine öffentliche Seite in einem privaten Browserfenster. Deine angemeldete Rolle kann von der Messung ausgeschlossen sein."
+msgid "Use the guided test to check this browser. Regular visits may be excluded by your role, privacy signals or browser blocking."
+msgstr "Prüfen Sie diesen Browser mit dem geführten Test. Normale Besuche können wegen Ihrer Rolle, Datenschutzsignalen oder Browser-Schutzmaßnahmen ausgeschlossen sein."
 
 msgid "Access policy"
 msgstr "Zugriffsregeln"
@@ -2154,3 +2352,768 @@ msgstr "Die Bereinigung wurde nach einem Speicherfehler gestoppt. Die verbleiben
 
 msgid "Statistics shortcuts"
 msgstr "Statistik-Navigation"
+
+msgid "Refresh this view"
+msgstr "Diese Ansicht aktualisieren"
+
+msgid "Page loaded:"
+msgstr "Seite geladen:"
+
+msgid "Lists normally refresh within one minute; historical rankings within 15 minutes. During a rebuild, the previous result can remain visible briefly. Refresh requests a new result without resetting filters."
+msgstr "Listen werden normalerweise innerhalb einer Minute aktualisiert; historische Rankings innerhalb von 15 Minuten. Während einer Neuberechnung kann kurz das vorherige Ergebnis sichtbar bleiben. Aktualisieren fordert neue Werte an und behält die Filter bei."
+
+msgid "Title filter"
+msgstr "Titelfilter"
+
+msgid "Selected day"
+msgstr "Ausgewählter Tag"
+
+msgid "Remove filter"
+msgstr "Filter entfernen"
+
+msgid "Clear content filters; keep period"
+msgstr "Inhaltsfilter entfernen; Zeitraum behalten"
+
+msgid "My saved report views"
+msgstr "Meine gespeicherten Berichtsansichten"
+
+msgid "These views belong to you on this website. They do not change website defaults or publish a ranking."
+msgstr "Diese Ansichten gehören Ihnen auf dieser Website. Sie ändern keine Website-Vorgaben und veröffentlichen kein Ranking."
+
+msgid "Delete this saved view"
+msgstr "Diese gespeicherte Ansicht löschen"
+
+msgid "Name this view"
+msgstr "Name für diese Ansicht"
+
+msgid "Save my report view"
+msgstr "Meine Berichtsansicht speichern"
+
+msgid "Reset my report display"
+msgstr "Meine Berichtsdarstellung zurücksetzen"
+
+msgid "Resets your report period and chart style only. Saved views, widget choices, website settings and statistics are preserved."
+msgstr "Setzt nur Ihren Berichtszeitraum und Diagrammstil zurück. Gespeicherte Ansichten, Widget-Auswahl, Website-Einstellungen und Statistiken bleiben erhalten."
+
+msgid "Use a name and keep at most 20 saved views."
+msgstr "Vergeben Sie einen Namen und speichern Sie höchstens 20 Ansichten."
+
+msgid "%1$s of %2$s plugins"
+msgstr "%1$s von %2$s Plugins"
+
+msgid "%s is installed but inactive. Activate it first."
+msgstr "%s ist installiert, aber inaktiv. Bitte zuerst aktivieren."
+
+msgid "%s is missing. Install and activate it first."
+msgstr "%s fehlt. Bitte zuerst installieren und aktivieren."
+
+msgid "%s must be network activated first."
+msgstr "%s muss zuerst netzwerkweit aktiviert werden."
+
+msgid "%s supports activation per site only."
+msgstr "%s unterstützt nur die Aktivierung je Website."
+
+msgid "Action cancelled."
+msgstr "Vorgang abgebrochen."
+
+msgid "Activate"
+msgstr "Aktivieren"
+
+msgid "Activate Bricks QuickNav per site after selecting the Bricks parent or child theme."
+msgstr "Bricks QuickNav bitte je Website aktivieren, nachdem das Bricks-Theme oder ein Child-Theme ausgewählt wurde."
+
+msgid "Activating…"
+msgstr "Wird aktiviert…"
+
+msgid "Active"
+msgstr "Aktiv"
+
+msgid "Active filters: "
+msgstr "Aktive Filter: "
+
+msgid "Admin"
+msgstr "Administration"
+
+msgid "Affected features remain paused until their requirements are met."
+msgstr "Betroffene Funktionen pausieren, bis ihre Voraussetzungen erfüllt sind."
+
+msgid "All"
+msgstr "Alle"
+
+msgid "Already active"
+msgstr "Bereits aktiv"
+
+msgid "Already up to date."
+msgstr "Bereits aktuell."
+
+msgid "Another action for this plugin is running. Please wait."
+msgstr "Für dieses Plugin läuft bereits eine Aktion. Bitte warten."
+
+msgid "Another component interrupted the request. If Git Updater is active, temporarily deactivate it and retry."
+msgstr "Eine andere Komponente hat die Anfrage unterbrochen. Falls Git Updater aktiv ist, deaktivieren Sie ihn vorübergehend und wiederholen Sie den Vorgang."
+
+msgid "Another updater provides a different release. Refresh updates before continuing."
+msgstr "Ein anderer Updater bietet einen abweichenden Release an. Bitte die Updateinformationen vor dem Fortfahren aktualisieren."
+
+msgid "Apr"
+msgstr "Apr"
+
+msgid "April"
+msgstr "April"
+
+msgid "Archive contains too many files."
+msgstr "Das Archiv enthält zu viele Dateien."
+
+msgid "Archive symlinks are not permitted."
+msgstr "Symbolische Verknüpfungen sind im Archiv nicht erlaubt."
+
+msgid "As of "
+msgstr "Stand: "
+
+msgid "Aug"
+msgstr "Aug"
+
+msgid "August"
+msgstr "August"
+
+msgid "Back to deckerweb"
+msgstr "Zurück zu deckerweb"
+
+msgid "Builder"
+msgstr "Builder"
+
+msgid "Bundled catalog"
+msgstr "Mitgelieferter Katalog"
+
+msgid "Cached or bundled catalog"
+msgstr "Gespeicherter oder mitgelieferter Katalog"
+
+msgid "Cannot create temporary file."
+msgstr "Temporäre Datei konnte nicht erstellt werden."
+
+msgid "Cannot create verified archive."
+msgstr "Geprüftes Archiv konnte nicht erstellt werden."
+
+msgid "Cannot finalize archive."
+msgstr "Archiv konnte nicht abgeschlossen werden."
+
+msgid "Cannot normalize archive."
+msgstr "Archiv konnte nicht aufbereitet werden."
+
+msgid "Cannot read archive entry."
+msgstr "Archiveintrag konnte nicht gelesen werden."
+
+msgid "Catalog URL"
+msgstr "Katalog-URL"
+
+msgid "Catalog refreshed."
+msgstr "Katalog aktualisiert."
+
+msgid "Catalog retrieval does not limit updates of installed plugins. Those use their normal WordPress update provider."
+msgstr "Der Katalogabruf begrenzt keine Updates installierter Plugins. Diese verwenden ihren normalen WordPress-Updater."
+
+msgid "Catalog verification"
+msgstr "Katalogprüfung"
+
+msgid "Check status"
+msgstr "Status prüfen"
+
+msgid "Checking status…"
+msgstr "Status wird geprüft…"
+
+msgid "Commerce"
+msgstr "Commerce"
+
+msgid "Compatible additions only"
+msgstr "Nur passende Ergänzungen"
+
+msgid "Connection failed. Please try again later."
+msgstr "Die Verbindung ist fehlgeschlagen. Bitte später erneut versuchen."
+
+msgid "Copy diagnostic information"
+msgstr "Diagnoseinformationen kopieren"
+
+msgid "Dec"
+msgstr "Dez"
+
+msgid "December"
+msgstr "Dezember"
+
+msgid "Delete Library settings when removing the last host plugin"
+msgstr "Library-Einstellungen beim Entfernen des letzten Host-Plugins ebenfalls löschen"
+
+msgid "Details & requirements"
+msgstr "Details & Voraussetzungen"
+
+msgid "Discover more plugins by deckerweb"
+msgstr "Weitere Plugins von deckerweb entdecken"
+
+msgid "Discover randomly"
+msgstr "Zufällig entdecken"
+
+msgid "Dismiss permanently"
+msgstr "Dauerhaft schließen"
+
+msgid "Done. The plugin is active."
+msgstr "Erledigt. Das Plugin ist aktiv."
+
+msgid "Enter a catalog URL first."
+msgstr "Bitte zuerst eine Katalog-URL eintragen."
+
+msgid "Expanded archive is too large."
+msgstr "Das entpackte Archiv ist zu groß."
+
+msgid "F j, Y"
+msgstr "j. F Y"
+
+msgid "Feb"
+msgstr "Feb"
+
+msgid "February"
+msgstr "Februar"
+
+msgid "Filesystem credentials are required."
+msgstr "Zugangsdaten für das Dateisystem werden benötigt."
+
+msgid "Filesystem credentials are required. Use the catalog with JavaScript enabled or the native Plugins screen."
+msgstr "Dateisystem-Zugangsdaten sind erforderlich. Bitte den Katalog mit aktiviertem JavaScript oder die WordPress-Pluginverwaltung verwenden."
+
+msgid "Filter"
+msgstr "Filtern"
+
+msgid "Fits my installation"
+msgstr "Passt zu meiner Installation"
+
+msgid "Fixed"
+msgstr "Behoben"
+
+msgid "Fri"
+msgstr "Fr"
+
+msgid "Friday"
+msgstr "Freitag"
+
+msgid "GitHub Stars"
+msgstr "GitHub-Sterne"
+
+msgid "Hide catalog"
+msgstr "Katalog ausblenden"
+
+msgid "Improved"
+msgstr "Verbessert"
+
+msgid "Inactive"
+msgstr "Inaktiv"
+
+msgid "Install and activate this plugin in the network admin."
+msgstr "Dieses Plugin bitte im Netzwerk-Admin installieren und aktivieren."
+
+msgid "Install deckerweb plugin"
+msgstr "deckerweb-Plugin installieren"
+
+msgid "Install now"
+msgstr "Jetzt installieren"
+
+msgid "Installation cancelled."
+msgstr "Installation abgebrochen."
+
+msgid "Installation failed."
+msgstr "Installation fehlgeschlagen."
+
+msgid "Installed"
+msgstr "Installiert"
+
+msgid "Installed plugin identity does not match the approved release."
+msgstr "Die Identität des installierten Plugins stimmt nicht mit dem freigegebenen Release überein."
+
+msgid "Installed plugins use their normal update provider. Reload the update information and try again."
+msgstr "Installierte Plugins verwenden ihren normalen Updater. Aktualisieren Sie die Updateinformationen und versuchen Sie es erneut."
+
+msgid "Installed · inactive"
+msgstr "Installiert · inaktiv"
+
+msgid "Installed: "
+msgstr "Installiert: "
+
+msgid "Installing…"
+msgstr "Wird installiert…"
+
+msgid "Invalid ZIP archive."
+msgstr "Ungültiges ZIP-Archiv."
+
+msgid "Invalid approval flag."
+msgstr "Ungültige Freigabeangabe."
+
+msgid "Invalid catalog field: "
+msgstr "Ungültiges Katalogfeld: "
+
+msgid "Invalid catalog revision."
+msgstr "Ungültiger Katalogstand."
+
+msgid "Invalid catalog schema."
+msgstr "Ungültiges Katalogformat."
+
+msgid "Invalid catalog timestamp."
+msgstr "Ungültiger Katalogzeitpunkt."
+
+msgid "Invalid dependencies."
+msgstr "Ungültige Abhängigkeiten."
+
+msgid "Invalid dependency URL."
+msgstr "Ungültige URL einer Abhängigkeit."
+
+msgid "Invalid dependency metadata."
+msgstr "Ungültige Angaben zu Abhängigkeiten."
+
+msgid "Invalid display field."
+msgstr "Ungültiges Anzeigefeld."
+
+msgid "Invalid icon color."
+msgstr "Ungültige Icon-Farbe."
+
+msgid "Invalid icon label."
+msgstr "Ungültiges Icon-Kürzel."
+
+msgid "Invalid identity or release metadata."
+msgstr "Ungültige Plugin- oder Release-Angaben."
+
+msgid "Invalid local icon."
+msgstr "Ungültiges lokales Icon."
+
+msgid "Invalid network policy."
+msgstr "Ungültige Netzwerkregel."
+
+msgid "Invalid network requirement."
+msgstr "Ungültige Netzwerkanforderung."
+
+msgid "Invalid platform version."
+msgstr "Ungültige Plattformversion."
+
+msgid "Invalid plugin series."
+msgstr "Ungültige Plugin-Serie."
+
+msgid "Invalid sort order."
+msgstr "Ungültige Sortierung."
+
+msgid "Invalid star count."
+msgstr "Ungültige Anzahl der GitHub-Sterne."
+
+msgid "Invalid stars date."
+msgstr "Ungültiges Datum der GitHub-Sterne."
+
+msgid "Invalid status filter."
+msgstr "Ungültiger Statusfilter."
+
+msgid "Jan"
+msgstr "Jan"
+
+msgid "January"
+msgstr "Januar"
+
+msgid "Jul"
+msgstr "Jul"
+
+msgid "July"
+msgstr "Juli"
+
+msgid "Jun"
+msgstr "Jun"
+
+msgid "June"
+msgstr "Juni"
+
+msgid "Last successful check: "
+msgstr "Zuletzt erfolgreich geprüft: "
+
+msgid "Library"
+msgstr "Library"
+
+msgid "Library changelog"
+msgstr "Library-Änderungsverlauf"
+
+msgid "Library settings"
+msgstr "Library-Einstellungen"
+
+msgid "Library settings saved."
+msgstr "Library-Einstellungen gespeichert."
+
+msgid "Manage Content"
+msgstr "Inhalte verwalten"
+
+msgid "Mar"
+msgstr "Mär"
+
+msgid "March"
+msgstr "März"
+
+msgid "May"
+msgstr "Mai"
+
+msgid "Misc"
+msgstr "Sonstiges"
+
+msgid "Missing display text."
+msgstr "Anzeigetext fehlt."
+
+msgid "Missing plugin header."
+msgstr "Plugin-Header fehlt."
+
+msgid "Mon"
+msgstr "Mo"
+
+msgid "Monday"
+msgstr "Montag"
+
+msgid "More by deckerweb"
+msgstr "Mehr von deckerweb"
+
+msgid "Name A–Z"
+msgstr "Name A–Z"
+
+msgid "Name Z–A"
+msgstr "Name Z–A"
+
+msgid "Network activate"
+msgstr "Netzwerkweit aktivieren"
+
+msgid "Network active"
+msgstr "Netzwerkweit aktiv"
+
+msgid "Network permission denied."
+msgstr "Keine Berechtigung für das Netzwerk."
+
+msgid "New"
+msgstr "Neu"
+
+msgid "No approved plugins match this selection."
+msgstr "Keine freigegebenen Plugins passen zu dieser Auswahl."
+
+msgid "No update reported."
+msgstr "Kein Update gemeldet."
+
+msgid "Not installed. You can try again."
+msgstr "Nicht installiert. Ein erneuter Versuch ist möglich."
+
+msgid "Nov"
+msgstr "Nov"
+
+msgid "November"
+msgstr "November"
+
+msgid "Oct"
+msgstr "Okt"
+
+msgid "October"
+msgstr "Oktober"
+
+msgid "Off by default. Applies only when no other host is installed, including inactive hosts. Removes Library settings, installation records and introduction status. Installed plugins, their content and other plugin settings remain unchanged. Network data is shared across sites."
+msgstr "Standardmäßig ausgeschaltet. Gilt nur, wenn kein weiterer Host installiert ist, auch kein deaktivierter. Entfernt Library-Einstellungen, Installationszuordnung und den Status des Einführungshinweises. Installierte Plugins, deren Inhalte und Einstellungen anderer Plugins bleiben erhalten. Netzwerkdaten werden gemeinsam von den Websites genutzt."
+
+msgid "Online catalog"
+msgstr "Online-Katalog"
+
+msgid "Only HTTPS on raw.githubusercontent.com/deckerweb. The server receives the requesting IP address. GitHub is contacted when installing a release."
+msgstr "Nur HTTPS auf raw.githubusercontent.com/deckerweb. Der Server sieht die anfragende IP-Adresse. Beim Installieren eines Releases wird GitHub kontaktiert."
+
+msgid "Only approved releases"
+msgstr "Nur freigegebene Releases"
+
+msgid "Open catalog"
+msgstr "Katalog öffnen"
+
+msgid "Optional. The bundled catalog works immediately. Catalog requests are cached for 24 hours. No site URL, plugin list or usage data is sent."
+msgstr "Optional. Der mitgelieferte Katalog funktioniert sofort. Katalogabfragen werden 24 Stunden zwischengespeichert. Keine Website-URL, Plugin-Liste oder Nutzungsdaten werden übertragen."
+
+msgid "PHP ZIP support is required."
+msgstr "PHP-ZIP-Unterstützung wird benötigt."
+
+msgid "POST required."
+msgstr "Eine POST-Anfrage ist erforderlich."
+
+msgid "Permission denied. Reload the page and check your permissions."
+msgstr "Zugriff verweigert. Laden Sie die Seite neu und prüfen Sie Ihre Berechtigungen."
+
+msgid "Planned: "
+msgstr "Geplant: "
+
+msgid "Plugin identity or version does not match the catalog."
+msgstr "Plugin oder Version stimmt nicht mit dem Katalog überein."
+
+msgid "Plugin is not installed."
+msgstr "Das Plugin ist nicht installiert."
+
+msgid "Plugin series"
+msgstr "Plugin-Serien"
+
+msgid "Plugin status"
+msgstr "Plugin-Status"
+
+msgid "Product website"
+msgstr "Produktwebsite"
+
+msgid "Recently updated"
+msgstr "Zuletzt aktualisiert"
+
+msgid "Refresh catalog"
+msgstr "Katalog aktualisieren"
+
+msgid "Release 1.0.0 is being prepared. Installation will be available after package verification."
+msgstr "Release 1.0.0 wird vorbereitet. Die Installation ist nach Prüfung des Pakets verfügbar."
+
+msgid "Release checksum is verified before installation. Activation is a separate step."
+msgstr "Vor der Installation wird die Release-Prüfsumme geprüft. Die Aktivierung erfolgt separat."
+
+msgid "Release in preparation"
+msgstr "Release in Vorbereitung"
+
+msgid "Release must contain exactly the approved plugin directory."
+msgstr "Das Release muss genau das freigegebene Plugin-Verzeichnis enthalten."
+
+msgid "Remove filter: "
+msgstr "Filter entfernen: "
+
+msgid "Repository & documentation"
+msgstr "Repository & Dokumentation"
+
+msgid "Requirements shown are preliminary until the stable release is verified."
+msgstr "Die gezeigten Voraussetzungen sind bis zur Prüfung des stabilen Releases vorläufig."
+
+msgid "Requires PHP %s or newer."
+msgstr "Benötigt PHP %s oder neuer."
+
+msgid "Requires WordPress %s or newer."
+msgstr "Benötigt WordPress %s oder neuer."
+
+msgid "Requires a WordPress Multisite network."
+msgstr "Benötigt ein WordPress-Multisite-Netzwerk."
+
+msgid "Reset filters"
+msgstr "Filter zurücksetzen"
+
+msgid "Reset view"
+msgstr "Ansicht zurücksetzen"
+
+msgid "Retrieve approved catalog updates online"
+msgstr "Katalogfreigaben online aktualisieren"
+
+msgid "Sat"
+msgstr "Sa"
+
+msgid "Saturday"
+msgstr "Samstag"
+
+msgid "Save settings"
+msgstr "Einstellungen speichern"
+
+msgid "Scripts"
+msgstr "Scripte"
+
+msgid "Search this catalog"
+msgstr "Diesen Katalog durchsuchen"
+
+msgid "Select and copy the text."
+msgstr "Text markieren und kopieren."
+
+msgid "Selected by deckerweb · Installed from GitHub releases"
+msgstr "Von deckerweb ausgewählt · Installation aus GitHub-Releases"
+
+msgid "Sep"
+msgstr "Sep"
+
+msgid "September"
+msgstr "September"
+
+msgid "Settings saved."
+msgstr "Einstellungen gespeichert."
+
+msgid "Shop"
+msgstr "Shop"
+
+msgid "Show deckerweb under Add Plugins"
+msgstr "deckerweb unter „Plugins hinzufügen“ anzeigen"
+
+msgid "Shows plugins whose platform and dependency requirements are met in this site or network. Without this filter, plugins with missing requirements remain visible."
+msgstr "Zeigt Plugins, deren Plattform- und Abhängigkeitsanforderungen auf dieser Website oder im Netzwerk erfüllt sind. Ohne diesen Filter bleiben Plugins mit fehlenden Voraussetzungen sichtbar."
+
+msgid "Shuffle again"
+msgstr "Neu mischen"
+
+msgid "Small plugins. Practical improvements."
+msgstr "Kleine Plugins. Konkrete Verbesserungen."
+
+msgid "Sort by"
+msgstr "Sortieren nach"
+
+msgid "Source: GitHub"
+msgstr "Quelle: GitHub"
+
+msgid "Stage: %1$s. %2$s"
+msgstr "Fehlerstufe: %1$s. %2$s"
+
+msgid "Standard"
+msgstr "Standard"
+
+msgid "Sun"
+msgstr "So"
+
+msgid "Sunday"
+msgstr "Sonntag"
+
+msgid "Technical information"
+msgstr "Technische Informationen"
+
+msgid "The GitHub release could not be downloaded."
+msgstr "Das GitHub-Release konnte nicht heruntergeladen werden."
+
+msgid "The action is still running. Check its status again."
+msgstr "Die Aktion läuft noch. Bitte den Status erneut prüfen."
+
+msgid "The approved package could not be verified."
+msgstr "Das freigegebene Paket konnte nicht geprüft werden."
+
+msgid "The catalog URL is not an allowed first-party HTTPS endpoint."
+msgstr "Die Katalog-URL ist keine erlaubte eigene HTTPS-Quelle."
+
+msgid "The catalog could not be verified. Please try again later."
+msgstr "Der Katalog konnte nicht geprüft werden. Bitte später erneut versuchen."
+
+msgid "The catalog is disabled."
+msgstr "Der Katalog ist deaktiviert."
+
+msgid "The catalog is hidden."
+msgstr "Der Katalog ist ausgeblendet."
+
+msgid "The catalog response is invalid, incompatible or too large."
+msgstr "Die Katalogantwort ist ungültig, inkompatibel oder zu groß."
+
+msgid "The connection timed out. Please try again later."
+msgstr "Die Zeit für die Verbindung wurde überschritten. Bitte später erneut versuchen."
+
+msgid "The deckerweb catalog could not load. Check platform requirements and the complete Library integration in the host plugin."
+msgstr "Der deckerweb-Katalog konnte nicht geladen werden. Bitte PHP-/WordPress-Anforderungen und die vollständige Library-Einbindung im Host-Plugin prüfen."
+
+msgid "The installed plugin identity could not be verified for this catalog update."
+msgstr "Die Identität des installierten Plugins konnte für dieses Katalogupdate nicht bestätigt werden."
+
+msgid "The installed plugin identity could not be verified. Use the Plugins screen to review it."
+msgstr "Die Identität des installierten Plugins konnte nicht geprüft werden. Prüfen Sie es auf der Plugins-Seite."
+
+msgid "The online catalog is unavailable. Showing cached or bundled entries; online approval is checked again before installation."
+msgstr "Der Online-Katalog ist nicht erreichbar. Angezeigt wird der gespeicherte oder mitgelieferte Katalog; vor der Installation wird die Online-Freigabe erneut geprüft."
+
+msgid "The online catalog source is not trusted."
+msgstr "Die Online-Katalogquelle ist nicht vertrauenswürdig."
+
+msgid "The package checksum does not match the approved release. Installation was stopped."
+msgstr "Die Paketprüfsumme stimmt nicht mit der freigegebenen Version überein. Die Installation wurde gestoppt."
+
+msgid "The package did not pass the archive or plugin identity checks. Installation was stopped."
+msgstr "Das Paket hat die Archiv- oder Plugin-Identitätsprüfung nicht bestanden. Die Installation wurde gestoppt."
+
+msgid "The release checksum does not match. Installation stopped."
+msgstr "Die Prüfsumme des Releases stimmt nicht überein. Installation gestoppt."
+
+msgid "The request could not be completed. Check the plugin status before trying again."
+msgstr "Die Anfrage konnte nicht abgeschlossen werden. Vor einem erneuten Versuch den Plugin-Status prüfen."
+
+msgid "The requirements below describe the catalog version for first installation, not an installed-plugin update."
+msgstr "Die folgenden Voraussetzungen beschreiben die Katalogversion für die Erstinstallation, nicht ein Bestandsupdate."
+
+msgid "The requirements below describe the offered release."
+msgstr "Die folgenden Voraussetzungen beziehen sich auf den angebotenen Release."
+
+msgid "The secure connection could not be verified."
+msgstr "Die sichere Verbindung konnte nicht bestätigt werden."
+
+msgid "The server address could not be resolved."
+msgstr "Die Serveradresse konnte nicht aufgelöst werden."
+
+msgid "The server returned HTTP %d. Please try again later."
+msgstr "Der Server hat HTTP %d zurückgegeben. Bitte später erneut versuchen."
+
+msgid "The update has not been confirmed. You can try again."
+msgstr "Die Aktualisierung wurde nicht bestätigt. Sie können es erneut versuchen."
+
+msgid "These details contain component versions and catalog status, without credentials or site content."
+msgstr "Diese Angaben enthalten Komponentenversionen und den Katalogstatus, keine Zugangsdaten oder Website-Inhalte."
+
+msgid "This catalog requires a newer Library."
+msgstr "Dieser Katalog benötigt eine neuere Library."
+
+msgid "This plugin directory already exists. Use the installed plugin; it will not be overwritten."
+msgstr "Dieses Plugin-Verzeichnis existiert bereits. Bitte das installierte Plugin verwenden; es wird nicht überschrieben."
+
+msgid "This release is no longer approved."
+msgstr "Dieses Release ist nicht mehr freigegeben."
+
+msgid "This release is not approved."
+msgstr "Dieses Release ist nicht freigegeben."
+
+msgid "Thu"
+msgstr "Do"
+
+msgid "Thursday"
+msgstr "Donnerstag"
+
+msgid "Tools"
+msgstr "Werkzeuge"
+
+msgid "Tue"
+msgstr "Di"
+
+msgid "Tuesday"
+msgstr "Dienstag"
+
+msgid "Unsafe archive path."
+msgstr "Unsicherer Archivpfad."
+
+msgid "Untrusted release URL."
+msgstr "Nicht vertrauenswürdige Release-URL."
+
+msgid "Update %1$s to version %2$s or newer."
+msgstr "%1$s bitte auf Version %2$s oder neuer aktualisieren."
+
+msgid "Update available"
+msgstr "Update verfügbar"
+
+msgid "Update available: %s"
+msgstr "Update verfügbar: %s"
+
+msgid "Update failed."
+msgstr "Aktualisierung fehlgeschlagen."
+
+msgid "Update information changed. Reload the page and try again."
+msgstr "Die Updateinformationen haben sich geändert. Laden Sie die Seite neu und versuchen Sie es erneut."
+
+msgid "Update to %s"
+msgstr "Auf %s aktualisieren"
+
+msgid "Updated"
+msgstr "Aktualisiert"
+
+msgid "Updating…"
+msgstr "Wird aktualisiert…"
+
+msgid "Use the Plugins screen to manage this installed plugin."
+msgstr "Verwalten Sie dieses installierte Plugin auf der Plugins-Seite."
+
+msgid "Verified first installations · Independent plugin updates"
+msgstr "Geprüfte Erstinstallationen · Unabhängige Pluginupdates"
+
+msgid "View plugins"
+msgstr "Plugins ansehen"
+
+msgid "Visibility"
+msgstr "Sichtbarkeit"
+
+msgid "Wed"
+msgstr "Mi"
+
+msgid "Wednesday"
+msgstr "Mittwoch"
+
+msgid "WordPress"
+msgstr "WordPress"
+
+msgid "You already use one of my plugins. Find selected additions in the deckerweb tab."
+msgstr "Sie nutzen bereits ein Plugin von mir. Ausgewählte Ergänzungen finden Sie im deckerweb-Tab."

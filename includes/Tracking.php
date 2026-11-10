@@ -80,9 +80,11 @@ final class Tracking {
             $response=wp_safe_remote_get($url,['timeout'=>45,'redirection'=>0,'stream'=>true,'filename'=>$gz,'limit_response_size'=>20*1024*1024]);
             if (is_wp_error($response) || wp_remote_retrieve_response_code($response)!==200 || !is_file($gz) || filesize($gz)>=20*1024*1024) { return false; }
             $in=@gzopen($gz,'rb'); $out=@fopen($tmp,'wb'); if (!$in || !$out) { if($in){gzclose($in);} if($out){fclose($out);} return false; }
-            $size=0;
-            while(!gzeof($in)) { $chunk=gzread($in,65536); if ($chunk===false || ($size+=strlen($chunk))>40*1024*1024 || fwrite($out,$chunk)!==strlen($chunk)) { $size=0; break; } }
+            $size=0;$crc=hash_init('crc32b');
+            while(!gzeof($in)) { $chunk=gzread($in,65536); if ($chunk===false || ($chunk===''&&!gzeof($in)) || ($size+=strlen($chunk))>40*1024*1024 || fwrite($out,$chunk)!==strlen($chunk)) { $size=0; break; } hash_update($crc,$chunk); }
             gzclose($in); fclose($out); if (!$size) { return false; }
+            // Validate the complete single gzip member before replacing a working database.
+            $trailer=file_get_contents($gz,false,null,max(0,filesize($gz)-8),8);if(!is_string($trailer)||strlen($trailer)!==8){return false;}$footer=unpack('Vcrc/Vsize',$trailer);if($footer['size']!==$size||sprintf('%08x',$footer['crc'])!==hash_final($crc)){return false;}
             spl_autoload_register([self::class,'autoload']); $reader=new Vendor\MaxMind\Db\Reader($tmp); $meta=$reader->metadata(); $reader->close();
             if (!str_contains(strtolower($meta->databaseType),'country')) { return false; }
             $success=rename($tmp,self::geo_path()); if($success){ update_option('tbm_geo_month',$month,false); update_option('tbm_geo_updated',time(),false); }
@@ -95,9 +97,10 @@ final class Tracking {
      */
     private static function prune(): bool {
         global $wpdb;$s=Plugin::settings();$ok=true;$more=CoreStore::cleanup_pending();$cutoff=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(1,min(120,(int)$s['retention'])).' months')->format('Y-m-d');
-        $tables=['dimensions'=>$cutoff];
+        $tables=['dimensions'=>$cutoff];$changed=false;
         if($s['core_retention']>0){$core=(new \DateTimeImmutable('today',wp_timezone()))->modify('-'.max(1,min(120,(int)$s['core_retention'])).' months')->format('Y-m-d');foreach(['site_stats','post_stats','referrer_stats','search_stats'] as $name){$tables[$name]=$core;}}
-        foreach($tables as $name=>$before){$deleted=$wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}tbm_{$name} WHERE date < %s LIMIT 1000",$before));if($deleted===false){$ok=false;}elseif($deleted===1000){$more=true;}}
+        foreach($tables as $name=>$before){$deleted=$wpdb->query($wpdb->prepare("DELETE FROM {$wpdb->prefix}tbm_{$name} WHERE date < %s LIMIT 1000",$before));if($deleted===false){$ok=false;}elseif($deleted>0){$changed=true;if($deleted===1000){$more=true;}}}
+        if($changed){ReportCache::invalidate();delete_transient('tbm_storage_summary');}
         if($ok&&$more&&!wp_next_scheduled('tbm_maintenance_batch')){$ok=(bool)wp_schedule_single_event(time()+60,'tbm_maintenance_batch');}
         return $ok;
     }
@@ -105,15 +108,15 @@ final class Tracking {
      * @return void
      */
     public static function maintenance_batch(): void {
-        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=self::prune()&&$ok;
+        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=OperationalStatus::cleanup()&&$ok;$ok=self::prune()&&$ok;
         if($ok){update_option('tbm_last_maintenance',time(),false);}else{CoreStore::failure('storage');}
     }
     /** Prune plugin-owned history and refresh opted-in country data at most monthly.
      * @return void
      */
     public static function maintenance(): void {
-        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=self::prune()&&$ok;$s=Plugin::settings();
-        if($s['country']&&$s['geo_download']&&get_option('tbm_geo_month')!==gmdate('Y-m')){if(!self::download_geo()){$ok=false;}}
+        if(!Plugin::ready()){return;}$ok=CoreStore::cleanup();$ok=OperationalStatus::cleanup()&&$ok;$ok=self::prune()&&$ok;$s=Plugin::settings();
+        if($s['country']&&$s['geo_download']&&get_option('tbm_geo_month')!==gmdate('Y-m')){if(!self::download_geo()){OperationalStatus::failure('country');}}
         if($ok){update_option('tbm_last_maintenance',time(),false);}else{CoreStore::failure('storage');}
     }
 }

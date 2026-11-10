@@ -5,9 +5,9 @@ defined('ABSPATH') || exit;
 final class Rankings {
     /** Register the public shortcode and the dynamic block. @return void */
     public static function register(): void {
-        wp_register_style('tbm-ranking',plugins_url('assets/rankings.css',TBM_FILE),[],TBM_VERSION);add_shortcode('tabulamea_ranking',[self::class,'shortcode']);
-        add_shortcode('tabulamea_counter',[self::class,'counter']);
-        add_shortcode('tabulamea_popular',[self::class,'popular']);
+        wp_register_style('tbm-ranking',plugins_url('assets/rankings.css',TBM_FILE),[],TBM_VERSION);add_shortcode('tabulamea_ranking',[self::class,'shortcode_adapter']);
+        add_shortcode('tabulamea_counter',[self::class,'counter_adapter']);
+        add_shortcode('tabulamea_popular',[self::class,'popular_adapter']);
         wp_register_script('tbm-block',plugins_url('assets/block.js',TBM_FILE),['wp-blocks','wp-element','wp-components','wp-block-editor','wp-i18n','wp-server-side-render','wp-data'],TBM_VERSION,true);
         wp_set_script_translations('tbm-block','tabulamea',dirname(TBM_FILE).'/languages');
         add_action('enqueue_block_editor_assets',[self::class,'editor_options']);
@@ -86,7 +86,7 @@ final class Rankings {
     public static function query(array $a): array {
         if(!Plugin::ready() || !($range=self::dates($a))){return [];}
         global $wpdb;$excluded=self::exclusions($a);$mode=$a['mode'] ?? 'popular';$compare=$mode!=='evergreen'&&(!empty($a['compare'])||in_array($mode,['rising','falling','rediscovered'],true));$previous=self::previous($range);
-        $key='tbm_rank_'.md5(wp_json_encode([$a,$range,$excluded,get_option('tbm_revision',0),TBM_VERSION]));$cached=get_transient($key);if(is_array($cached)){return $cached;}
+        $identity=wp_json_encode([$a,$range,$excluded,get_option('tbm_revision',0),TBM_VERSION]);
         $dateWhere="s.date BETWEEN %s AND %s";$dateParams=[$compare?$previous[0]:$range[0],$range[1]];
         $where="p.post_status='publish' AND p.post_password=''";$params=[];
         $types=array_values(array_diff(get_post_types(['public'=>true]),['attachment']));
@@ -119,7 +119,7 @@ final class Rankings {
                 : "SELECT p.ID,$select pageviews,$prev previous FROM {$wpdb->prefix}tbm_post_stats s JOIN {$wpdb->posts} p ON p.ID=s.post_id WHERE $dateWhere AND $where GROUP BY p.ID";
             $sql="SELECT totals.*,totals.pageviews-totals.previous delta FROM ($aggregate) totals HAVING ".str_replace('p.ID','ID',$having).' ORDER BY '.str_replace('p.ID','ID',$order).' LIMIT %d';$params[]=$limit;
         }
-        $rows=$wpdb->get_results($wpdb->prepare($sql,$params),ARRAY_A);if(is_array($rows)){set_transient($key,$rows,300);}return is_array($rows)?$rows:[];
+        return ReportCache::ranking($identity,$range,static function()use($wpdb,$sql,$params){$rows=$wpdb->get_results($wpdb->prepare($sql,$params),ARRAY_A);return $wpdb->last_error?null:$rows;});
     }
     /**
      * Obtain the explicit denominator for site-wide pageview shares.
@@ -129,7 +129,7 @@ final class Rankings {
     public static function site_total(array $a): int {
         if(isset($a['snapshot'])){return (int)($a['snapshot']['site_total'] ?? 0);}
         $range=self::dates($a);if(!$range || !Plugin::ready()){return 0;}global $wpdb;
-        return (int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s",$range));
+        return (new Stats())->get_totals(...$range)->pageviews;
     }
     /**
      * Recheck current content visibility and exclusions even for saved snapshots.
@@ -174,6 +174,33 @@ __('Recorded pageviews · %1$s to %2$s','tabulamea'),$range[0],$range[1])).'</p>
     public static function shortcode(array $atts=[]): string {
         if(!Plugin::settings()['public_rankings']){return '';}$id=is_scalar($atts['id'] ?? '')?sanitize_key((string)($atts['id'] ?? '')):'';$rank=get_option('tbm_rankings',[])[$id] ?? null;
         if(!is_array($rank)||empty($rank['public'])){return '';}if(!Plugin::settings()['public_counts']){$rank['counts']=false;$rank['share']=false;$rank['compare']=false;$rank['hide_changes']=true;}return self::render($rank,$rank['snapshot']['rows']??null);
+    }
+    /** Adapt WordPress shortcode arguments without interpreting enclosed content as context.
+     * @param array|string $atts Parsed attributes; WordPress passes an empty string when absent.
+     * @param string|null $content Enclosed content, deliberately ignored.
+     * @param string $tag Registered shortcode name, deliberately ignored.
+     * @return string Public output after the ordinary publication checks.
+     */
+    public static function shortcode_adapter($atts=[],?string $content=null,string $tag=''): string {
+        return self::shortcode(is_array($atts)?$atts:[]);
+    }
+    /** Adapt WordPress shortcode arguments without interpreting enclosed content as context.
+     * @param array|string $atts Parsed attributes; WordPress passes an empty string when absent.
+     * @param string|null $content Enclosed content, deliberately ignored.
+     * @param string $tag Registered shortcode name, deliberately ignored.
+     * @return string Public output after the ordinary publication checks.
+     */
+    public static function counter_adapter($atts=[],?string $content=null,string $tag=''): string {
+        return self::counter(is_array($atts)?$atts:[]);
+    }
+    /** Adapt WordPress shortcode arguments without interpreting enclosed content as context.
+     * @param array|string $atts Parsed attributes; WordPress passes an empty string when absent.
+     * @param string|null $content Enclosed content, deliberately ignored.
+     * @param string $tag Registered shortcode name, deliberately ignored.
+     * @return string Public output after the ordinary publication checks.
+     */
+    public static function popular_adapter($atts=[],?string $content=null,string $tag=''): string {
+        return self::popular(is_array($atts)?$atts:[]);
     }
     /** Render a public anonymous pageview counter only after explicit publication opt-in.
      * @param array $atts Days and whole-site selection.

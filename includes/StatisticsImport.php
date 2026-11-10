@@ -32,7 +32,7 @@ final class StatisticsImport {
     }
     /** Render source summary, limits, and protected start/continue controls. @return void */
     public static function panel(): void {
-        echo '<section class="tbm-card"><h2>'.esc_html__('Import Koko Analytics statistics','tabulamea').'</h2>';$source=self::inspect();
+        echo '<section class="tbm-card"><h2>'.esc_html__('Import Koko Analytics statistics','tabulamea').'</h2>';$source=self::inspect();self::completion('koko');
         if(!$source){echo '<p>'.esc_html__('No supported Koko Analytics tables were found on this website. The source plugin does not need to be active.','tabulamea').'</p></section>';return;}
         if(Plugin::settings()['measurement']){echo '<p class="tbm-attention">'.esc_html__('Pause TabulaMea measurement under Measurement before importing. Enable it again after the import is complete.','tabulamea').'</p></section>';return;}
         global $wpdb;if($wpdb->get_var("SELECT 1 FROM {$wpdb->prefix}tbm_import_ledger WHERE source='statify' LIMIT 1")){echo '<p>'.esc_html__('Statify data has already been imported. Combining sources cannot reliably remove overlaps.','tabulamea').'</p></section>';return;}$s=$source['summary'];echo '<p>'.esc_html(sprintf(
@@ -47,6 +47,20 @@ __('Import status: %1$s · processed rows: %2$d.','tabulamea'),(['site'=>__('Sit
         if($state && $state['phase']!=='done'){echo '<input type="hidden" name="operation" value="continue">';submit_button(__('Continue import (next batch)','tabulamea'),'secondary','submit',false);echo ' <button class="button" type="button" data-tbm-auto-import data-stop="'.esc_attr__('Pause automatic import','tabulamea').'" data-done="'.esc_attr__('Import completed.','tabulamea').'" data-error="'.esc_attr__('Import paused. Reload this page and try again.','tabulamea').'">'.esc_html__('Continue automatically','tabulamea').'</button>';}
         else{echo '<input type="hidden" name="operation" value="start"><p><label><input type="checkbox" name="confirmed" value="1" required> '.esc_html__('I have a current database backup and have reviewed the source period above.','tabulamea').'</label></p>';submit_button(__('Import these statistics','tabulamea'),'secondary','submit',false);}
         echo '</form><p class="description">'.esc_html__('Import runs in small batches. Continue until it reports done. Repeating it adds only source increases already identified by the import ledger. Keep Koko collection paused during the import for a consistent source.','tabulamea').'</p></section>';
+    }
+    /** Show a completed import's cumulative ledger totals, keeping source kinds distinct.
+     * @param string $source Whitelisted importer identity.
+     * @return void
+     */
+    public static function completion(string $source): void {
+        $state=(array)get_option($source==='koko'?'tbm_import_state':'tbm_statify_import',[]);
+        if(!current_user_can('manage_options')||!in_array($source,['koko','statify'],true)||($source==='koko'?($state['phase']??'')!=='done':empty($state['done']))){return;}
+        global $wpdb;$rows=$wpdb->get_results($wpdb->prepare("SELECT kind,COUNT(*) records,COALESCE(SUM(pageviews),0) views FROM {$wpdb->prefix}tbm_import_ledger WHERE source=%s GROUP BY kind",$source),ARRAY_A);
+        if($wpdb->last_error){return;}
+        echo '<div class="tbm-import-summary"><h3>'.esc_html__('Import completed','tabulamea').'</h3><p>'.esc_html__('Cumulative source values retained by the import ledger, including previous batches. Site, content and referrer totals overlap and must not be added together. Source tables remain unchanged. Re-enable measurement after reviewing the result.','tabulamea').'</p><ul>';
+        $labels=['site'=>__('Site pageviews','tabulamea'),'posts'=>__('Content pageviews','tabulamea'),'referrers'=>__('Referrer pageviews','tabulamea'),'row'=>__('Imported Statify pageviews','tabulamea')];
+        foreach((array)$rows as $row){echo '<li>'.esc_html(($labels[$row['kind']]??$row['kind']).': '.number_format_i18n((int)$row['views'])).'</li>';}
+        echo '</ul></div>';
     }
     /** Process one protected import action and redirect to the result. @return void */
     public static function action(): void {

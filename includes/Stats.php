@@ -9,14 +9,14 @@ final class Stats {
      * @return object Pageview total; visitor counts are intentionally unavailable.
      */
     public function get_totals(string $start,string $end): object {
-        global $wpdb;return (object)['pageviews'=>(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s",$start,$end))];
+        global $wpdb;return ReportCache::once('total|'.$start.'|'.$end,static fn()=>(object)['pageviews'=>(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_site_stats WHERE date BETWEEN %s AND %s",$start,$end))]);
     }
     /** Sum a single public content item's retained pageviews.
      * @param int $id Content identifier.
      * @param array $range Inclusive site-local dates.
      * @return int Aggregate pageviews.
      */
-    public function content_total(int $id,array $range): int {global $wpdb;return (int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_post_stats WHERE post_id=%d AND date BETWEEN %s AND %s",$id,...$range));}
+    public function content_total(int $id,array $range): int {global $wpdb;return ReportCache::once("content|$id|".implode("|",$range),static fn()=>(int)$wpdb->get_var($wpdb->prepare("SELECT COALESCE(SUM(pageviews),0) FROM {$wpdb->prefix}tbm_post_stats WHERE post_id=%d AND date BETWEEN %s AND %s",$id,...$range)));}
     /** Choose monthly aggregation only for custom ranges longer than ten years.
      * @param array $range Inclusive date pair.
      * @return bool Whether monthly buckets are needed.

@@ -9,17 +9,17 @@ final class UpdateIntegration {
     public static function boot(): void {
         // Use this host's pinned implementation even when another V2 version loaded first.
         $class=require __DIR__.'/deckerweb-github-release-updater-v2.php';
-        if(!is_string($class)||!class_exists($class,false)||!defined($class.'::SUPPORTS_CATALOG_PROVIDER')||!constant($class.'::SUPPORTS_CATALOG_PROVIDER')||!defined($class.'::SUPPORTS_HOST_TRANSLATIONS')||!constant($class.'::SUPPORTS_HOST_TRANSLATIONS')||!defined($class.'::IMPLEMENTATION_VERSION')||version_compare(constant($class.'::IMPLEMENTATION_VERSION'),'2.2.1','<')){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);return;}
+        if(!is_string($class)||!class_exists($class,false)||!defined($class.'::UPDATES_INDEPENDENT_OF_CATALOG')||!constant($class.'::UPDATES_INDEPENDENT_OF_CATALOG')||!defined($class.'::SUPPORTS_HOST_TRANSLATIONS')||!constant($class.'::SUPPORTS_HOST_TRANSLATIONS')||!defined($class.'::IMPLEMENTATION_VERSION')||version_compare(constant($class.'::IMPLEMENTATION_VERSION'),'2.4.0','<')){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);return;}
         try{
             $translate=require __DIR__.'/updater-translations.php';
             $base=plugins_url('assets/brand/',TBM_FILE);$de=str_starts_with(determine_locale(),'de_');
-            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-772x250-de.png':'banner-772x250.png'),'high'=>$base.($de?'banner-1544x500-de.png':'banner-1544x500.png')]],array_merge(deckerweb_library_updater_options_v1(TBM_FILE,'https://github.com/deckerweb/tabulamea'),['translate'=>$translate]));
+            $updater=new $class(TBM_FILE,'https://github.com/deckerweb/tabulamea','TabulaMea',__('Privacy-friendly website statistics','tabulamea'),['icons'=>['svg'=>$base.'icon.svg','1x'=>$base.'icon-128x128.png','2x'=>$base.'icon-256x256.png'],'banners'=>['low'=>$base.($de?'banner-772x250-de.png':'banner-772x250.png'),'high'=>$base.($de?'banner-1544x500-de.png':'banner-1544x500.png')]],['translate'=>$translate]);
             $updater->register();add_filter('upgrader_source_selection',[self::class,'validate'],30,4);
         }catch(\Throwable $error){self::$unavailable=true;add_action('admin_notices',[self::class,'notice']);}
     }
     /** Show an actionable, host-localized configuration notice only to update administrators. @return void */
     public static function notice(): void {
-        if(self::$unavailable&&current_user_can('update_plugins')){echo '<div class="notice notice-warning"><p>'.esc_html__('TabulaMea updates require a compatible deckerweb Updater. Update the other plugins that bundle this component, then check again.','tabulamea').'</p></div>';}
+        if(self::$unavailable&&current_user_can('update_plugins')){echo '<div class="notice notice-warning"><p>'.esc_html__('TabulaMea updates could not be initialized. Reinstall the current TabulaMea ZIP, then check again. Existing statistics are preserved.','tabulamea').'</p></div>';}
     }
     /** Validate the host identity, offered version and actual requirements of a native update package.
      * @param string|\WP_Error $source Unpacked and normalized candidate directory or earlier failure.

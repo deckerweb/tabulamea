@@ -1,6 +1,14 @@
 # Änderungsverlauf
 
-[English](Changelog) · [Deutsch](Changelog-de)
+## 1.0.0 — 2026-11-10
+
+- Neu: Persönliche gespeicherte Berichtsansichten, klare aktive Filter und gemeinsame Zeiträume; Tages-, Wochen- und Monatsdiagramme mit genauer Wertetabelle.
+- Neu: Native Block-Vorlagen und bebilderte Anleitungen zur Inhaltspflege, zum Zeitraumvergleich und zu Jahresrankings.
+- Verbessert: Wiederverwendete Berichtsabfragen, Ranking-Caches mit begrenzter Neuberechnung, Wartungsdiagnose, Importzusammenfassungen und kontextbezogene CSV-Exporte.
+- Verbessert: Zeitlich begrenzte Messsignaturen und begrenzte laufende Referrer-Erfassung; verständliche Hinweise zu Cache-Konfiguration und Messgrenzen.
+- Verbessert: deckerweb Library 1.3.0 und Updater 2.4.0; Updates installierter Plugins bleiben unabhängig vom Entdeckungskatalog.
+- Behoben: Registrierte Shortcode-Aufrufe, Lebenszyklus-Isolation der Zielnetzwerke, Vergleiche abgeschlossener Tage, verwaiste Cache-Sperren und Integritätsprüfung der Länderdatenbank.
+- Sonstiges: Nach Installation oder Update den vollständigen Seiten-/CDN-HTML-Cache leeren. HTML kürzer als sieben Tage zwischenspeichern; ein Tag wird empfohlen. WordPress 7.1.2 und PHP 8.2 bleiben Mindestvoraussetzungen.
 
 ## 0.9.1 — 2026-10-21
 

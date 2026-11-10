@@ -4,11 +4,19 @@
 
 Datenschutzfreundliche Website-Statistik direkt in WordPress: Seitenaufrufe überblicken, beliebte Inhalte entdecken und Zahlen für deine redaktionelle Arbeit nutzen. Ohne Cookies und Besucherprofile.
 
-**0.9.1 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
+**1.0.0 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
 
-[English / Deutsch](README.md) · [Anleitung](DOCUMENTATION-de.txt) · [FAQ](FAQ-de.txt) · [Über TabulaMea](ABOUT-de.txt)
+[English / Deutsch](README.md) · [Anleitung](docs/Guide-de.md) · [FAQ](FAQ-de.txt) · [Über TabulaMea](ABOUT-de.txt)
 
-[Download 0.9.1](https://github.com/deckerweb/tabulamea/releases/download/v0.9.1/tabulamea-0.9.1.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+[Downloads](https://github.com/deckerweb/tabulamea/releases) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+
+[Praktische Anleitungen](docs/Tasks-de.md) · [Cache einrichten](docs/Cache-de.md)
+
+[Plugin-Website](https://deckerwebplugins.com/de/plugins/tabulamea/)
+
+![Statistikübersicht mit Seitenaufrufen, Vergleich und Diagramm](docs/assets/screenshots/statistics-de.jpg)
+
+*Beispieldaten einer neutralen Demo-Website.*
 
 ## Inhaltsverzeichnis
 
@@ -56,9 +64,13 @@ TabulaMea erfasst bewusst wenige Daten und bereitet die vorhandenen Zahlen verst
 
 Deine Inhalte. Ihre Wirkung. Alles im Blick.
 
+![Aufrufspalten direkt in den WordPress-Inhaltslisten](docs/assets/screenshots/content-list-de.jpg)
+
 ## Schnellstart
 
-1. Lade das Installationspaket tabulamea-0.9.1.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
+**Nach dem Update:** vollständigen Seiten-/CDN-HTML-Cache leeren; HTML kürzer als sieben Tage zwischenspeichern (ein Tag empfohlen).
+
+1. Lade das Installationspaket tabulamea-1.0.0.zip vom GitHub-Release herunter. Öffne in WordPress Plugins → Installieren → Plugin hochladen, wähle die ZIP-Datei und aktiviere TabulaMea. Du benötigst mindestens WordPress 7.1.2 und PHP 8.2.
 2. Öffne Einstellungen → TabulaMea → Übersicht. Dort siehst du Messstatus und geführten Messtest.
 3. Unter Messung legst du fest, welche öffentlichen Inhalte erfasst werden. Administratoren und Redakteure sind standardmäßig von regulären Aufrufen ausgeschlossen.
 4. Öffne TabulaMea → Statistikübersicht und wähle deinen Zeitraum. Neue Messdaten entstehen ab der Aktivierung; historische Daten lassen sich separat importieren.
@@ -195,7 +207,9 @@ Deaktivierung erhält Daten. Deinstallation entfernt immer temporäre Caches und
 
 ## GitHub-Updates und deckerweb Library
 
-TabulaMea enthält die deckerweb Library 1.1.0 und den deckerweb Updater 2.2.1 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
+TabulaMea enthält die deckerweb Library 1.3.0 und den deckerweb Updater 2.4.0 für den direkten GitHub-Vertrieb. Der Updater prüft veröffentlichte Releases unter github.com/deckerweb/tabulamea. Ohne veröffentlichten Release gibt es kein Updateangebot. Die Prüfung verbindet sich mit GitHub; der Dienst sieht dabei die Server-IP. Dabei werden keine Statistikdaten oder Besucherprofile übertragen. Für das öffentliche Repository sind keine Zugangsdaten erforderlich. Downloads erfolgen erst beim ausgelösten WordPress-Update; das Paket wird vor dem Ersetzen auf Plugin-Identität, angebotene Version und Systemanforderungen geprüft.
+
+Normale Updates installierter Plugins verwenden WordPress-Updateangebote und sind unabhängig von Katalogversion, Online-Einstellung und Katalogverfügbarkeit. Öffnen oder Sortieren des Katalogs löst keine zusätzlichen GitHub-Updateabfragen aus. Erstinstallationen benötigen weiterhin Katalogfreigabe und Paketprüfung.
 
 Die Library bietet unter Plugins → Installieren → deckerweb einen zusätzlichen Plugin-Katalog. Der optionale Online-Abruf ist standardmäßig ausgeschaltet. Bei Aktivierung lädt er den freigegebenen Katalog von GitHub; Installation und Aktivierung weiterer Plugins werden jeweils bewusst ausgelöst. Der Dienst sieht dabei die Server-IP, aber keine TabulaMea-Statistikdaten. Library-Einstellungen und Verwaltungsdaten sind gemeinsame Komponentendaten: Sie bleiben erhalten, solange ein weiterer Host installiert ist, auch wenn dieser deaktiviert ist. Beim letzten Host werden temporäre Daten bereinigt; die eigene optionale Löschung dauerhafter Library-Einstellungen ist standardmäßig aus. Installierte andere Plugins und deren Inhalte werden nicht gelöscht.
 
@@ -203,7 +217,7 @@ TabulaMea wird über GitHub veröffentlicht.
 
 ## Technische Messgrenzen
 
-Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten Dokuments und wird für höchstens drei Versuche nach Netzwerk- oder Serverfehlern wiederverwendet. Der Server speichert vorübergehend ausschließlich ihren Hash und Ablaufzeitpunkt, ohne Zuordnung zu Inhalt, Adresse oder Browser. Die Kennung läuft nach zehn Minuten ab und wird in kleinen Bereinigungspaketen entfernt; verzögerte Bereinigung kann abgelaufene Hashes länger erhalten. Sie verhindert doppelte Zustellung, keine wiederholten Besuche. Ohne sichere Browserzufallsquelle gibt es genau einen Versuch ohne Kennung. Atomare InnoDB-Transaktionen halten die Zähler bei Schreibfehlern konsistent. Ein anonymes Anfragebudget je Website liegt standardmäßig bei 60.000 validierten Anfragen pro Minute einschließlich Wiederholungsversuchen, ist einstellbar und verwendet keine IP-Adressen. Oberhalb des Limits werden Anfragen abgewiesen. Das schützt Ressourcen, verhindert aber nicht jede bewusste Manipulation. Nach einem Datenbankfehler stoppt die Verarbeitung sofort und die gesamte Zählertransaktion wird zurückgerollt. Bei Deadlocks und Sperrzeitüberschreitungen sind höchstens drei vollständige Versuche vorgesehen; Verbindungsabbrüche und unklare Commit-Bestätigungen werden intern nicht erneut ausgeführt. Die Zustellkennung des Dokuments schützt einen nachfolgenden Zustellversuch innerhalb der Beleglaufzeit vor Doppelzählungen.
+Eine zufällige Zustellkennung existiert nur im Arbeitsspeicher des geöffneten Dokuments und wird für höchstens drei Versuche nach Netzwerk- oder Serverfehlern wiederverwendet. Der Server speichert vorübergehend ausschließlich ihren Hash und Ablaufzeitpunkt, ohne Zuordnung zu Inhalt, Adresse oder Browser. Die Kennung läuft nach zehn Minuten ab und wird in kleinen Bereinigungspaketen entfernt; verzögerte Bereinigung kann abgelaufene Hashes länger erhalten. Sie verhindert doppelte Zustellung, keine wiederholten Besuche. Fehlt die sichere Browserzufallsquelle, wird eine zufällige Wiederholungskennung im Arbeitsspeicher des Dokuments erzeugt. Sie bezeichnet eine Lieferung, keine Person, und ist kein Anmeldegeheimnis. Atomare InnoDB-Transaktionen halten die Zähler bei Schreibfehlern konsistent. Ein anonymes Anfragebudget je Website liegt standardmäßig bei 60.000 validierten Anfragen pro Minute einschließlich Wiederholungsversuchen, ist einstellbar und verwendet keine IP-Adressen. Oberhalb des Limits werden Anfragen abgewiesen. Das schützt Ressourcen, verhindert aber nicht jede bewusste Manipulation. Nach einem Datenbankfehler stoppt die Verarbeitung sofort und die gesamte Zählertransaktion wird zurückgerollt. Bei Deadlocks und Sperrzeitüberschreitungen sind höchstens drei vollständige Versuche vorgesehen; Verbindungsabbrüche und unklare Commit-Bestätigungen werden intern nicht erneut ausgeführt. Die Zustellkennung des Dokuments schützt einen nachfolgenden Zustellversuch innerhalb der Beleglaufzeit vor Doppelzählungen.
 
 ## FAQ
 
@@ -223,9 +237,9 @@ Standardmäßig Administratoren. Unter Zugriff lassen sich Rollen und persönlic
 
 Angemeldete Administratoren und Redakteure sind standardmäßig ausgeschlossen. Auch Do Not Track, Global Privacy Control, Browserblockaden oder deaktiviertes JavaScript können eine Messung verhindern. Private Fenster können solche Schutzsignale ebenfalls senden. Der geführte Messtest unter Übersicht zählt absichtlich keinen regulären Aufruf.
 
-### Warum ist mein Ranking leer oder kürzer als erwartet?
+### Wie stelle ich den Seiten-/CDN-Cache richtig ein?
 
-Prüfe Zeitraum, Inhaltstyp, Ausschlüsse und Mindestwerte. Vergleichsmethoden brauchen Vorperiodendaten; Monatsrankings ausreichende Werte in jedem vollständigen Monat. Nur aktuell öffentliche, nicht passwortgeschützte Inhalte kommen für die Ausgabe infrage.
+Den vollständigen HTML-Seitencache im Cache-Plugin und gegebenenfalls beim Hoster oder CDN leeren. Die HTML-Cache-Laufzeit unter sieben Tagen halten; empfohlen ist ein Tag (24 Stunden). Bereits geöffnete Testtabs neu laden. Messsignaturen laufen nach sieben Tagen ab; altes zwischengespeichertes HTML kann deshalb keine Aufrufe mehr beitragen. Dafür müssen weder der Seitencache abgeschaltet noch Browser-Caches für Bilder oder CSS geändert werden.
 
 ### Kann ich öffentliche Rankings nur als Rangfolge anzeigen?
 
@@ -237,7 +251,17 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 
 [Alle Fragen nach Themen](FAQ-de.txt)
 
-## Changelog
+## Änderungsverlauf
+
+### 1.0.0 — 2026-11-10
+
+- Neu: Persönliche gespeicherte Berichtsansichten, klare aktive Filter und gemeinsame Zeiträume; Tages-, Wochen- und Monatsdiagramme mit genauer Wertetabelle.
+- Neu: Native Block-Vorlagen und bebilderte Anleitungen zur Inhaltspflege, zum Zeitraumvergleich und zu Jahresrankings.
+- Verbessert: Wiederverwendete Berichtsabfragen, Ranking-Caches mit begrenzter Neuberechnung, Wartungsdiagnose, Importzusammenfassungen und kontextbezogene CSV-Exporte.
+- Verbessert: Zeitlich begrenzte Messsignaturen und begrenzte laufende Referrer-Erfassung; verständliche Hinweise zu Cache-Konfiguration und Messgrenzen.
+- Verbessert: deckerweb Library 1.3.0 und Updater 2.4.0; Updates installierter Plugins bleiben unabhängig vom Entdeckungskatalog.
+- Behoben: Registrierte Shortcode-Aufrufe, Lebenszyklus-Isolation der Zielnetzwerke, Vergleiche abgeschlossener Tage, verwaiste Cache-Sperren und Integritätsprüfung der Länderdatenbank.
+- Sonstiges: Nach Installation oder Update den vollständigen Seiten-/CDN-HTML-Cache leeren. HTML kürzer als sieben Tage zwischenspeichern; ein Tag wird empfohlen. WordPress 7.1.2 und PHP 8.2 bleiben Mindestvoraussetzungen.
 
 ### 0.9.1 — 2026-10-21
 
@@ -255,6 +279,7 @@ Deaktivierung erhält Daten. Deinstallation entfernt eigene temporäre Daten und
 ### 0.1.0 – 0.8.0
 
 - Sonstiges: Frühe Testfassungen der eigenständigen Website-Statistik.
+
 ## Projekt und Sicherheit
 
 Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Website-Statistik mit bewusst begrenzter Datenerfassung. Veröffentlichte Versionen sind auf [GitHub](https://github.com/deckerweb/tabulamea/releases) erhältlich. Sicherheitsprobleme bitte über die private Sicherheitsmeldung des GitHub-Repositories melden; keine Zugangsdaten oder vollständigen Datenbanksicherungen veröffentlichen. [Sicherheitsinformationen](SECURITY-de.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [Weitere Plugins](https://github.com/deckerweb).
@@ -267,4 +292,4 @@ Entwickelt und herausgegeben von David Decker – DECKERWEB. Eigenständige Webs
 
 © 2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 
-deckerweb Plugin Library 1.1.0 und deckerweb Updater 2.2.1: GPL-2.0-or-later, lokal eingebettet. MaxMind DB Reader 1.13.1: Apache-2.0, isolierter Namensraum; Herkunft und Lizenz in [vendor/maxmind](vendor/maxmind). Inter-Konturschrift in den Grafiken: OFL-1.1; [Lizenz](assets/brand/Inter-OFL-LICENSE.txt). Länderquelle: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Messung, Auswertungen und Importer enthalten keinen übernommenen Quellcode von Koko Analytics oder Statify.
+deckerweb Plugin Library 1.3.0 und deckerweb Updater 2.4.0: GPL-2.0-or-later, lokal eingebettet. MaxMind DB Reader 1.13.1: Apache-2.0, isolierter Namensraum; Herkunft und Lizenz in [vendor/maxmind](vendor/maxmind). Inter-Konturschrift in den Grafiken: OFL-1.1; [Lizenz](assets/brand/Inter-OFL-LICENSE.txt). Länderquelle: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Messung, Auswertungen und Importer enthalten keinen übernommenen Quellcode von Koko Analytics oder Statify.

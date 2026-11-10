@@ -9,7 +9,19 @@ final class DataExports {
      * @return void
      */
     public static function controls(array $range,bool $search=false): void {
-        if(!Plugin::allowed('view')){return;}echo '<details class="tbm-card"><summary>'.esc_html__('Export this period','tabulamea').'</summary>';InterfaceTools::form('csv',['start'=>$range[0],'end'=>$range[1],'content_type'=>InterfaceTools::text($_GET,'content_type','all'),'content_search'=>InterfaceTools::text($_GET,'content_search')]);$choices=$search?['search'=>__('Internal search','tabulamea')]:['overview'=>__('Daily pageviews','tabulamea'),'contents'=>__('Public content totals','tabulamea'),'referrers'=>__('Referrer domains','tabulamea')];InterfaceTools::select('report',__('Export data','tabulamea'),$choices,array_key_first($choices));submit_button(__('Download CSV','tabulamea'),'secondary','submit',false);echo '</form><p class="description">'.esc_html__('Exports use the displayed dates and privacy rules. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains.','tabulamea').'</p></details>';
+        if(!Plugin::allowed('view')){return;}echo '<details class="tbm-card"><summary>'.esc_html__('Export this period','tabulamea').'</summary>';InterfaceTools::form('csv',['start'=>$range[0],'end'=>$range[1],'content_type'=>InterfaceTools::text($_GET,'content_type','all'),'content_search'=>InterfaceTools::text($_GET,'content_search'),'focus_date'=>InterfaceTools::text($_GET,'focus_date')]);$choices=$search?['search'=>__('Internal search','tabulamea')]:['overview'=>__('Daily pageviews','tabulamea'),'contents'=>__('Public content totals','tabulamea'),'referrers'=>__('Referrer domains','tabulamea')];InterfaceTools::select('report',__('Export data','tabulamea'),$choices,array_key_first($choices));submit_button(__('Download CSV','tabulamea'),'secondary','submit',false);echo '</form><p class="description">'.esc_html__('Exports use the displayed dates and privacy rules. Content exports include up to 50 matching public items; referrer exports include up to 1,000 domains.','tabulamea').'</p></details>';
+    }
+    /** Add explicit context as uniform columns rather than non-standard comment rows.
+     * @param array $rows Header and data rows.
+     * @param string $kind Report identifier.
+     * @param array $range Inclusive exported dates.
+     * @return array Contextualized CSV rows.
+     */
+    public static function annotate(array $rows,string $kind,array $range): array {
+        if(!$rows){return [];}$s=Plugin::settings();$scope=$s['measure_scope']==='selected'?'selected types: '.implode(',',(array)$s['measure_types']).'; archives: '.implode(',',(array)$s['measure_archives']):'all eligible public pages';
+        $head=[__('Report','tabulamea'),__('Period start','tabulamea'),__('Period end','tabulamea'),__('Content type filter','tabulamea'),__('Title filter (content report only)','tabulamea'),__('Selected day (content/referrer reports)','tabulamea'),__('Current measurement scope (historical scope may differ)','tabulamea'),__('Generated at','tabulamea')];
+        $context=[$kind,$range[0],$range[1],InterfaceTools::text($_POST,'content_type','all'),mb_substr(InterfaceTools::text($_POST,'content_search'),0,80),InterfaceTools::text($_POST,'focus_date'),$scope,wp_date('c')];
+        foreach($rows as $i=>&$row){$row=array_merge($row,$i===0?$head:$context);}unset($row);return $rows;
     }
     /** Prepare bounded rows without exposing deleted/private content or hidden search topics.
      * @param string $kind Fixed export type.

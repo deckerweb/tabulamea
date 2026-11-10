@@ -14,6 +14,10 @@ TabulaMea erfasst bewusst wenige Daten und bereitet die vorhandenen Zahlen verst
 
 [English](Home) · [Deutsch](Startseite)
 
+![TabulaMea – Statistikübersicht](https://raw.githubusercontent.com/deckerweb/tabulamea/main/docs/assets/screenshots/statistics-de.jpg)
+
+[Nach der Installation: Cache einrichten](Cache-de)
+
 ## Wenige Daten. Ein klarer Überblick.
 
 Seitenaufrufe zählen, ohne Cookies, Besucherprofile oder die Wiedererkennung einzelner Menschen. Deine Statistikdaten bleiben in WordPress.

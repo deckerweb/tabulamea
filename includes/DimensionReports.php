@@ -30,7 +30,7 @@ final class DimensionReports {
     /** Render the separate dimension reports and their final coverage card. @return void */
     public static function page(): void {
         if(!Plugin::ready()||!Plugin::allowed('view')){wp_die(esc_html__('Access denied.','tabulamea'),'',403);}
-        echo '<div class="wrap tbm">';Settings::header(__('Additional statistics','tabulamea'));Settings::status();Navigation::links();$a=ReportTools::requested();$range=Rankings::dates($a);ReportTools::controls('tabulamea-dimensions',$a);
+        echo '<div class="wrap tbm">';Settings::header(__('Additional statistics','tabulamea'));Settings::status();Navigation::links();$a=ReportTools::requested();$range=ReportTools::range($a);ReportTools::controls('tabulamea-dimensions',$a);
         echo '<p>'.esc_html__('These reports count pageviews, not unique people. Percentages use displayed categories only; categories below 5 pageviews and their totals are never exported.','tabulamea').'</p>';
         if(!$range){echo '<p role="alert">'.esc_html__('Choose a valid date range; the end must not precede the start.','tabulamea').'</p>';}
         else{foreach(self::labels() as $dim=>$label){echo '<section class="tbm-card"><h2>'.esc_html($label).'</h2><p class="tbm-state">'.esc_html(self::state($dim)).'</p><p>'.esc_html__('Collection started:','tabulamea').' '.esc_html(get_option('tbm_since_'.$dim,__('Not collected yet','tabulamea'))).'</p>';$rows=self::rows($dim,$range);

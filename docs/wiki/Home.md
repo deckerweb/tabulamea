@@ -14,6 +14,10 @@ TabulaMea collects a small set of measurements and presents the recorded numbers
 
 [English](Home) · [Deutsch](Startseite)
 
+![TabulaMea – Statistics overview](https://raw.githubusercontent.com/deckerweb/tabulamea/main/docs/assets/screenshots/statistics-en.jpg)
+
+[After installation: cache setup](Cache)
+
 ## Less data. A clearer picture.
 
 Count pageviews without cookies, visitor profiles or identifying returning people. Your statistics stay in WordPress.

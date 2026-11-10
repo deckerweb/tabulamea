@@ -1,7 +1,19 @@
 FAQ by topic — TabulaMea
 
+Illustrated guide: https://github.com/deckerweb/tabulamea/wiki/Guide
 Deutsch: FAQ-de.txt
 Full guide: DOCUMENTATION.txt
+
+Installation and updates
+────────────────────────
+
+How should I configure the page/CDN cache?
+Clear the full-page HTML cache in your caching plugin and, if present, at your host or CDN. Keep the HTML cache lifetime below seven days; one day (24 hours) is recommended. Reload already open test tabs. Measurement signatures expire after seven days, so old cached HTML can stop contributing counts. This does not require disabling page caching or changing browser image/CSS caches.
+
+1. Clear the HTML/page cache in the WordPress cache plugin.
+2. Clear the corresponding host/CDN HTML cache, if used.
+3. Set its HTML cache lifetime below seven days; preferably 24 hours.
+4. Reload the public page and run the guided test under Settings → TabulaMea → Overview. Privacy signals still apply.
 
 Getting started
 ───────────────
@@ -105,3 +117,35 @@ Yes, including network activation. The main site and subsites keep separate stat
 What happens on deactivation or uninstall?
 Deactivation preserves data. Uninstall removes plugin-owned temporary data and tasks; permanent statistics and settings remain by default. Only the explicit deletion option removes the relevant website’s permanent TabulaMea data. Other plugins’ data is never deleted.
 
+
+
+Personal views and data freshness
+─────────────────────────────────
+
+Are saved report views public?
+No. They save report filters for your user on this website only. They do not change website defaults or publish a content ranking.
+
+How current are the lists?
+Rankings including today normally rebuild within one minute; historical rankings within 15 minutes. During a rebuild, the previous result can remain visible briefly. Refresh this view requests fresh results and preserves the filters. Permissions are not stored in this data cache.
+
+Why can weeks or months be incomplete?
+Groups contain only retained values within the selected period. Boundary weeks and months can therefore be shorter; missing days are not estimated. Comparison boundaries may contain different numbers of days. Period totals cover equal-length intervals; the values table identifies the comparison dates.
+
+What if I use a page cache or CDN?
+Publication permissions are checked whenever TabulaMea renders output. Another page cache or a CDN can continue serving previously generated HTML. Purge those caches after changing public-output permissions or content visibility. Previously published numbers cannot be recalled.
+
+
+Do catalog settings control updates of installed plugins?
+Normal updates of installed plugins use WordPress update offers and are independent of the Library catalog version, its online setting and catalog availability. Opening or sorting the catalog does not trigger extra GitHub update polls. First-time installations still require catalog approval and package verification.
+
+Can anonymous pageviews be manipulated?
+
+Measurement integrity and cache configuration
+
+The public signature validates the website, content path and issue time. It is not a login, bot attestation or proof of a human visit. Signatures expire after seven days, with at most five minutes of clock skew. Old signatures without an expiry are not accepted. Clear the full-page and CDN HTML cache when installing this update. Keep HTML cache lifetimes below seven days; one day is recommended. Expired cached pages do not contribute counts until the HTML is refreshed. Also refresh long-lived tabs. The same rule applies to search-result delivery.
+
+The endpoint requires the website's Origin header and a 32-character per-document retry token. These are useful validation checks, not client identities: a direct HTTP client can imitate them. Reusing the same token is idempotent while its ten-minute receipt is retained. Choosing a different token within the signature lifetime can still create a separate count. Reloads intentionally remain separate pageviews. No IP address, persistent identifier or visitor profile is introduced by these safeguards.
+
+Live collection stores at most 1,000 distinct referrer domains per site and local calendar day. Once this limit is reached, new domains are omitted, but pageview totals and already recorded domains continue counting. Historic imports and existing records are not deleted or retroactively limited. Referrer reports therefore do not represent every arrival source. The configured retention period still applies; an unlimited history remains unlimited by choice.
+
+Set a suitable site-wide request budget under Settings → Measurement. At capacity the endpoint returns HTTP 429 and Retry-After: 60 without counting the rejected delivery. A shared anonymous budget does not prevent a hostile client from consuming capacity and displacing real measurements. For an exposed website, ask the host to add endpoint-specific rate and concurrency limits at the reverse proxy, WAF or webserver, before WordPress executes. Include both /wp-json/tabulamea/v1/pageview and the ?rest_route=/tabulamea/v1/pageview form, adapted to subdirectory and multisite installations. Configure thresholds for the actual website traffic; a blanket low per-IP limit can exclude visitors behind a shared gateway. Do not cache POST requests, block all REST routes or remove Origin headers. Check the guided measurement test after changing these rules. Server/edge logs and address-based rules are the host's separate privacy responsibility; TabulaMea itself retains no address-based profile. Distributed spoofed requests cannot be reliably distinguished from genuine anonymous traffic by this plugin alone.

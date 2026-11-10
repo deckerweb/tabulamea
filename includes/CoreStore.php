@@ -15,7 +15,7 @@ final class CoreStore {
     public static function budget(): ?bool {
         global $wpdb;$bucket=(int)floor(time()/60);$limit=(int)Plugin::settings()['request_limit'];
         $prior=$wpdb->suppress_errors(true);try{
-            $result=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_rate (bucket,requests) VALUES (%d,1) ON DUPLICATE KEY UPDATE requests=requests+1",$bucket));
+            $result=$wpdb->query($wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_rate (bucket,requests) VALUES (%d,1) ON DUPLICATE KEY UPDATE requests=LEAST(requests+1,%d)",$bucket,$limit+1));
             if($result===false){return null;}$count=$wpdb->get_var($wpdb->prepare("SELECT requests FROM {$wpdb->prefix}tbm_rate WHERE bucket=%d",$bucket));return $count===null?null:(int)$count<=$limit;
         }finally{$wpdb->suppress_errors($prior);}
 
@@ -41,7 +41,9 @@ final class CoreStore {
                 $wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_post_stats (date,post_id,path_hash,path,pageviews) VALUES (%s,%d,%s,%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1", $date, $id, hash('sha256',$id.'|'.$path), $path),
             ];
             if ($ref && !in_array($ref, Plugin::settings()['referrer_blocklist'], true)) {
-                $queries[] = $wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) VALUES (%s,%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1", $date, $ref);
+                // The preceding site-total write locks this date, serializing the bounded check.
+                // Keep known domains countable even after 1,000 distinct domains for a day.
+                $queries[] = $wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_referrer_stats (date,domain,pageviews) SELECT %s,%s,1 FROM DUAL WHERE EXISTS (SELECT 1 FROM {$wpdb->prefix}tbm_referrer_stats WHERE date=%s AND domain=%s) OR (SELECT COUNT(*) FROM (SELECT domain FROM {$wpdb->prefix}tbm_referrer_stats WHERE date=%s LIMIT 1000) AS bounded_domains)<1000 ON DUPLICATE KEY UPDATE pageviews=pageviews+1", $date, $ref, $date, $ref, $date);
             }
             foreach ($dimensions as $dimension => $value) {
                 $queries[] = $wpdb->prepare("INSERT INTO {$wpdb->prefix}tbm_dimensions (date,dimension,value,pageviews) VALUES (%s,%s,%s,1) ON DUPLICATE KEY UPDATE pageviews=pageviews+1", $date, $dimension, $value);
@@ -133,7 +135,7 @@ final class CoreStore {
                         }
                     }
                     if ($wpdb->query('COMMIT') === false) { throw new \RuntimeException('commit_failed'); }
-                    return true;
+                    ReportCache::reset();return true;
                 } catch (\Throwable $error) {
                     $rolledBack = false;
                     if ($started) {
@@ -167,6 +169,6 @@ final class CoreStore {
      * @return void
      */
     public static function failure(string $code): void {
-        $last=(array)get_option('tbm_core_error',[]);if(($last['code']??'')!==$code||(int)($last['time']??0)<time()-60){update_option('tbm_core_error',['time'=>time(),'code'=>in_array($code,['storage','capacity'],true)?$code:'storage','occurrences'=>(($last['code']??'')===$code&&(int)($last['time']??0)>time()-HOUR_IN_SECONDS)?(int)($last['occurrences']??1)+1:1],false);}
+        OperationalStatus::failure($code);$last=(array)get_option('tbm_core_error',[]);if(($last['code']??'')!==$code||(int)($last['time']??0)<time()-60){update_option('tbm_core_error',['time'=>time(),'code'=>in_array($code,['storage','capacity'],true)?$code:'storage','occurrences'=>(($last['code']??'')===$code&&(int)($last['time']??0)>time()-HOUR_IN_SECONDS)?(int)($last['occurrences']??1)+1:1],false);}
     }
 }

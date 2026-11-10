@@ -4,11 +4,19 @@
 
 Privacy-friendly website statistics inside WordPress: see pageviews, discover popular content and put your numbers to work when maintaining your site. No cookies or visitor profiles.
 
-**0.9.1 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
+**1.0.0 · WordPress ≥ 7.1.2 · PHP ≥ 8.2**
 
-[English / Deutsch](README-de.md) · [Guide](DOCUMENTATION.txt) · [FAQ](FAQ.txt) · [About TabulaMea](ABOUT.txt)
+[English / Deutsch](README-de.md) · [Guide](docs/Guide.md) · [FAQ](FAQ.txt) · [About TabulaMea](ABOUT.txt)
 
-[Download 0.9.1](https://github.com/deckerweb/tabulamea/releases/download/v0.9.1/tabulamea-0.9.1.zip) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+[Downloads](https://github.com/deckerweb/tabulamea/releases) · [Wiki](https://github.com/deckerweb/tabulamea/wiki)
+
+[Practical guides](docs/Tasks.md) · [Cache setup](docs/Cache.md)
+
+[Plugin website](https://deckerwebplugins.com/en/plugins/tabulamea/)
+
+![Statistics overview with pageviews, comparison and chart](docs/assets/screenshots/statistics-en.jpg)
+
+*Illustrative data from a neutral demo website.*
 
 ## Contents
 
@@ -56,9 +64,13 @@ TabulaMea collects a small set of measurements and presents the recorded numbers
 
 Your content. Its impact. All in view.
 
+![Pageview columns in WordPress content lists](docs/assets/screenshots/content-list-en.jpg)
+
 ## Quick start
 
-1. Download the installable tabulamea-0.9.1.zip from the GitHub release. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
+**After updating:** clear the full-page/CDN HTML cache; cache HTML for less than seven days (one day recommended).
+
+1. Download the installable tabulamea-1.0.0.zip from GitHub Releases. In WordPress, open Plugins → Add New → Upload Plugin, select the ZIP file and activate TabulaMea. WordPress 7.1.2 and PHP 8.2 are required.
 2. Open Settings → TabulaMea → Overview for collection status and the guided measurement test.
 3. Under Measurement, choose eligible public content. Administrators and editors are excluded from regular collection by default.
 4. Open TabulaMea → Statistics overview and choose a period. New collection begins after activation; historical data can be imported separately.
@@ -195,7 +207,9 @@ Deactivation preserves data. Uninstall always removes temporary caches and sched
 
 ## GitHub updates and deckerweb Library
 
-TabulaMea includes deckerweb Library 1.1.0 and deckerweb Updater 2.2.1 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+TabulaMea includes deckerweb Library 1.3.0 and deckerweb Updater 2.4.0 for direct GitHub distribution. The updater checks published releases at github.com/deckerweb/tabulamea. No published release means no update offer. Checks connect to GitHub, exposing the requesting server IP. They do not send statistics or visitor profiles. The public repository needs no credentials. Downloads occur when a WordPress update is triggered; plugin identity, offered version and actual system requirements are checked before replacement.
+
+Normal updates of installed plugins use WordPress update offers and are independent of the Library catalog version, its online setting and catalog availability. Opening or sorting the catalog does not trigger extra GitHub update polls. First-time installations still require catalog approval and package verification.
 
 The Library adds a plugin catalog under Plugins → Add New → deckerweb. Optional online retrieval is off by default. Enabling it reads the approved catalog from GitHub; installing and activating other plugins remain separate explicit actions. The endpoint sees the server IP, not TabulaMea statistics. Library preferences and administrative records are shared component data: they are retained while another host is installed, including inactive hosts. Final-host uninstall cleans temporary data; optional permanent Library-settings deletion is off by default. Other installed plugins and their content are not deleted.
 
@@ -203,7 +217,7 @@ TabulaMea is distributed through GitHub.
 
 ## Technical collection limits
 
-A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. Without secure browser randomness, one attempt is made without a token. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
+A random delivery token exists only in document memory and is reused for up to three attempts after network or server errors. The server temporarily stores only its hash and expiry, without content, address or browser associations. It expires after ten minutes and is removed in small cleanup batches; delayed cleanup can retain expired hashes longer. It prevents duplicate delivery counts, not repeat visits. If secure browser randomness is unavailable, a random retry token is generated in document memory. This token identifies a delivery attempt, not a person, and is not an authentication secret. Atomic InnoDB transactions keep all counters consistent on write failures. A site-wide anonymous request budget defaults to 60,000 accepted validation attempts per minute (including retries); it is configurable and does not use IP addresses. Requests over the limit are rejected. This protects resources but is not a guarantee against deliberate manipulation. After a database error, processing stops immediately and the whole counter transaction is rolled back. Deadlocks and lock timeouts permit at most three complete attempts; lost connections and uncertain commit acknowledgements are not replayed internally. The document delivery token protects a subsequent delivery retry from double counting within its receipt lifetime.
 
 ## FAQ
 
@@ -223,9 +237,9 @@ Administrators by default. Access supports role and personal rules. The compact 
 
 Logged-in administrators and editors are excluded by default. Do Not Track, Global Privacy Control, browser blocking and disabled JavaScript can also prevent collection. Private windows may send privacy signals too. The guided test under Overview intentionally creates no regular pageview.
 
-### Why is a ranking empty or shorter than expected?
+### How should I configure the page/CDN cache?
 
-Check dates, content type, exclusions and minimum counts. Comparison methods need preceding records; monthly methods need sufficient views in every complete month. Output includes only currently public content without passwords.
+Clear the full-page HTML cache in your caching plugin and, if present, at your host or CDN. Keep the HTML cache lifetime below seven days; one day (24 hours) is recommended. Reload already open test tabs. Measurement signatures expire after seven days, so old cached HTML can stop contributing counts. This does not require disabling page caching or changing browser image/CSS caches.
 
 ### Can public rankings show their order without displaying counts?
 
@@ -238,6 +252,16 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 [All FAQs by topic](FAQ.txt)
 
 ## Changelog
+
+### 1.0.0 — 2026-11-10
+
+- New: Personal saved report views, clear active filters and shared periods; daily, weekly and monthly charts with exact-value tables.
+- New: Native block patterns and illustrated guides for content maintenance, period comparisons and yearly rankings.
+- Improved: Reused report queries, ranking caches with bounded rebuilds, maintenance diagnostics, import summaries and contextual CSV exports.
+- Improved: Time-limited measurement signatures and bounded live referrer collection; clear cache setup and measurement-integrity guidance.
+- Improved: deckerweb Library 1.3.0 and Updater 2.4.0; installed-plugin updates remain independent of the discovery catalog.
+- Fixed: Registered shortcode calls, target-network lifecycle isolation, completed-day comparisons, abandoned cache locks and country database integrity checks.
+- Misc: After installation or updating, clear the full-page/CDN HTML cache. Keep HTML cache lifetimes below seven days; one day is recommended. WordPress 7.1.2 and PHP 8.2 remain the minimum requirements.
 
 ### 0.9.1 — 2026-10-21
 
@@ -255,6 +279,7 @@ Deactivation preserves data. Uninstall removes plugin-owned temporary data and t
 ### 0.1.0 – 0.8.0
 
 - Misc: Early test versions of the independent website statistics plugin.
+
 ## Project and security
 
 Developed and published by David Decker – DECKERWEB. Independent website statistics with deliberately limited collection. Published versions are available on [GitHub](https://github.com/deckerweb/tabulamea/releases). Report security issues through the repository’s private vulnerability reporting; never publish credentials or complete database backups. [Security information](SECURITY.md). [Issues](https://github.com/deckerweb/tabulamea/issues) · [Discussions](https://github.com/deckerweb/tabulamea/discussions) · [More plugins](https://github.com/deckerweb).
@@ -267,4 +292,4 @@ Developed and published by David Decker – DECKERWEB. Independent website stati
 
 © 2026 David Decker – DECKERWEB. GPL-2.0-or-later.
 
-deckerweb Plugin Library 1.1.0 and deckerweb Updater 2.2.1: GPL-2.0-or-later, bundled locally. MaxMind DB Reader 1.13.1: Apache-2.0, isolated namespace; source and license in [vendor/maxmind](vendor/maxmind). Inter outlines in artwork: OFL-1.1; [license](assets/brand/Inter-OFL-LICENSE.txt). Country source: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Collection, reports and importers contain no copied Koko Analytics or Statify source code.
+deckerweb Plugin Library 1.3.0 and deckerweb Updater 2.4.0: GPL-2.0-or-later, bundled locally. MaxMind DB Reader 1.13.1: Apache-2.0, isolated namespace; source and license in [vendor/maxmind](vendor/maxmind). Inter outlines in artwork: OFL-1.1; [license](assets/brand/Inter-OFL-LICENSE.txt). Country source: [DB-IP Country Lite](https://db-ip.com/), CC BY 4.0. Collection, reports and importers contain no copied Koko Analytics or Statify source code.
